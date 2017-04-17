@@ -39,7 +39,7 @@
     "contao": {
       "sources": {
         "templates/theme-caribean-blue": "templates/theme-caribean-blue",
-        "files/templates/theme-caribean-blue": "files/theme-caribean-blue"
+        "files/theme-caribean-blue": "files/theme-caribean-blue"
       }
     }
   }
