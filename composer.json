@@ -24,7 +24,7 @@
     "php": ">=5.3",
     "contao/core": ">=3.2,<4",
     "twbs/bootstrap": "4.0.0-alpha.6",
-    "fortawesome/font-awesome": ">4.7.0",
+    "fortawesome/font-awesome": ">=4.7.0",
     "dma/dma_simple_grid": "dev-develop",
     "markocupic/custom-section": ">=0.0.2",
     "markocupic/preloader-icon": ">=0.0.2"
