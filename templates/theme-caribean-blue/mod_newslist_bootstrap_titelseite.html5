@@ -1,0 +1,65 @@
+
+
+
+
+<div id="myCarousel" class="carousel slide">
+<div class="carousel-inner">
+
+<?php $i=0; ?>
+<?php $m=0; ?>
+<?php $total = count($this->articles); ?>
+
+<?php foreach($this->articles as $article): ?>
+<?php $m++; ?>
+<?php if($i == 0): ?>
+<div class="item<?php if($m == 1): ?> active<?php endif; ?>">
+<div class="row">
+
+<?php endif; ?>
+
+<?php $i++; ?>
+
+<?php echo $article; ?>
+
+<?php if($i == 3 || $m == $total): ?>
+<?php $i=0; ?>
+</div>
+</div>
+<?php endif; ?>
+
+<?php endforeach; ?>
+
+</div>
+<!-- end inner-->
+
+</div>
+<!-- end MyCarousel -->
+<hr>
+<ul class="pager">
+    <li class="previous">
+    <a href="" onclick="return false;">
+    <span class="fa fa-arrow-circle-left"></span> zurück
+    </a>
+    </li>
+
+    <li class="next">
+    <a href="" onclick="return false;">
+    weiter <span class="fa fa-arrow-circle-right"></span>
+    </a>
+    </li>
+</ul>
+
+<script>
+	$('#myCarousel').carousel({
+		interval:   60000
+	});
+
+    $('.pager .previous').click(function() {
+     $('#myCarousel').carousel('prev');
+    });
+     $('.pager .next').click(function() {
+         $('#myCarousel').carousel('next');
+     });
+</script>
+
+<?php //echo $this->pagination;?>

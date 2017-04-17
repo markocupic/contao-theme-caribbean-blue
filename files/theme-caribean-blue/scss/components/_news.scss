@@ -1,0 +1,20 @@
+.mod_newslist{
+  @extend .row;
+  margin-bottom: 30px;
+  .pagination{
+    padding:0 $spacer-x;
+    display:block;
+    p{
+      display:block;
+    }
+    ul{
+      display:flex;
+      li{
+        margin-right: 10px;
+      }
+    }
+  }
+  .more {
+    margin-top: $spacer-y;
+  }
+}

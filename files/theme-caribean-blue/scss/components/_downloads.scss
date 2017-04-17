@@ -1,0 +1,62 @@
+.ce_downloads > ul, .ce_hyperlink > a {
+  position: relative;
+  display: block;
+  padding: 8px $spacer;
+  padding-right: 50px;
+
+  @extend .well;
+  @extend .well-downloads;
+
+}
+
+// Replace contao mime icons with font awesome icons
+
+.ce_downloads {
+
+  li {
+    position: relative;
+    padding-left: 30px !important;
+    line-height: 2.25;
+  }
+  .mime_icon {
+    display: none;
+  }
+  ul::after {
+    font-family: $icon-font-name;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #ddd;
+    content: "\f019";
+  }
+  a[href*="."]:before {
+    font-family: $icon-font-name;
+    padding-right: 4px;
+    color: $red;
+    content: "\f0c1"; // fa-file-o     // fa-file-word
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  a[href$=".docx"]:before {
+    content: "\f1c2"; // fa-file-word
+  }
+  a[href$=".doc"]:before {
+    content: "\f1c2"; // fa-file-word
+  }
+  a[href$=".pdf"]:before {
+    content: "\f1c1"; // fa-file-pdf
+  }
+}
+
+.ce_hyperlink {
+  a[href*="."]:before {
+    font-family: $icon-font-name;
+    padding-right: 4px;
+    color: $red;
+    content: "\f0c1";
+  }
+
+}
+

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -203px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: -224px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -410px;
+  }
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+}
+
+#footer{
+  overflow:hidden;
+}
+
+#footer, #wrapper:after {
+  height: 203px;
+  @include media-breakpoint-down(md) {
+    height: 224px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 410px;
+  }
+}
+
+
+

@@ -1,0 +1,81 @@
+<div class="header-row-1">
+    <div class="row">
+        <div class="header-navigation-toggle-container col-3 col-md-2">
+            <!-- Navbar toggler mobile -->
+            <button class="navigation-toggler"><i class="fa fa-navicon" title="Navigation öffnen"></i></button>
+            <script>
+
+
+
+
+                // Let header grow when scrolling to top
+                (function ($) {
+                    $(document).ready(function () {
+                        var body = $("body");
+                        var shrinkOn = 200;
+                        if(body.scrollTop() < shrinkOn){
+                            body.addClass("affix-top");
+                        }
+
+                        $(window).scroll(function (e) {
+                            var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+                            if (distanceY < shrinkOn) {
+                                body.addClass("affix-top");
+                            } else {
+                                body.removeClass("affix-top");
+                            }
+                        });
+                    });
+                })(jQuery);
+
+
+
+
+            </script>
+            <!-- End Navbar toggler mobile -->
+        </div>
+
+        <div class="mobile-title-heading col-9 col-md-4">
+            <h1>Schule Ettiswil</h1>
+        </div>
+
+
+        <div class="col-md-3 hidden-sm-down header-search-form">
+            <form action="suche" method="get">
+                <div class="formbody">
+                    <label for="ctrl_keywords_152" class="invisible">Suchbegriffe</label>
+
+                    <div>
+                        <div class="input-group">
+                            <input type="text" name="keywords" id="ctrl_keywords_152" class="form-control text" placeholder="Suchbegriffe..." value="">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </span>
+                        </div>
+                    </div>
+
+                    <fieldset class="radio_container" style="display:none">
+                        <div class="radio">
+                            <legend class="invisible">Optionen</legend>
+                            <label for="matchAll_152">
+                                <input type="radio" name="query_type" id="matchAll_152" value="and" checked="checked">
+                                finde alle Wörter </label>
+                        </div>
+                        <div class="radio">
+                            <label for="matchAny_152">
+                                <input type="radio" name="query_type" id="matchAny_152" value="or">
+                                finde irgendein Wort </label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="header-button-container col-6 col-md-3 hidden-sm-down">
+            <a href="login" role="button" class="btn btn-primary">Anmelden</a>
+        </div>
+    </div>
+</div>
+
+
