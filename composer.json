@@ -1,0 +1,46 @@
+{
+  "name": "markocupic/contao-theme-caribean-blue",
+  "description": "Contao Frontend Theme Caribean Blue",
+  "keywords": [
+    "contao",
+    "frontend",
+    "theme"
+  ],
+  "type": "contao-module",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Marko Cupic",
+      "email": "m.cupic@gmx.ch",
+      "homepage": "https://github.com/markocupic",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/markocupic/contao-theme-caribean-blue/issues",
+    "source": "https://github.com/markocupic/contao-theme-caribean-blue"
+  },
+  "require": {
+    "php": ">=5.3",
+    "contao/core": ">=3.2,<4",
+    "twbs/bootstrap": ">=4.0.0.0-alpha6,<4.1-dev@alpha"
+  },
+  "replace": {
+  },
+  "conflict": {
+    "contao/core": "3.0.*"
+  },
+  "autoload": {
+    "classmap": [
+      ""
+    ]
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "templates/theme-caribean-blue": "templates/theme-caribean-blue",
+        "files/templates/theme-caribean-blue": "files/theme-caribean-blue"
+      }
+    }
+  }
+}
