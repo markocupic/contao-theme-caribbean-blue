@@ -1,11 +1,22 @@
+// Email mailto link
+a.email{
+  &:before {
+    font-family: $icon-font-name;
+    padding-right: 4px;
+    color: $red;
+    content: "\f003";
+  }
+}
+
+
 .ce_downloads > ul, .ce_hyperlink > a {
   position: relative;
   display: block;
-  padding: 8px $spacer;
+  //padding: 8px $spacer;
   padding-right: 50px;
 
-  @extend .well;
-  @extend .well-downloads;
+  //@extend .well;
+  //@extend .well-downloads;
 
 }
 

@@ -23,9 +23,7 @@ html, body {
   display: block;
 }
 
-#footer{
-  overflow:hidden;
-}
+
 
 #footer, #wrapper:after {
   height: 203px;
@@ -35,6 +33,9 @@ html, body {
   @include media-breakpoint-down(sm) {
     height: 410px;
   }
+}
+#footer{
+  overflow:hidden;
 }
 
 
