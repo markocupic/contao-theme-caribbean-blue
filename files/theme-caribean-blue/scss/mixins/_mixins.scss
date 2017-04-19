@@ -1,3 +1,11 @@
+// Add a icon font before an element
+@mixin icon-before($icon) {
+  display: inline-block;
+  font-family: $icon-font-name;
+  padding-right: 4px;
+  content: "\#{$icon}";
+}
+
 
 @mixin flex-vertical-align-middle() {
   // Center vertical with flexbox

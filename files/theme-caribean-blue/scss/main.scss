@@ -1,12 +1,13 @@
 // Set variables and overwrite bootstrap vars
-@import "variables"; 
-
+@import "variables";
 // EMBED BOOTSTRAP FRAMEWORK
 @import "/../../../composer/vendor/twbs/bootstrap/scss/bootstrap.scss";
+
 
 // MIXINS
 @import "mixins/_general.scss";
 @import "mixins/_mixins.scss";
+
 
 // GENERIC
 @import "generic/contao-reset";
@@ -14,7 +15,7 @@
 
 // BASE
 @import "base/page";
-@import "base/layout"; 
+@import "base/layout";
 @import "base/type";
 @import "base/bootstrap-anpassungen";
 @import "base/grid";
@@ -25,7 +26,6 @@
 @import "components/footer";
 @import "components/sticky-footer";
 @import "components/forms";
-
 @import "components/downloads";
 @import "components/gallery-creator";
 @import "components/service-link";
@@ -39,11 +39,3 @@
 @import "components/news";
 @import "components/leitbild";
 @import "components/accordion";
-
-
-
-
-
-
-
-

@@ -7,7 +7,6 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-
 body {
   &.loaded {
     @include media-breakpoint-up(sm) {
@@ -15,25 +14,39 @@ body {
     }
   }
 
-  font-weight: $font-weight-base;
-  font-family: $font-family-base;
+  // Choose between these font sizes:
+  //font-size: $font-size-base;
+  //font-size: $font-size-xs;
+  //font-size: $font-size-sm;
+  //font-size: $font-size-lg;
+
+  // Choose between thes line heights:
+  //line-height: $line-height-base;
+  //line-height: $line-height-sm;
+  //line-height: $line-height-lg;
 
   font-size: $font-size-sm;
   line-height: $line-height-sm;
 
   @include media-breakpoint-up(xs) {
-    //font-size: $font-size-xs;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
   }
   @include media-breakpoint-up(sm) {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
   }
   @include media-breakpoint-up(lg) {
-   // font-size: $font-size-lg;
-   // line-height: $line-height-lg;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
   }
 
+  // The font family
+  font-family: $font-family-base;
 
   // Go easy on the eyes and use something other than `#000` for text
   color: $body-color;
