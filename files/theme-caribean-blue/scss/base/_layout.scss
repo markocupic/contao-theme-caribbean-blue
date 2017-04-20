@@ -29,7 +29,7 @@
 }
 
 #container {
-  padding-top: 100px;
+  padding-top: 87px;
 
   .mod_article:not(.container-fluid) > .inside {
     @extend .container;
@@ -41,7 +41,7 @@
   }
 
   .mod_article *[class*="ce_"], .mod_article *[class*="mod_"] {
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
   }
   .mod_article {
     background-color: transparent;
