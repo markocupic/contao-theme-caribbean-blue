@@ -53,11 +53,11 @@
           font-size: $socialmedia-button-line-height-mobile;
         }
         &:hover {
-          color: $red;
+          color: $accent-color;
         }
       }
       .fa-stack-icon {
-        color: $red;
+        color: $accent-color;
         font-size: $socialmedia-icon-font-size;
         @include media-breakpoint-down(lg) {
           font-size: $socialmedia-icon-font-size-mobile;
@@ -73,7 +73,7 @@
         color: #fff;
       }
       .fa-stack-icon {
-        color: $red;
+        color: $accent-color;
       }
     }
   }

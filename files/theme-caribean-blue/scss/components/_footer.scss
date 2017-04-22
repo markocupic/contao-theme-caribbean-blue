@@ -1,6 +1,5 @@
 #footer {
   font-size: 0.875rem;
-  background-color: #222;
 
   h6 {
     font-size: 0.875rem;
@@ -11,13 +10,13 @@
   }
 
   .footer-row-1 {
-    background-color: $red;
-    color: $gray-lighter !important;
+    background-color: #fff;
+    color: $gray-light !important;
     a, &:hover {
-      color: $gray-lighter !important;
+      color: $gray !important;
     }
     .title {
-      color: #fff;
+      color: $gray;
     }
     .row > div > div {
       padding: 0 8px;
@@ -47,9 +46,8 @@
       padding: 0;
       margin: 0;
       span:before, a:before {
+        @include icon-before(f105);
         font-family: FontAwesome;
-        content: "\f105 ";
-        padding-right: 5px;
       }
     }
   }

@@ -1,3 +1,30 @@
+// Load resources
+(function ($) {
+
+    <!-- Fonts -->
+    $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" type="text/css" />');
+    $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" type="text/css" />');
+
+    // Load tether
+    $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.min.css" type="text/css" />');
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js");
+
+    // Load Bootstrap
+    $.getScript("/composer/vendor/twbs/bootstrap/dist/js/bootstrap.min.js");
+
+    // Load FontAwesome
+    $.getScript("https://use.fontawesome.com/926b4fc2c0.js");
+
+    // WOW & Animate.css
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js");
+    $.getScript( "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" )
+        .done(function( script, textStatus ) {
+            new WOW().init();
+        });
+    $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" type="text/css" />');
+})(jQuery);
+
+
 /** Sticky footer **/
 (function ($) {
     $().ready(function () {
@@ -5,12 +32,7 @@
     });
 })(jQuery);
 
-/** Animate & wow **/
-(function ($) {
-    $().ready(function () {
-        new WOW().init();
-    });
-})(jQuery);
+
 
 /** Scroll to top button **/
 (function ($) {
@@ -33,8 +55,6 @@
         });
     });
 })(jQuery);
-
-
 
 
 /** Mediabox **/

@@ -1,5 +1,4 @@
 $header-height: 78px;
-$header-height-affix-top: 88px;
 
 #header {
 
@@ -19,6 +18,16 @@ $header-height-affix-top: 88px;
       height: $header-height;
       @include transition(height);
     }
+    .logo-header{
+      height:40px;
+      width: auto;
+    }
+    .mobile-title-heading{
+      @include flex-vertical-align-middle();
+      img{
+        margin-right: 1rem;
+      }
+    }
     .header-search-form {
       margin: 0;
     }
@@ -35,13 +44,3 @@ $header-height-affix-top: 88px;
   }
 }
 
-body.affix-top {
-  #header {
-    .header-row-1 {
-      height: $header-height-affix-top;
-      .row {
-        height: $header-height-affix-top;
-      }
-    }
-  }
-}

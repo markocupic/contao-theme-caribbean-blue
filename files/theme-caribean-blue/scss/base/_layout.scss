@@ -22,6 +22,7 @@
 #container {
 
   #main {
+    margin-bottom: $spacer-y;
     > .inside {
       //display: block;
     }
@@ -47,7 +48,7 @@
     background-color: transparent;
   }
   .mod_article.first {
-    //padding-top: $spacer;
+    padding-top: $spacer;
   }
 
   .mod_article {

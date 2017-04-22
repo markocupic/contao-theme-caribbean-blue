@@ -1,4 +1,5 @@
-$nav-bg-color: #444;
+$nav-bg-color: #2C3E50;
+$nav-bg-hover-color: #25b89a;
 $nav-font-color: #ddd;
 $nav-bg-color: #333;
 //$nav-font-color: #333;
@@ -8,10 +9,6 @@ html, body {
   height: 100%;
 }
 
-#header {
-  overflow: visible;
-  background-color: #eceeef;
-}
 
 #header, #sidebar {
   .navigation-toggler {
@@ -72,25 +69,29 @@ html, body {
   background-color: $nav-bg-color;
   @include transition(left, ease-in-out, 0.7s);
 
-  .sidebar-logo-container {
+  .sidebar-top-container {
     @include flex-vertical-align-middle();
-    background: #fff;
+    background: $nav-bg-color;
     z-index: 99;
     height: 78px;
     overflow: hidden;
+    border-bottom: 1px ridge $gray-light;
     @include transition(height);
     img {
       margin: 0 $spacer;
-      background: #000;
-      width: 75% !important;
+      width: auto;
       max-width: 120px;
-      height: auto;
+      height: 66px;
+    }
+    .sidebar-title{
+      padding-left: $spacer-x;
+      color: $gray-light;
     }
     .navigation-toggler {
       position: absolute;
       right: $spacer;
       .fa {
-        color: #000;
+        color: $gray-lightest;
         font-size: 2rem;
       }
     }
@@ -103,9 +104,6 @@ body.loaded {
   }
 }
 
-body.affix-top #sidebar .sidebar-logo-container {
-  height: 88px;
-}
 
 body.sidebar-open {
   #sidebarOverlay {
@@ -230,15 +228,24 @@ body.sidebar-open {
     }
   }
 
-  // Borders
+  // Borders&backgrounds
   ul.level_1 {
     > li {
-      // border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid #34495D;
+      &:hover{
+        background-color: $nav-bg-hover-color;
+         > a, > span{
+          color: #fff !important;
+        }
+      }
     }
   }
 
   // Expand Icon for items with submenus
   ul.level_1 {
+    > li.expanded{
+      background-color: $nav-bg-hover-color;
+    }
 
     li.submenu {
       > .toggle-submenu {
@@ -274,6 +281,11 @@ body.sidebar-open {
         }
       }
     }
+    > li {
+      > .toggle-submenu:before, > .toggle-submenu:hover:before {
+        color: #fff !important;
+      }
+    }
   }
   $level_1-offset: 48px;
   $level_2-offset: 54px;
@@ -283,18 +295,18 @@ body.sidebar-open {
   ul.level_1 {
     > li {
       padding: 0;
-      line-height: 40px;
+      line-height: 60px;
       background-color: transparent;
       > .toggle-submenu {
         right: 0;
       }
-      > a, span {
+      > a, > span {
         padding-left: $level_1-offset;
         font-size: 16px;
-        color: $nav-font-color;
+        color: #fff;
       }
       span.active {
-        color: $red !important;
+        color: #fff !important;
       }
     }
   }

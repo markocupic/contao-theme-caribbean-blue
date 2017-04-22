@@ -144,7 +144,7 @@ $text-elements: (
   &:after {
     content: "";
     width: 20%;
-    background: $red;
+    background: $accent-color;
     margin: .5em auto;
     margin-bottom: 1em;
     height: .125em;
@@ -157,23 +157,14 @@ $text-elements: (
   h1 {
     @include transition(font-size);
     @extend .h1;
-    font-family: "Shadows Into Light" !important;
-    //font-size: 1.875rem;
     font-weight: bold;
-    color: #000;
+    color: #800000;
     margin: 0;
     padding:0;
     line-height: 1;
   }
 }
 
-body.affix-top {
-  .mobile-title-heading {
-    h1 {
-      //font-size: 2.25rem;
-    }
-  }
-}
 
 // Lists
 ul {

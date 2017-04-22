@@ -36,6 +36,7 @@
         </div>
 
         <div class="mobile-title-heading col-9 col-md-4">
+            <img src="/files/theme-caribean-blue/images/logos/logo-red.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
             <h1>Schule Ettiswil</h1>
         </div>
 
