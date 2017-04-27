@@ -52,8 +52,8 @@ html, body {
 }
 
 #sidebar::-webkit-scrollbar-thumb {
-  border-radius: 8px !important;
-  background-color: #FD7F01 !important;
+  border-radius: 6px !important;
+  background-color: $nav-bg-hover-color !important;
 }
 
 #sidebar {

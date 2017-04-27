@@ -5,7 +5,6 @@
 
 
 // MIXINS
-@import "mixins/_general.scss";
 @import "mixins/_mixins.scss";
 
 
@@ -27,7 +26,7 @@
 @import "components/sticky-footer";
 @import "components/forms";
 @import "components/downloads";
-@import "components/gallery-creator"; 
+@import "components/gallery-creator";
 @import "components/service-link";
 @import "components/socialmedia-buttons";
 @import "components/preloader-overlay";

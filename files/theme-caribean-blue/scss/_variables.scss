@@ -1,6 +1,6 @@
 // Fonts
-$font-family-sans-serif: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$headings-font-family: "Roboto Slab", Georgia;
+$font-family-sans-serif: 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family:'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 
 // Icon Fontname
 $icon-font-name: "FontAwesome";
@@ -11,4 +11,7 @@ $enable-rounded: false;
 // Colors
 $accent-color: #800000;
 $body-bg: #e9ebee;
+$body-color: #333;
+$body-bg: #fff;
 $link-color: $accent-color;
+$font-size-lg: 1.125rem;

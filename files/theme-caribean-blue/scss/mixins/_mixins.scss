@@ -2,7 +2,7 @@
 @mixin icon-before($icon) {
   display: inline-block;
   font-family: $icon-font-name;
-  padding-right: 4px;
+  padding-right: 6px;
   content: "\#{$icon}";
 }
 
@@ -39,4 +39,27 @@
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
+}
+
+
+// Functions
+// function map-deep-get()
+// function to get a value from a nested map, see _type.scss for usage
+//
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// screen reader only
+@mixin invisible {
+  width:0;
+  height:0;
+  left:-1000px;
+  top:-1000px;
+  position:absolute;
+  overflow:hidden;
+  display:inline;
 }

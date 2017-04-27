@@ -27,10 +27,10 @@
     </figure>
   <?php endif; ?>
   <h3><?= $this->linkHeadline ?></h3>
-
+<!--
   <div class="teaser">
     <?= $this->teaser ?>
-  </div>
+  </div>-->
 
   <?php if ($this->text || $this->teaser): ?>
     <p class="more"><?= $this->more ?></p>
