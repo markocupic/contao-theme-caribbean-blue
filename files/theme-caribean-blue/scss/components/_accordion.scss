@@ -20,7 +20,8 @@
   .toggler {
     //font-size: 1.25rem !important;
     cursor: pointer;
-    color: $link-color;
+    @include transition(color);
+    color: #000;
     // for open accordions
     .ui-icon-triangle-1-s::before {
       font-family: FontAwesome;
@@ -33,5 +34,8 @@
       content: "\f054";
       padding-right: 20px;
     }
+  }
+  .toggler:hover {
+    color: $link-color;
   }
 }

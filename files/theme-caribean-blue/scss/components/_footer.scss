@@ -7,8 +7,9 @@
   }
 
   .footer-row-1 {
-    background-color: #eee;
+    background-color: $gray-lightest;
     color: #1a1a1a !important;
+    border-top: 1px solid darken($gray-lighter,4);
     a, &:hover {
       color: $gray !important;
     }

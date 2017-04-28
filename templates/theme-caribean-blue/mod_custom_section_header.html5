@@ -1,42 +1,14 @@
+
 <div class="header-row-1">
     <div class="row">
-        <div class="header-navigation-toggle-container col-3 col-md-2">
+        <div class="header-navigation-toggle-container hidden-lg-up col-2 col-md-1">
             <!-- Navbar toggler mobile -->
             <button class="navigation-toggler"><i class="fa fa-navicon" title="Navigation öffnen"></i></button>
-            <script>
-
-
-
-
-                // Let header grow when scrolling to top
-                (function ($) {
-                    $(document).ready(function () {
-                        var body = $("body");
-                        var shrinkOn = 200;
-                        if(body.scrollTop() < shrinkOn){
-                            body.addClass("affix-top");
-                        }
-
-                        $(window).scroll(function (e) {
-                            var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-                            if (distanceY < shrinkOn) {
-                                body.addClass("affix-top");
-                            } else {
-                                body.removeClass("affix-top");
-                            }
-                        });
-                    });
-                })(jQuery);
-
-
-
-
-            </script>
             <!-- End Navbar toggler mobile -->
         </div>
 
-        <div class="mobile-title-heading col-9 col-md-4">
-            <img src="/files/theme-caribean-blue/images/logos/logo-green.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
+        <div class="mobile-title-heading col-10 col-md-5 col-lg-6">
+            <img src="/files/theme-caribean-blue/images/logos/logo-blue.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
             <h1>Schule Ettiswil</h1>
         </div>
 
@@ -78,5 +50,6 @@
         </div>
     </div>
 </div>
+<div class="header-row-2">{{insert_module::179}}</div>
 
 

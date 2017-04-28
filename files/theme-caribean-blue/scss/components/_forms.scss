@@ -14,13 +14,19 @@ input.text, input.captcha, textarea, select {
 .submit{
   @extend .btn;
   @extend .btn-primary;
+  background-color: $accent-color;
+  border-color: $accent-color;
+  &:hover{
+    background-color: darken($accent-color, 4);
+    border-color: darken($accent-color, 4);
+  }
 }
 
 #main {
   .formbody {
     max-width: 800px;
     background: #fff;
-    border: 1px solid $gray-lightest;
+    border: 1px solid $gray-lighter;
     padding: $spacer;
     position:relative;
     & > *{

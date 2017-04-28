@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-@mixin transition($property, $mode: ease-in-out, $duration: 0.3s) {
+@mixin transition($property, $mode: ease-in-out, $duration: 0.4s) {
   -webkit-transition: $property $mode $duration;
   -moz-transition: $property $mode $duration;
   -ms-transition: $property $mode $duration;

@@ -1,3 +1,8 @@
+
+
+
+
+
 // Load resources
 (function ($) {
 
@@ -31,6 +36,45 @@
     });
 })(jQuery);
 
+
+
+(function ($) {
+    $().ready(function () {
+       $('#header .mod_navigation ul.level_1 > li > a, #header .mod_navigation ul.level_1 > li>a:after, #header .mod_navigation ul.level_1 > li > span').click(function(e){
+           if(!$(this).closest('li').hasClass('submenu')){
+               return true;
+           }else{
+               e.stopPropagation();
+               e.preventDefault();
+           }
+
+           $(this).closest('ul').find('.expanded').removeClass('expanded');
+           $(this).closest('li').addClass('expanded');
+
+           $('.navbar-backdrop').remove();
+           $('body').append('<div class="navbar-backdrop"></div>');
+           $('.navbar-backdrop').click(function(e){
+               e.preventDefault();
+               dispandNavigation();
+           });
+           $(window).resize(function(e){
+               e.preventDefault();
+               dispandNavigation();
+           });
+           $(window).scroll(function(e){
+               e.preventDefault();
+               dispandNavigation();
+           });
+
+           function dispandNavigation()
+           {
+               $('.navbar-backdrop').remove();
+               $('.mod_navigation .expanded').removeClass('expanded');
+           }
+
+       });
+    });
+})(jQuery);
 
 
 /** Scroll to top button **/

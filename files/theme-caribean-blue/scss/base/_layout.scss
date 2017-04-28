@@ -5,9 +5,14 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: $zindex-fixed; //1030
+    z-index: $zindex-fixed;
     height: 78px;
     background: darken(#f9f9f9,4);
+    @include media-breakpoint-up(lg) {
+      background: #fff;
+
+    }
+
   }
 }
 
@@ -25,13 +30,17 @@
 #container {
 
   #main {
+
     margin-bottom: $spacer-y;
 
   }
 }
 
 #container {
-  margin-top: 87px; // Because auf the fixed header, we need some margin
+  @include media-breakpoint-down(md) {
+    margin-top: 78px; // Because auf the fixed header, we need some margin
+
+  }
 
   .mod_article:not(.container-fluid) > .inside {
     @extend .container;

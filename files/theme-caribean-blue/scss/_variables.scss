@@ -9,9 +9,14 @@ $icon-font-name: "FontAwesome";
 $enable-rounded: false;
 
 // Colors
-$accent-color: #008000;
+$accent-color: dodgerblue;
 
 $body-bg: #e9ebee;
 $body-color: #333;
 $body-bg: #fff;
-$link-color: #1570a6;
+//$link-color: #1570a6;
+$btn-primary-bg: dodgerblue;
+
+
+$zindex-navbar-aside-backdrop: 1080;
+$zindex-navbar-aside: 1090;

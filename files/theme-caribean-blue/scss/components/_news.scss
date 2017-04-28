@@ -2,7 +2,12 @@
   @extend .row;
   .layout_latest{
     h3 a {
-      color: $accent-color;
+      color: #000;
+      @include transition(color);
+      &:hover{
+        color: $link-color;
+        text-decoration: none;
+      }
     }
   }
   margin-bottom: 30px;
