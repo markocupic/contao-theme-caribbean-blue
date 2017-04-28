@@ -1,14 +1,17 @@
 
 #header {
-  .first-row {
+  .header-row-1 {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    z-index: $zindex-fixed; //1030
+    height: 78px;
+    background: darken(#f9f9f9,4);
   }
-
 }
 
-// overwrite .container padding
+// overwrite bootstrap .container padding
 .container {
   padding-left: 0;
   padding-right: 0;
@@ -23,14 +26,12 @@
 
   #main {
     margin-bottom: $spacer-y;
-    > .inside {
-      //display: block;
-    }
+
   }
 }
 
 #container {
-  padding-top: 87px;
+  margin-top: 87px; // Because auf the fixed header, we need some margin
 
   .mod_article:not(.container-fluid) > .inside {
     @extend .container;
@@ -47,13 +48,13 @@
   .mod_article {
     background-color: transparent;
   }
-  .mod_article.first {
-    padding-top: $spacer;
-  }
 
   .mod_article {
     >.inside {
       background-color: #fff;
+      > *:first-child {
+        margin-top: $spacer !important;
+      }
     }
   }
 

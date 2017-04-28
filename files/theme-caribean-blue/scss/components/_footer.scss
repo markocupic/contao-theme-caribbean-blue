@@ -1,9 +1,6 @@
 #footer {
-  font-size: 0.875rem;
 
-  h6 {
-    font-size: 0.875rem;
-  }
+
   [class*="footer-row-"] {
     padding-top: $spacer;
     padding-bottom: $spacer;
@@ -11,12 +8,12 @@
 
   .footer-row-1 {
     background-color: #eee;
-    color: $gray-light !important;
+    color: #1a1a1a !important;
     a, &:hover {
       color: $gray !important;
     }
     .title {
-      color: $gray;
+      font-weight:bold;
     }
     .row > div > div {
       padding: 0 8px;

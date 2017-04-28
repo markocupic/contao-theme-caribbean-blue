@@ -1,5 +1,7 @@
 $nav-bg-color: #2C3E50;
-$nav-bg-hover-color: #25b89a;
+$nav-bg-hover-color: #5fcf80;
+//$nav-bg-hover-color: $accent-color;
+
 $nav-font-color: #ddd;
 $nav-bg-color: #333;
 //$nav-font-color: #333;
@@ -40,14 +42,14 @@ html, body {
   top: 0;
   height: 100%;
   background-color: #000;
-  z-index: 1010;
+  z-index: #{($zindex-fixed+1)};
   @include transition(opacity);
 }
 
 // Thin scrollbar
 #sidebar::-webkit-scrollbar {
   -webkit-appearance: none !important;
-  width: 9px !important;
+  width: 6px !important;
   background-color: #000 !important;
 }
 
@@ -60,7 +62,7 @@ html, body {
   display: none;
   visibility:hidden;
   overflow-x: hidden;
-  z-index: 1020;
+  z-index: #{($zindex-fixed+2)};
   position: fixed;
   left: -300px;
   top: 0;
@@ -245,6 +247,9 @@ body.sidebar-open {
   ul.level_1 {
     > li.expanded{
       background-color: $nav-bg-hover-color;
+      &:before,  > *,> *:before{
+        color: #fff !important;
+      }
     }
 
     li.submenu {

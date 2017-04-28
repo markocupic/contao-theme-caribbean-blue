@@ -145,7 +145,7 @@ $text-elements: (
     content: "";
     width: 20%;
     background: $accent-color;
-    margin: .5em 0 !important;
+    margin: 0 0 !important;
     font-weight: 300;
     margin-bottom: 1em;
     height: .125em;
@@ -159,7 +159,7 @@ $text-elements: (
     @include transition(font-size);
     @extend .h1;
     font-weight: bold;
-    color: #800000;
+    color: #000;
     margin: 0;
     padding:0;
     line-height: 1;

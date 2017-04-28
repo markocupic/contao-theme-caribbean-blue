@@ -1,5 +1,10 @@
 .mod_newslist{
   @extend .row;
+  .layout_latest{
+    h3 a {
+      color: $accent-color;
+    }
+  }
   margin-bottom: 30px;
   .pagination{
     padding:0 $spacer-x;

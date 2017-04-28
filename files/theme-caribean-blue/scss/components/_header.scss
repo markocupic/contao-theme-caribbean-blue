@@ -3,13 +3,7 @@ $header-height: 78px;
 #header {
 
   .header-row-1 {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    height: $header-height;
-    background: darken(#f9f9f9,4);
+
     //border-bottom: 1px solid $gray-lighter;
     @include transition(all);
 

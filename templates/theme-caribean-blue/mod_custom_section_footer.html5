@@ -5,7 +5,7 @@
 
             <div class="col-md-4">
                 <div>
-                    <h6 class="title">Schule Ettiswil</h6>
+                    <h5 class="title">Schule Ettiswil</h5>
                     Dorf 21<br>
                     6218 Ettiswil<br>
                     Tel. Lehrerzimmer:<br>
@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-4">
                 <div>
-                    <h6 class="title">Schulleitung:</h6>
+                    <h5 class="title">Schulleitung:</h5>
                     {{email::schulleitung.ettiswil@bluewin.ch}}<br>
                     041 984 13 51
                 </div>
@@ -23,7 +23,7 @@
 
             <div class="col-md-4">
                 <div>
-                    <h6 class="title">Quicklinks</h6>
+                    <h5 class="title">Quicklinks</h5>
                     {{insert_module::99}}
                     </div>
             </div>

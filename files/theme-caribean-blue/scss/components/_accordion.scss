@@ -19,6 +19,7 @@
   }
   .toggler {
     //font-size: 1.25rem !important;
+    cursor: pointer;
     color: $link-color;
     // for open accordions
     .ui-icon-triangle-1-s::before {

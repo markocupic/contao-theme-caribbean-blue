@@ -1,42 +1,11 @@
-* {
-  margin: 0;
+
+/** From https://teamtreehouse.com/library/css-flexbox-layout/building-a-layout-with-flexbox/creating-a-sticky-footer-with-flexbox **/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-html, body {
-  height: 100%;
-}
-
-#wrapper {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -203px;
-  @include media-breakpoint-down(md) {
-    margin-bottom: -224px;
-  }
-  @include media-breakpoint-down(sm) {
-    margin-bottom: -410px;
-  }
-}
-
-#wrapper:after {
-  content: "";
-  display: block;
-}
-
-
-
-#footer, #wrapper:after {
-  height: 203px;
-  @include media-breakpoint-down(md) {
-    height: 224px;
-  }
-  @include media-breakpoint-down(sm) {
-    height: 410px;
-  }
-}
-#footer{
-  overflow:hidden;
-}
-
-
-
+#footer {
+  margin-top: auto;
+} 
