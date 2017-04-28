@@ -78,6 +78,9 @@
   .mod_article.article-gray {
     background-image: none;
     background-color: $gray-lighter;
+    >.inside{
+      background-color: $gray-lighter;
+    }
   }
   .mod_article.article-white {
     background-image: none;
