@@ -1,4 +1,3 @@
-
 $navbar-height: 45px;
 
 body .navbar-backdrop {
@@ -15,7 +14,7 @@ body .navbar-backdrop {
   * {
     overflow: visible;
   }
-  .mod_navigation {
+  .mod_navigation.navbar-header {
     z-index: $zindex-navbar;
     height: $navbar-height;
     overflow-y: visible;
@@ -50,13 +49,13 @@ body .navbar-backdrop {
         color: $link-color;
       }
       > li.trail, > li.active {
-        background-color: dodgerblue;
+        background-color: $accent-color;
         > span, > a, > a:after, > span:after {
           color: #fff;
         }
       }
       > li.expanded, > li:hover {
-        background-color: dodgerblue;
+        background-color: $accent-color;
         > a, > a:after, > span {
           color: #fff;
           text-decoration: none;
@@ -91,6 +90,5 @@ body .navbar-backdrop {
         border: 0;
       }
     }
-
   }
 }
