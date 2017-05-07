@@ -20,7 +20,7 @@ body .navbar-backdrop {
     overflow-y: visible;
     background-color: $gray-lightest;
     color: #000;
-    margin-top: 77px;
+    margin-top: 100px;
     ul, li {
       margin: 0;
       padding: 0;
@@ -78,6 +78,7 @@ body .navbar-backdrop {
     }
     ul.level_2 {
       background-color: #eee;
+      opacity: 1;
       a, span {
         color: #000;
       }

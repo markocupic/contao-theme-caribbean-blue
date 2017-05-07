@@ -6,13 +6,11 @@
     left: 0;
     right: 0;
     z-index: $zindex-fixed;
-    height: 78px;
+    height: 100px;
     background: darken(#f9f9f9,4);
     @include media-breakpoint-up(lg) {
       background: #fff;
-
     }
-
   }
 }
 

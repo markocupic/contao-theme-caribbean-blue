@@ -144,12 +144,11 @@ $text-elements: (
   text-align: left;
   color: #000;
   font-weight: 500;
-/*
+
   &:after {
     content: "";
-    width: 20%;
+    width: 100px;
     background: $accent-color;
-    background: #333;
 
     margin: 0 0 !important;
     font-weight: 300;
@@ -158,7 +157,7 @@ $text-elements: (
     display: block;
     text-align: left;
   }
-  */
+
 }
 
 .mobile-title-heading {

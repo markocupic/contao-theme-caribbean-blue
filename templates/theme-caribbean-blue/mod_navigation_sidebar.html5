@@ -4,7 +4,7 @@
 
 <!-- indexer::stop -->
 <div class="sidebar-top-container">
-    <!--<img src="/files/theme-caribean-blue/images/logos/logo.png" alt="Logo">-->
+    <!--<img src="/files/theme-caribbean-blue/images/logos/logo.png" alt="Logo">-->
     <h5 class="sidebar-title">NAVIGATION</h5>
     <div class="navigation-toggler" title="Navigation schliessen" role="button">
         <span class="fa fa-close" aria-hidden="true"></span>

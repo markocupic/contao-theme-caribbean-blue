@@ -10,7 +10,7 @@ html {
 body {
   &.loaded {
     @include media-breakpoint-up(sm) {
-      //background: $body-bg url("/../../files/theme-caribean-blue/images/bg/background-clip-2.png") no-repeat fixed center;
+      //background: $body-bg url("/../../files/theme-caribbean-blue/images/bg/background-clip-2.png") no-repeat fixed center;
     }
   }
 

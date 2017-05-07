@@ -8,7 +8,9 @@
         </div>
 
         <div class="mobile-title-heading col-10 col-md-5 col-lg-6">
-            <img src="/files/theme-caribean-blue/images/logos/logo-blue.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
+            <a href="" title="startseite">
+                <img src="/files/theme-caribbean-blue/images/logos/logo-blue.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
+            </a>
             <h1>Schule Ettiswil</h1>
         </div>
 
