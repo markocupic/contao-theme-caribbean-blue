@@ -9,14 +9,11 @@
  */
 
 
-
-
-
 /**
  * Register the templates
  */
 TemplateLoader::addFiles(array
 (
-	'mod_custom_section_header_caribean_blue'   => 'system/modules/theme-caribbean-blue/templates',
-	'mod_custom_section_footer_caribean_blue'       => 'system/modules/theme-caribbean-blue/templates',
+    'mod_custom_section_header_caribbean_blue' => 'system/modules/theme-caribbean-blue/templates',
+    'mod_custom_section_footer_caribbean_blue' => 'system/modules/theme-caribbean-blue/templates',
 ));

@@ -35,9 +35,9 @@
 }
 
 #container {
+  margin-top: 15px; // Because auf the fixed header, we need some margin
   @include media-breakpoint-down(md) {
-    margin-top: 78px; // Because auf the fixed header, we need some margin
-
+    margin-top: 100px;
   }
 
   .mod_article:not(.container-fluid) > .inside {
@@ -75,7 +75,7 @@
   }
   .mod_article.article-gray {
     background-image: none;
-    background-color: $gray-lighter;
+    //background-color: $gray-lighter;
     >.inside{
       background-color: $gray-lighter;
     }
