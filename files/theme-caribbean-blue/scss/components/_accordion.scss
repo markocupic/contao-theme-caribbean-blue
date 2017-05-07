@@ -1,7 +1,6 @@
 /** Accordion **/
 .ce_accordion {
-  border-bottom: 1px solid $gray-lighter;
-
+  border-bottom: 1px solid $gray-light;
   .ui-accordion-header {
     @extend .h4;
   }
