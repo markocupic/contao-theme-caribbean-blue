@@ -54,6 +54,10 @@
   }
   .mod_article {
     background-color: transparent;
+    margin-bottom: $spacer-y;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+    }
   }
 
   .mod_article {
