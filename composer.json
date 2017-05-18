@@ -24,7 +24,7 @@
     "php": ">=5.3",
     "contao/core": ">=3.2",
     "twbs/bootstrap": "4.0.0-alpha.6",
-    "dma/dma_simple_grid": "dev-develop",
+    "dma/dma_simple_grid": "dev-master",
     "markocupic/custom-section": ">=0.0.2",
     "markocupic/preloader-overlay": ">=0.0.1",
     "markocupic/sidebar-navigation": ">=0.0.1",
