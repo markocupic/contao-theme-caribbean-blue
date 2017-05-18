@@ -22,7 +22,7 @@
   },
   "require": {
     "php": ">=5.3",
-    "contao/core": ">=3.2,<4",
+    "contao/core": ">=3.2",
     "twbs/bootstrap": "4.0.0-alpha.6",
     "dma/dma_simple_grid": "dev-develop",
     "markocupic/custom-section": ">=0.0.2",
