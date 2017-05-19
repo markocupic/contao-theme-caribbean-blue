@@ -30,6 +30,7 @@
     "markocupic/sidebar-navigation": ">=0.0.1",
     "markocupic/rotate_image": ">=1.0.6",
     "markocupic/service_link": ">=0.0.1",
+    "markocupic/dma_simple_grid": ">=1.0.0",
     "markocupic/bootstrap_responsive_youtube_embed": ">=1.0.0"
   },
   "replace": {
@@ -53,4 +54,9 @@
       "type": "vcs",
       "url": "https://github.com/markocupic/bootstrap"
     },
+    {
+      "type": "vcs",
+      "url": "https://github.com/markocupic/dma_simple_grid"
+    }
+    ]
 }
