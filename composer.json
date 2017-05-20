@@ -23,7 +23,6 @@
   "require": {
     "php": ">=5.3.2",
     "markocupic/rotate_image": "~1.0",
-    "dma/dma_simple_grid": "dev-develop",
     "markocupic/custom-section": ">=0.0.2",
     "markocupic/preloader-icon": ">=0.0.2",
     "markocupic/sidebar-navigation": ">=0.0.1",
@@ -48,13 +47,6 @@
     }
   },
   "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/markocupic/bootstrap"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/markocupic/dma_simple_grid"
-    }
+   
   ]
 }
