@@ -22,7 +22,7 @@
   },
   "require": {
     "php": ">=5.3.2",
-    "markocupic/rotate_image": "~1.0",
+    "markocupic/rotate_image": ">=1.0.10",
     "markocupic/custom-section": ">=0.0.2",
     "markocupic/preloader-overlay": ">=0.0.2",
     "markocupic/sidebar-navigation": ">=0.0.1",
