@@ -22,7 +22,7 @@
   },
   "require": {
     "php":">=5.3.2",
-    "markocupic/rotate_image": ">=1.0.9"
+    "markocupic/rotate_image": "~1.0"
   },
   "replace": {
   },
@@ -34,9 +34,9 @@
   "extra": {
     "contao": {
       "sources": {
-        "templates/theme-caribean-blue": "templates/theme-caribbean-blue",
-        "files/theme-caribean-blue": "files/theme-caribbean-blue",
-        "system/modules/theme-caribean-blue": "system/modules/theme-caribbean-blue"
+        "templates/theme-caribbean-blue": "templates/theme-caribbean-blue",
+        "files/theme-caribbean-blue": "files/theme-caribbean-blue",
+        "system/modules/theme-caribbean-blue": "system/modules/theme-caribbean-blue"
       }
     }
   },
