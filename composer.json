@@ -28,7 +28,8 @@
     "markocupic/sidebar-navigation": ">=0.0.1",
     "markocupic/service_link": ">=0.0.1",
     "markocupic/bootstrap_responsive_youtube_embed": ">=1.0.0",
-    "menatwork/contao-multicolumnwizard": "~3.3"
+    "menatwork/contao-multicolumnwizard": "~3.3",
+    "twbs/bootstrap": "4.0.0-alpha.6"
   },
   "replace": {
   },
