@@ -21,7 +21,8 @@
     "source": "https://github.com/markocupic/contao-theme-caribbean-blue"
   },
   "require": {
-    "php": ">=5.3.2",
+    "contao/core": ">=3.5",
+    "contao-community-alliance/composer-plugin": "*",
     "markocupic/rotate_image": ">=1.0.11",
     "markocupic/custom-section": ">=0.0.2",
     "markocupic/preloader-overlay": ">=0.0.2",
