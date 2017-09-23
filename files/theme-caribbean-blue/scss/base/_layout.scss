@@ -35,7 +35,7 @@
 }
 
 #container {
-  margin-top: 15px; // Because auf the fixed header, we need some margin
+  margin-top: 30px; // Because of the fixed header, we need some margin
   @include media-breakpoint-down(md) {
     margin-top: 100px;
   }
