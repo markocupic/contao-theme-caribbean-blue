@@ -31,7 +31,7 @@
     "markocupic/service_link": "^1.0",
     "markocupic/sidebar-navigation": "^1.0",
     "markocupic/preloader-overlay": ">=0.0.10",
-    "menatwork/contao-multicolumnwizard": "^3.3",
+    "menatwork/contao-multicolumnwizard": "^3.3"
   },
   "replace": {
   },
