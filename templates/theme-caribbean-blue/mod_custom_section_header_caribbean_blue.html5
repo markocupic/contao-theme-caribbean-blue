@@ -16,7 +16,7 @@
 
 
         <div class="col-md-3 d-none d-md-block header-search-form">
-            <form action="suche" method="get">
+            <form action="suche.html" method="get">
                 <div class="formbody">
                     <label for="ctrl_keywords_152" class="invisible">Suchbegriffe</label>
 

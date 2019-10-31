@@ -1,10 +1,17 @@
-.pagination{
-  margin:0;
-  padding:0;
-  li{
-    a,span{
+.pagination {
+  margin: 0;
+  padding: 0;
+  p {
+    margin-right: 10px;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    margin-right: 7px;
+    a, span, strong.active {
       border-radius: 0 !important;
-      i{
+      i {
         margin-right: 4px;
       }
     }
