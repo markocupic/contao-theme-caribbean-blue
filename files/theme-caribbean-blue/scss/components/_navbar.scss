@@ -1,14 +1,5 @@
 $navbar-height: 45px;
 
-body .navbar-backdrop {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: transparent;
-  z-index: $zindex-dropdown-backdrop;
-}
 
 #header {
   * {
@@ -39,10 +30,10 @@ body .navbar-backdrop {
         @include transition(background-color);
         z-index: $zindex-dropdown;
       }
-      > li > a, > li > span {
+      > li > a, > li > strong {
         line-height: $navbar-height;
       }
-      > li.submenu > a:after, li.submenu > span:after {
+      > li.submenu > a:after, li.submenu > strong:after {
         font-family: $icon-font-name;
         content: "\f078";
         padding-left: $spacer-x;
@@ -50,13 +41,13 @@ body .navbar-backdrop {
       }
       > li.trail, > li.active {
         background-color: $accent-color;
-        > span, > a, > a:after, > span:after {
+        > strong, > a, > a:after, > strong:after {
           color: #fff;
         }
       }
       > li.expanded, > li:hover {
         background-color: $accent-color;
-        > a, > a:after, > span {
+        > a, > a:after, > strong {
           color: #fff;
           text-decoration: none;
         }
@@ -79,7 +70,7 @@ body .navbar-backdrop {
     ul.level_2 {
       background-color: #eee;
       opacity: 1;
-      a, span {
+      a, strong {
         color: #000;
       }
       > li {

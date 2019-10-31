@@ -1,6 +1,6 @@
 // Fonts
 $font-family-sans-serif: 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
-$headings-font-family:'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 
 // Icon Fontname
 $icon-font-name: "FontAwesome";
@@ -14,12 +14,23 @@ $accent-color: firebrick;
 
 $btn-primary-bg: dodgerblue;
 
-
 $body-bg: #e9ebee;
 $body-color: #333;
 $body-bg: #ccc;
 //$link-color: #1570a6;
 
-
 $zindex-navbar-aside-backdrop: 1080;
 $zindex-navbar-aside: 1090;
+
+// Backward compatibility to bootstrap 3
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+$gray-dark: #292b2c;
+$gray: #464a4c;
+$gray-light: #636c72;
+$gray-lighter: #eceeef;
+$gray-lightest: #f7f7f9;
+$zindex-dropdown-backdrop: 990;
+$zindex-navbar: 1000;

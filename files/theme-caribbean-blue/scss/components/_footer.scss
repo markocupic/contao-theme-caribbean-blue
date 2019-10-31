@@ -43,7 +43,7 @@
     li {
       padding: 0;
       margin: 0;
-      span:before, a:before {
+      strong:before, a:before {
         @include icon-before(f105);
         font-family: FontAwesome;
       }

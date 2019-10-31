@@ -1,12 +1,15 @@
 // Set variables and overwrite bootstrap vars
 @import "variables";
 // EMBED BOOTSTRAP FRAMEWORK
-@import "/../../../composer/vendor/twbs/bootstrap/scss/bootstrap.scss";
+//@import "/../../../composer/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "/../../../assets/contao-component-bootstrap/bootstrap/scss/bootstrap.scss";
+
+
 // MIXINS
 @import "mixins/_mixins.scss";
 // GENERIC
 @import "generic/contao-reset";
-// BASE 
+// BASE
 @import "base/page";
 @import "base/layout";
 @import "base/type";
