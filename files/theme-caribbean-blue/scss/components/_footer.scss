@@ -45,7 +45,7 @@
       margin: 0;
       strong:before, a:before {
         @include icon-before(f105);
-        font-family: FontAwesome;
+        font-family: $icon-font-name;
       }
     }
   }
