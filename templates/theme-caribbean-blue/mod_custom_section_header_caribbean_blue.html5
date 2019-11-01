@@ -48,7 +48,11 @@
 
 
         <div class="header-button-container col-6 col-md-3 d-none d-md-block">
-            <a href="login" role="button" class="btn btn-primary"><?php if(FE_USER_LOGGED_IN): ?>Abmelden<?php else: ?>Anmelden<?php endif; ?></a>
+            <?php if(FE_USER_LOGGED_IN): ?>
+            <a href="{{link_url::anmelden}}" role="button" class="btn btn-danger">Abmelden</a>
+            <?php else: ?>
+            <a href="{{link_url::anmelden}}" role="button" class="btn btn-primary">{{link_name::anmelden}}</a>
+            <?php endif; ?>
         </div>
     </div>
 </div>

@@ -28,7 +28,6 @@
     "markocupic/contao-db-backup": "^1.2",
     "markocupic/custom-section": "^1.0",
     "markocupic/rotate_image": "^1.0",
-    "markocupic/service_link": "^1.0",
     "markocupic/sidebar-navigation": "^1.0",
     "markocupic/preloader-overlay": ">=0.0.10",
     "menatwork/contao-multicolumnwizard": "^3.3"
