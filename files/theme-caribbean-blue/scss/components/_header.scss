@@ -7,6 +7,10 @@ $header-height: 100px;
     border-bottom: 1px solid $gray-lighter;
     @include transition(all);
 
+    .header-navigation-toggle-container .fa-bars{
+      font-size: 2rem;
+    }
+
     .row {
       @include flex-vertical-align-middle();
       height: $header-height;
