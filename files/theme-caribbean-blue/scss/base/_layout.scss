@@ -12,6 +12,14 @@
       background: #fff;
     }
   }
+  .header-row-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-fixed;
+
+  }
 }
 
 // overwrite bootstrap .container padding
