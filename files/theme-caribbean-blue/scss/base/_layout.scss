@@ -1,53 +1,20 @@
 
 #header {
   .header-row-1 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: $zindex-fixed;
-    height: 100px;
-    background: darken(#f9f9f9,4);
+    background: darken(#f9f9f9, 4);
     @include media-breakpoint-up(lg) {
       background: #fff;
     }
   }
   .header-row-2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: $zindex-fixed;
-
-  }
-}
-
-// overwrite bootstrap .container padding
-.container {
-  padding-left: 0;
-  padding-right: 0;
-
-  @include media-breakpoint-up(md) {
-    //padding-left:$spacer;
-    //padding-right: $spacer;
+      background-color: $accent-color;
   }
 }
 
 #container {
-
   #main {
-
-    margin-bottom: $spacer-y;
-
+    padding-bottom: $spacer-y;
   }
-}
-
-#container {
-  margin-top: 30px; // Because of the fixed header, we need some margin
-  @include media-breakpoint-down(md) {
-    margin-top: 100px;
-  }
-
   .mod_article:not(.container-fluid) > .inside {
     @extend .container;
     padding: $spacer;
@@ -57,11 +24,8 @@
     padding: 0;
   }
 
-  .mod_article *[class*="ce_"], .mod_article *[class*="mod_"] {
-    //margin-bottom: 20px;
-  }
   .mod_article {
-    background-color: transparent;
+    background-color: #fff;
     margin-bottom: $spacer-y;
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
@@ -69,7 +33,7 @@
   }
 
   .mod_article {
-    >.inside {
+    > .inside {
       background-color: #fff;
       > *:first-child {
         margin-top: $spacer !important;
@@ -80,31 +44,27 @@
   .mod_article.article-dark {
     background-image: none;
     background-color: #222;
-  }
-  .mod_article.article-white {
-    background-image: none;
-    background-color: #fff;
-  }
-  .mod_article.article-gray {
-    background-image: none;
-    //background-color: $gray-lighter;
-    >.inside{
-      background-color: $gray-lighter;
+    > .inside {
+      background-color: #222;
     }
   }
   .mod_article.article-white {
     background-image: none;
     background-color: #fff;
+    > .inside {
+      background-color: #fff;
+    }
+  }
+  .mod_article.article-gray {
+    background-image: none;
+    background-color: $gray-lighter;
+    > .inside {
+      background-color: $gray-lighter;
+    }
   }
 
-  @include media-breakpoint-down(md) {
-    //width: 100%;
-  }
 }
 
-#footer {
-  //
-}
 
 
 

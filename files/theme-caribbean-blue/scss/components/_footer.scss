@@ -7,14 +7,15 @@
   }
 
   .footer-row-1 {
-    background-color: $gray-lightest;
-    color: #1a1a1a !important;
+    background-color: #36275d;
+    color: #fff !important;
     border-top: 1px solid darken($gray-lighter,4);
     a, &:hover {
-      color: $gray !important;
+      color: #fff !important;
     }
     .title {
       font-weight:bold;
+      color: #baa8de !important;
     }
     .row > div > div {
       padding: 0 8px;
@@ -22,13 +23,13 @@
   }
 
   .footer-row-2 {
-    background-color: #222;
-    color: #8b889b !important;
+    background-color: #181830;
+    color: #fff !important;
     a, &:hover {
-      color: #8b889b !important;
+      color: #fff !important;
     }
     .title {
-      color: #d7d5e5;
+      color: #fff;
     }
     .row > div > div {
       padding: 0 8px;

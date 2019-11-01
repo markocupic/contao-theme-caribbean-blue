@@ -1,64 +1,84 @@
-
 <div class="header-row-1">
-    <div class="row">
-        <div class="header-navigation-toggle-container d-lg-none col-2 col-md-1">
-            <!-- Navbar toggler mobile -->
-            <button class="navigation-toggler"><i class="fas fa-bars" title="Navigation öffnen"></i></button>
-            <!-- End Navbar toggler mobile -->
-        </div>
+    <div class="container">
 
-        <div class="mobile-title-heading col-10 col-md-5 col-lg-6">
-            <a href="" title="Startseite">
-                <img src="/files/page_media/logos-ettiswil/logos-schule/logo-red.png" class="logo-header wow fadeIn" data-wow-duration="1s" data-wow-delay="2s" alt="Logo">
-            </a>
-            <h1>Schule Ettiswil</h1>
-        </div>
-
-
-        <div class="col-md-3 d-none d-md-block header-search-form">
-            <form action="suche.html" method="get">
-                <div class="formbody">
-                    <label for="ctrl_keywords_152" class="invisible">Suchbegriffe</label>
-
-                    <div>
-                        <div class="input-group">
-                            <input type="text" name="keywords" id="ctrl_keywords_152" class="form-control text" placeholder="Suchbegriffe..." value="">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
-                                </span>
-                        </div>
-                    </div>
-
-                    <fieldset class="radio_container" style="display:none">
-                        <div class="radio">
-                            <legend class="invisible">Optionen</legend>
-                            <label for="matchAll_152">
-                                <input type="radio" name="query_type" id="matchAll_152" value="and" checked="checked">
-                                finde alle Wörter </label>
-                        </div>
-                        <div class="radio">
-                            <label for="matchAny_152">
-                                <input type="radio" name="query_type" id="matchAny_152" value="or">
-                                finde irgendein Wort </label>
-                        </div>
-                    </fieldset>
+        <div class="d-flex align-items-center pt-4 pb-4">
+            <div class="mobile-title-heading flex-grow-1">
+                <div class="mr-2">
+                    <a href="" title="Startseite">
+                        <img src="/files/page_media/logos-ettiswil/logos-schule/logo-red.png" class="logo-header" alt="Logo">
+                    </a>
                 </div>
-            </form>
-        </div>
+                <div class="mr-2">
+                    <h1>Schule Ettiswil</h1>
+                </div>
+            </div>
 
 
-        <div class="header-button-container col-6 col-md-3 d-none d-md-block">
+            <div class="d-none d-lg-block mr-4 header-search-form">
+                <form action="suche.html" method="get">
+                    <div class="formbody">
+                        <label for="ctrl_keywords_152" class="invisible">Suchbegriffe</label>
+
+                        <div>
+                            <div class="input-group">
+                                <input type="text" name="keywords" id="ctrl_keywords_152" class="form-control text" placeholder="Suchbegriffe..." value="">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <fieldset class="radio_container" style="display:none">
+                            <div class="radio">
+                                <legend class="invisible">Optionen</legend>
+                                <label for="matchAll_152">
+                                    <input type="radio" name="query_type" id="matchAll_152" value="and" checked="checked">
+                                    finde alle Wörter </label>
+                            </div>
+                            <div class="radio">
+                                <label for="matchAny_152">
+                                    <input type="radio" name="query_type" id="matchAny_152" value="or">finde irgendein Wort </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+
+
+
             <?php if(FE_USER_LOGGED_IN): ?>
-            <a href="{{link_url::anmelden}}" role="button" class="btn btn-danger">Abmelden</a>
-            <?php else: ?>
-            <a href="{{link_url::anmelden}}" role="button" class="btn btn-primary">{{link_name::anmelden}}</a>
+            <div class="header-avatar d-none d-lg-block mr-2">
+                {{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}
+            </div>
+            <div class="header-username d-none d-lg-block mr-2">
+                {{user::firstname}}
+            </div>
             <?php endif; ?>
+
+            <div class="header-button-container d-none d-lg-block">
+                <div>
+                    <?php if(FE_USER_LOGGED_IN): ?>
+                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-outline-danger">Abmelden</a>
+                    <?php else: ?>
+                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-outline-danger">{{link_name::anmelden}}</a>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="header-navigation-toggle-container d-block d-lg-none">
+                <!-- Navbar toggler mobile -->
+                <button class="navigation-toggler"><i class="fal fa-bars" title="Navigation öffnen"></i></button>
+                <!-- End Navbar toggler mobile -->
+            </div>
         </div>
     </div>
+
 </div>
 
 <!-- NAVBAR-START -->
-<div class="header-row-2 navbar-header">{{insert_module::179}}</div>
+<div class="header-row-2 navbar-header">
+    <div class="container">{{insert_module::179}}</div>
+</div>
 <!-- NAVBAR-END -->
 
 

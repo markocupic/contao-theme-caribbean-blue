@@ -9,9 +9,9 @@ $navbar-height: 45px;
     z-index: $zindex-navbar;
     height: $navbar-height;
     overflow-y: visible;
-    background-color: $gray-lightest;
+    background-color: $accent-color;
     color: #000;
-    margin-top: 100px;
+    //margin-top: 100px;
     ul, li {
       margin: 0;
       padding: 0;
@@ -32,21 +32,22 @@ $navbar-height: 45px;
       }
       > li > a, > li > strong {
         line-height: $navbar-height;
+        color: #fff;
       }
-      > li.submenu > a:after, li.submenu > strong:after {
+      > li.submenu > a:after, >li.submenu > strong:after {
         font-family: $icon-font-name;
         content: "\f078";
         padding-left: $spacer-x;
-        color: $link-color;
+        color: #fff;
       }
       > li.trail, > li.active {
-        background-color: $accent-color;
+        background-color: firebrick;
         > strong, > a, > a:after, > strong:after {
           color: #fff;
         }
       }
       > li.expanded, > li:hover {
-        background-color: $accent-color;
+        background-color: firebrick;
         > a, > a:after, > strong {
           color: #fff;
           text-decoration: none;
@@ -76,6 +77,23 @@ $navbar-height: 45px;
       > li {
         line-height: 3;
         border-top: 1px solid #fff;
+        padding: 0 $spacer-x;
+      }
+      > li:first-child {
+        border: 0;
+      }
+    }
+    ul.level_3 {
+      margin-top: -10px;
+      background-color: #eee;
+      opacity: 1;
+      a, strong {
+        color: #000;
+        font-size: 0.875rem;
+      }
+      > li {
+        line-height: 2;
+        //border-top: 1px solid #fff;
         padding: 0 $spacer-x;
       }
       > li:first-child {

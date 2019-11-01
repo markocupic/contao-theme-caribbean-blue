@@ -91,7 +91,7 @@ html, body {
     .navigation-toggler {
       position: absolute;
       right: $spacer;
-      .fa {
+      .svg-inline--fa {
         color: $gray-lightest;
         font-size: 2rem;
       }
@@ -172,57 +172,6 @@ body.sidebar-open {
     }
   }
 
-  // Iconfont for level_1
-  ul.level_1 {
-
-    > li:before {
-      font-family: $icon-font-name;
-      position: absolute;
-      top: 0;
-      left: 16px;
-      color: $nav-font-color;
-      width: 2.5rem;
-    }
-    > li.picture-o:before {
-      content: "\f03e";
-    }
-    > li.newspaper-o:before {
-      content: "\f1ea";
-    }
-    > li.users:before {
-      content: "\f0c0";
-    }
-    > li.bolt:before {
-      content: "\f0e7";
-    }
-    > li.wrench:before {
-      content: "\f0ad";
-    }
-    > li.newspaper-o:before {
-      content: "\f1ea ";
-    }
-    > li.cogs:before {
-      content: "\f085";
-    }
-    > li.flask:before {
-      content: "\f0c3";
-    }
-    > li.file-o:before {
-      content: "\f016";
-    }
-    > li.leanpub:before {
-      content: "\f212";
-    }
-    > li.handshake-o:before {
-      content: "\f2b5";
-    }
-    > li.school:before {
-      content: "\f19d";
-    }
-    > li.home:before {
-      content: "\f015";
-    }
-  }
 
   // Borders&backgrounds
   ul.level_1 {

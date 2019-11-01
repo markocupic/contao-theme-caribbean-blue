@@ -2,7 +2,7 @@
   * {
     @include ease-in-out;
   }
-  .fa {
+  .svg-inline--fa {
     padding: 27px 25px;
     width: 100px;
     height: 100px;
@@ -36,6 +36,10 @@
     font-size: 1.25rem !important;
     color: #000;
     text-align: center;
+  }
+
+  .service-link-text {
+    color: #000;
   }
 
   .service-link-button {
