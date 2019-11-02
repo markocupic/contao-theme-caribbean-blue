@@ -27,7 +27,7 @@ input.text, input.captcha, textarea, select {
     //max-width: 800px;
     background: #fff;
     //border: 1px solid $gray-lighter;
-    padding: $spacer;
+    padding: $spacer 0;
     position:relative;
     & > *{
       box-sizing: border-box;
