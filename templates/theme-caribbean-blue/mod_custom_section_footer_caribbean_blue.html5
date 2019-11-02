@@ -15,7 +15,7 @@
             <div class="col-md-4">
                 <div>
                     <h5 class="title">Schulleitung:</h5>
-                    {{email::schulleitung.ettiswil@bluewin.ch}}<br>
+                    {{link::kontakt-schulleitung}}<br>
                     041 984 13 51
                 </div>
             </div>
@@ -33,11 +33,11 @@
 
 <div class="copyright-box footer-row-2">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
+        <div class="d-flex">
+            <div class="flex-grow-1">
                 <div>Copyright ©  <?= \Date::parse('Y') ?> Konzeption & Design Marko Cupic</div>
             </div>
-            <div class="col-lg-4">
+            <div class="">
                 <div>{{link::impressum}}</div>
             </div>
         </div>

@@ -48,7 +48,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
             var outsideClicker = $('#header .mod_navigation');
 
             if (!(clickedEl.is(outsideClicker) || outsideClicker.has(clickedEl).length > 0)) {
-                console.log('I clicked outside the target!');
+                //console.log('I clicked outside the target!');
                 //e.preventDefault();
                 dispandNavigation();
             } else {
