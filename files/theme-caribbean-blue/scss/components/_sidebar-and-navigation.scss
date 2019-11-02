@@ -1,11 +1,12 @@
-$nav-bg-color: #2C3E50;
-$nav-bg-hover-color: #5fcf80;
-//$nav-bg-hover-color: $accent-color;
+$nav-bg-color: $accent-color;
+$nav-bg-hover-color: lighten($accent-color, 10%);
+$nav-border-color: lighten($nav-bg-color, 20%);
+$nav-font-color: #fff;
+$level_1-offset: 1rem;
+$level_2-offset: 2.5rem;
+$level_3-offset: 3rem;
+$level_4-offset: 3.5rem;
 
-$nav-font-color: #ddd;
-$nav-bg-color: #333;
-//$nav-font-color: #333;
-/* Dropdown - main navigation header */
 
 html, body {
   height: 100%;
@@ -33,6 +34,13 @@ html, body {
   }
 }
 
+#sidebar .sidebar-button-container{
+  .svg-inline--fa {
+    color: $nav-font-color !important;
+    font-size: 2rem;
+  }
+}
+
 #sidebarOverlay {
   display: none;
   opacity: 0;
@@ -41,7 +49,6 @@ html, body {
   right: 0;
   top: 0;
   height: 100%;
-  background-color: #000;
   z-index: $zindex-navbar-aside-backdrop;
   @include transition(opacity);
 }
@@ -71,30 +78,24 @@ html, body {
   @include transition(left, ease-in-out, 0.7s);
 
   .sidebar-top-container {
-    @include flex-vertical-align-middle();
     background: $nav-bg-color;
-    z-index: 99;
-    height: 78px;
-    overflow: hidden;
-    border-bottom: 1px ridge $gray-light;
-    @include transition(height);
-    img {
-      margin: 0 $spacer;
-      width: auto;
-      max-width: 120px;
-      height: 66px;
-    }
+    border-bottom: 1px ridge $nav-border-color;
     .sidebar-title{
-      padding-left: $spacer-x;
-      color: $gray-light;
+      color: lighten($nav-bg-color, 10%);
     }
-    .navigation-toggler {
-      position: absolute;
-      right: $spacer;
+    .sidebar-navigation-toggler {
       .svg-inline--fa {
         color: $gray-lightest;
         font-size: 2rem;
       }
+    }
+  }
+
+  .sidebar-search-form {
+    .btn {
+      color: #fff;
+      border-color: #fff;
+      border-left:0;
     }
   }
 }
@@ -132,9 +133,6 @@ body.sidebar-open {
 //https://jsfiddle.net/markocupic/br520419/
 
 .sidebar-navigation {
-  padding: $spacer 0;
-  margin: 40px 0 0 0;
-  text-align: left;
 
   * {
     text-decoration: none !important;
@@ -176,7 +174,7 @@ body.sidebar-open {
   // Borders&backgrounds
   ul.level_1 {
     > li {
-      border-bottom: 1px solid #34495D;
+      border-bottom: 1px solid $nav-border-color;
       &:hover{
         background-color: $nav-bg-hover-color;
          > a, > strong{
@@ -197,7 +195,7 @@ body.sidebar-open {
 
     li.submenu {
       > .toggle-submenu {
-        font-size: 16px;
+        font-size: 1.5rem;
         vertical-align: middle;
         margin-right: 10px;
         width: 30px;
@@ -205,14 +203,13 @@ body.sidebar-open {
         position: absolute;
         top: 0;
         cursor: pointer;
-        // background-color: #444;
       }
 
       > .toggle-submenu:before {
         font-family: $icon-font-name;
         color: $nav-font-color;
         content: "\f067";
-        font-size: 12px;
+        font-size: 1.5rem;
         font-style: normal;
       }
 
@@ -225,32 +222,29 @@ body.sidebar-open {
         }
         > .toggle-submenu:before {
           content: "\f068";
-          color: $red;
+          color: $nav-font-color;
         }
       }
     }
     > li {
       > .toggle-submenu:before, > .toggle-submenu:hover:before {
-        color: #fff !important;
+        color: $nav-font-color !important;
       }
     }
   }
-  $level_1-offset: 48px;
-  $level_2-offset: 54px;
-  $level_3-offset: 60px;
-  $level_4-offset: 66px;
+
 
   ul.level_1 {
     > li {
       padding: 0;
-      line-height: 60px;
+      line-height: 3.5rem;
       background-color: transparent;
       > .toggle-submenu {
         right: 0;
       }
       > a, > strong {
         padding-left: $level_1-offset;
-        font-size: 16px;
+        font-size: 1.25rem;
         color: #fff;
       }
       strong.active {
@@ -262,14 +256,14 @@ body.sidebar-open {
     background-color: #222;
     > li {
       padding: 0;
-      line-height: 34px;
+      line-height: 3rem;
       background-color: transparent;
       > .toggle-submenu {
         right: 0;
       }
       > a, strong {
         padding-left: $level_2-offset;
-        font-size: 13px;
+        font-size: 1rem;
         color: $nav-font-color;
       }
       strong.active {
@@ -280,14 +274,14 @@ body.sidebar-open {
   ul.level_3 {
     > li {
       padding: 0;
-      line-height: 30px;
+      line-height: 2.5rem;
       background-color: transparent;
       > .toggle-submenu {
         right: 0;
       }
       > a, strong {
         padding-left: $level_3-offset;
-        font-size: 13px;
+        font-size: .875rem;
         color: $nav-font-color;
       }
       strong.active {
@@ -298,7 +292,7 @@ body.sidebar-open {
   ul.level_4 {
     > li {
       padding: 0;
-      line-height: 28px;
+      line-height: 2rem;
       background-color: transparent;
       > .toggle-submenu {
         right: 0;
@@ -306,7 +300,7 @@ body.sidebar-open {
 
       > a, strong {
         padding-left: $level_4-offset;
-        font-size: 13px;
+        font-size: .75rem;
         color: $nav-font-color;
       }
       strong.active {

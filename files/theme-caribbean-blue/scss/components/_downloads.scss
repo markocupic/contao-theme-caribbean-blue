@@ -1,10 +1,17 @@
 // Email mailto link
-a.email{
+.ce_hyperlink, .ce_download {
+  margin: .5rem 0;
+}
+
+.ce_downloads .download-element {
+  margin: .5rem 0;
+}
+
+a.email {
   &:before {
     @include icon-before(f0e0);
   }
 }
-
 
 .ce_downloads > ul, .ce_hyperlink > a {
   position: relative;
@@ -13,8 +20,11 @@ a.email{
 }
 
 // Replace contao mime icons with font awesome icons
-.ce_downloads {
+.ce_downloads, .ce_download {
 
+  .size {
+    display: none;
+  }
   li {
     position: relative;
     line-height: 2.25;
@@ -23,18 +33,25 @@ a.email{
     display: none;
   }
 
-  a[href*="."]:before {
-    @include icon-before(f0c1); // fa-file-o     // fa-file-word
+  [class*="ext-"] a:before {
+    @include icon-before(f15b); // fa-file-o     // fa-file-word
   }
-  a[href$=".docx"]:before {
+  .ext-docx a:before {
     @include icon-before(f1c2); // fa-file-word
   }
-  a[href$=".doc"]:before {
+  .ext-doc a:before {
     @include icon-before(f1c2); // fa-file-word
   }
-  a[href$=".pdf"]:before {
+  .ext-pdf a:before {
     @include icon-before(f1c1); // fa-file-pdf
   }
+  .ext-xlsx a:before {
+    @include icon-before(f1c3); // fa-file-word
+  }
+  .ext-xls a:before {
+    @include icon-before(f1c3); // fa-file-word
+  }
+
 }
 
 .ce_hyperlink {

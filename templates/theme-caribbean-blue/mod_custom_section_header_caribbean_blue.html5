@@ -19,33 +19,7 @@
 
 
             <div class="d-none d-lg-block mr-4 header-search-form">
-                <form action="suche.html" method="get">
-                    <div class="formbody">
-                        <label for="ctrl_keywords_152" class="invisible">Suchbegriffe</label>
-
-                        <div>
-                            <div class="input-group">
-                                <input type="text" name="keywords" id="ctrl_keywords_152" class="form-control text" placeholder="Suchbegriffe..." value="">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
-                                </span>
-                            </div>
-                        </div>
-
-                        <fieldset class="radio_container" style="display:none">
-                            <div class="radio">
-                                <legend class="invisible">Optionen</legend>
-                                <label for="matchAll_152">
-                                    <input type="radio" name="query_type" id="matchAll_152" value="and" checked="checked">
-                                    finde alle Wörter </label>
-                            </div>
-                            <div class="radio">
-                                <label for="matchAny_152">
-                                    <input type="radio" name="query_type" id="matchAny_152" value="or">finde irgendein Wort </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                </form>
+                {{insert_module::185}}
             </div>
 
 
