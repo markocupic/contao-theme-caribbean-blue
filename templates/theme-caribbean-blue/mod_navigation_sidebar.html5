@@ -1,20 +1,21 @@
-<?php // Own Stylesheet ?>
-<?php // $GLOBALS['TL_CSS'][] = 'system/modules/sidebar_navigation/assets/css/sidebar_navigation.css|static'; ?>
 <?php $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/sidebar_navigation/assets/js/sidebar_navigation.js|static'; ?>
 
 <!-- indexer::stop -->
 <div class="sidebar-top-container d-flex align-items-center pl-3 pr-3 pt-4 pb-4">
-    <!--<img src="/files/theme-caribbean-blue/images/logos/logo.png" alt="Logo">-->
+
+    <!-- Titel -->
     <h2 class="sidebar-title text-uppercase flex-grow-1 m-0 mr-3">Navigation</h2>
+
+    <!-- Avatar -->
     <?php if(FE_USER_LOGGED_IN): ?>
     <div class="sidebar-avatar mr-3">
-        {{image::files/theme-caribbean-blue/images/avatar.png?width=35&height=35&class=rounded-circle}}
+        <a href="{{link_url::anmelden}}" title="{{user::firstname}} {{user::lastname}}">
+            {{image::files/theme-caribbean-blue/images/avatar.png?width=35&height=35&class=rounded-circle}}
+        </a>
     </div>
-    <!--<div class="header-username d-none d-lg-block mr-2">
-        {{user::firstname}}
-    </div>-->
     <?php endif; ?>
 
+    <!-- Login/Logout buttons -->
     <div class="sidebar-button-container mr-3">
         <div>
             <?php if(FE_USER_LOGGED_IN): ?>
@@ -25,42 +26,45 @@
         </div>
     </div>
 
-
-    <div class="sidebar-navigation-toggler navigation-toggler" title="Navigation schliessen" role="button">
+    <!-- toggler -->
+    <div class="sidebar-navigation-toggler navigation-toggler cursor-pointer" title="Navigation schliessen" role="button">
         <span class="fas fa-times" aria-hidden="true"></span>
         <span class="sr-only">Navigation</span>
     </div>
 </div>
 
+
+<!-- Navigation -->
 <nav class="<?= $this->class ?> sidebar-navigation block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-        <?php if ($this->headline): ?>
+<?php if ($this->headline): ?>
 <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-        <?php endif; ?>
+<?php endif; ?>
 
 <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
-        <?= $this->items ?>
+<?= $this->items ?>
 <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
-        </nav>
+</nav>
 
+<!-- Suchformular -->
 <div class="sidebar-search-form mt-4 ml-3 mr-3">{{insert_module::185}}</div>
 
-
+<!-- Toggler script -->
 <script>
-jQuery(document).ready(function () {
-    $('<div id="sidebarOverlay"></div>').prependTo("body");
-    $("#sidebar").detach().prependTo("body");
-    $('.navigation-toggler, #sidebarOverlay').click(function () {
-        $('body').toggleClass('sidebar-open');
+    jQuery(document).ready(function () {
+        $('<div id="sidebarOverlay"></div>').prependTo("body");
+        $("#sidebar").detach().prependTo("body");
+        $('.navigation-toggler, #sidebarOverlay').click(function () {
+            $('body').toggleClass('sidebar-open');
 
-        if ($('body').hasClass('sidebar-open')) {
-            $('#sidebar').css('visibility', 'visible');
-        }
-        else {
-            window.setTimeout(function () {
-                $('#sidebar').css('visibility', 'hidden');
-            }, 600);
-        }
+            if ($('body').hasClass('sidebar-open')) {
+                $('#sidebar').css('visibility', 'visible');
+            }
+            else {
+                window.setTimeout(function () {
+                    $('#sidebar').css('visibility', 'hidden');
+                }, 600);
+            }
+        });
     });
-});
 </script>
 <!-- indexer::continue -->
