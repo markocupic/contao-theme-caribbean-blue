@@ -13,7 +13,6 @@ a.email{
 }
 
 // Replace contao mime icons with font awesome icons
-
 .ce_downloads {
 
   li {
@@ -23,17 +22,7 @@ a.email{
   .mime_icon {
     display: none;
   }
-  /*
-  ul::after {
-    font-family: $icon-font-name;
-    font-size: 40px;
-    position: absolute;
-    top: 0;
-    right: 10px;
-    color: #ddd;
-    content: "\f019";
-  }
-  */
+
   a[href*="."]:before {
     @include icon-before(f0c1); // fa-file-o     // fa-file-word
   }

@@ -3,7 +3,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
 
-
 // Set headline
 $text-elements: (
         h1: (
@@ -93,8 +92,6 @@ $text-elements: (
         ),
 );
 
-
-
 // Scalling down headline font-size for mobile devices
 @each $key, $map in $text-elements {
   #{$key} {
@@ -140,24 +137,25 @@ $text-elements: (
 }
 
 // Underline
-#main h1.ce_headline {
-  text-align: left;
-  color: #000;
-  font-weight: 500;
-
-  &:after {
-    content: "";
-    width: 100px;
-    background: $accent-color;
-
-    margin: 0 0 !important;
-    font-weight: 300;
-    margin-bottom: 1em;
-    height: .125em;
-    display: block;
+#main {
+  h1.ce_headline, .ce_text h1 {
     text-align: left;
-  }
+    color: #000;
+    font-weight: 500;
 
+    &:after {
+      content: "";
+      width: 100px;
+      background: $accent-color;
+
+      margin: 0 0 !important;
+      font-weight: 300;
+      margin-bottom: 1em;
+      height: .125em;
+      display: block;
+      text-align: left;
+    }
+  }
 }
 
 .mobile-title-heading {
@@ -167,11 +165,10 @@ $text-elements: (
     font-weight: 500;
     color: #000;
     margin: 0;
-    padding:0;
+    padding: 0;
     line-height: 1;
   }
 }
-
 
 // Lists
 ul {
@@ -203,6 +200,12 @@ ul {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
+}
+
+.ce_text ul {
+  list-style-type: disc;
+  padding-left: 40px;
+
 }
 
 
