@@ -70,9 +70,9 @@ html, body {
   overflow-x: hidden;
   z-index: $zindex-navbar-aside;
   position: fixed;
-  left: -300px;
+  left: -500px;
   top: 0;
-  width: 300px;
+  width: 500px;
   height: 100%;
   background-color: $nav-bg-color;
   @include transition(left, ease-in-out, 0.7s);
