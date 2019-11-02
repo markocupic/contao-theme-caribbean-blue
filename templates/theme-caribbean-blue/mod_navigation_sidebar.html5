@@ -46,7 +46,7 @@
 </nav>
 
 <!-- Suchformular -->
-<div class="sidebar-search-form mt-5 mb-3 ml-3 mr-3">{{insert_module::185}}</div>
+<div class="sidebar-search-form mt-5 mb-5 ml-3 mr-3">{{insert_module::185}}</div>
 
 <!-- Toggler script -->
 <script>
