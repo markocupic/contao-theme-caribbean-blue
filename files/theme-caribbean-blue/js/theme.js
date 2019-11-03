@@ -8,15 +8,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
     });
 })(jQuery);
 
-
-/** Sticky footer **/
-(function ($) {
-    $().ready(function () {
-        $($("#footer").detach()).appendTo("body");
-    });
-})(jQuery);
-
-
+// Header navigation
 (function ($) {
     $().ready(function () {
         $('#header .mod_navigation ul.level_1 > li > a, #header .mod_navigation ul.level_1 > li>a:after, #header .mod_navigation ul.level_1 > li > strong').click(function (e) {
@@ -30,7 +22,6 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
             $(this).closest('ul').find('.expanded').removeClass('expanded');
             $(this).closest('li').addClass('expanded');
 
-
             $(window).resize(function (e) {
                 e.preventDefault();
                 dispandNavigation();
@@ -40,7 +31,6 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
                 dispandNavigation();
             });
 
-
         });
         // Close Navigation when clicking outside
         $(document).on('click', function (e) {
@@ -49,7 +39,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
 
             if (!(clickedEl.is(outsideClicker) || outsideClicker.has(clickedEl).length > 0)) {
                 //console.log('I clicked outside the target!');
-                //e.preventDefault();
+                e.preventDefault();
                 dispandNavigation();
             } else {
                 //console.log('all good'); // if you don't have an else just get rid of this
@@ -87,26 +77,8 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
 })(jQuery);
 
 
-/** Mediabox **/
-(function ($) {
-    $().ready(function () {
-
-        /** Add caption to the title attribute when using colorbox **/
-        $('.ce_gallery a[data-lightbox]').map(function () {
-            var thumb = $(this);
-
-            $(this).siblings('figcaption').map(function () {
-                if ($(this).text() != '') {
-                    thumb.attr('title', $(this).text());
-                }
-            });
-        });
-
-    });
-})(jQuery);
-
-
 /** shorten download links **/
+/**
 (function ($) {
     $().ready(function () {
         if (window.screen.width < 800) {
@@ -131,4 +103,4 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
         });
     });
 })(jQuery);
-
+**/

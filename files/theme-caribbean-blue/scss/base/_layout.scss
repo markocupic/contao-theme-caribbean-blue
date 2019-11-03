@@ -1,9 +1,9 @@
 
 #header {
   .header-row-1 {
-    background: darken(#f9f9f9, 4);
+    background: #607d8b29;
     @include media-breakpoint-up(lg) {
-      background: #fff;
+      background: #607d8b29;
     }
   }
   .header-row-2 {

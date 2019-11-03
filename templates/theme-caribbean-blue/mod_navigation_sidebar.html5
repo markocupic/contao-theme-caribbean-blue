@@ -52,7 +52,6 @@
 <script>
     jQuery(document).ready(function () {
         $('<div id="sidebarOverlay"></div>').prependTo("body");
-        $("#sidebar").detach().prependTo("body");
         $('.navigation-toggler, #sidebarOverlay').click(function () {
             $('body').toggleClass('sidebar-open');
 
