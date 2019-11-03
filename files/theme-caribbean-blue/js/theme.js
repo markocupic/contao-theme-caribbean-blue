@@ -39,7 +39,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
 
             if (!(clickedEl.is(outsideClicker) || outsideClicker.has(clickedEl).length > 0)) {
                 //console.log('I clicked outside the target!');
-                e.preventDefault();
+                //e.preventDefault();
                 dispandNavigation();
             } else {
                 //console.log('all good'); // if you don't have an else just get rid of this
@@ -78,7 +78,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
 
 
 /** shorten download links **/
-/**
+
 (function ($) {
     $().ready(function () {
         if (window.screen.width < 800) {
@@ -103,4 +103,4 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
         });
     });
 })(jQuery);
-**/
+

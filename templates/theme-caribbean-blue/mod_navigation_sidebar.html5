@@ -55,10 +55,12 @@
         $('.navigation-toggler, #sidebarOverlay').click(function () {
             $('body').toggleClass('sidebar-open');
 
-            if ($('body').hasClass('sidebar-open')) {
+            if ($('body').hasClass('sidebar-open'))
+            {
                 $('#sidebar').css('visibility', 'visible');
             }
-            else {
+            else
+            {
                 window.setTimeout(function () {
                     $('#sidebar').css('visibility', 'hidden');
                 }, 600);

@@ -124,7 +124,7 @@ body.sidebar-open {
     #sidebar {
       left: 0;
     }
-    #wrapper, #footer, #stickyFooter {
+    #wrapper, #footer {
       display: none;
     }
   }
@@ -186,7 +186,7 @@ body.sidebar-open {
 
   // Expand Icon for items with submenus
   ul.level_1 {
-    > li.expanded{
+    > li.opened{
       background-color: $nav-bg-hover-color;
       &:before,  > *,> *:before{
         color: #fff !important;
@@ -216,7 +216,7 @@ body.sidebar-open {
       > .toggle-submenu:hover:before {
         color: $red;
       }
-      &.expanded {
+      &.opened {
         > .toggle-submenu {
           background-color: transparent;
         }
