@@ -1,19 +1,21 @@
 <div class="header-row-1">
     <div class="container">
 
-        <div class="d-flex align-items-center pt-3 pt-xl-4 pb-3 pb-xl-4">
+        <div class="d-flex align-items-end pt-3 pt-xl-3 pb-3 pb-xl-3">
 
             <div class="header-logo">
                 <div class="mr-4">
                     <a href="" title="Startseite">
-                        {{image::files/theme-caribbean-blue/images/logos/Logo.jpg?height=80px&width=auto&class=logo-header&alt=Logo}}
+                        <div class="d-none d-block-xl">{{image::files/theme-caribbean-blue/images/logos/Logo.jpg?height=100px&width=auto&class=logo-header&alt=Logo}}</div>
+                        <div class="d-block d-none-xl">{{image::files/theme-caribbean-blue/images/logos/Logo.jpg?height=80px&width=auto&class=logo-header&alt=Logo}}</div>
+
                     </a>
                 </div>
             </div>
 
             <div class="header-title flex-grow-1">
                 <div class="mr-2">
-                    <h1>Schule Ettiswil</h1>
+                    <h1 class="m-0">Schule Ettiswil</h1>
                 </div>
             </div>
 

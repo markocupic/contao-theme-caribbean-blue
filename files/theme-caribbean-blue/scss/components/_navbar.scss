@@ -41,13 +41,13 @@ $navbar-height: 45px;
         color: #fff;
       }
       > li.trail, > li.active {
-        background-color: firebrick;
+        background-color: #671010;
         > strong, > a, > a:after, > strong:after {
           color: #fff;
         }
       }
       > li.expanded, > li:hover {
-        background-color: firebrick;
+        background-color: #671010;
         > a, > a:after, > strong {
           color: #fff;
           text-decoration: none;

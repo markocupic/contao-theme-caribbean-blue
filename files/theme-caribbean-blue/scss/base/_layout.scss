@@ -1,16 +1,3 @@
-
-#header {
-  .header-row-1 {
-    background: #607d8b29;
-    @include media-breakpoint-up(lg) {
-      background: #607d8b29;
-    }
-  }
-  .header-row-2 {
-    background-color: $accent-color;
-  }
-}
-
 #container {
   #main {
     padding-bottom: $spacer-y;
@@ -42,26 +29,30 @@
   }
 
   .mod_article.article-dark {
-    background-image: none;
     background-color: #222;
     > .inside {
-      background-color: #222;
+      background-color: transparent;
     }
   }
 
   .mod_article.article-white {
-    background-image: none;
     background-color: #fff;
     > .inside {
       background-color: #fff;
     }
   }
 
+  .mod_article.article-accent-2 {
+    background-color: $accent-color-2;
+    > .inside {
+      background-color: transparent;
+    }
+  }
+
   .mod_article.article-gray {
-    background-image: none;
     background-color: $gray-lighter;
     > .inside {
-      background-color: $gray-lighter;
+      background-color: transparent;
     }
   }
 
