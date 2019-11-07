@@ -1,7 +1,7 @@
 <div class="header-row-1">
     <div class="container">
 
-        <div class="d-flex align-items-end pt-3 pt-xl-3 pb-3 pb-xl-3">
+        <div class="d-flex align-items-end pt-3 pt-lg-4 pt-xl-5 pb-3 pb-lg-4 pb-xl-5">
 
             <div class="header-logo">
                 <div class="mr-4">
@@ -47,7 +47,7 @@
 
             <div class="header-navigation-toggle-container d-block d-lg-none">
                 <!-- Navbar toggler mobile -->
-                <button class="navigation-toggler"><i class="fal fa-bars" title="Navigation öffnen"></i></button>
+                <button class="navigation-toggler"><i class="far fa-bars" title="Navigation öffnen"></i></button>
                 <!-- End Navbar toggler mobile -->
             </div>
         </div>
