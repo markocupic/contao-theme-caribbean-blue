@@ -18,8 +18,13 @@ $navbar-height: 45px;
       line-height: 1;
     }
     ul.level_1 {
-      >li>a,>li>strong{
-        font-weight: bold;
+      > li > a, > li > strong {
+        line-height: $navbar-height;
+        color: #fff;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.125rem !important;
+        }
+        font-weight: 500;
       }
       display: flex;
       ul {
@@ -33,10 +38,7 @@ $navbar-height: 45px;
         @include transition(background-color);
         z-index: $zindex-dropdown;
       }
-      > li > a, > li > strong {
-        line-height: $navbar-height;
-        color: #fff;
-      }
+
       > li.submenu > a:after, >li.submenu > strong:after {
         font-family: $icon-font-name;
         content: "\f078";

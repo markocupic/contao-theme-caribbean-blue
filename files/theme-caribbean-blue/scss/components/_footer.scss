@@ -5,15 +5,15 @@
   }
 
   .footer-row-1 {
-    background-color: #36275d;
+    background-color: #252f33;
     color: #fff !important;
-    border-top: 1px solid darken($gray-lighter,4);
+    border-top: 0;
     a, &:hover {
       color: #fff !important;
     }
     .title {
-      font-weight:bold;
-      color: #baa8de !important;
+      font-weight: bold;
+      color: #FFEB3B !important;
     }
     .row > div > div {
       padding: 0 8px;
@@ -21,7 +21,7 @@
   }
 
   .footer-row-2 {
-    background-color: #181830;
+    background-color: #262627;
     color: #fff !important;
     a, &:hover {
       color: #fff !important;

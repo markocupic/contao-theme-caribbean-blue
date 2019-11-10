@@ -10,8 +10,8 @@ $text-elements: (
                         xs: 1.65rem,
                         sm: 1.65rem,
                         md: 1.75rem,
-                        lg: 2.25rem,
-                        xl: 2.5rem
+                        lg: 2.5rem,
+                        xl: 3rem
                 ),
                 line-height: 1.55,
                 margin-top: 2rem,
@@ -23,7 +23,7 @@ $text-elements: (
                         sm: 1.625rem,
                         md: 1.750rem,
                         lg: 1.750rem,
-                        xl: 1.750rem
+                        xl: 2rem
                 ),
                 line-height: 1.5,
                 margin-top: 2rem,
@@ -87,6 +87,19 @@ $text-elements: (
                 ),
                 line-height: 1.5,
                 margin-top: 2rem,
+                margin-bottom: 0.5rem,
+                font-weight: bold
+        ),
+        label: (
+                sizes: (
+                        xs: 1.125rem,
+                        sm: 1.25rem,
+                        md: 1.250rem,
+                        lg: 1.250rem,
+                        xl: 1.250rem
+                ),
+                line-height: 1.5,
+                margin-top: 0,
                 margin-bottom: 0.5rem,
                 font-weight: bold
         ),

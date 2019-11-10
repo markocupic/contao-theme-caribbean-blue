@@ -22,7 +22,7 @@ figure{
 }
 
 .ce_gallery {
-  ul{
+  ul[class*="cols_"]{
     @extend .row;
     li {
       @extend .col-12;

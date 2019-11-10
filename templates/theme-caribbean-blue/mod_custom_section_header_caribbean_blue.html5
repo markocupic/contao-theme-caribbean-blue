@@ -1,7 +1,7 @@
 <div class="header-row-1">
     <div class="container">
 
-        <div class="d-flex align-items-end pt-3 pt-lg-4 pt-xl-5 pb-3 pb-lg-4 pb-xl-5">
+        <div class="d-flex align-items-end pt-3 pt-md-4 pt-xl-5 pb-3 pb-md-4 pb-xl-5">
 
             <div class="header-logo">
                 <div class="mr-4">
@@ -31,7 +31,7 @@
                 {{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}
             </div>
             <div class="header-username d-none d-lg-block mr-2">
-                {{user::firstname}}
+                <span class="btn btn-dark">{{user::firstname}}</span>
             </div>
             <?php endif; ?>
 
