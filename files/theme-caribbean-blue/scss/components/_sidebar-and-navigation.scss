@@ -1,7 +1,7 @@
-$nav-bg-color: $accent-color;
-$nav-bg-hover-color: lighten($accent-color, 10%);
+$nav-bg-color: $accent-color-2;
+$nav-bg-hover-color: #ff9800;
 $nav-border-color: lighten($nav-bg-color, 20%);
-$nav-font-color: #fff;
+$nav-font-color: #000;
 $level_1-offset: 1rem;
 $level_2-offset: 2.5rem;
 $level_3-offset: 3rem;
@@ -31,6 +31,14 @@ html, body {
   .navigation-toggler {
     margin-left: $spacer;
     color: $blue;
+  }
+}
+
+#sidebar .mod_search{
+  .btn{
+    background-color:#ff9800 !important;
+    color: #000;
+    border: none !important;
   }
 }
 
@@ -81,7 +89,7 @@ html, body {
     background: $nav-bg-color;
     border-bottom: 1px ridge $nav-border-color;
     .sidebar-title{
-      color: lighten($nav-bg-color, 10%);
+      color: lighten($nav-bg-color, 20%);
     }
     .sidebar-navigation-toggler {
       .svg-inline--fa {
@@ -264,7 +272,7 @@ body.sidebar-open {
       > a, strong {
         padding-left: $level_2-offset;
         font-size: 1rem;
-        color: $nav-font-color;
+        color: #999 !important;
       }
       strong.active {
         color: $red !important;
@@ -282,7 +290,7 @@ body.sidebar-open {
       > a, strong {
         padding-left: $level_3-offset;
         font-size: .875rem;
-        color: $nav-font-color;
+        color: #999 !important;
       }
       strong.active {
         color: $red !important;
@@ -301,7 +309,7 @@ body.sidebar-open {
       > a, strong {
         padding-left: $level_4-offset;
         font-size: .75rem;
-        color: $nav-font-color;
+        color: #999 !important;
       }
       strong.active {
         color: $red !important;
