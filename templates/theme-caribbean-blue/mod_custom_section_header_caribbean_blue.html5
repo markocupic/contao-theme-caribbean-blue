@@ -28,10 +28,10 @@
 
             <?php if(FE_USER_LOGGED_IN): ?>
             <div class="header-avatar d-none d-lg-block mr-2">
-                {{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}
+                {{link_open::benutzerprofil}}{{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}{{link_close}}
             </div>
             <div class="header-username d-none d-lg-block mr-2">
-                <span class="btn btn-dark">{{user::firstname}}</span>
+                <span class="btn btn-dark">{{link_open::benutzerprofil}}<span style="color: #fff;text-decoration: none;">{{user::firstname|strtoupper}}</span>{{link_close}}</span>
             </div>
             <?php endif; ?>
 
