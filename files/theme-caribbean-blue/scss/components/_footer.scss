@@ -40,10 +40,7 @@
     li {
       padding: 0;
       margin: 0;
-      strong:before, a:before {
-        @include icon-before(f105);
-        font-family: $icon-font-name;
-      }
+      @include icon-before("\f105");
     }
   }
 }

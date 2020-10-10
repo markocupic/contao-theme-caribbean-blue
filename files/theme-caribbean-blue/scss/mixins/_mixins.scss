@@ -1,10 +1,37 @@
 // Add a icon font before an element
-@mixin icon-before($icon) {
-  display: inline-block;
-  font-family: $icon-font-name;
-  padding-right: 6px;
-  content: "\#{$icon}";
+@mixin icon-before($icon, $color:false, $display: 'flex') {
+  //font-family: $icon-font-name;
+  //padding-right: 6px;
+  //content: "\#{$icon}";
+  display: $display;
+  flex-wrap: nowrap;
+  &:before {
+    font-family: $icon-font-name !important;
+    padding-right: .75rem;
+    content: $icon;
+    @if $color {
+      color: $color;
+    }
+  }
 }
+
+// Add a icon font after an element
+@mixin icon-after($icon, $color:false, $display: 'flex') {
+  //font-family: $icon-font-name;
+  //padding-right: 6px;
+  //content: "\#{$icon}";
+  display: $display;
+  flex-wrap: nowrap;
+  &:after {
+    font-family: $icon-font-name !important;
+    padding-left: .75rem;
+    content: $icon;
+    @if $color {
+      color: $color;
+    }
+  }
+}
+
 
 
 @mixin flex-vertical-align-middle() {
