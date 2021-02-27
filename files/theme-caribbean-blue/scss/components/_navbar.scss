@@ -18,15 +18,18 @@ $navbar-height: 45px;
       line-height: 1;
     }
     ul.level_1 {
+      display: flex;
+
       > li > a, > li > strong {
         line-height: $navbar-height;
         color: #fff;
+        text-decoration: none;
         @include media-breakpoint-up(lg) {
           font-size: 1.125rem !important;
         }
         font-weight: 500;
       }
-      display: flex;
+
       ul {
         display: none;
       }

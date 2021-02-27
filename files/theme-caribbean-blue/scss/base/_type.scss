@@ -174,7 +174,7 @@ $text-elements: (
 .mobile-title-heading {
   h1 {
     @include transition(font-size);
-    @extend .h1;
+    //@extend .h1;
     font-weight: 500;
     color: #000;
     margin: 0;
