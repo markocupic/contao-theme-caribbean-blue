@@ -11,6 +11,15 @@ input.text, input.captcha, textarea, select {
 .btn {
   border-radius: 0;
 }
+
+a.btn, .btn a
+{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 .submit{
   @extend .btn;
   @extend .btn-primary;
