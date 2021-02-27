@@ -6,7 +6,6 @@
       @include transition(color);
       &:hover{
         color: $link-color;
-        text-decoration: none;
       }
     }
   }
