@@ -5,7 +5,7 @@
   <?php foreach ($this->faq as $category): ?>
     <ul class="d-flex flex-wrap <?= $category['class'] ?>">
       <?php foreach ($category['items'] as $faq): ?>
-        <li class="mr-2 mt-2 <?= $faq['class'] ?>">
+        <li class="me-2 mt-2 <?= $faq['class'] ?>">
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary btn-sm" title="<?= $faq['title'] ?>" data-toggle="modal" data-target="#faqModal<?= $faq['id'] ?>">
             <?= $faq['question'] ?>
