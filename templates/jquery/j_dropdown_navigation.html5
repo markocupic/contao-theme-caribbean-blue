@@ -1,0 +1,46 @@
+<script>
+    // Header navigation
+    (function ($) {
+        $().ready(function () {
+            $('#header .mod_navigation ul.level_1 > li > a, #header .mod_navigation ul.level_1 > li>a:after, #header .mod_navigation ul.level_1 > li > strong').click(function (e) {
+                if (!$(this).closest('li').hasClass('submenu')) {
+                    return true;
+                } else {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+
+                $(this).closest('ul').find('.expanded').removeClass('expanded');
+                $(this).closest('li').addClass('expanded');
+
+                $(window).resize(function (e) {
+                    e.preventDefault();
+                    dispandNavigation();
+                });
+                $(window).scroll(function (e) {
+                    e.preventDefault();
+                    dispandNavigation();
+                });
+
+            });
+						// Close Navigation when clicking outside
+            $(document).on('click', function (e) {
+                var clickedEl = $(e.target);
+                var outsideClicker = $('#header .mod_navigation');
+
+                if (!(clickedEl.is(outsideClicker) || outsideClicker.has(clickedEl).length > 0)) {
+								//console.log('I clicked outside the target!');
+								//e.preventDefault();
+                    dispandNavigation();
+                } else {
+								//console.log('all good'); // if you don't have an else just get rid of this
+                }
+            });
+
+            function dispandNavigation() {
+                $('.mod_navigation .expanded').removeClass('expanded');
+            }
+
+        });
+    })(jQuery);
+</script>
