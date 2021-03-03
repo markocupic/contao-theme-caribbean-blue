@@ -1,4 +1,6 @@
 $nav-bg-color: $accent-color-2;
+$nav-bg-color: darken($accent-color-2,5%);
+
 $nav-bg-hover-color: #ff9800;
 $nav-border-color: lighten($nav-bg-color, 20%);
 $nav-font-color: #000;
