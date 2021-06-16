@@ -1,4 +1,4 @@
-<?php $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/sidebar_navigation/assets/js/sidebar_navigation.js|static'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/markocupiccontaosidebarnavigation/js/sidebar_navigation.js|static'; ?>
 
 <!-- indexer::stop -->
 <div class="sidebar-top-container d-flex align-items-center ps-3 pe-3 pt-4 pb-4">
@@ -36,13 +36,13 @@
 
 <!-- Navigation -->
 <nav class="<?= $this->class ?> sidebar-navigation block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-<?php if ($this->headline): ?>
-<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-<?php endif; ?>
+    <?php if ($this->headline): ?>
+        <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+    <?php endif; ?>
 
-<a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
-<?= $this->items ?>
-<a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
+    <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+    <?= $this->items ?>
+    <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
 </nav>
 
 <!-- Suchformular -->

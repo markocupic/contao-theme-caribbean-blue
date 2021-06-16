@@ -29,6 +29,10 @@ html, body {
   }
 }
 
+#sidebar{
+  overflow-y: scroll;
+}
+
 #header {
   .navigation-toggler {
     margin-left: $spacer;
@@ -196,7 +200,7 @@ body.sidebar-open {
 
   // Expand Icon for items with submenus
   ul.level_1 {
-    > li.opened{
+    > li.expanded{
       background-color: $nav-bg-hover-color;
       &:before,  > *,> *:before{
         color: #fff !important;
@@ -214,6 +218,10 @@ body.sidebar-open {
         top: 0;
         cursor: pointer;
       }
+      >.toggle-submenu{
+        border: 0;
+        background-color: transparent;
+      }
 
       > .toggle-submenu:before {
         font-family: $icon-font-name;
@@ -226,7 +234,7 @@ body.sidebar-open {
       > .toggle-submenu:hover:before {
         color: $red;
       }
-      &.opened {
+      &.expanded {
         > .toggle-submenu {
           background-color: transparent;
         }
