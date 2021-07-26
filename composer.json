@@ -24,7 +24,6 @@
     "contao/core-bundle":"^4.11",
     "dma/dma_simple_grid": "^1.0",
     "markocupic/bootstrap_responsive_youtube_embed": "^1.0",
-    "markocupic/contao-component-bootstrap": "^5.0",
     "markocupic/contao-db-backup": "^1.2",
     "markocupic/custom-section": "^1.0",
     "markocupic/rotate_image": "^1.0",
