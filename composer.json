@@ -30,14 +30,5 @@
     "markocupic/contao-sidebar-navigation": "^1.0",
     "markocupic/service-link-bundle": "^1.0",
     "menatwork/contao-multicolumnwizard-bundle": "^3.4"
-  },
-  "extra": {
-    "contao": {
-      "sources": {
-        "templates/theme-caribbean-blue": "templates/theme-caribbean-blue",
-        "files/theme-caribbean-blue": "files/theme-caribbean-blue",
-        "system/modules/theme-caribbean-blue": "system/modules/theme-caribbean-blue"
-      }
-    }
   }
 }
