@@ -10549,11 +10549,11 @@ body {
 }
 @media (min-width: 992px) {
   body {
-    font-size: 1.25rem;
-    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   body {
     font-size: 1.25rem;
     line-height: 2;
