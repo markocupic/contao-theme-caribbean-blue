@@ -27,20 +27,20 @@
 
 
             <?php if(FE_USER_LOGGED_IN): ?>
-            <div class="header-avatar d-none d-lg-block me-2">
+            <div class="header-avatar d-none d-lg-block me-4">
                 {{link_open::benutzerprofil}}{{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}{{link_close}}
             </div>
             <div class="header-username d-none d-lg-block me-2">
-                <span class="btn btn-dark">{{link_open::benutzerprofil}}<span style="color: #fff;text-decoration: none;">{{user::firstname|strtoupper}}</span>{{link_close}}</span>
+                <span class="btn btn-lg btn-dark">{{link_open::benutzerprofil}}<span style="color: #fff;text-decoration: none;">{{user::firstname|strtoupper}}</span>{{link_close}}</span>
             </div>
             <?php endif; ?>
 
             <div class="header-button-container d-none d-lg-block">
                 <div>
                     <?php if(FE_USER_LOGGED_IN): ?>
-                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-outline-danger">Abmelden</a>
+                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-lg btn-outline-danger">Abmelden</a>
                     <?php else: ?>
-                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-outline-danger">{{link_name::anmelden}}</a>
+                    <a href="{{link_url::anmelden}}" role="button" class="btn btn-lg btn-outline-danger">{{link_name::anmelden}}</a>
                     <?php endif; ?>
                 </div>
             </div>

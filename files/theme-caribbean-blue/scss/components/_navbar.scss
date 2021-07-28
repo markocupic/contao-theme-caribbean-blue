@@ -1,4 +1,4 @@
-$navbar-height: 45px;
+$navbar-height: 3.3rem;
 
 
 #header {
@@ -20,13 +20,11 @@ $navbar-height: 45px;
     ul.level_1 {
       display: flex;
 
-      > li > a, > li > strong {
+      > li > a, > li > strong, > li > span {
         line-height: $navbar-height;
         color: #fff;
         text-decoration: none;
-        @include media-breakpoint-up(lg) {
-          font-size: 1.125rem !important;
-        }
+        font-size: 1.35rem !important;
         font-weight: 500;
       }
 

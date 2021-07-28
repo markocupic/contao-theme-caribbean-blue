@@ -8,7 +8,7 @@
         <!--<label for="ctrl_keywords_<?= $this->uniqueId ?>" class="invisible"><?= $this->keywordLabel ?></label>-->
         <input type="search" name="keywords" id="ctrl_keywords_<?= $this->uniqueId ?>" class="text form-control m-0" value="<?= $this->keyword ?>">
         <span class="input-group-btn">
-          <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit btn btn-danger"><?= $this->search ?></button>
+          <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit btn btn-lg btn-danger"><?= $this->search ?></button>
         </span>
       </div>
 

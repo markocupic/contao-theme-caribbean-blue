@@ -1,9 +1,10 @@
 $nav-bg-color: $accent-color-2;
-$nav-bg-color: darken($accent-color-2,5%);
+$nav-bg-color: #23272A;
+$nav-button-bg-color: #9e000f;
 
-$nav-bg-hover-color: #ff9800;
-$nav-border-color: lighten($nav-bg-color, 20%);
-$nav-font-color: #000;
+$nav-bg-hover-color: lighten($nav-bg-color, 10%);
+$nav-border-color: lighten($nav-bg-color, 10%);
+$nav-font-color: #fff;
 $level_1-offset: 1rem;
 $level_2-offset: 2.5rem;
 $level_3-offset: 3rem;
@@ -18,10 +19,13 @@ html, body {
 #header, #sidebar {
   .navigation-toggler {
     background: transparent;
+
     .fa {
       font-size: 2rem;
     }
+
     border: 0;
+
     &:focus {
       border: 0;
       outline: 0;
@@ -29,7 +33,7 @@ html, body {
   }
 }
 
-#sidebar{
+#sidebar {
   overflow-y: scroll;
 }
 
@@ -40,15 +44,15 @@ html, body {
   }
 }
 
-#sidebar .mod_search{
-  .btn{
-    background-color:#ff9800 !important;
-    color: #000;
-    border: none !important;
+#sidebar .mod_search {
+  .btn {
+    background-color: $nav-button-bg-color !important;
+    color: #fff;
+    border-color: $nav-button-bg-color !important;
   }
 }
 
-#sidebar .sidebar-button-container{
+#sidebar .sidebar-button-container {
   .svg-inline--fa {
     color: $nav-font-color !important;
     font-size: 2rem;
@@ -71,16 +75,16 @@ html, body {
 #sidebar::-webkit-scrollbar {
   -webkit-appearance: none !important;
   width: 6px !important;
-  background-color: #000 !important;
+  background-color: $nav-button-bg-color !important;
 }
 
 #sidebar::-webkit-scrollbar-thumb {
   border-radius: 6px !important;
-  background-color: $nav-bg-hover-color !important;
+  background-color: $nav-button-bg-color !important;
 }
 
 #sidebar {
-  visibility:hidden;
+  visibility: hidden;
   overflow-x: hidden;
   z-index: $zindex-navbar-aside;
   position: fixed;
@@ -94,9 +98,11 @@ html, body {
   .sidebar-top-container {
     background: $nav-bg-color;
     border-bottom: 1px ridge $nav-border-color;
-    .sidebar-title{
+
+    .sidebar-title {
       color: lighten($nav-bg-color, 20%);
     }
+
     .sidebar-navigation-toggler {
       .svg-inline--fa {
         color: $gray-lightest;
@@ -109,11 +115,10 @@ html, body {
     .btn {
       color: #fff;
       border-color: #fff;
-      border-left:0;
+      border-left: 0;
     }
   }
 }
-
 
 
 body.sidebar-open {
@@ -121,9 +126,11 @@ body.sidebar-open {
     display: block;
     opacity: 0;
   }
+
   #sidebar {
     left: 0;
   }
+
   #header .navigation-toggler {
     display: none;
   }
@@ -138,6 +145,7 @@ body.sidebar-open {
     #sidebar {
       left: 0;
     }
+
     #wrapper, #footer {
       display: none;
     }
@@ -151,24 +159,29 @@ body.sidebar-open {
   * {
     text-decoration: none !important;
   }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
   li {
     display: block;
     position: relative;
     margin: 0;
     padding: 0;
     overflow: hidden;
+
     > a,
     > strong {
       color: $nav-font-color !important;
     }
+
     > strong.active {
-      color:$red !important;
+      color: $red !important;
     }
+
     &:hover {
       > a, > strong {
         color: $red !important;
@@ -179,6 +192,7 @@ body.sidebar-open {
   // Hide Submenus
   ul.level_1 {
     display: block;
+
     ul {
       display: none;
     }
@@ -189,9 +203,11 @@ body.sidebar-open {
   ul.level_1 {
     > li {
       border-bottom: 1px solid $nav-border-color;
-      &:hover{
+
+      &:hover {
         background-color: $nav-bg-hover-color;
-         > a, > strong{
+
+        > a, > strong {
           color: #fff !important;
         }
       }
@@ -200,9 +216,10 @@ body.sidebar-open {
 
   // Expand Icon for items with submenus
   ul.level_1 {
-    > li.expanded{
+    > li.expanded {
       background-color: $nav-bg-hover-color;
-      &:before,  > *,> *:before{
+
+      &:before, > *, > *:before {
         color: #fff !important;
       }
     }
@@ -218,7 +235,8 @@ body.sidebar-open {
         top: 0;
         cursor: pointer;
       }
-      >.toggle-submenu{
+
+      > .toggle-submenu {
         border: 0;
         background-color: transparent;
       }
@@ -234,16 +252,19 @@ body.sidebar-open {
       > .toggle-submenu:hover:before {
         color: $red;
       }
+
       &.expanded {
         > .toggle-submenu {
           background-color: transparent;
         }
+
         > .toggle-submenu:before {
           content: "\f068";
           color: $nav-font-color;
         }
       }
     }
+
     > li {
       > .toggle-submenu:before, > .toggle-submenu:hover:before {
         color: $nav-font-color !important;
@@ -257,61 +278,83 @@ body.sidebar-open {
       padding: 0;
       line-height: 3.5rem;
       background-color: transparent;
+
       > .toggle-submenu {
         right: 0;
       }
+
       > a, > strong {
         padding-left: $level_1-offset;
         font-size: 1.25rem;
         color: #fff;
       }
+
       strong.active {
         color: #fff !important;
       }
     }
   }
+
   ul.level_2 {
     background-color: #222;
+
     > li {
       padding: 0;
       line-height: 3rem;
       background-color: transparent;
+
       > .toggle-submenu {
         right: 0;
       }
+
       > a, strong {
         padding-left: $level_2-offset;
         font-size: 1rem;
         color: #999 !important;
       }
+
+      > a:hover, strong:hover {
+        color: #fff !important;
+      }
+
       strong.active {
         color: $red !important;
       }
     }
   }
+
   ul.level_3 {
     > li {
       padding: 0;
       line-height: 2.5rem;
       background-color: transparent;
+
       > .toggle-submenu {
         right: 0;
       }
+
       > a, strong {
         padding-left: $level_3-offset;
         font-size: .875rem;
         color: #999 !important;
       }
+
+      > a:hover, strong:hover {
+        color: #fff !important;
+      }
+
       strong.active {
         color: $red !important;
       }
     }
   }
+
   ul.level_4 {
     > li {
       padding: 0;
       line-height: 2rem;
       background-color: transparent;
+
       > .toggle-submenu {
         right: 0;
       }
@@ -321,6 +364,11 @@ body.sidebar-open {
         font-size: .75rem;
         color: #999 !important;
       }
+
+      > a:hover, strong:hover {
+        color: #fff !important;
+      }
+
       strong.active {
         color: $red !important;
       }
