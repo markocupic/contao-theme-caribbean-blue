@@ -47,9 +47,9 @@
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
@@ -77,47 +77,52 @@ h6, .h6, h5, .h5, h4, .h4, .ce_accordion .ui-accordion-header, h3, .h3, h2, .h2,
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.4rem + 1.8vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.345rem + 1.14vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.3175rem + 0.81vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 1.925rem;
   }
 }
 
 h4, .h4, .ce_accordion .ui-accordion-header {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.29rem + 0.48vw);
 }
 @media (min-width: 1200px) {
   h4, .h4, .ce_accordion .ui-accordion-header {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  h5, .h5 {
+    font-size: 1.375rem;
+  }
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 p {
@@ -449,8 +454,13 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
   font-weight: 300;
+}
+@media (min-width: 1200px) {
+  .lead {
+    font-size: 1.375rem;
+  }
 }
 
 .display-1 {
@@ -543,7 +553,12 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .blockquote {
+    font-size: 1.375rem;
+  }
 }
 .blockquote > :last-child {
   margin-bottom: 0;
@@ -2126,19 +2141,24 @@ progress {
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .col-form-label-lg {
+    font-size: 1.375rem;
+  }
 }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
 }
 
 .form-text {
@@ -2151,9 +2171,9 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   background-color: #fff;
   background-clip: padding-box;
@@ -2181,7 +2201,7 @@ progress {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-control::-webkit-date-and-time-value, input.text::-webkit-date-and-time-value, input.captcha::-webkit-date-and-time-value, textarea::-webkit-date-and-time-value, select::-webkit-date-and-time-value {
-  height: 1.5em;
+  height: 1.65em;
 }
 .form-control::placeholder, input.text::placeholder, input.captcha::placeholder, textarea::placeholder, select::placeholder {
   color: #6c757d;
@@ -2241,7 +2261,7 @@ progress {
   width: 100%;
   padding: 0.375rem 0;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   background-color: transparent;
   border: solid transparent;
@@ -2253,9 +2273,9 @@ progress {
 }
 
 .form-control-sm {
-  min-height: calc(1.5em + (0.5rem + 2px));
+  min-height: calc(1.65em + (0.5rem + 2px));
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
 }
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
@@ -2269,9 +2289,14 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.5em + (1rem + 2px));
+  min-height: calc(1.65em + (1rem + 2px));
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .form-control-lg {
+    font-size: 1.375rem;
+  }
 }
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
@@ -2285,13 +2310,13 @@ progress {
 }
 
 textarea.form-control, textarea {
-  min-height: calc(1.5em + (0.75rem + 2px));
+  min-height: calc(1.65em + (0.75rem + 2px));
 }
 textarea.form-control-sm {
-  min-height: calc(1.5em + (0.5rem + 2px));
+  min-height: calc(1.65em + (0.5rem + 2px));
 }
 textarea.form-control-lg {
-  min-height: calc(1.5em + (1rem + 2px));
+  min-height: calc(1.65em + (1rem + 2px));
 }
 
 .form-control-color {
@@ -2303,10 +2328,10 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
-  height: 1.5em;
+  height: 1.65em;
 }
 .form-control-color::-webkit-color-swatch {
-  height: 1.5em;
+  height: 1.65em;
 }
 
 .form-select {
@@ -2314,9 +2339,9 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
@@ -2354,19 +2379,24 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
 }
 
 .form-select-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .form-select-lg {
+    font-size: 1.375rem;
+  }
 }
 
 .form-check {
   display: block;
-  min-height: 1.5rem;
+  min-height: 1.815rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -2378,7 +2408,7 @@ textarea.form-control-lg {
 .form-check-input {
   width: 1em;
   height: 1em;
-  margin-top: 0.25em;
+  margin-top: 0.325em;
   vertical-align: top;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -2627,9 +2657,9 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   text-align: center;
   white-space: nowrap;
@@ -2644,7 +2674,17 @@ textarea.form-control-lg {
 .ce_serviceLink .service-link-button .input-group-lg > a,
 .input-group-lg > .submit {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .input-group-lg > .form-control, .input-group-lg > input.text, .input-group-lg > input.captcha, .input-group-lg > textarea, .input-group-lg > select,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text,
+.input-group-lg > .btn,
+.ce_serviceLink .service-link-button .input-group-lg > a,
+.input-group-lg > .submit {
+    font-size: 1.375rem;
+  }
 }
 
 .input-group-sm > .form-control, .input-group-sm > input.text, .input-group-sm > input.captcha, .input-group-sm > textarea, .input-group-sm > select,
@@ -2654,7 +2694,7 @@ textarea.form-control-lg {
 .ce_serviceLink .service-link-button .input-group-sm > a,
 .input-group-sm > .submit {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
 }
 
 .input-group-lg > .form-select,
@@ -2682,7 +2722,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   color: #fff;
   background-color: rgba(25, 135, 84, 0.9);
 }
@@ -2696,11 +2736,11 @@ textarea.form-control-lg {
 
 .was-validated .form-control:valid, .was-validated input.text:valid, .was-validated input.captcha:valid, .was-validated textarea:valid, .was-validated select:valid, .form-control.is-valid, input.is-valid.text, input.is-valid.captcha, textarea.is-valid, select.is-valid {
   border-color: #198754;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.65em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.4125em + 0.1875rem) center;
+  background-size: calc(0.825em + 0.375rem) calc(0.825em + 0.375rem);
 }
 .was-validated .form-control:valid:focus, .was-validated input.text:valid:focus, .was-validated input.captcha:valid:focus, .was-validated textarea:valid:focus, .was-validated select:valid:focus, .form-control.is-valid:focus, input.is-valid.text:focus, input.is-valid.captcha:focus, textarea.is-valid:focus, select.is-valid:focus {
   border-color: #198754;
@@ -2708,8 +2748,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:valid, .was-validated textarea:valid, textarea.form-control.is-valid, textarea.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.65em + 0.75rem);
+  background-position: top calc(0.4125em + 0.1875rem) right calc(0.4125em + 0.1875rem);
 }
 
 .was-validated .form-select:valid, .form-select.is-valid {
@@ -2719,7 +2759,7 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.825em + 0.375rem) calc(0.825em + 0.375rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: #198754;
@@ -2770,7 +2810,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   color: #fff;
   background-color: rgba(191, 9, 23, 0.9);
 }
@@ -2784,11 +2824,11 @@ textarea.form-control-lg {
 
 .was-validated .form-control:invalid, .was-validated input.text:invalid, .was-validated input.captcha:invalid, .was-validated textarea:invalid, .was-validated select:invalid, .form-control.is-invalid, input.is-invalid.text, input.is-invalid.captcha, textarea.is-invalid, select.is-invalid {
   border-color: #bf0917;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.65em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23bf0917'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23bf0917' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.4125em + 0.1875rem) center;
+  background-size: calc(0.825em + 0.375rem) calc(0.825em + 0.375rem);
 }
 .was-validated .form-control:invalid:focus, .was-validated input.text:invalid:focus, .was-validated input.captcha:invalid:focus, .was-validated textarea:invalid:focus, .was-validated select:invalid:focus, .form-control.is-invalid:focus, input.is-invalid.text:focus, input.is-invalid.captcha:focus, textarea.is-invalid:focus, select.is-invalid:focus {
   border-color: #bf0917;
@@ -2796,8 +2836,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:invalid, .was-validated textarea:invalid, textarea.form-control.is-invalid, textarea.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.65em + 0.75rem);
+  background-position: top calc(0.4125em + 0.1875rem) right calc(0.4125em + 0.1875rem);
 }
 
 .was-validated .form-select:invalid, .form-select.is-invalid {
@@ -2807,7 +2847,7 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23bf0917'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23bf0917' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.825em + 0.375rem) calc(0.825em + 0.375rem);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: #bf0917;
@@ -2845,7 +2885,7 @@ textarea.form-control-lg {
 .btn, .ce_serviceLink .service-link-button a, .submit {
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   color: #333333;
   text-align: center;
   text-decoration: none;
@@ -2855,7 +2895,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3330,13 +3370,18 @@ textarea.form-control-lg {
 
 .btn-lg, .btn-group-lg > .btn, .ce_serviceLink .service-link-button .btn-group-lg > a, .btn-group-lg > .submit {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
   border-radius: 0;
+}
+@media (min-width: 1200px) {
+  .btn-lg, .btn-group-lg > .btn, .ce_serviceLink .service-link-button .btn-group-lg > a, .btn-group-lg > .submit {
+    font-size: 1.375rem;
+  }
 }
 
 .btn-sm, .ce_serviceLink .service-link-button a, .btn-group-sm > .btn, .btn-group-sm > .submit {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   border-radius: 0;
 }
 
@@ -3398,7 +3443,7 @@ textarea.form-control-lg {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #333333;
   text-align: left;
   list-style: none;
@@ -3632,7 +3677,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   color: #6c757d;
   white-space: nowrap;
 }
@@ -3882,12 +3927,17 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.273125rem;
+  padding-bottom: 0.273125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
   text-decoration: none;
   white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.375rem;
+  }
 }
 .navbar-nav {
   display: flex;
@@ -3917,11 +3967,16 @@ textarea.form-control-lg {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
   transition: box-shadow 0.15s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .navbar-toggler {
+    font-size: 1.375rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -4293,7 +4348,7 @@ textarea.form-control-lg {
   align-items: center;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #333333;
   text-align: left;
   background-color: #fff;
@@ -4446,11 +4501,16 @@ textarea.form-control-lg {
 
 .pagination-lg .page-link, .pagination-lg .pagination > ul li a, .pagination > ul li .pagination-lg a, .pagination-lg .pagination > ul li strong, .pagination > ul li .pagination-lg strong {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: calc(1.2625rem + 0.15vw);
+}
+@media (min-width: 1200px) {
+  .pagination-lg .page-link, .pagination-lg .pagination > ul li a, .pagination > ul li .pagination-lg a, .pagination-lg .pagination > ul li strong, .pagination > ul li .pagination-lg strong {
+    font-size: 1.375rem;
+  }
 }
 .pagination-sm .page-link, .pagination-sm .pagination > ul li a, .pagination > ul li .pagination-sm a, .pagination-sm .pagination > ul li strong, .pagination > ul li .pagination-sm strong {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
 }
 .badge {
   display: inline-block;
@@ -4579,7 +4639,7 @@ textarea.form-control-lg {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.825rem;
   background-color: #e9ecef;
 }
 
@@ -5058,7 +5118,7 @@ textarea.form-control-lg {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 .modal-body {
@@ -5205,7 +5265,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5216,7 +5276,7 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -5306,7 +5366,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5317,7 +5377,7 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -5410,7 +5470,7 @@ textarea.form-control-lg {
 .popover-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -5716,7 +5776,7 @@ textarea.form-control-lg {
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 .offcanvas-body {
@@ -6884,27 +6944,27 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.4rem + 1.8vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.345rem + 1.14vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.3175rem + 0.81vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.29rem + 0.48vw) !important;
 }
 
 .fs-5 {
-  font-size: 1.25rem !important;
+  font-size: calc(1.2625rem + 0.15vw) !important;
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: 1.1rem !important;
 }
 
 .fst-italic {
@@ -6944,7 +7004,7 @@ textarea.form-control-lg {
 }
 
 .lh-base {
-  line-height: 1.5 !important;
+  line-height: 1.65 !important;
 }
 
 .lh-lg {
@@ -10439,19 +10499,23 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 2.75rem !important;
   }
 
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
 
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 1.925rem !important;
   }
 
   .fs-4 {
-    font-size: 1.5rem !important;
+    font-size: 1.65rem !important;
+  }
+
+  .fs-5 {
+    font-size: 1.375rem !important;
   }
 }
 @media print {
@@ -10533,9 +10597,9 @@ html {
 }
 
 body {
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   line-height: 1.25;
-  font-size: 0.875rem;
+  font-size: 0.9625rem;
   line-height: 1.25;
   font-family: var(--bs-font-sans-serif);
   color: #333333;
@@ -10543,19 +10607,19 @@ body {
 }
 @media (min-width: 576px) {
   body {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.65;
   }
 }
 @media (min-width: 992px) {
   body {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.65;
   }
 }
 @media (min-width: 1400px) {
   body {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     line-height: 2;
   }
 }
@@ -11901,7 +11965,7 @@ body.sidebar-open #header .navigation-toggler {
 }
 #header .mod_navigation.navbar-header {
   z-index: 1000;
-  height: 3.3rem;
+  height: 3rem;
   overflow-y: visible;
   background-color: #bf0917;
   color: #000;
@@ -11915,10 +11979,10 @@ body.sidebar-open #header .navigation-toggler {
   display: flex;
 }
 #header .mod_navigation.navbar-header ul.level_1 > li > a, #header .mod_navigation.navbar-header ul.level_1 > li > strong, #header .mod_navigation.navbar-header ul.level_1 > li > span {
-  line-height: 3.3rem;
+  line-height: 3rem;
   color: #fff;
   text-decoration: none;
-  font-size: 1.35rem !important;
+  font-size: 1.125rem !important;
   font-weight: 500;
 }
 #header .mod_navigation.navbar-header ul.level_1 ul {
@@ -11928,7 +11992,7 @@ body.sidebar-open #header .navigation-toggler {
   margin: 0 2px 0 0;
   padding: 0 1rem;
   position: relative;
-  height: 3.3rem;
+  height: 3rem;
   -webkit-transition: background-color ease-in-out 0.4s;
   -moz-transition: background-color ease-in-out 0.4s;
   -ms-transition: background-color ease-in-out 0.4s;
@@ -11960,7 +12024,7 @@ body.sidebar-open #header .navigation-toggler {
 }
 #header .mod_navigation.navbar-header ul.level_1 li.expanded > ul {
   position: absolute;
-  top: 3.3rem;
+  top: 3rem;
   left: 0;
   width: 200px;
 }
