@@ -6,14 +6,14 @@
 
   .footer-row-1 {
     background-color: #252f33;
-    color: #fff !important;
+    color: #fff;
     border-top: 0;
     a, &:hover {
-      color: #fff !important;
+      color: #fff;
     }
     .title {
       font-weight: bold;
-      color: #3baeff !important;
+      color: #3baeff;
     }
     .row > div > div {
       padding: 0 8px;
@@ -22,9 +22,9 @@
 
   .footer-row-2 {
     background-color: #262627;
-    color: #fff !important;
+    color: #fff;
     a, &:hover {
-      color: #fff !important;
+      color: #fff;
     }
     .title {
       color: #fff;
@@ -41,6 +41,19 @@
       padding: 0;
       margin: 0;
       @include icon-before("\f105");
+    }
+  }
+}
+
+#footer{
+  a.email{
+    color: #FDD171;
+    text-decoration: none;
+  }
+  .navigation-footer {
+    a {
+      text-decoration: none;
+      color: #43b581;
     }
   }
 }

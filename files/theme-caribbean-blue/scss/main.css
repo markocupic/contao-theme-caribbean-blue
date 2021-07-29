@@ -50,7 +50,7 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1939,15 +1939,15 @@ progress {
 .table, #main .ce_table table, #main .ce_text table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #333333;
+  --bs-table-striped-color: #23272a;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #333333;
+  --bs-table-active-color: #23272a;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #333333;
+  --bs-table-hover-color: #23272a;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #333333;
+  color: #23272a;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -2174,7 +2174,7 @@ progress {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -2194,7 +2194,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus, input.text:focus, input.captcha:focus, textarea:focus, select:focus {
-  color: #333333;
+  color: #23272a;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
@@ -2215,7 +2215,7 @@ progress {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
-  color: #333333;
+  color: #23272a;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2237,7 +2237,7 @@ progress {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
-  color: #333333;
+  color: #23272a;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2262,7 +2262,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2342,7 +2342,7 @@ textarea.form-control-lg {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2372,7 +2372,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #333333;
+  text-shadow: 0 0 0 #23272a;
 }
 
 .form-select-sm {
@@ -2660,7 +2660,7 @@ textarea.form-control-lg {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
@@ -2886,7 +2886,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.65;
-  color: #333333;
+  color: #23272a;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -2905,7 +2905,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover, .ce_serviceLink .service-link-button a:hover, .submit:hover {
-  color: #333333;
+  color: #23272a;
 }
 .btn-check:focus + .btn, .ce_serviceLink .service-link-button .btn-check:focus + a, .btn-check:focus + .submit, .btn:focus, .ce_serviceLink .service-link-button a:focus, .submit:focus {
   outline: 0;
@@ -3444,7 +3444,7 @@ textarea.form-control-lg {
   padding: 0.5rem 0;
   margin: 0;
   font-size: 1.1rem;
-  color: #333333;
+  color: #23272a;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -4349,7 +4349,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1.1rem;
-  color: #333333;
+  color: #23272a;
   text-align: left;
   background-color: #fff;
   border: 0;
@@ -4376,7 +4376,7 @@ textarea.form-control-lg {
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333333'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2323272a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.25rem;
   transition: transform 0.2s ease-in-out;
@@ -4702,7 +4702,7 @@ textarea.form-control-lg {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #333333;
+  color: #23272a;
   background-color: #e9ecef;
 }
 
@@ -5480,7 +5480,7 @@ textarea.form-control-lg {
 
 .popover-body {
   padding: 1rem 1rem;
-  color: #333333;
+  color: #23272a;
 }
 
 .carousel {
@@ -7099,7 +7099,7 @@ textarea.form-control-lg {
 }
 
 .text-body {
-  color: #333333 !important;
+  color: #23272a !important;
 }
 
 .text-muted {
@@ -10602,7 +10602,7 @@ body {
   font-size: 0.9625rem;
   line-height: 1.25;
   font-family: var(--bs-font-sans-serif);
-  color: #333333;
+  color: #23272a;
   background-color: #fff;
 }
 @media (min-width: 576px) {
@@ -10674,7 +10674,7 @@ body {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, .ce_accordion .ui-accordion-header, h5, .h5, h6, .h6 {
-  font-weight: 800;
+  font-weight: 700;
   color: #000;
 }
 
@@ -11117,7 +11117,7 @@ h1 > a, .h1 > a, h2 > a, .h2 > a, h3 > a, .h3 > a, h4 > a, .h4 > a, .ce_accordio
 #main h1.ce_headline, #main .ce_headline.h1, #main .ce_text h1, #main .ce_text .h1 {
   text-align: left;
   color: #000;
-  font-weight: 800;
+  font-weight: 700;
 }
 #main h1.ce_headline:after, #main .ce_headline.h1:after, #main .ce_text h1:after, #main .ce_text .h1:after {
   content: "";
@@ -11284,25 +11284,25 @@ ul {
 }
 #footer .footer-row-1 {
   background-color: #252f33;
-  color: #fff !important;
+  color: #fff;
   border-top: 0;
 }
 #footer .footer-row-1 a, #footer .footer-row-1:hover {
-  color: #fff !important;
+  color: #fff;
 }
 #footer .footer-row-1 .title {
   font-weight: bold;
-  color: #3baeff !important;
+  color: #3baeff;
 }
 #footer .footer-row-1 .row > div > div, #footer .footer-row-1 .mod_newslist > div > div, #footer .footer-row-1 .ce_gallery ul[class*=cols_] > div > div, .ce_gallery #footer .footer-row-1 ul[class*=cols_] > div > div {
   padding: 0 8px;
 }
 #footer .footer-row-2 {
   background-color: #262627;
-  color: #fff !important;
+  color: #fff;
 }
 #footer .footer-row-2 a, #footer .footer-row-2:hover {
-  color: #fff !important;
+  color: #fff;
 }
 #footer .footer-row-2 .title {
   color: #fff;
@@ -11321,6 +11321,15 @@ ul {
   font-family: "Font Awesome 5 Pro" !important;
   padding-right: 0.75rem;
   content: "";
+}
+
+#footer a.email {
+  color: #FDD171;
+  text-decoration: none;
+}
+#footer .navigation-footer a {
+  text-decoration: none;
+  color: #43b581;
 }
 
 /** From https://teamtreehouse.com/library/css-flexbox-layout/building-a-layout-with-flexbox/creating-a-sticky-footer-with-flexbox **/
@@ -11764,7 +11773,7 @@ html, body {
   border-bottom: 1px ridge #3a4146;
 }
 #sidebar .sidebar-top-container .sidebar-title {
-  color: #515b62;
+  color: #43b581;
 }
 #sidebar .sidebar-top-container .sidebar-navigation-toggler .svg-inline--fa {
   color: #f7f7f9;
@@ -12009,7 +12018,7 @@ body.sidebar-open #header .navigation-toggler {
 #header .mod_navigation.navbar-header ul.level_1 > li.trail, #header .mod_navigation.navbar-header ul.level_1 > li.active {
   background-color: #671010;
 }
-#header .mod_navigation.navbar-header ul.level_1 > li.trail > strong, #header .mod_navigation.navbar-header ul.level_1 > li.trail > a, #header .mod_navigation.navbar-header ul.level_1 > li.trail > a:after, #header .mod_navigation.navbar-header ul.level_1 > li.trail > strong:after, #header .mod_navigation.navbar-header ul.level_1 > li.active > strong, #header .mod_navigation.navbar-header ul.level_1 > li.active > a, #header .mod_navigation.navbar-header ul.level_1 > li.active > a:after, #header .mod_navigation.navbar-header ul.level_1 > li.active > strong:after {
+#header .mod_navigation.navbar-header ul.level_1 > li.trail > span, #header .mod_navigation.navbar-header ul.level_1 > li.trail > strong, #header .mod_navigation.navbar-header ul.level_1 > li.trail > a, #header .mod_navigation.navbar-header ul.level_1 > li.trail > a:after, #header .mod_navigation.navbar-header ul.level_1 > li.trail > strong:after, #header .mod_navigation.navbar-header ul.level_1 > li.active > span, #header .mod_navigation.navbar-header ul.level_1 > li.active > strong, #header .mod_navigation.navbar-header ul.level_1 > li.active > a, #header .mod_navigation.navbar-header ul.level_1 > li.active > a:after, #header .mod_navigation.navbar-header ul.level_1 > li.active > strong:after {
   color: #fff;
 }
 #header .mod_navigation.navbar-header ul.level_1 > li.expanded, #header .mod_navigation.navbar-header ul.level_1 > li:hover {
@@ -12035,9 +12044,10 @@ body.sidebar-open #header .navigation-toggler {
   background-color: #eee;
   opacity: 1;
 }
-#header .mod_navigation.navbar-header ul.level_2 a, #header .mod_navigation.navbar-header ul.level_2 strong {
+#header .mod_navigation.navbar-header ul.level_2 li > span, #header .mod_navigation.navbar-header ul.level_2 li > strong, #header .mod_navigation.navbar-header ul.level_2 li > a, #header .mod_navigation.navbar-header ul.level_2 li > a:after, #header .mod_navigation.navbar-header ul.level_2 li > strong:after {
   color: #000;
   text-decoration: none;
+  font-size: 1rem;
 }
 #header .mod_navigation.navbar-header ul.level_2 > li {
   line-height: 3;
@@ -12065,18 +12075,19 @@ body.sidebar-open #header .navigation-toggler {
 }
 
 .scroll-to-top {
-  width: auto;
+  width: 50px;
   height: auto;
-  padding: 10px 1rem;
-  text-align: center;
   background: #bf0917;
   color: #fff;
   text-decoration: none;
   position: fixed;
   bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 10px;
-  display: none;
   border-radius: 0;
+  aspect-ratio: 1/1;
   opacity: 1;
   -webkit-transition: background-color ease-in-out 0.4s;
   -moz-transition: background-color ease-in-out 0.4s;

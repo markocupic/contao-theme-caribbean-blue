@@ -53,7 +53,7 @@ $navbar-height: 3rem;
       > li.trail, > li.active {
         background-color: #671010;
 
-        > strong, > a, > a:after, > strong:after {
+        > span, > strong, > a, > a:after, > strong:after {
           color: #fff;
         }
       }
@@ -89,9 +89,10 @@ $navbar-height: 3rem;
       background-color: #eee;
       opacity: 1;
 
-      a, strong {
+      li > span, li > strong, li > a, li > a:after, li > strong:after {
         color: #000;
         text-decoration: none;
+        font-size: 1rem;
       }
 
       > li {

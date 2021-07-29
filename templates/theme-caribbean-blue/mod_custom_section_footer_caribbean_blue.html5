@@ -15,7 +15,7 @@
             <div class="col-md-4">
                 <div>
                     <h4 class="title">Schulleitung:</h4>
-                    {{link::kontakt-schulleitung}}<br>
+                    {{email_open::gesamtschulleitung@schule-ettiswil.ch}}Kontakt{{email_close}}<br>
                     041 984 13 51
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="flex-grow-1">
                 <div>Copyright ©  <?= \Date::parse('Y') ?> Konzeption & Design Marko Cupic</div>
             </div>
-            <div class="">
+            <div class="navigation-footer">
                 <div>{{link::impressum}}</div>
             </div>
         </div>
