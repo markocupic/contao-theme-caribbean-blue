@@ -4,11 +4,10 @@
 // main.scss is stored in "vendor/markocupic/contao-theme-caribean-blue/files/theme-caribbean-blue/scss/main.scss"
 // thats why you have to jump up 6 folders to reach the contao root
 @import "../../../../../../assets/contao-component-bootstrap/bootstrap/scss/bootstrap.scss";
- 
 
 // MIXINS
 @import "mixins/_mixins.scss";
-// GENERIC
+// GENERIC 
 @import "generic/contao-reset";
 // BASE
 @import "base/page";

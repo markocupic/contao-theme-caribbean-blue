@@ -92,6 +92,10 @@ a.btn, .btn a
       flex-direction: column;
     }
 
+    .widget + .widget {
+      margin-top: 3rem;
+    }
+
     span.mandatory, .captcha_text {
       display: inline-block !important;
     }
