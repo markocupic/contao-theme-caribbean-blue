@@ -76,7 +76,7 @@ $navbar-height: 3rem;
           position: absolute;
           top: $navbar-height;
           left: 0;
-          width: 200px;
+          width: 220px;
         }
 
         li {
@@ -99,6 +99,25 @@ $navbar-height: 3rem;
         line-height: 3;
         border-top: 1px solid #fff;
         padding: 0 $spacer-x;
+      }
+
+      > li {
+        position: relative;
+        padding-right: 20px;
+      }
+
+      > li.active > *:after {
+        font-family: $icon-font-name;
+        content: "\f00c";
+        position: absolute;
+        right: 20px;
+        top: 0;
+        color: #43b581;
+        font-weight: 100;
+      }
+
+      > li > * {
+        margin-right: 20px;
       }
 
       > li:first-child {
