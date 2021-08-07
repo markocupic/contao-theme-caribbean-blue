@@ -1,0 +1,5 @@
+// Add a custom xxxl breakpoint
+$grid-breakpoints-custom: (
+        xxxl: 2000px
+);
+$grid-breakpoints: map-merge($grid-breakpoints, $grid-breakpoints-custom);

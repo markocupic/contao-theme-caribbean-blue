@@ -13,12 +13,20 @@
       font-weight: normal;
       font-size: 2rem;
       line-height: 1 !important;
-
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(sm) {
         font-size: 2.5rem;
       }
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(md) {
         font-size: 3rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 3.5rem;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 4rem;
+      }
+      @include media-breakpoint-up(xxxl) {
+        font-size: 4.5rem;
       }
     }
 

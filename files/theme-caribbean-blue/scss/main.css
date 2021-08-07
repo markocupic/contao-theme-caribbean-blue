@@ -10607,11 +10607,17 @@ body {
 }
 @media (min-width: 576px) {
   body {
-    font-size: 1.1rem;
-    line-height: 1.65;
+    font-size: 0.9625rem;
+    line-height: 1.25;
   }
 }
 @media (min-width: 992px) {
+  body {
+    font-size: 0.9625rem;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 1200px) {
   body {
     font-size: 1.1rem;
     line-height: 1.65;
@@ -11415,6 +11421,9 @@ a.btn:hover, .ce_serviceLink .service-link-button a:hover, a.submit:hover, .btn 
   display: flex;
   flex-direction: column;
 }
+#main .formbody .widget + .widget {
+  margin-top: 3rem;
+}
 #main .formbody span.mandatory, #main .formbody .captcha_text {
   display: inline-block !important;
 }
@@ -12035,7 +12044,7 @@ body.sidebar-open #header .navigation-toggler {
   position: absolute;
   top: 3rem;
   left: 0;
-  width: 200px;
+  width: 220px;
 }
 #header .mod_navigation.navbar-header ul.level_1 li.expanded li {
   display: block;
@@ -12050,9 +12059,24 @@ body.sidebar-open #header .navigation-toggler {
   font-size: 1rem;
 }
 #header .mod_navigation.navbar-header ul.level_2 > li {
-  line-height: 3;
+  line-height: 1;
   border-top: 1px solid #fff;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
+  padding-right: 20px;
+  position: relative;
+}
+#header .mod_navigation.navbar-header ul.level_2 > li.active > *:after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 0.25rem;
+  line-height: 3;
+  color: #43b581;
+  font-weight: 100;
+}
+#header .mod_navigation.navbar-header ul.level_2 > li > * {
+  margin-right: 20px;
 }
 #header .mod_navigation.navbar-header ul.level_2 > li:first-child {
   border: 0;

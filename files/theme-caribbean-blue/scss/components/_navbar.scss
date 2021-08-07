@@ -28,6 +28,11 @@ $navbar-height: 3rem;
         text-decoration: none;
         font-size: 1.125rem !important;
         font-weight: 500;
+        // XXX-Large devices (larger desktops, 2000px and up)
+        @include media-breakpoint-up(xxxl) {
+          font-size: 1.25rem !important;
+        }
+
       }
 
       ul {
@@ -96,14 +101,11 @@ $navbar-height: 3rem;
       }
 
       > li {
-        line-height: 3;
+        line-height: 1;
         border-top: 1px solid #fff;
-        padding: 0 $spacer-x;
-      }
-
-      > li {
-        position: relative;
+        padding: 1rem $spacer-x;
         padding-right: 20px;
+        position: relative;
       }
 
       > li.active > *:after {
@@ -111,7 +113,8 @@ $navbar-height: 3rem;
         content: "\f00c";
         position: absolute;
         right: 20px;
-        top: 0;
+        top: .25rem;
+        line-height:3;
         color: #43b581;
         font-weight: 100;
       }
