@@ -1,10 +1,10 @@
 #container {
   #main {
-    padding-bottom: $spacer-y;
+    //padding-bottom: $spacer-y;
   }
   .mod_article:not(.container-fluid) > .inside {
     @extend .container;
-    padding: $spacer;
+    padding: 2rem 1rem;
   }
 
   .mod_article.container-fluid {
@@ -13,7 +13,6 @@
 
   .mod_article {
     background-color: #fff;
-    margin-bottom: $spacer-y;
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
     }
