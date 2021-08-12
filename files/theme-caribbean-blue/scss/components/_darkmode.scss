@@ -1,8 +1,8 @@
-$dm-accent-color-1: #232323;
-$dm-accent-color-2: #252f33;
-$dm-accent-color-3: #43b581;
-$dm-accent-color-4: #FDD171;
-$dm-accent-color-5: #f14f4f;
+$dm-accent-color-1: #121212;
+$dm-accent-color-2: #242424;
+$dm-accent-color-3: #009688;
+$dm-accent-color-4: #1976d2;
+$dm-accent-color-5: #d32f2f;
 
 $dm-color-1: #ffffff;
 $dm-color-2: #cccccc;
@@ -10,6 +10,10 @@ $dm-color-3: #666666;
 
 body.dark-mode {
   background-color: $dm-accent-color-1;
+
+  .bg-primary {
+    background-color: $dm-accent-color-4 !important;
+  }
 
   // header
   #header {
@@ -28,10 +32,13 @@ body.dark-mode {
         }
       }
 
+      .header-search-form .btn {
+        color: $dm-color-2;
+      }
+
       .header-navigation-toggle-container .fa-bars {
         color: $dm-color-1;
       }
-
 
     }
 
@@ -49,7 +56,7 @@ body.dark-mode {
 
       ul.level_2 > li, ul.level_2 > li.expanded {
         background-color: $dm-accent-color-2 !important;
-        border:0;
+        border: 0;
         border-bottom: 1px solid $dm-color-3 !important;
         color: $dm-color-2;
 
@@ -57,13 +64,15 @@ body.dark-mode {
           color: $dm-color-2;
         }
       }
-      ul.level_2 > li:hover{
+
+      ul.level_2 > li:hover {
         background-color: $dm-accent-color-5 !important;
         border-color: $dm-accent-color-5 !important;
         color: $dm-color-1;
       }
-      ul.level_2 > li:last-child{
-        border: 0!important;
+
+      ul.level_2 > li:last-child {
+        border: 0 !important;
       }
     }
   }
@@ -84,155 +93,175 @@ body.dark-mode {
 
 
   #container {
-    .dark-mode {
-      .resource-booking-app {
-        background-color: $dm-accent-color-1 !important;
+    .resource-booking-app {
 
-        // Form elements
-        .resource-booking-form {
-          .form-messages {
-            .alert {
-              background-color: $dm-accent-color-2;
-              border: 0;
-              color: $dm-color-2;
-            }
+      background-color: $dm-accent-color-1 !important;
+
+      // Form elements
+      .resource-booking-form {
+        select, options, [class*="fa-"], .btn {
+          font-size: 1rem !important;
+          line-height: 1.5rem !important;
+        }
+
+        .form-messages {
+          background-color: $dm-accent-color-2;
+
+          .alert {
+            background-color: $dm-accent-color-2;
+            border: 0;
+            color: $dm-color-2;
+            margin-bottom: 0;
           }
         }
+      }
 
-        .btn-primary {
-          background-color: #3baeff;
+      .btn-primary {
+        background-color: $dm-accent-color-4;
+        border-color: $dm-accent-color-4;
 
-          &:hover {
-            background-color: darken(#3baeff, 10);
-          }
+        &:hover {
+          background-color: darken($dm-accent-color-4, 10);
+          border-color: darken($dm-accent-color-4, 10);
+
         }
+      }
 
-        .btn-danger {
-          background-color: #f13342;
+      .btn-secondary {
+        border-color: lighten($dm-accent-color-1, 20);
+        background-color: lighten($dm-accent-color-1, 20);
 
-          &:hover {
-            background-color: darken(#f13342, 10);
-          }
+        &:hover {
+          background-color: lighten($dm-accent-color-1, 10);
+          border-color: lighten($dm-accent-color-1, 10);
         }
+      }
 
-        .custom-control-input {
-          width: 1rem;
-          height: 1rem;
+      .btn-danger {
+        background-color: $dm-accent-color-5;
+
+        &:hover {
+          background-color: darken($dm-accent-color-5, 10);
         }
+      }
 
-        select, .form-control {
-          background-clip: unset;
-          border: 0;
-        }
+      .custom-control-input {
+        width: 1rem;
+        height: 1rem;
+      }
 
-        label {
-          color: $dm-color-2;
-        }
+      select, .form-control {
+        background-clip: unset;
+        border: 0;
+      }
 
-        // End form elements
-        .logged-in-user-data {
-          color: $dm-color-2;
-        }
+      legend, label, .logged-in-user-data, .help-info {
+        color: $dm-color-2;
+      }
 
-        .layout-table > * {
-          background-color: $dm-accent-color-1;
+      // End form elements
+
+
+      .layout-table > * {
+        background-color: $dm-accent-color-1;
+        color: $dm-color-1;
+      }
+
+      .layout-table {
+        border-color: $dm-accent-color-1;
+
+        .layout-cell {
+          background-color: $dm-accent-color-3;
+          border-color: $dm-accent-color-1;
+          padding: 4px 8px;
           color: $dm-color-1;
         }
 
-        .layout-table {
-          border-color: $dm-accent-color-1;
+        .layout-cell[data-isinvaliddate] {
+          background-color: $dm-accent-color-2;
+        }
 
-          .layout-cell {
-            background-color: $dm-accent-color-3;
-            border-color: $dm-accent-color-1;
-            padding: 4px 8px;
-            color: $dm-color-1;
-          }
-
-          .layout-cell[data-isinvaliddate] {
+        .layout-cell {
+          &.time-slot-indicator, &.cell-headline {
             background-color: $dm-accent-color-2;
+            color: $dm-color-2;
           }
+        }
 
-          .layout-cell {
-            &.time-slot-indicator, &.cell-headline {
-              background-color: $dm-accent-color-2;
+        .layout-cell[data-isfullybooked="true"] {
+          background-color: $dm-accent-color-5;
+        }
+
+        .layout-cell[data-isfullybooked="true"][data-iscancelable="true"] {
+          //background-color: $dm-accent-color-4;
+        }
+
+        .btn-booking .icon-cancel-booking {
+          color: #000000 !important;
+        }
+      }
+
+      .booking-window {
+        button.close-window {
+          border: 0;
+        }
+
+        .layout-table.info-table, .layout-table.booking-preview-table {
+          > .layout-row {
+            background-color: $dm-accent-color-2 !important;
+            border-color: $dm-accent-color-1;
+
+            > .layout-cell {
+              background-color: $dm-accent-color-2 !important;
+              padding-left: 1rem;
               color: $dm-color-2;
             }
           }
 
-          .layout-cell[data-isfullybooked="true"] {
-            background-color: $dm-accent-color-5;
-          }
+          > .layout-row.not-bookable {
+            background-color: $dm-accent-color-5 !important;
+            border-color: $dm-accent-color-2;
 
-          .layout-cell[data-isfullybooked="true"][data-iscancelable="true"] {
-            //background-color: $dm-accent-color-4;
-          }
-
-          .btn-booking .icon-cancel-booking {
-            color: #000000 !important;
-          }
-        }
-
-        .booking-window {
-          button.close-window {
-            border: 0;
-          }
-
-          .layout-table.info-table, .layout-table.booking-preview-table {
-            > .layout-row {
-              background-color: $dm-accent-color-3 !important;
-              border-color: $dm-accent-color-2;
-
-              > .layout-cell {
-                background-color: $dm-accent-color-3 !important;
-                padding-left: 1rem;
-              }
-            }
-
-            > .layout-row.not-bookable {
+            > .layout-cell {
               background-color: $dm-accent-color-5 !important;
-              border-color: $dm-accent-color-2;
-
-              > .layout-cell {
-                background-color: $dm-accent-color-5 !important;
-                padding-left: 1rem;
-              }
-            }
-          }
-
-          .booking-window-header {
-            background-color: $dm-accent-color-2 !important;
-
-            > div {
-              background-color: $dm-accent-color-2 !important;
-            }
-          }
-
-          .message-box {
-            [class*="alert-"] {
-              background-color: $dm-accent-color-2 !important;
-              color: $dm-color-1;
-              border-color: $dm-accent-color-1;
-            }
-
-            .alert-danger {
-              background-color: $dm-accent-color-2 !important;
-              color: $dm-color-1;
-            }
-
-            .alert-success {
-              background-color: $dm-accent-color-2 !important;
-              color: $dm-color-1;
-            }
-
-            .alert-info {
-              background-color: $dm-accent-color-2 !important;
-              color: $dm-color-1;
+              padding-left: 1rem;
             }
           }
         }
 
+        .booking-window-header {
+          background-color: $dm-accent-color-2 !important;
+
+          > div {
+            background-color: $dm-accent-color-2 !important;
+          }
+        }
+
+        .message-box {
+          [class*="alert-"] {
+            background-color: $dm-accent-color-2 !important;
+            color: $dm-color-2;
+            border-color: $dm-accent-color-1;
+          }
+
+          .alert-danger {
+            background-color: $dm-accent-color-2 !important;
+            color: $dm-color-2;
+          }
+
+          .alert-success {
+            background-color: $dm-accent-color-2 !important;
+            color: $dm-color-2;
+          }
+
+          .alert-info {
+            background-color: $dm-accent-color-2 !important;
+            color: $dm-color-2;
+          }
+        }
       }
+
     }
+
   }
 }
