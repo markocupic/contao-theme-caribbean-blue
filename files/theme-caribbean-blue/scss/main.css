@@ -92,7 +92,7 @@ h2, .h2 {
   h2, .h2 {
     font-size: 2.2rem;
   }
-}
+} 
 
 h3, .h3 {
   font-size: calc(1.3175rem + 0.81vw);
@@ -10625,8 +10625,8 @@ body {
 }
 @media (min-width: 1400px) {
   body {
-    font-size: 1.375rem;
-    line-height: 2;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -12543,7 +12543,7 @@ body.dark-mode #header .header-row-1 {
 body.dark-mode #header .header-row-1 .btn-outline-danger {
   border-color: #cccccc;
   color: #cccccc;
-  background-color: #242424;
+  background-color: #212121;
 }
 body.dark-mode #header .header-row-1 .btn-outline-danger:hover {
   border-color: #d32f2f;
@@ -12560,13 +12560,13 @@ body.dark-mode #header .header-title h1, body.dark-mode #header .header-title .h
   color: #ffffff;
 }
 body.dark-mode #header .header-row-2, body.dark-mode #header .mod_navigation.navbar-header {
-  background-color: #242424;
+  background-color: #212121;
 }
 body.dark-mode #header .header-row-2 ul.level_1 > li.active, body.dark-mode #header .header-row-2 ul.level_1 > li:hover, body.dark-mode #header .header-row-2 ul.level_1 > li.expanded, body.dark-mode #header .mod_navigation.navbar-header ul.level_1 > li.active, body.dark-mode #header .mod_navigation.navbar-header ul.level_1 > li:hover, body.dark-mode #header .mod_navigation.navbar-header ul.level_1 > li.expanded {
   background-color: #d32f2f !important;
 }
 body.dark-mode #header .header-row-2 ul.level_2 > li, body.dark-mode #header .header-row-2 ul.level_2 > li.expanded, body.dark-mode #header .mod_navigation.navbar-header ul.level_2 > li, body.dark-mode #header .mod_navigation.navbar-header ul.level_2 > li.expanded {
-  background-color: #242424 !important;
+  background-color: #212121 !important;
   border: 0;
   border-bottom: 1px solid #666666 !important;
   color: #cccccc;
@@ -12591,126 +12591,120 @@ body.dark-mode #container .mod_article .ce_headline {
 body.dark-mode #container .mod_article .inside {
   background-color: #121212;
 }
-body.dark-mode #container .resource-booking-app {
+body.dark-mode #container .rbb-app {
   background-color: #121212 !important;
 }
-body.dark-mode #container .resource-booking-app .resource-booking-form > div {
-  display: flex;
-  align-items: baseline;
-}
-body.dark-mode #container .resource-booking-app .resource-booking-form select, body.dark-mode #container .resource-booking-app .resource-booking-form options, body.dark-mode #container .resource-booking-app .resource-booking-form [class*=fa-], body.dark-mode #container .resource-booking-app .resource-booking-form .btn, body.dark-mode #container .resource-booking-app .resource-booking-form .submit, body.dark-mode #container .resource-booking-app .resource-booking-form .ce_serviceLink .service-link-button a, .ce_serviceLink .service-link-button body.dark-mode #container .resource-booking-app .resource-booking-form a {
+body.dark-mode #container .rbb-app .rbb-filter-board-form select, body.dark-mode #container .rbb-app .rbb-filter-board-form options, body.dark-mode #container .rbb-app .rbb-filter-board-form [class*=fa-], body.dark-mode #container .rbb-app .rbb-filter-board-form .btn, body.dark-mode #container .rbb-app .rbb-filter-board-form .submit, body.dark-mode #container .rbb-app .rbb-filter-board-form .ce_serviceLink .service-link-button a, .ce_serviceLink .service-link-button body.dark-mode #container .rbb-app .rbb-filter-board-form a {
   font-size: 1rem !important;
   line-height: 1.5rem !important;
 }
-body.dark-mode #container .resource-booking-app .resource-booking-form .form-messages {
-  background-color: #242424;
+body.dark-mode #container .rbb-app .rbb-filter-board-form .rbb-filter-form-messages {
+  background-color: #212121;
 }
-body.dark-mode #container .resource-booking-app .resource-booking-form .form-messages .alert {
-  background-color: #242424;
+body.dark-mode #container .rbb-app .rbb-filter-board-form .rbb-filter-form-messages .alert {
+  background-color: #212121;
   border: 0;
   color: #cccccc;
   margin-bottom: 0;
 }
-body.dark-mode #container .resource-booking-app .btn-primary, body.dark-mode #container .resource-booking-app .submit {
+body.dark-mode #container .rbb-app .btn-primary, body.dark-mode #container .rbb-app .submit {
   background-color: #1976d2;
   border-color: #1976d2;
 }
-body.dark-mode #container .resource-booking-app .btn-primary:hover, body.dark-mode #container .resource-booking-app .submit:hover {
+body.dark-mode #container .rbb-app .btn-primary:hover, body.dark-mode #container .rbb-app .submit:hover {
   background-color: #145ca4;
   border-color: #145ca4;
 }
-body.dark-mode #container .resource-booking-app .btn-secondary {
+body.dark-mode #container .rbb-app .btn-secondary {
   border-color: #454545;
   background-color: #454545;
 }
-body.dark-mode #container .resource-booking-app .btn-secondary:hover {
+body.dark-mode #container .rbb-app .btn-secondary:hover {
   background-color: #2c2c2c;
   border-color: #2c2c2c;
 }
-body.dark-mode #container .resource-booking-app .btn-danger, body.dark-mode #container .resource-booking-app .ce_serviceLink .service-link-button a, .ce_serviceLink .service-link-button body.dark-mode #container .resource-booking-app a {
+body.dark-mode #container .rbb-app .btn-danger, body.dark-mode #container .rbb-app .ce_serviceLink .service-link-button a, .ce_serviceLink .service-link-button body.dark-mode #container .rbb-app a {
   background-color: #d32f2f;
 }
-body.dark-mode #container .resource-booking-app .btn-danger:hover, body.dark-mode #container .resource-booking-app .ce_serviceLink .service-link-button a:hover, .ce_serviceLink .service-link-button body.dark-mode #container .resource-booking-app a:hover {
+body.dark-mode #container .rbb-app .btn-danger:hover, body.dark-mode #container .rbb-app .ce_serviceLink .service-link-button a:hover, .ce_serviceLink .service-link-button body.dark-mode #container .rbb-app a:hover {
   background-color: #ab2424;
 }
-body.dark-mode #container .resource-booking-app .custom-control-input {
+body.dark-mode #container .rbb-app .custom-control-input {
   width: 1rem;
   height: 1rem;
 }
-body.dark-mode #container .resource-booking-app select, body.dark-mode #container .resource-booking-app .form-control, body.dark-mode #container .resource-booking-app input.text, body.dark-mode #container .resource-booking-app input.captcha, body.dark-mode #container .resource-booking-app textarea {
+body.dark-mode #container .rbb-app select, body.dark-mode #container .rbb-app .form-control, body.dark-mode #container .rbb-app input.text, body.dark-mode #container .rbb-app input.captcha, body.dark-mode #container .rbb-app textarea {
   background-clip: unset;
   border: 0;
 }
-body.dark-mode #container .resource-booking-app legend, body.dark-mode #container .resource-booking-app label, body.dark-mode #container .resource-booking-app .logged-in-user-data, body.dark-mode #container .resource-booking-app .help-info {
+body.dark-mode #container .rbb-app legend, body.dark-mode #container .rbb-app label, body.dark-mode #container .rbb-app .rbb-logged-in-user-data, body.dark-mode #container .rbb-app .rbb-input-help-text {
   color: #cccccc;
 }
-body.dark-mode #container .resource-booking-app .layout-table > * {
+body.dark-mode #container .rbb-app .rbb-layout-table > * {
   background-color: #121212;
   color: #ffffff;
 }
-body.dark-mode #container .resource-booking-app .layout-table {
+body.dark-mode #container .rbb-app .rbb-layout-table {
   border-color: #121212;
 }
-body.dark-mode #container .resource-booking-app .layout-table .layout-cell {
-  background-color: #009688;
+body.dark-mode #container .rbb-app .rbb-layout-table .rbb-layout-cell {
+  background-color: #1976d2;
   border-color: #121212;
   padding: 4px 8px;
   color: #ffffff;
 }
-body.dark-mode #container .resource-booking-app .layout-table .layout-cell[data-isinvaliddate] {
-  background-color: #242424;
+body.dark-mode #container .rbb-app .rbb-layout-table .rbb-layout-cell[data-isinvaliddate] {
+  background-color: #212121;
 }
-body.dark-mode #container .resource-booking-app .layout-table .layout-cell.time-slot-indicator, body.dark-mode #container .resource-booking-app .layout-table .layout-cell.cell-headline {
-  background-color: #242424;
+body.dark-mode #container .rbb-app .rbb-layout-table .rbb-layout-cell.rbb-time-slot-indicator, body.dark-mode #container .rbb-app .rbb-layout-table .rbb-layout-cell.rbb-cell-headline {
+  background-color: #212121;
   color: #cccccc;
 }
-body.dark-mode #container .resource-booking-app .layout-table .layout-cell[data-isfullybooked=true] {
+body.dark-mode #container .rbb-app .rbb-layout-table .rbb-layout-cell[data-isfullybooked=true] {
   background-color: #d32f2f;
 }
-body.dark-mode #container .resource-booking-app .layout-table .btn-booking .icon-cancel-booking {
+body.dark-mode #container .rbb-app .rbb-layout-table .rbb-btn-booking .rbb-icon-cancel-booking {
   color: #000000 !important;
 }
-body.dark-mode #container .resource-booking-app .booking-window button.close-window {
+body.dark-mode #container .rbb-app .rbb-booking-window button.rbb-close-window {
   border: 0;
 }
-body.dark-mode #container .resource-booking-app .booking-window .layout-table.info-table > .layout-row, body.dark-mode #container .resource-booking-app .booking-window .layout-table.booking-preview-table > .layout-row {
-  background-color: #242424 !important;
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-info-table .rbb-layout-box-inner, body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-booking-preview-table .rbb-layout-box-inner {
+  background-color: #212121 !important;
+  border: 0;
+}
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-info-table .rbb-layout-box-inner .rbb-layout-cell, body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-booking-preview-table .rbb-layout-box-inner .rbb-layout-cell {
+  background-color: transparent;
+  border: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-info-table .rbb-layout-box-inner .not-bookable, body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-booking-preview-table .rbb-layout-box-inner .not-bookable {
+  background-color: #d32f2f !important;
+  border-color: #212121;
+}
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-info-table .rbb-layout-box-inner .not-bookable .rbb-layout-cell, body.dark-mode #container .rbb-app .rbb-booking-window .rbb-layout-table.rbb-booking-preview-table .rbb-layout-box-inner .not-bookable .rbb-layout-cell {
+  background-color: #d32f2f !important;
+}
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-booking-form .rbb-layout-box .rbb-layout-box-inner {
+  background-color: #212121 !important;
+  padding: 1rem;
+}
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-message-box [class*=alert-] {
+  background-color: #212121 !important;
+  color: #cccccc;
   border-color: #121212;
 }
-body.dark-mode #container .resource-booking-app .booking-window .layout-table.info-table > .layout-row > .layout-cell, body.dark-mode #container .resource-booking-app .booking-window .layout-table.booking-preview-table > .layout-row > .layout-cell {
-  background-color: #242424 !important;
-  padding-left: 1rem;
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-message-box .alert-danger {
+  background-color: #212121 !important;
   color: #cccccc;
 }
-body.dark-mode #container .resource-booking-app .booking-window .layout-table.info-table > .layout-row.not-bookable, body.dark-mode #container .resource-booking-app .booking-window .layout-table.booking-preview-table > .layout-row.not-bookable {
-  background-color: #d32f2f !important;
-  border-color: #242424;
-}
-body.dark-mode #container .resource-booking-app .booking-window .layout-table.info-table > .layout-row.not-bookable > .layout-cell, body.dark-mode #container .resource-booking-app .booking-window .layout-table.booking-preview-table > .layout-row.not-bookable > .layout-cell {
-  background-color: #d32f2f !important;
-  padding-left: 1rem;
-}
-body.dark-mode #container .resource-booking-app .booking-window .booking-window-header {
-  background-color: #242424 !important;
-}
-body.dark-mode #container .resource-booking-app .booking-window .booking-window-header > div {
-  background-color: #242424 !important;
-}
-body.dark-mode #container .resource-booking-app .booking-window .message-box [class*=alert-] {
-  background-color: #242424 !important;
-  color: #cccccc;
-  border-color: #121212;
-}
-body.dark-mode #container .resource-booking-app .booking-window .message-box .alert-danger {
-  background-color: #242424 !important;
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-message-box .alert-success {
+  background-color: #212121 !important;
   color: #cccccc;
 }
-body.dark-mode #container .resource-booking-app .booking-window .message-box .alert-success {
-  background-color: #242424 !important;
-  color: #cccccc;
-}
-body.dark-mode #container .resource-booking-app .booking-window .message-box .alert-info {
-  background-color: #242424 !important;
+body.dark-mode #container .rbb-app .rbb-booking-window .rbb-message-box .alert-info {
+  background-color: #212121 !important;
   color: #cccccc;
 }
 
