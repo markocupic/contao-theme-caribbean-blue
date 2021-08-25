@@ -120,6 +120,32 @@ body.dark-mode {
         }
       }
 
+      // alerts
+      .rbb-message-box {
+        [class*="alert-"] {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+          border: 0;
+          margin-bottom: 0;
+          border-radius: 0
+        }
+
+        .alert-danger {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+
+        .alert-success {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+
+        .alert-info {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+      }
+
       .btn-primary {
         background-color: $dm-accent-color-4;
         border-color: $dm-accent-color-4;
@@ -267,30 +293,7 @@ body.dark-mode {
           }
         }
 
-        .rbb-message-box {
-          [class*="alert-"] {
-            background-color: $dm-accent-color-2 !important;
-            color: $dm-color-2;
-            border: 0;
-            margin-bottom: 0;
-            border-radius: 0
-          }
 
-          .alert-danger {
-            background-color: $dm-accent-color-2 !important;
-            color: $dm-color-2;
-          }
-
-          .alert-success {
-            background-color: $dm-accent-color-2 !important;
-            color: $dm-color-2;
-          }
-
-          .alert-info {
-            background-color: $dm-accent-color-2 !important;
-            color: $dm-color-2;
-          }
-        }
       }
 
       // End booking window
