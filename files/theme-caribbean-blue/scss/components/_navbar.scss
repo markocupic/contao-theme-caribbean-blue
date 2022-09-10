@@ -1,6 +1,5 @@
 $navbar-height: 3rem;
 
-
 #header {
   * {
     overflow: visible;
@@ -53,6 +52,10 @@ $navbar-height: 3rem;
         content: "\f078";
         padding-left: $spacer-x;
         color: #fff;
+      }
+
+      > li.expanded.submenu > a:after, > li.expanded.submenu > strong:after {
+        content: "\f077";
       }
 
       > li.trail, > li.active {
@@ -114,7 +117,7 @@ $navbar-height: 3rem;
         position: absolute;
         right: 20px;
         top: .25rem;
-        line-height:3;
+        line-height: 3;
         color: #43b581;
         font-weight: 100;
       }
