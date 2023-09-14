@@ -1,0 +1,22 @@
+.scroll-to-top {
+  width: 50px;
+  height: auto;
+  //padding: 10px $spacer;
+  //text-align: center;
+  background: $accent-color;
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  border-radius: 0;
+  aspect-ratio: 1/1;
+  opacity: 1;
+  @include transition(background-color);
+  a, .fa{
+    color: #fff;
+  }
+}
