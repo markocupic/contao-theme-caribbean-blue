@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        bind:
+
+    Markocupic\ContaoThemeCaribbeanBlue\:
+        resource: ../src/
+        exclude: ../src/{DependencyInjection}
