@@ -35,7 +35,7 @@
     <div class="container">
         <div class="d-flex">
             <div class="flex-grow-1">
-                <div>Copyright ©  <?= \Date::parse('Y') ?> Konzeption & Design Marko Cupic</div>
+                <div>Copyright ©  <?= \Contao\Date::parse('Y') ?> Konzeption & Design Marko Cupic</div>
             </div>
             <div class="navigation-footer">
                 <div>{{link::impressum}}</div>
