@@ -38,6 +38,7 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
         if ($this->scopeMatcher->isFrontendRequest($request)) {
             $GLOBALS['TL_JAVASCRIPT'][] = 'files/themes/theme-caribbean-blue/js/theme.js|static';
             $GLOBALS['TL_JAVASCRIPT'][] = 'files/themes/theme-caribbean-blue/js/navbar_navigation.js|static';
+            $GLOBALS['TL_CSS'][] = 'files/themes/theme-caribbean-blue/scss/main.css|static';
 
             // Bootstrap
             $GLOBALS['TL_BODY'][] = '<script defer src="/assets/contao-component-bootstrap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>';

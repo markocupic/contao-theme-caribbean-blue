@@ -3,7 +3,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
 
-
 // Set headline
 $text-elements: (
         h1: (
@@ -94,10 +93,10 @@ $text-elements: (
         label: (
                 sizes: (
                         xs: 1.125rem,
-                        xs: 1.125rem,
-                        xs: 1.125rem,
-                        xs: 1.125rem,
-                        xs: 1.125rem,
+                        sm: 1.125rem,
+                        md: 1.125rem,
+                        lg: 1.125rem,
+                        xl: 1.125rem,
                 ),
                 line-height: 1.5,
                 margin-top: 0,
@@ -151,7 +150,7 @@ $text-elements: (
 }
 
 // Underline
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a{
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
   text-decoration: none;
 }
 
