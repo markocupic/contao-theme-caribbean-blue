@@ -1,6 +1,6 @@
 /**
  * Header dropdown navigation script for Contao CMS (pure vanilla script)
- * @author Marko Cupic, Oberkirch
+ * @author Marko Cupic, Oberkirch 2023
  */
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -78,7 +78,5 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!Object.is(clickedEl, navigation) && !contains(navigation, clickedEl)) {
             hideSubmenus();
         }
-
     });
-
 });

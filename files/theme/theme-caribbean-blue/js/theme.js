@@ -58,4 +58,3 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
         });
     });
 })(jQuery);
-
