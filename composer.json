@@ -53,8 +53,8 @@
                 }
             },
             {
-                "source": "files/theme-caribbean-blue",
-                "target": "files/theme-caribbean-blue",
+                "source": "files/theme/theme-caribbean-blue",
+                "target": "files/theme/theme-caribbean-blue",
                 "options": {
                     "OVERRIDE": true,
                     "DELETE": true
