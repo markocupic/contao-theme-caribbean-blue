@@ -32,7 +32,8 @@
         "markocupic/service-link-bundle": "^1.0",
         "markocupic/contao-article-class-select-bundle": "^2.0",
         "menatwork/contao-multicolumnwizard-bundle": "^3.4",
-        "markocupic/composer-file-copier-plugin": "^0.2"
+        "markocupic/composer-file-copier-plugin": "^0.2",
+        "craffft/css-style-selector-bundle": "^1.6"
     },
     "require-dev": {
         "contao/easy-coding-standard": "*"
@@ -79,6 +80,13 @@
             {
                 "source": "files/theme/theme-caribbean-blue/scss/main.css",
                 "target": "files/themes/theme-caribbean-blue/css/main.css",
+                "options": {
+                    "OVERRIDE": true
+                }
+            },
+            {
+                "source": "files/theme/theme-caribbean-blue/scss",
+                "target": "files/themes/theme-caribbean-blue/scss",
                 "options": {
                     "OVERRIDE": true
                 }

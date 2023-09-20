@@ -6,8 +6,8 @@
             <div class="header-logo">
                 <div class="me-4">
                     <a href="" title="Startseite">
-                        <div class="d-none d-block-xl">{{image::files/theme-caribbean-blue/images/logos/Logo.jpg?height=100px&width=auto&class=logo-header&alt=Logo}}</div>
-                        <div class="d-block d-none-xl">{{image::files/theme-caribbean-blue/images/logos/Logo.jpg?height=80px&width=auto&class=logo-header&alt=Logo}}</div>
+                        <div class="d-none d-block-xl">{{image::files/themes/theme-caribbean-blue/images/logos/Logo.jpg?height=100px&width=auto&class=logo-header&alt=Logo}}</div>
+                        <div class="d-block d-none-xl">{{image::files/themes/theme-caribbean-blue/images/logos/Logo.jpg?height=80px&width=auto&class=logo-header&alt=Logo}}</div>
 
                     </a>
                 </div>
@@ -28,7 +28,7 @@
 
             <?php if(FE_USER_LOGGED_IN): ?>
             <div class="header-avatar d-none d-lg-block me-4">
-                {{link_open::benutzerprofil}}{{image::files/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}{{link_close}}
+                {{link_open::benutzerprofil}}{{image::files/themes/theme-caribbean-blue/images/avatar.png?width=40&height=40&class=rounded-circle}}{{link_close}}
             </div>
             <div class="header-username d-none d-lg-block me-2">
                 <span class="btn btn-dark">{{link_open::benutzerprofil}}<span style="color: #fff;text-decoration: none;">{{user::firstname|strtoupper}}</span>{{link_close}}</span>

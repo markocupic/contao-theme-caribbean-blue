@@ -41,10 +41,20 @@ figure{
 
 // Do not show caption on mobile phones
 @include media-breakpoint-up(sm) {
-      .gallery_creator .caption {
-        display: none;
-      }
-      .ce_gallery .caption {
-        display: none;
-      }
+  .gallery_creator .caption {
+    display: none;
+  }
+  .ce_gallery .caption {
+    display: none;
+  }
 }
+
+img.img-not-fluid, .img-not-fluid img{
+  max-width: 100%;
+  width: initial !important;
+}
+
+figcaption{
+  @extend .small;
+}
+

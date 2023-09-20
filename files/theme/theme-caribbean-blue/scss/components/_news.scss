@@ -1,4 +1,12 @@
 .mod_newslist{
+
+  & > div{
+    @extend .pb-4;
+    border-bottom: 1px solid $gray-100;
+    h2:first-child {
+      margin-top:0 !important;
+    }
+  }
   @extend .row;
   .layout_latest{
     h3 a {
