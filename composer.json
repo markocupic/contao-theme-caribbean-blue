@@ -22,16 +22,18 @@
     },
     "require": {
         "contao/core-bundle": "^4.13 || ^5.0",
+        "dma/dma_simple_grid": "^1.0",
         "markocupic/bootstrap_responsive_youtube_embed": "^2.0",
         "markocupic/contao-component-bootstrap": "^5.0",
         "markocupic/contao-db-backup": "^1.2",
         "markocupic/custom-section": "^1.0",
         "markocupic/rotate_image": "^1.0",
-        "markocupic/contao-sidebar-navigation": "^2.0",
+        "markocupic/contao-sidebar-navigation": "^1.0",
         "markocupic/service-link-bundle": "^1.0",
         "markocupic/contao-article-class-select-bundle": "^2.0",
         "menatwork/contao-multicolumnwizard-bundle": "^3.4",
-        "markocupic/composer-file-copier-plugin": "^0.2"
+        "markocupic/composer-file-copier-plugin": "^0.2",
+        "craffft/css-style-selector-bundle": "^1.6"
     },
     "require-dev": {
         "contao/easy-coding-standard": "*"
