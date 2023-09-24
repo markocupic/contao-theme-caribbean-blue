@@ -32,6 +32,7 @@
         "markocupic/contao-article-class-select-bundle": "^2.0",
         "menatwork/contao-multicolumnwizard-bundle": "^3.4",
         "markocupic/composer-file-copier-plugin": "^0.2",
+        "markocupic/contao-twig-assets": "^1.1",
         "craffft/css-style-selector-bundle": "^1.6"
     },
     "require-dev": {
