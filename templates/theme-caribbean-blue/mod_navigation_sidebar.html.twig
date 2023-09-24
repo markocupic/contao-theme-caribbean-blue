@@ -1,0 +1,66 @@
+<script src="bundles/markocupiccontaosidebarnavigation/js/sidebar_navigation.js"></script>
+
+<!-- indexer::stop -->
+<div class="sidebar-top-container d-flex align-items-center ps-3 pe-3 pt-4 pb-4">
+
+    <h2 class="sidebar-title text-uppercase flex-grow-1 m-0 me-3">Navigation</h2>
+
+    {# avatar #}
+    {% if has_logged_in_frontend_user() %}
+        <div class="sidebar-avatar me-3">
+            <a href="{{ '{{link_url::anmelden}}' }}" title="{{ '{{user::firstname}} {{user::lastname}}' }}">
+                {{ '{{image::files/theme-caribbean-blue/images/avatar.png?width=35&height=35&class=rounded-circle}}'|raw }}
+            </a>
+        </div>
+    {% endif %}
+
+    {# Login/Logout buttons #}
+    <div class="sidebar-button-container me-3">
+        <div>
+            {% if has_logged_in_frontend_user() %}
+                <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn" title="abmelden"><i class="fal fa-sign-out-alt"></i></a>
+            {% else %}
+                <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn" title="anmelden"><i class="fal fa-sign-in-alt"></i></a>
+            {% endif %}
+        </div>
+    </div>
+
+    {# Hide sidebar button #}
+    <div class="sidebar-navigation-toggler navigation-toggler cursor-pointer" title="Navigation schliessen" role="button">
+        <span class="fas fa-times" aria-hidden="true"></span>
+        <span class="sr-only">Navigation</span>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="{{ class }} sidebar-navigation block"{{ cssID }}{% if style|default %} style="{{ style }}"{% endif %}>
+    {% if headline|default %}
+    <{{ hl }}>{{ headline }}</{{ hl }}>
+{% endif %}
+
+<a href="{{ request }}#{{ skipId }}" class="invisible">{{ skipNavigation }}</a>
+{{ items|raw }}
+<a id="{{ skipId }}" class="invisible">&nbsp;</a>
+</nav>
+
+<!-- Suchformular -->
+<div class="sidebar-search-form mt-5 mb-5 ms-3 me-3">{{ '{{insert_module::185}}'|raw }}</div>
+
+<!-- Toggler script -->
+<script>
+    jQuery(document).ready(function () {
+        $('<div id="sidebarOverlay"></div>').prependTo("body");
+        $('.navigation-toggler, #sidebarOverlay').click(function () {
+            $('body').toggleClass('sidebar-open');
+
+            if ($('body').hasClass('sidebar-open')) {
+                $('#sidebar').css('visibility', 'visible');
+            } else {
+                window.setTimeout(function () {
+                    $('#sidebar').css('visibility', 'hidden');
+                }, 600);
+            }
+        });
+    });
+</script>
+<!-- indexer::continue -->
