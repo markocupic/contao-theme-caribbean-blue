@@ -9,7 +9,7 @@ $navbar-height: 3rem;
     z-index: $zindex-navbar;
     height: $navbar-height;
     overflow-y: visible;
-    background-color: $accent-color;
+    background-color: $accent-color-1;
     color: #000;
     //margin-top: 100px;
     ul, li {
@@ -101,6 +101,14 @@ $navbar-height: 3rem;
         color: #000;
         text-decoration: none;
         font-size: 1rem;
+      }
+
+      li:hover {
+        background-color: $accent-color-1;
+
+        > * {
+          color: #fff;
+        }
       }
 
       > li {

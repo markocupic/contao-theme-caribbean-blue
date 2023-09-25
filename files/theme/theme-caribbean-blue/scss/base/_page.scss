@@ -40,5 +40,9 @@ body {
   color: $body-color;
   // By default, `<body>` has no `background-color` so we set one as a best practice.
   background-color: $body-bg;
+
+  #container{
+    padding-bottom: 3rem;
+  }
 }
 

@@ -1,0 +1,33 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <ul>
+    <?php foreach ($this->files as $file): ?>
+      <?php
+      $icon = 'fa-file';
+      if ($file['extension'] === 'pdf'){
+        $icon = 'fa-file-pdf';
+      } elseif ($file['extension'] === 'docx' || $file['extension'] === 'doc'){
+        $icon = 'fa-file-word';
+      } elseif ($file['extension'] === 'xlsx' || $file['extension'] === 'xls'){
+        $icon = 'fa-file-excel';
+      } elseif ($file['extension'] === 'jpeg' || $file['extension'] === 'jpg' || $file['extension'] === 'png'){
+        $icon = 'fa-file-image';
+      }
+      ?>
+      <li class="download-element ext-<?= $file['extension'] ?>">
+        <div class="download-icon"><i data-extension="<?= $file['extension'] ?>" class="fas <?= $icon ?>"></i></div>
+        <?php if ($file['previews']): ?>
+          <?php foreach ($file['previews'] as $preview): ?>
+            <?php $this->insert('image', $preview->getLegacyTemplateData()) ?>
+          <?php endforeach ?>
+        <?php endif ?>
+        <div class="download-link flex-grow-1">
+          <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>" type="<?= $file['mime'] ?>"><?= $file['link'] ?> <span class="size">(<?= $file['filesize'] ?>)</span></a>
+        </div>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+
+<?php $this->endblock(); ?>

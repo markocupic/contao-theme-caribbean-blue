@@ -16,7 +16,7 @@ $enable-rounded: false;
 //$accent-color: orangered;
 //$accent-color: firebrick;
 //$accent-color: #ff3545;
-$accent-color: #bf0917;
+$accent-color-1: #bf0917;
 $accent-color-2: #ffc107;
 
 $btn-primary-bg: dodgerblue;
@@ -44,7 +44,7 @@ $body-bg: #fff;
 //$body-color: $gray-lightest;
 
 $body-color: #23272a;
-$danger: $accent-color;
+$danger: $accent-color-1;
 
 $light-weights: ("lightest": 100, "light": 300);
 $heavy-weights: ("medium": 500, "bold": 700);

@@ -1,24 +1,14 @@
 // Email mailto link
-.ce_hyperlink{
-  .hyperlink_txt{
+.ce_hyperlink {
+  .hyperlink_txt {
     line-height: 2.25rem;
   }
 }
-.ce_hyperlink, .ce_download {
-  margin: .5rem 0;
-}
-.ce_downloads{
-  ul{
-    margin:0;
-  }
-}
-.ce_downloads .download-element {
-  margin: .5rem 0;
-}
 
-.ce_download .download-element {
-  margin: 0;
-  line-height: 2.25;
+.ce_downloads {
+  ul {
+    margin: 0;
+  }
 }
 
 a.email {
@@ -27,50 +17,56 @@ a.email {
   }
 }
 
-.ce_downloads > ul, .ce_hyperlink > a {
-  position: relative;
-  display: block;
-  padding-right: 50px;
-}
-
 // Replace contao mime icons with font awesome icons
 .ce_downloads, .ce_download {
-
   .size {
     display: none;
   }
-  li {
-    position: relative;
-    line-height: 2.25;
-  }
-  .mime_icon {
-    display: none;
-  }
-
-  [class*="ext-"] a:before {
-    @include icon-before("\f15b"); // fa-file-o     // fa-file-word
-  }
-  .ext-docx a:before {
-    @include icon-before("\f1c2"); // fa-file-word
-  }
-  .ext-doc a:before {
-    @include icon-before("\f1c2"); // fa-file-word
-  }
-  .ext-pdf a:before {
-    @include icon-before("\f1c1"); // fa-file-pdf
-  }
-  .ext-xlsx a:before {
-    @include icon-before("\f1c3"); // fa-file-word
-  }
-  .ext-xls a:before {
-    @include icon-before("\f1c3"); // fa-file-word
-  }
-
 }
 
-.ce_hyperlink {
-  a[href*="."]:before {
-    @include icon-before("\f0c1"); // fa-link
+.ce_downloads, .ce_download, .ce_hyperlink {
+  margin: 0;
+
+  .download-element {
+    &:hover .download-link {
+      background-color: darken(#f6f6f6, 10);
+    }
+
+    max-width: 600px;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    display: flex;
+    gap: 2px;
+
+    .download-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1;
+      background-color: $accent-color-1;
+      color: #fff;
+    }
+
+    .download-link {
+      background-color: #f6f6f6;
+      padding: 8px 10px;
+
+      a {
+        text-decoration: none !important;
+        color: #333;
+        @extend .small;
+        line-height: 1 !important;
+      }
+    }
+
+    .download-icon, .download-link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 56.5px;
+    }
+
   }
 }
+
 

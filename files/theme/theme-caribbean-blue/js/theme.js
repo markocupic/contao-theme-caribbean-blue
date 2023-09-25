@@ -51,7 +51,7 @@ if (navigator.appVersion.indexOf("MSIE 9.") !== -1) {
                     var filename = match[1];
                     if (filename.length > maxStringLength) {
                         var filenameShortened = filename.substring(0, maxStringLength) + ' … ';
-                        el.innerHTML = filenameShortened + '<span' + match[2];
+                        //el.innerHTML = filenameShortened + '<span' + match[2];
                     }
                 }
             });

@@ -1,0 +1,31 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <?php if ($this->previews): ?>
+    <?php foreach ($this->previews as $preview): ?>
+      <?php $this->insert('image', $preview->getLegacyTemplateData()) ?>
+    <?php endforeach ?>
+  <?php endif ?>
+
+  <?php
+    $icon = 'fa-file';
+    if ($this->extension === 'pdf'){
+      $icon = 'fa-file-pdf';
+    } elseif ($this->extension === 'doc' || $this->extension === 'docx' ){
+      $icon = 'fa-file-word';
+    } elseif ($this->extension === 'xls' || $this->extension === 'xlsx'){
+      $icon = 'fa-file-excel';
+    } elseif ($this->extension === 'jpeg' || $this->extension === 'jpg' || $this->extension === 'png'){
+      $icon = 'fa-file-image';
+    }
+  ?>
+
+  <div class="download-element">
+    <div class="download-icon"><i data-extension="<?= $this->extension ?>" class="fas <?= $icon ?>"></i></div>
+    <div class="download-link flex-grow-1">
+      <a href="<?= $this->href ?>" title="<?= $this->title ?>" type="<?= $this->mime ?>"><?= $this->link ?> <span class="size">(<?= $this->filesize ?>)</span></a>
+    </div>
+  </div>
+
+<?php $this->endblock(); ?>

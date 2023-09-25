@@ -23,11 +23,11 @@ a.btn, .btn a
 .submit{
   @extend .btn;
   @extend .btn-primary;
-  background-color: $accent-color;
-  border-color: $accent-color;
+  background-color: $accent-color-1;
+  border-color: $accent-color-1;
   &:hover{
-    background-color: darken($accent-color, 4);
-    border-color: darken($accent-color, 4);
+    background-color: darken($accent-color-1, 4);
+    border-color: darken($accent-color-1, 4);
   }
 }
 
