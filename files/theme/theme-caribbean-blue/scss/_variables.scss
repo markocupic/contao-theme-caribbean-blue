@@ -1,6 +1,6 @@
 // Fonts
 $font-family-sans-serif: 'Nunito', 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
-$headings-font-family: 'Nunito','Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: 'Nunito', 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-size-base: 1.1rem;
 $line-height-base: 1.1*1.5;
 
@@ -8,21 +8,24 @@ $line-height-base: 1.1*1.5;
 //$icon-font-name: "FontAwesome";
 $icon-font-name: "Font Awesome 5 Pro";
 
-
 // Border radius
 $enable-rounded: false;
 
-// Colors
-//$accent-color: orangered;
-//$accent-color: firebrick;
-//$accent-color: #ff3545;
-$accent-color-1: #bf0917;
-$accent-color-2: #ffc107;
+// Scheme color
+// https://www.schemecolor.com/blue-red-yellow-green.php#download
 
-$btn-primary-bg: dodgerblue;
+$theme-color-1: #3581D8;
+$theme-color-2: #63CAD8;
+$theme-color-3: #D82E3F;
+$theme-color-4: #FFE135;
+$theme-color-5: #FFF44F;
+$theme-color-6: #28CC2D;
 
+$accent-color-1: $theme-color-3;
+$accent-color-2: $theme-color-4;
 
-$link-color: #0a52ff;
+$btn-primary-bg: $theme-color-1;
+$link-color: $theme-color-1;
 
 $zindex-navbar-aside-backdrop: 1080;
 $zindex-navbar-aside: 1090;
