@@ -17,7 +17,11 @@
       }
       ?>
       <li class="download-element ext-<?= $file['extension'] ?>">
-        <div class="download-icon"><i data-extension="<?= $file['extension'] ?>" class="fas <?= $icon ?>"></i></div>
+        <div class="download-icon">
+          <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>">
+            <i data-extension="<?= $file['extension'] ?>" class="fas <?= $icon ?>"></i>
+          </a>
+        </div>
         <?php if ($file['previews']): ?>
           <?php foreach ($file['previews'] as $preview): ?>
             <?php $this->insert('image', $preview->getLegacyTemplateData()) ?>
