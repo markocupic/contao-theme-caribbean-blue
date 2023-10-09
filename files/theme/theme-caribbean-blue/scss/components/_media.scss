@@ -25,7 +25,7 @@ figure{
   ul[class*="cols_"]{
     @extend .row;
     li {
-      @extend .col-12;
+      @extend .col-6;
       @extend .col-sm-4;
       @extend .col-md-3;
       padding: 0.5rem;

@@ -47,7 +47,6 @@
     <?php $this->sections('top'); ?>
 
     <div id="wrapper">
-
       <?php $this->block('header'); ?>
         <?php if ($this->header): ?>
           <header id="header">
