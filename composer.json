@@ -27,7 +27,7 @@
         "markocupic/contao-db-backup": "^1.2",
         "markocupic/custom-section": "^1.0",
         "markocupic/rotate_image": "^1.0",
-        "markocupic/contao-sidebar-navigation": "^1.0",
+        "markocupic/contao-sidebar-navigation": "^2.0",
         "markocupic/service-link-bundle": "^1.0",
         "markocupic/contao-article-class-select-bundle": "^2.0",
         "menatwork/contao-multicolumnwizard-bundle": "^3.4",
