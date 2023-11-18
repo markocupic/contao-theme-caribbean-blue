@@ -5,49 +5,49 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     const hideSubmenus = () => {
-        const expanded = document.querySelectorAll('.mod_navigation .expanded');
-        let i;
-        for (i = 0; i < expanded.length; ++i) {
-            expanded[i].classList.remove('expanded');
+        const expanded = document.querySelectorAll('#header .mod_navigation .expanded');
+
+        if (expanded) {
+            for (const elExpandedListItem of expanded) {
+                elExpandedListItem.classList.remove('expanded');
+            }
         }
     }
 
     // Close all submenus, before open a new one
     const links = document.querySelectorAll('#header .mod_navigation ul.level_1 > li > a, #header .mod_navigation ul.level_1 > li>a:after, #header .mod_navigation ul.level_1 > li > strong');
-    let i;
 
-    for (i = 0; i < links.length; ++i) {
-        let linkPressed = links[i];
+    if (links) {
+        for (const linkClicked of links) {
 
-        linkPressed.addEventListener('click', (eventClick) => {
-            if (!eventClick.target.closest('li').classList.contains('submenu')) {
-                return true;
-            } else {
-                eventClick.stopPropagation();
-                eventClick.preventDefault();
+            linkClicked.addEventListener('click', (eventClick) => {
+                if (!eventClick.target.closest('li').classList.contains('submenu')) {
+                    return true;
+                } else {
+                    eventClick.stopPropagation();
+                    eventClick.preventDefault();
 
-                // Get all expanded nav items
-                const expanded = eventClick.target.closest('ul').querySelectorAll('.expanded');
-                let ii;
+                    // Get all expanded nav items
+                    const expanded = eventClick.target.closest('ul').querySelectorAll('.expanded');
 
-                const promise = new Promise(resolve => {
-                    for (ii = 0; ii < expanded.length; ++ii) {
-                        // Remove the CSS "expanded" class
-                        expanded[ii].classList.remove('expanded');
-                    }
-                    resolve('done');
-                });
+                    const promise = new Promise(resolve => {
+                        for (const elExpandedListItem of expanded) {
+                            // Remove the CSS "expanded" class
+                            elExpandedListItem.classList.remove('expanded');
+                        }
+                        resolve('done');
+                    });
 
-                promise.then(valueResolve => {
-                    // Add the CSS "expanded" class
-                    eventClick.target.closest('li').classList.add('expanded');
-                });
+                    promise.then(valueResolve => {
+                        // Add the CSS "expanded" class
+                        eventClick.target.closest('li').classList.add('expanded');
+                    });
 
-                return false;
-            }
+                    return false;
+                }
 
-        });
-
+            });
+        }
     }
 
     // Hide submenus on window resize

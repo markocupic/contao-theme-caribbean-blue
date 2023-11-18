@@ -10,11 +10,9 @@ $level_2-offset: 2.5rem;
 $level_3-offset: 3rem;
 $level_4-offset: 3.5rem;
 
-
 html, body {
   height: 100%;
 }
-
 
 #header, #sidebar {
   .navigation-toggler {
@@ -120,7 +118,6 @@ html, body {
   }
 }
 
-
 body.sidebar-open {
   #sidebarOverlay {
     display: block;
@@ -198,8 +195,7 @@ body.sidebar-open {
     }
   }
 
-
-  // Borders&backgrounds
+  // Borders & backgrounds
   ul.level_1 {
     > li {
       border-bottom: 1px solid $nav-border-color;
@@ -214,9 +210,9 @@ body.sidebar-open {
     }
   }
 
-  // Expand Icon for items with submenus
+  // Expand icon for items with submenus
   ul.level_1 {
-    > li.expanded {
+    > li[aria-expanded="true"] {
       background-color: $nav-bg-hover-color;
 
       &:before, > *, > *:before {
@@ -253,7 +249,7 @@ body.sidebar-open {
         color: $red;
       }
 
-      &.expanded {
+      &[aria-expanded="true"] {
         > .toggle-submenu {
           background-color: transparent;
         }
@@ -272,7 +268,6 @@ body.sidebar-open {
     }
   }
 
-
   ul.level_1 {
     > li {
       padding: 0;
@@ -281,6 +276,7 @@ body.sidebar-open {
 
       > .toggle-submenu {
         right: 0;
+        left: initial;
       }
 
       > a, > strong {
@@ -305,6 +301,7 @@ body.sidebar-open {
 
       > .toggle-submenu {
         right: 0;
+        left: initial;
       }
 
       > a, strong {
@@ -331,6 +328,7 @@ body.sidebar-open {
 
       > .toggle-submenu {
         right: 0;
+        left: initial;
       }
 
       > a, strong {
@@ -357,6 +355,7 @@ body.sidebar-open {
 
       > .toggle-submenu {
         right: 0;
+        left: initial;
       }
 
       > a, strong {
@@ -381,8 +380,3 @@ body.sidebar-open {
   }
 
 }
-
-
-
-
-

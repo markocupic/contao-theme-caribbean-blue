@@ -1,11 +1,11 @@
 // Email mailto link
-.ce_hyperlink {
+.content-hyperlink {
   .hyperlink_txt {
     line-height: 2.25rem;
   }
 }
 
-.ce_downloads {
+.content-downloads {
   ul {
     margin: 0;
   }
@@ -18,16 +18,16 @@ a.email {
 }
 
 // Replace contao mime icons with font awesome icons
-.ce_downloads, .ce_download {
+.content-downloads, .content-download {
   .size {
     display: none;
   }
 }
 
-.ce_downloads, .ce_download, .ce_hyperlink {
+.content-downloads, .content-download, .content-hyperlink {
   margin: 0;
 
-  .download-element {
+  .download-element--icon-box {
     &:hover .download-link {
       background-color: darken(#f6f6f6, 10);
     }

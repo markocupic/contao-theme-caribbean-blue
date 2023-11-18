@@ -1,6 +1,9 @@
-<script src="bundles/markocupiccontaosidebarnavigation/js/sidebar_navigation.js"></script>
+<script type="text/javascript" src="bundles/markocupiccontaosidebarnavigation/js/sidebar_navigation.min.js"></script>
+
+{{ addCssResource('bundles/markocupiccontaosidebarnavigation/css/sidebar_navigation.css') }}
 
 <!-- indexer::stop -->
+
 <div class="sidebar-top-container d-flex align-items-center ps-3 pe-3 pt-4 pb-4">
 
     <h2 class="sidebar-title text-uppercase flex-grow-1 m-0 me-3">Navigation</h2>
@@ -32,21 +35,27 @@
     </div>
 </div>
 
-<!-- Navigation -->
-<nav class="{{ class }} sidebar-navigation block"{{ cssID }}{% if style|default %} style="{{ style }}"{% endif %}>
-    {% if headline|default %}
+{% set classes = ['sidebar-navigation' , 'block'] %}
+{% if class|default('') %}
+    {% set classes = classes|merge(class|split(' ')) %}
+{% endif %}
+{% set class = classes|join(' ') %}
+
+<nav class="{{ class }}" {{ cssID }}>
+    {% if headline is defined and headline is not empty %}
     <{{ hl }}>{{ headline }}</{{ hl }}>
 {% endif %}
 
 <a href="{{ request }}#{{ skipId }}" class="invisible">{{ skipNavigation }}</a>
 {{ items|raw }}
 <a id="{{ skipId }}" class="invisible">&nbsp;</a>
+
 </nav>
 
 <!-- Suchformular -->
 <div class="sidebar-search-form mt-5 mb-5 ms-3 me-3">{{ '{{insert_module::185}}'|raw }}</div>
 
-<!-- Toggler script -->
+<!-- Sidebar toggle script -->
 <script>
     jQuery(document).ready(function () {
         $('<div id="sidebarOverlay"></div>').prependTo("body");
@@ -61,6 +70,19 @@
                 }, 600);
             }
         });
+    });
+</script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+        if (ContaoSidebarNavigation) {
+            new ContaoSidebarNavigation({
+                'submenuContainer': '.submenu',
+                'followSubmenuContainerLink': false,
+                'submenuTogglerHtml': '<button class="toggle-submenu" role="button"></button>',
+            });
+        }
     });
 </script>
 <!-- indexer::continue -->

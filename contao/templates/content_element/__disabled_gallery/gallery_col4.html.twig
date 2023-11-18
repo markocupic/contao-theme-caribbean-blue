@@ -1,0 +1,60 @@
+{#
+This is a variation of  @Contao/content_element/gallery.html.twig
+
+It simply adds a few Bootstrap CSS classes to the layout:
+- add classes 'row', 'col-12', 'col-sm-6', 'col-md-3' to the ul & li tags
+- add the 'list-unstyled' CSS class to the ul tag.
+- add the 'img-fluid' & 'w-100' CSS classes to the img tag
+- add the 'mb-0' CSS class to the figure tag
+
+Marko Cupic, St.Léger 14.04.2023 ;-)
+#}
+
+{% extends "@Contao/content_element/_base.html.twig" %}
+{% use "@Contao/component/_list.html.twig" %}
+{% use "@Contao/component/_figure.html.twig" %}
+{% use "@Contao/component/_picture.html.twig" %}
+
+{% set attributes = attrs(attributes|default).addClass("content-#{type}--cols-#{items_per_row|default(4)}") %}
+
+{% block content %}
+    {% with {items: images} %}{{ block('list_component') }}{% endwith %}
+{% endblock %}
+
+{% block list_item %}
+    {% with {figure: item} %}{{ block('figure_component') }}{% endwith %}
+{% endblock %}
+
+{#
+Grid layout
+Add Bootstrap row & list-style CSS classes to the ul tag.
+#}
+{% block list_attributes %}
+    {{- attrs(list_attributes|default).addClass(['row','g-2','list-unstyled']) -}}
+{% endblock %}
+
+{#
+Grid layout
+Add Bootstrap column CSS classes to the li tags.
+#}
+{% block list_item_attributes %}
+    {{- attrs(list.item_attributes|default).addClass(['col-12','col-sm-6','col-md-3']) -}}
+{% endblock %}
+
+{#
+Responsive images:
+Add Bootstrap responsive image CSS classes to the img tags.
+#}
+{% block image %}
+    {% set img_attributes = attrs(img_attributes|default).addClass(['img-fluid','w-100']) %}
+    {{ parent() }}
+{% endblock %}
+
+{#
+Remove margin from the figure tag
+Add Bootstrap mb-0 CSS class to the figure tag
+#}
+{% block figure_component %}
+    {% set figure_attributes = attrs(figure_attributes|default).addClass(['mb-0']) %}
+    {{ parent() }}
+{% endblock %}
