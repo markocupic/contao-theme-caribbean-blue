@@ -52,24 +52,8 @@
                 }
             },
             {
-                "source": "files/theme/theme-caribbean-blue/favicon",
-                "target": "files/themes/theme-caribbean-blue/favicon",
-                "options": {
-                    "OVERRIDE": true,
-                    "DELETE": true
-                }
-            },
-            {
                 "source": "files/theme/theme-caribbean-blue/images",
                 "target": "files/themes/theme-caribbean-blue/images",
-                "options": {
-                    "OVERRIDE": true,
-                    "DELETE": true
-                }
-            },
-            {
-                "source": "files/theme/theme-caribbean-blue/js",
-                "target": "files/themes/theme-caribbean-blue/js",
                 "options": {
                     "OVERRIDE": true,
                     "DELETE": true
