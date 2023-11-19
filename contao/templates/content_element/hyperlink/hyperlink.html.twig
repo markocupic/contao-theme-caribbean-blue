@@ -6,11 +6,11 @@
         {# Link wrapping text #}
         {% block text_link %}
             {{- text_before -}}
-            <div class="download-element--icon-box">
-                <div class="download-icon">
+            <div class="icon-box-link-element">
+                <div class="icon-box-link-element--icon">
                     <a{{ attrs(link_attributes|default) }}><i class="fas fa-link"></i></a>
                 </div>
-                <div class="download-link flex-grow-1">
+                <div class="icon-box-link-element--link">
                     <a{{ attrs(link_attributes|default) }}>{{ link_text }}</a>
                 </div>
             </div>

@@ -44,7 +44,8 @@ Note:
             .setIfExists('type', download.file.mimeType('')) %}
 
         {% set ext = download.file.extension(true) %}
-        {% set icon = 'fa-file' %}
+        {% set icon = 'fa-file' %}{# default icon #}
+
         {% if ext == 'pdf' %}
             {% set icon = 'fa-file-pdf' %}
         {% elseif ext == 'doc' or ext == 'docx' %}
@@ -54,13 +55,14 @@ Note:
         {% elseif ext == 'jpeg' or ext == 'jpg' or ext == 'png' %}
             {% set icon = 'fa-file-image' %}
         {% endif %}
-        <div class="download-element--icon-box">
-            <div class="download-icon">
+
+        <div class="icon-box-link-element">
+            <div class="icon-box-link-element--icon">
                 <a{% block download_link_attributes %}{{ download_link_attributes }}{% endblock %}>
                     <i data-ext="{{ ext }}" class="fas {{ icon }}"></i>
                 </a>
             </div>
-            <div class="download-link flex-grow-1">
+            <div class="icon-box-link-element--link ">
                 <a{{ block('download_link_attributes') }}>
                     {%- block download_link_inner %}{{ text }}{% endblock -%}
                 </a>

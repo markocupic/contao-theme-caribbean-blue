@@ -1,4 +1,3 @@
-// Email mailto link
 .content-hyperlink {
   .hyperlink_txt {
     line-height: 2.25rem;
@@ -27,7 +26,7 @@ a.email {
 .content-downloads, .content-download, .content-hyperlink {
   margin: 0;
 
-  .download-element--icon-box {
+  .icon-box-link-element {
     &:hover .download-link {
       background-color: darken(#f6f6f6, 10);
     }
@@ -38,7 +37,7 @@ a.email {
     display: flex;
     gap: 1px;
 
-    .download-icon {
+    .icon-box-link-element--icon {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,7 +49,8 @@ a.email {
       }
     }
 
-    .download-link {
+    .icon-box-link-element--link {
+      flex-grow: 1;
       background-color: #f6f6f6;
       padding: 2px 10px;
 
@@ -62,7 +62,7 @@ a.email {
       }
     }
 
-    .download-icon, .download-link {
+    .icon-box-link-element--icon, .icon-box-link-element--link {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
