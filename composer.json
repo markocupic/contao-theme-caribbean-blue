@@ -44,6 +44,14 @@
     "extra": {
         "composer-file-copier-plugin": [
             {
+                "source": "files/theme/theme-caribbean-blue/templates",
+                "target": "templates/theme-caribbean-blue",
+                "options": {
+                    "OVERRIDE": true,
+                    "DELETE": true
+                }
+            },
+            {
                 "source": "files/theme/theme-caribbean-blue/images",
                 "target": "files/themes/theme-caribbean-blue/images",
                 "options": {
