@@ -40,7 +40,8 @@ Note:
     {% block download_link %}
         {% set download_link_attributes = attrs(download.link_attributes|default)
             .set('href', download.href)
-            .set('title','MSC.download'|trans([title]))
+            .set('data-ext', download.file.extension(true))
+            .set('title', 'MSC.download'|trans([title]))
             .setIfExists('type', download.file.mimeType('')) %}
 
         {% set ext = download.file.extension(true) %}
@@ -56,6 +57,8 @@ Note:
             {% set icon = 'fa-file-image' %}
         {% elseif ext == 'mp3' or ext == 'wav' %}
             {% set icon = 'fa-file-audio' %}
+        {% elseif ext == 'mp4' %}
+            {% set icon = 'fa-file-video' %}
         {% endif %}
 
         <div class="icon-box-link-element">
