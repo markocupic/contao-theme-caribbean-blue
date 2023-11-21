@@ -54,6 +54,8 @@ Note:
             {% set icon = 'fa-file-excel' %}
         {% elseif ext == 'jpeg' or ext == 'jpg' or ext == 'png' %}
             {% set icon = 'fa-file-image' %}
+        {% elseif ext == 'mp3' or ext == 'wav' %}
+            {% set icon = 'fa-file-audio' %}
         {% endif %}
 
         <div class="icon-box-link-element">
