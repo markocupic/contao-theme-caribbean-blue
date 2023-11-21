@@ -19,7 +19,7 @@
             </div>
 
             <div class="d-none d-lg-block me-4 header-search-form">
-                <a class="btn" title="suchen" href="suche.html"><i class="fal fa-1.5x fa-search"></i></a>
+                <a class="btn btn-lg" title="suchen" href="{{ '{{link_url::suche}}' }}"><i class="fal fa-1.5x fa-search"></i></a>
             </div>
 
             {% if has_logged_in_frontend_user() %}
@@ -34,9 +34,9 @@
             <div class="header-button-container d-none d-lg-block">
                 <div>
                     {% if has_logged_in_frontend_user() %}
-                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-outline-danger">Abmelden</a>
+                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-lg btn-outline-danger">Abmelden</a>
                     {% else %}
-                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-outline-danger">{{ '{{link_name::anmelden}}' }}</a>
+                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-lg btn-outline-danger">{{ '{{link_name::anmelden}}' }}</a>
                     {% endif %}
                 </div>
             </div>
