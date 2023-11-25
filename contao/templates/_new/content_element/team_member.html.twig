@@ -1,0 +1,50 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+{% use "@Contao/component/_figure.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-8 col-lg-8">
+            <div class="content-team_member--name"><h3>{{ firstname }} {{ lastname }}</h3></div>
+
+            {% if roles|default %}
+                <div class="content-team_member--roles mt-4">
+                    <p class="m-0"><strong>Ressorts:</strong></p>
+                    <ul class="content-team_member--roles-list">
+                        {% for role in roles %}
+                            <li class="content-team_member--roles-list-item d-flex"><i class="fa-regular fa-check-double me-2"></i><span>{{ role }}</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if working_time|default %}
+                <div class="content-team_member--working-time mt-4">
+                    <p class="m-0"><strong>Bürozeit:</strong></p>
+                    <ul class="content-team_member--working-time-list">
+                        {% for item in working_time %}
+                            <li class="content-team_member--working-time-list-item">{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <address class="content-team_member--address mt-4">
+                {% if email|default %}
+                    <div class="content-team_member--email"><i class="fa-regular fa-envelope fa-fw me-2"></i><a href="mailto:{{ email }}">{{ email }}</a></div>
+                {% endif %}
+
+                {% if phone|default %}
+                    <div class="content-team_member--phone"><i class="fa-regular fa-phone fa-fw me-2"></i><a href="tel:{{ phone|replace({' ': ''}) }}">{{ phone }}</a></div>
+                {% endif %}
+            </address>
+        </div>
+
+        <div class="col-sm-4 col-lg-4">
+            {% if has_image|default %}
+                <div class="content-team_member--picture">
+                    {% with {figure: images|first} %}{{ block('figure_component') }}{% endwith %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -53,8 +53,9 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
             $GLOBALS['TL_BODY'][] = '<script defer src="/assets/contao-component-bootstrap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>';
 
             // Font Awesome
-            $GLOBALS['TL_CSS'][] = '/files/fontawesome-pro-5.5.0-web/css/all.css|static';
-            $GLOBALS['TL_BODY'][] = '<script defer src="/files/fontawesome-pro-5.5.0-web/js/all.js"></script>';
+            //$GLOBALS['TL_CSS'][] = '/files/fontawesome-pro-5.5.0-web/css/all.css|static';
+            //$GLOBALS['TL_BODY'][] = '<script defer src="/files/fontawesome-pro-5.5.0-web/js/all.js"></script>';
+            $GLOBALS['TL_BODY'][] = '<script src="https://kit.fontawesome.com/edd1254fa6.js" crossorigin="anonymous"></script>';
         }
     }
 

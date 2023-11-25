@@ -47,15 +47,34 @@ $navbar-height: 3.5rem;
         z-index: $zindex-dropdown;
       }
 
+      > li.submenu {
+        padding-right: 56px;
+      }
+
       > li.submenu > a:after, > li.submenu > strong:after {
-        font-family: $icon-font-name;
-        content: "\f078";
-        padding-left: $spacer-x;
+        //padding-left: $spacer-x;
+        width: 16px;
+        height: 16px;
         color: #fff;
+        margin-left: 4px;
+        // Arrow https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_arrows
+        content: " ";
+        pointer-events: all;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        // Arrow down
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
       }
 
       > li.expanded.submenu > a:after, > li.expanded.submenu > strong:after {
-        content: "\f077";
+        // Arrow up
+        top: 24px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
       }
 
       > li.trail, > li.active {
@@ -117,17 +136,6 @@ $navbar-height: 3.5rem;
         padding: 1rem $spacer-x;
         padding-right: 20px;
         position: relative;
-      }
-
-      > li.active > *:after {
-        font-family: $icon-font-name;
-        content: "\f00c";
-        position: absolute;
-        right: 20px;
-        top: .25rem;
-        line-height: 3;
-        color: #43b581;
-        font-weight: 100;
       }
 
       > li > * {

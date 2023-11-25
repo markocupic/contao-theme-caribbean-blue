@@ -238,11 +238,20 @@ body.sidebar-open {
       }
 
       > .toggle-submenu:before {
-        font-family: $icon-font-name;
         color: $nav-font-color;
-        content: "\f067";
-        font-size: 1.5rem;
-        font-style: normal;
+        // Arrow https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_arrows
+        content: " ";
+        width: 20px;
+        height: 20px;
+        pointer-events: all;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        // Arrow down
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
       }
 
       > .toggle-submenu:hover:before {
@@ -255,8 +264,11 @@ body.sidebar-open {
         }
 
         > .toggle-submenu:before {
-          content: "\f068";
           color: $nav-font-color;
+          // Arrow up
+          top: 20px;
+          transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg);
         }
       }
     }

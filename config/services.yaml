@@ -4,6 +4,8 @@ services:
         autoconfigure: true
         public: true
         bind:
+            $filesStorage: '@contao.filesystem.virtual.files'
+            $validExtensions: '%contao.image.valid_extensions%'
 
     Markocupic\ContaoThemeCaribbeanBlue\:
         resource: ../src/

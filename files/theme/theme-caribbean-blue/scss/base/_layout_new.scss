@@ -1,0 +1,31 @@
+body {
+  background-color: #f8f8f8;
+}
+
+#wrapper{
+  //@extend .container;
+  //max-width: 1660px;
+  background-color: transparent;
+}
+
+#header {
+ .header-row-1{
+   background-color: #fff !important;
+ }
+  background-color: #fff;
+}
+
+#main{
+  > .inside > .mod_article{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    .article-inside:not(.p-0){
+      @extend .px-4;
+      background-color: #fff;
+    }
+    .article-inside.container{
+      max-width: 1660px;
+    }
+  }
+}

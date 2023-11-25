@@ -23,9 +23,9 @@
 @import "base/bootstrap-anpassungen";
 @import "base/grid";
 @import "base/article";
+@import "base/layout_new";
 
 // components
-//@import "components/news_timeline";
 @import "components/accordion";
 @import "components/col-border";
 @import "components/cookiebar";
@@ -47,6 +47,5 @@
 @import "components/scroll-to-top";
 @import "components/service-link";
 @import "components/sidebar-and-navigation";
-@import "components/socialmedia-buttons";
 @import "components/sticky-footer";
 @import "components/table";

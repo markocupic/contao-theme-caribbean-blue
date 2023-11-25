@@ -4,6 +4,7 @@
 
   .ui-accordion-header {
     @extend .h4;
+    padding-left: 50px;
   }
 
   padding: $spacer-y, 0;
@@ -23,6 +24,7 @@
   }
 
   .toggler {
+    position: relative;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     //font-size: 1.25rem !important;
@@ -30,17 +32,26 @@
     @include transition(color);
     color: #000;
     // for open accordions
-    .ui-icon-triangle-1-s::before {
-      font-family: $icon-font-name;
-      content: "\f078";
-      padding-right: 20px;
+    .ui-icon::before {
+      width: 20px;
+      height: 20px;
+      content: " ";
+      pointer-events: all;
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      // Arrow down
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
     }
 
     // for closed accordions
-    .ui-icon-triangle-1-e::before {
-      font-family: $icon-font-name;
-      content: "\f054";
-      padding-right: 20px;
+    .ui-icon.ui-icon-triangle-1-e::before {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      top:-6px;
     }
   }
 
