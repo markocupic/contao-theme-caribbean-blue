@@ -2,8 +2,9 @@
   #main {
     //padding-bottom: $spacer-y;
   }
+
   .mod_article:not(.container-fluid) > .inside {
-    @extend .container;
+    @extend .container-lg;
     padding: 2rem 1rem;
   }
 
@@ -21,6 +22,7 @@
   .mod_article {
     > .inside {
       background-color: #fff;
+
       > *:first-child {
         margin-top: $spacer !important;
       }
@@ -29,6 +31,7 @@
 
   .mod_article.article-dark {
     background-color: #222;
+
     > .inside {
       background-color: transparent;
     }
@@ -36,6 +39,7 @@
 
   .mod_article.article-white {
     background-color: #fff;
+
     > .inside {
       background-color: #fff;
     }
@@ -43,6 +47,7 @@
 
   .mod_article.article-accent-2 {
     background-color: $accent-color-2;
+
     > .inside {
       background-color: transparent;
     }
@@ -50,21 +55,10 @@
 
   .mod_article.article-gray {
     background-color: #9e9e9e4a;
+
     > .inside {
       background-color: transparent;
     }
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
