@@ -1,5 +1,6 @@
 // Set variables and overwrite bootstrap vars
 @import "variables";
+@import "variables_new";
 // EMBED BOOTSTRAP FRAMEWORK
 // main.scss is stored in "vendor/markocupic/contao-theme-caribbean-blue/files/theme-caribbean-blue/scss/main.scss"
 // thats why you have to jump up 6 folders to reach the contao root
@@ -21,8 +22,9 @@
 @import "base/margins";
 @import "base/type";
 @import "base/bootstrap-anpassungen";
-@import "base/grid";
-//@import "base/layout_new";
+@import "base/grid"; 
+//@import "components/footer";
+@import "base/layout_new";
 
 // components
 @import "components/accordion";
@@ -31,7 +33,6 @@
 @import "components/cursor";
 @import "components/darkmode";
 @import "components/downloads_and_hyperlinks";
-@import "components/footer";
 @import "components/forms";
 @import "components/header";
 @import "components/hero-banner";
