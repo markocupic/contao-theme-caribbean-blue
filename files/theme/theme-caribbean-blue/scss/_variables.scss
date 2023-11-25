@@ -2,7 +2,11 @@
 $font-family-sans-serif: 'Nunito', 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 $headings-font-family: 'Nunito', 'Segoe UI', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-size-base: 1.1rem;
-$line-height-base: 1.1*1.5;
+
+// Line heights
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.5 !default; // default 1.25
+$line-height-lg:              2 !default;
 
 // Icon Fontname
 //$icon-font-name: "FontAwesome";

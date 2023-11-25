@@ -69,7 +69,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ceTeamMemberPhone'] = [
 $GLOBALS['TL_DCA']['tl_content']['fields']['ceTeamMemberEmail'] = [
     'search'    => true,
     'inputType' => 'text',
-    'eval'      => ['mandatory' => true, 'maxlength' => 255, 'rgxp' => 'email', 'unique' => true, 'decodeEntities' => true, 'tl_class' => 'w50'],
+    'eval'      => ['maxlength' => 255, 'rgxp' => 'email', 'decodeEntities' => true, 'tl_class' => 'w50'],
     'sql'       => "varchar(255) NOT NULL default ''",
 ];
 

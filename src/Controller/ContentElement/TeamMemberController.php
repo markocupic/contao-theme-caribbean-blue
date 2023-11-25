@@ -39,10 +39,11 @@ class TeamMemberController extends AbstractContentElementController
 
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
-        if($model->addImage){
+        if ($model->ceTeamMemberAddImage) {
             // Find all images (see #5911)
             $filesystemItems = FilesystemUtil::listContentsFromSerialized($this->filesStorage, $model->singleSRC)
-                ->filter(fn($item) => \in_array($item->getExtension(true), $this->validExtensions, true));
+                ->filter(fn ($item) => \in_array($item->getExtension(true), $this->validExtensions, true))
+            ;
 
             // Compile list of images
             $figureBuilder = $this->studio
@@ -54,7 +55,7 @@ class TeamMemberController extends AbstractContentElementController
             ;
 
             $imageList = array_map(
-                fn(FilesystemItem $filesystemItem): Figure => $figureBuilder
+                fn (FilesystemItem $filesystemItem): Figure => $figureBuilder
                     ->fromStorage($this->filesStorage, $filesystemItem->getPath())
                     ->build(),
                 iterator_to_array($filesystemItems)
@@ -64,15 +65,18 @@ class TeamMemberController extends AbstractContentElementController
                 $template->set('images', $imageList);
                 $template->set('has_image', true);
             }
-
         }
 
         $template->set('firstname', $model->ceTeamMemberFirstname);
         $template->set('lastname', $model->ceTeamMemberLastname);
         $template->set('phone', $model->ceTeamMemberPhone);
         $template->set('email', $model->ceTeamMemberEmail);
-        $template->set('roles', StringUtil::deserialize($model->ceTeamMemberRoles,true));
-        $template->set('working_time', StringUtil::deserialize($model->ceTeamMemberWorkingTime,true));
+
+        $arrRoles = array_filter(StringUtil::deserialize($model->ceTeamMemberRoles, true));
+        $template->set('roles', !empty($arrRoles) ? $arrRoles : null);
+
+        $arrWorkingTime = array_filter(StringUtil::deserialize($model->ceTeamMemberWorkingTime, true));
+        $template->set('working_time', !empty($arrWorkingTime) ? $arrWorkingTime : null);
 
         return $template->getResponse();
     }

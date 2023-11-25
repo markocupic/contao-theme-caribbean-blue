@@ -20,6 +20,6 @@ $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberFirstname'] = ['Vorname', 'Geben 
 $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberLastname'] = ['Nachname', 'Geben Sie den Nachnamen ein.'];
 $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberPhone'] = ['Telefonnummer', 'Geben Sie die Telefonnummer ein.'];
 $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberEmail'] = ['E-Mail-Adresse', 'Geben Sie die E-Mail-Adresse ein.'];
-$GLOBALS['TL_LANG']['tl_content']['ceTeamMemberRoles'] = ['Aufgaben/Funktionen/Ressorts', 'Geben Sie die Aufgaben/Funktionen/Ressorts ein.'];
+$GLOBALS['TL_LANG']['tl_content']['ceTeamMemberRoles'] = ['Aufgaben/Funktionen/Ressorts/Zuständigkeit', 'Geben Sie die Aufgaben/Funktionen/Ressorts/Zuständigkeit ein.'];
 $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberWorkingTime'] = ['Arbeitszeiten', 'Geben Sie die Arbeitszeiten ein.'];
 $GLOBALS['TL_LANG']['tl_content']['ceTeamMemberAddImage'] =  $GLOBALS['TL_LANG']['tl_content']['addImage'];

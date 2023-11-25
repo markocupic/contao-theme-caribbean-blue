@@ -240,9 +240,9 @@ body.sidebar-open {
       > .toggle-submenu:before {
         color: $nav-font-color;
         // Arrow https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_arrows
-        content: " ";
-        width: 20px;
-        height: 20px;
+        content: "";
+        width: 16px;
+        height: 16px;
         pointer-events: all;
         border: solid white;
         border-width: 0 3px 3px 0;
