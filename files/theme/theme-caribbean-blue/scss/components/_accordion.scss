@@ -7,16 +7,13 @@
     padding-left: 50px;
   }
 
-  padding: $spacer-y, 0;
-  margin: $spacer-y, 0;
-
   .ui-accordion-content-active {
-    padding-bottom: 1rem;
+    padding: 2rem 0 0 1rem;
+
   }
 
   .ui-state-focus {
     outline: none !important;
-
   }
 
   .ui-accordion-header.active:focus {
@@ -51,7 +48,7 @@
     .ui-icon.ui-icon-triangle-1-e::before {
       transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
-      top:-6px;
+      top: -6px;
     }
   }
 
