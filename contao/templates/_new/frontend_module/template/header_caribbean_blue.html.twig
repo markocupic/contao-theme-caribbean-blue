@@ -6,8 +6,7 @@
             <div class="header-logo">
                 <div class="me-4">
                     <a href="" title="Startseite">
-                        <div class="d-none d-block-xl">{{ '{{image::files/themes/theme-caribbean-blue/images/logos/Logo.jpg?height=100px&width=auto&class=logo-header&alt=Logo}}'|raw }}</div>
-                        <div class="d-block d-none-xl">{{ '{{image::files/themes/theme-caribbean-blue/images/logos/Logo.jpg?height=80px&width=auto&class=logo-header&alt=Logo}}'|raw }}</div>
+                        <img src="files/themes/theme-caribbean-blue/images/logos/Logo.svg" alt="Logo" class="logo-header">
                     </a>
                 </div>
             </div>
@@ -34,9 +33,9 @@
             <div class="header-button-container d-none d-lg-block">
                 <div>
                     {% if has_logged_in_frontend_user() %}
-                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-lg btn-outline-danger">Abmelden</a>
+                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-outline-danger">Abmelden</a>
                     {% else %}
-                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-lg btn-outline-danger">{{ '{{link_name::anmelden}}' }}</a>
+                        <a href="{{ '{{link_url::anmelden}}' }}" role="button" class="btn btn-outline-danger">{{ '{{link_name::anmelden}}' }}</a>
                     {% endif %}
                 </div>
             </div>

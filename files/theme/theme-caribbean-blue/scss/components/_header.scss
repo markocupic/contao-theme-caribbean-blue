@@ -1,9 +1,6 @@
 #header {
   .header-row-1 {
-    //background-color: #607d8b29;
     background-color: $accent-color-2;
-    //background-color: transparent;
-    //background-color: #f6f6f6;
 
     .header-title h1 {
       font-family: Georgia, 'Times New Roman', serif;
@@ -33,11 +30,20 @@
       @include media-breakpoint-up(lg) {
         height: 80px;
       }
+      @include media-breakpoint-up(xxl) {
+        height: 90px;
+      }
     }
 
     .header-navigation-toggle-container .fa-bars {
       font-size: 2rem;
       color: #000;
+    }
+  }
+
+  .header-button-container .btn {
+    @include media-breakpoint-up(xxl) {
+      @extend .btn-lg;
     }
   }
 }
