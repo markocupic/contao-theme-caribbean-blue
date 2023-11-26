@@ -39,22 +39,14 @@ figure{
   }
 }
 
-// Do not show caption on mobile phones
-@include media-breakpoint-up(sm) {
-  .gallery_creator .caption {
-    display: none;
-  }
-  .ce_gallery .caption {
-    display: none;
-  }
-}
-
 img.img-not-fluid, .img-not-fluid img{
   max-width: 100%;
   width: initial !important;
 }
 
 figcaption{
+  @extend .mt-2;
   @extend .small;
+  color: $gray-500;
+  line-height: 1.25;
 }
-
