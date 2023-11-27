@@ -9,7 +9,7 @@ $navbar-height: 3.5rem;
     z-index: $zindex-navbar;
     height: $navbar-height;
     overflow-y: visible;
-    background-color: $accent-color-1;
+    background-color: $accent-color-5;
     color: #000;
     //margin-top: 100px;
     ul, li {
@@ -113,7 +113,7 @@ $navbar-height: 3.5rem;
     }
 
     ul.level_2 {
-      background-color: #eee;
+      background-color: $accent-color-3;
       opacity: 1;
 
       li > span, li > strong, li > a, li > a:after, li > strong:after {
@@ -123,7 +123,7 @@ $navbar-height: 3.5rem;
       }
 
       li:hover {
-        background-color: $accent-color-1;
+        background-color: $accent-color-5;
 
         > * {
           color: #fff;
@@ -149,7 +149,7 @@ $navbar-height: 3.5rem;
 
     ul.level_3 {
       margin-top: -10px;
-      background-color: #eee;
+      background-color: $accent-color-3;
       opacity: 1;
 
       a, strong {

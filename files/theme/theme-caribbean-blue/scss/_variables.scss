@@ -4,9 +4,9 @@ $headings-font-family: 'Nunito', 'Segoe UI', -apple-system, system-ui, BlinkMacS
 $font-size-base: 1.1rem;
 
 // Line heights
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.5 !default; // default 1.25
-$line-height-lg:              2 !default;
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.5 !default; // default 1.25
+$line-height-lg: 2 !default;
 
 // Icon Fontname
 //$icon-font-name: "FontAwesome";
@@ -16,17 +16,20 @@ $icon-font-name: "Font Awesome 6 Pro";
 $enable-rounded: false;
 
 // Scheme color
-// https://www.schemecolor.com/blue-red-yellow-green.php#download
+// https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429
 
-$theme-color-1: #3581D8;
-$theme-color-2: #63CAD8;
-$theme-color-3: #D82E3F;
-$theme-color-4: #FFE135;
-$theme-color-5: #FFF44F;
-$theme-color-6: #28CC2D;
+$theme-color-1: #2b2d42;
+$theme-color-2: #8d99ae;
+//$theme-color-3: #edf2f4;
+$theme-color-3: #F8FAFB;
+$theme-color-4: #ef233c;
+$theme-color-5: #d90429;
 
-$accent-color-1: $theme-color-3;
-$accent-color-2: $theme-color-4;
+$accent-color-1: $theme-color-1;
+$accent-color-2: $theme-color-2;
+$accent-color-3: $theme-color-3;
+$accent-color-4: $theme-color-4;
+$accent-color-5: $theme-color-5;
 
 $btn-primary-bg: $theme-color-1;
 $link-color: $theme-color-1;
@@ -47,11 +50,9 @@ $gray-lightest: #f7f7f9;
 $zindex-dropdown-backdrop: 990;
 $zindex-navbar: 1000;
 
-$body-bg: #fff;
-//$body-color: $gray-lightest;
-
+$body-bg: $accent-color-3;
 $body-color: #23272a;
-$danger: $accent-color-1;
+$danger: $accent-color-5;
 
 $light-weights: ("lightest": 100, "light": 300);
 $heavy-weights: ("medium": 500, "bold": 700);

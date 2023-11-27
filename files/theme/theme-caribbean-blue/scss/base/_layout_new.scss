@@ -1,6 +1,3 @@
-body {
-  background-color: #efefef;
-}
 
 #wrapper {
   background-color: transparent;
@@ -43,6 +40,36 @@ body {
     .article-inside.article-container {
       @extend .container-lg;
     }
+  }
+
+  .box-bg-accent-1 {
+    @extend .p-3;
+    color: #ffffff;
+    background-color: $accent-color-1;
+  }
+
+  .box-bg-accent-2 {
+    @extend .p-3;
+    color: #ffffff;
+    background-color: $accent-color-2;
+  }
+
+  .box-bg-accent-3 {
+    @extend .p-3;
+    //color: #ffffff;
+    background-color: $accent-color-3;
+  }
+
+  .box-bg-accent-4 {
+    @extend .p-3;
+    color: #ffffff;
+    background-color: $accent-color-4;
+  }
+
+  .box-bg-accent-5 {
+    @extend .p-3;
+    color: #ffffff;
+    background-color: $accent-color-5;
   }
 }
 

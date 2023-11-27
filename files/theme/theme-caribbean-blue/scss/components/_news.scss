@@ -43,7 +43,7 @@
 
     &:before {
       content: '# ';
-      color: red !important;
+      color: $accent-color-5 !important;
       font-weight: 800;
     }
   }
@@ -51,7 +51,7 @@
   &.news-list-start-page {
     h2[itemprop="name"]:before {
       content: '# ';
-      color: red !important;
+      color: $accent-color-5 !important;
       font-weight: 800;
     }
   }
