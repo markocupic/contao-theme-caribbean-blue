@@ -9,7 +9,7 @@ $navbar-height: 3.5rem;
     z-index: $zindex-navbar;
     height: $navbar-height;
     overflow-y: visible;
-    background-color: $accent-color-5;
+    background-color: $theme-color-1;
     color: #000;
     //margin-top: 100px;
     ul, li {
@@ -39,7 +39,7 @@ $navbar-height: 3.5rem;
       }
 
       > li {
-        margin: 0 2px 0 0;
+        margin: 0;
         padding: 0 $spacer-x;
         position: relative;
         height: $navbar-height;
@@ -78,7 +78,8 @@ $navbar-height: 3.5rem;
       }
 
       > li.trail, > li.active {
-        background-color: #671010;
+        //background-color: #671010;
+        background-color: $theme-color-2;
 
         > span, > strong, > a, > a:after, > strong:after {
           color: #fff;
@@ -86,7 +87,8 @@ $navbar-height: 3.5rem;
       }
 
       > li.expanded, > li:hover {
-        background-color: #671010;
+        //background-color: #671010;
+        background-color: $theme-color-2;
 
         > a, > a:after, > strong {
           color: #fff;
@@ -113,7 +115,7 @@ $navbar-height: 3.5rem;
     }
 
     ul.level_2 {
-      background-color: $accent-color-3;
+      background-color: $theme-color-5;
       opacity: 1;
 
       li > span, li > strong, li > a, li > a:after, li > strong:after {
@@ -123,7 +125,7 @@ $navbar-height: 3.5rem;
       }
 
       li:hover {
-        background-color: $accent-color-5;
+        background-color: $theme-color-1;
 
         > * {
           color: #fff;
@@ -149,7 +151,7 @@ $navbar-height: 3.5rem;
 
     ul.level_3 {
       margin-top: -10px;
-      background-color: $accent-color-3;
+      background-color: $theme-color-5;
       opacity: 1;
 
       a, strong {

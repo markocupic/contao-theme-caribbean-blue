@@ -163,7 +163,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     &:after {
       content: "";
       width: 100px;
-      background: $accent-color-5;
+      background: $theme-color-1;
 
       margin: 0 0 !important;
       font-weight: 300;

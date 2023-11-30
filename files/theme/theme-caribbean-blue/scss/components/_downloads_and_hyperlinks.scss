@@ -28,7 +28,7 @@ a.email {
 
   .icon-box-link-element {
     &:hover .download-link {
-      background-color: darken($accent-color-5, 10);
+      background-color: darken($theme-color-1, 10);
     }
 
     max-width: 600px;
@@ -42,7 +42,7 @@ a.email {
       justify-content: center;
       align-items: center;
       aspect-ratio: 1 / 1;
-      background-color: $accent-color-5;
+      background-color: $theme-color-1;
 
       a {
         color: #fff;
@@ -51,7 +51,7 @@ a.email {
 
     .icon-box-link-element--link {
       flex-grow: 1;
-      background-color: $accent-color-3;
+      background-color: $theme-color-5;
       padding: 2px 10px;
 
       a {
