@@ -5,9 +5,9 @@ $nav-bg-hover-color: lighten($nav-bg-color, 10%);
 $nav-border-color: lighten($nav-bg-color, 10%);
 $nav-font-color: #fff;
 $level_1-offset: 1rem;
-$level_2-offset: 2.5rem;
-$level_3-offset: 3rem;
-$level_4-offset: 3.5rem;
+$level_2-offset: 1.25rem;
+$level_3-offset: 1.5rem;
+$level_4-offset: 1.75rem;
 
 html, body {
   height: 100%;
@@ -89,10 +89,10 @@ $focus-outline-color: #a0d3eb;
   top: 0;
   height: 100%;
   width: 100%;
-  left: -576px;
-  max-width: 576px;
+  left: -400px;
+  max-width: 400px;
   background-color: $nav-bg-color;
-  @include transition(left, ease-in-out, 0.7s);
+  @include transition(left, ease-in-out, 1s);
 
   a:focus, a:focus-visible, button:focus, button:focus-visible {
     outline: 4px solid $focus-outline-color;
@@ -118,7 +118,6 @@ $focus-outline-color: #a0d3eb;
   .sidebar-top-container {
 
     .sidebar-title {
-      padding-left: $spacer-x;
       color: $gray-400;
     }
 
@@ -126,6 +125,7 @@ $focus-outline-color: #a0d3eb;
       position: absolute;
       right: $spacer;
       border: 0;
+
       i {
         color: $nav-close-btn-color;
       }
@@ -157,7 +157,7 @@ body.sidebar-open {
 
 .sidebar-navigation {
   padding: $spacer 0;
-  margin: 20px 0 0 0;
+  margin: 4rem 0 3rem 0 !important;
   text-align: left;
   position: relative;
 
@@ -174,7 +174,7 @@ body.sidebar-open {
     flex-wrap: wrap;
     position: relative;
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
@@ -328,14 +328,13 @@ body.sidebar-open {
     }
   }
 
-
   ul.level_1 {
 
     > li {
       line-height: 1.5;
       background-color: transparent;
       padding: clamp-calc(.8rem, 1.4rem);
-      padding-left: clamp-calc(.8rem, 1.4rem);
+      padding-left: 0;
       padding-right: 0;
 
       > .toggle-submenu:before {
@@ -346,6 +345,7 @@ body.sidebar-open {
         font-size: clamp-calc(1.25rem, 1.5rem);
         font-weight: bolder;
         max-width: calc(100% - 4.5rem);
+        padding-left: $level_1-offset !important;
       }
 
       > strong.active {
@@ -363,7 +363,7 @@ body.sidebar-open {
       line-height: 1.5;
       background-color: transparent;
       padding: .7rem;
-      padding-left: .7rem;
+      padding-left: 0;
       padding-right: 0;
 
       &:first-child {
@@ -387,6 +387,7 @@ body.sidebar-open {
         font-size: clamp-calc(1.125rem, 1.4rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
+        padding-left: $level_2-offset !important;
       }
 
       > strong.active {
@@ -404,7 +405,7 @@ body.sidebar-open {
       line-height: 1.5;
       background-color: transparent;
       padding: .6rem;
-      padding-left: .6rem;
+      padding-left: 0;
       padding-right: 0;
 
       &:first-child {
@@ -427,6 +428,7 @@ body.sidebar-open {
         font-size: clamp-calc(1rem, 1.3rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
+        padding-left: $level_3-offset !important;
       }
 
       > strong.active {
@@ -444,7 +446,7 @@ body.sidebar-open {
       line-height: 1.5;
       background-color: transparent;
       padding: .5rem;
-      padding-left: .5rem;
+      padding-left: 0;
       padding-right: 0;
 
       &:first-child {
@@ -467,6 +469,7 @@ body.sidebar-open {
         font-size: clamp-calc(.875rem, 1.2rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
+        padding-left: $level_4-offset !important;
       }
 
       > strong.active {

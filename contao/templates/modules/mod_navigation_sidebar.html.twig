@@ -48,21 +48,26 @@
     });
 </script>
 <script>
-    jQuery(document).ready(function () {
-        $('<div id="sidebarOverlay"></div>').prependTo("body");
-        $('.navigation-toggler, #sidebarOverlay').click(function () {
-            $('body').toggleClass('sidebar-open');
+    document.addEventListener("DOMContentLoaded", function () {
+        let sidebarOverlay = document.createElement("div");
+        sidebarOverlay.id = "sidebarOverlay";
+        document.body.prepend(sidebarOverlay);
 
-            if ($('body').hasClass('sidebar-open')) {
-                $('#sidebar').css('visibility', 'visible');
-            } else {
-                window.setTimeout(function () {
-                    $('#sidebar').css('visibility', 'hidden');
-                }, 600);
-            }
+        document.querySelectorAll(".navigation-toggler, #sidebarOverlay").forEach(element => {
+            element.addEventListener("click", function () {
+                document.body.classList.toggle("sidebar-open");
+
+                if (document.body.classList.contains("sidebar-open")) {
+                    document.getElementById("sidebar").style.visibility = "visible";
+                } else {
+                    setTimeout(function () {
+                        document.getElementById("sidebar").style.visibility = "hidden";
+                    }, 600);
+                }
+            });
         });
     });
 </script>
 <!-- Suchformular -->
-<div class="sidebar-search-form mt-5 mb-5 ms-3 me-3">{{ '{{insert_module::185}}'|raw }}</div>
+<div class="sidebar-search-form mt-5 ms-3 me-3">{{ '{{insert_module::185}}'|raw }}</div>
 <!-- indexer::continue -->
