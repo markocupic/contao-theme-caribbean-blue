@@ -1,0 +1,30 @@
+#wrapper {
+  background-color: transparent;
+}
+
+#main {
+  > .inside > .mod_article {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+
+    .article-inside:not(.article-container-p-0) {
+      @extend .px-4;
+      @extend .pe-4;
+      padding-bottom: 1.5rem;
+      background-color: #fff;
+    }
+
+    .article-inside.article-container {
+      @extend .container-lg;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 4rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 6rem;
+  }
+}

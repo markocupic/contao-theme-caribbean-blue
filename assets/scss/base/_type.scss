@@ -1,0 +1,105 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #000;
+  display:flex;
+}
+
+// Set headline
+$text-elements: (
+        h1: (
+                line-height: 1.55,
+                margin-top: 2rem,
+                margin-bottom: 2rem
+        ),
+        h2: (
+                line-height: 1.5,
+                margin-top: 2rem,
+                margin-bottom: 0.5rem
+        ),
+        h3: (
+                line-height: 1.25,
+                margin-top: 2rem,
+                margin-bottom: 0.5rem
+        ),
+        h4: (
+                line-height: 1,
+                margin-top: 1.5rem,
+                margin-bottom: 0.5rem
+        ),
+        h5: (
+                line-height: 1,
+                margin-top: 1.5rem,
+                margin-bottom: 0.5rem
+        ),
+        h6: (
+                line-height: 1,
+                margin-top: 1.5rem,
+                margin-bottom: 0.5rem
+        ),
+        legend: (
+                line-height: 1.5,
+                margin-top: 2rem,
+                margin-bottom: 0.5rem,
+                font-weight: bold
+        ),
+        label: (
+                line-height: 1.5,
+                margin-top: 0,
+                margin-bottom: 0.5rem,
+                font-weight: bold
+        ),
+);
+
+@each $key, $map in $text-elements {
+  #{$key} {
+    @extend .#{$key};
+    line-height: map-deep-get($text-elements, $key, "line-height");
+    margin-top: map-deep-get($text-elements, $key, "margin-top");
+    margin-bottom: map-deep-get($text-elements, $key, "margin-bottom");
+  }
+  .#{$key} {
+    margin-top: map-deep-get($text-elements, $key, "margin-top");
+    margin-bottom: map-deep-get($text-elements, $key, "margin-bottom");
+  }
+}
+
+.small {
+  font-weight: 500;
+}
+
+// Underline
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  text-decoration: none;
+}
+
+.mobile-title-heading {
+  h1 {
+    @include transition(font-size);
+    //@extend .h1;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hyphenate, .hyphenate * {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.mod_sitemap {
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+}

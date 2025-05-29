@@ -1,0 +1,87 @@
+/** From https://teamtreehouse.com/library/css-flexbox-layout/building-a-layout-with-flexbox/creating-a-sticky-footer-with-flexbox **/
+/** Sticky Footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#footer {
+  margin-top: auto;
+}
+
+/** End Sticky Footer */
+
+#footer {
+  background-color: #202125;
+  padding-top: clamp-calc(0rem, 2rem);
+  padding-bottom: clamp-calc(0rem, 2rem);
+
+  [class*="footer-row-"] {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
+
+  .footer-row-1 {
+    background-color: transparent;
+    color: $gray-300;
+    border-top: 0;
+
+    .footer-container {
+      @extend .container-lg;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      a {
+        color: $primary;
+        text-decoration: none;
+      }
+
+      .navigation-footer {
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+
+        li {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: $font-size-base;
+        color: #ffffff;
+      }
+    }
+
+    .row > div > div {
+      padding: 0;
+    }
+  }
+
+  .footer-row-2 {
+    background-color: transparent;
+    color: $gray-300;
+
+    .footer-container {
+      border-top: 1px solid $gray-700;
+      @extend .container-lg;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      a {
+        color: $primary;
+        text-decoration: none;
+      }
+
+      .title {
+        color: #ffffff;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

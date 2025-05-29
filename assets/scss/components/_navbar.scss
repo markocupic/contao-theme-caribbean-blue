@@ -1,0 +1,79 @@
+:root {
+  --contao-nav--color-level-1-hover: $primary !important;
+}
+
+.mod_navigation.header-desktop-navbar {
+  ul.level_1.contao-nav--nav-list {
+    & > li > a > span, & > li > strong, & li > span {
+      text-decoration: none;
+      font-size: 0.9125rem !important;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 1rem !important;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        font-size: $font-size-base;
+      }
+
+      font-weight: 500;
+    }
+
+    & > li.contao-nav--nav-item .contao-nav--dropdown-toggle:after {
+      width: 0.75rem !important;
+    }
+
+    > li.contao-nav--nav-item.trail, > li.contao-nav--nav-item.active {
+      border: 0;
+
+      & > span, & > strong, & > a, & > a:after, & > strong:after {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    > li.contao-nav--nav-item:hover {
+      & > span, & > strong, & > a, & > a:after, & > strong:after {
+        color: $primary !important;
+        text-decoration: none;
+      }
+    }
+
+    div.contao-nav--dropdown-menu {
+
+      @extend .shadow-sm;
+      @extend .rounded;
+      @extend .border;
+      min-width: 100%;
+      opacity: 1;
+      background-color: #ffffff;
+      width: max-content;
+
+      ul.level_2.contao-nav--nav-list {
+        opacity: 1;
+        background-color: #ffffff;
+        width: max-content;
+
+        li.contao-nav--nav-item {
+          background-color: #fff;
+          padding: .5rem 1rem;
+          display: block;
+
+          & > strong, & > a > span {
+            color: $body-color;
+            text-decoration: none;
+            font-size: 0.9125rem !important;
+            @include media-breakpoint-up(xl) {
+              font-size: 1rem !important;
+            }
+            font-weight: 400;
+          }
+
+          &:hover {
+            background-color: var(--bs-primary-bg-subtle);
+          }
+        }
+      }
+    }
+  }
+}

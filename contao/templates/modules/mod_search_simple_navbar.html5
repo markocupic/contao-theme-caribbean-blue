@@ -1,0 +1,14 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="get">
+<div class="formbody">
+  <div class="widget widget-text m-0 p-0">
+    <input type="search" name="keywords" id="ctrl_keywords_<?= $this->uniqueId ?>" class="form-control" id="floatingInputGroup1" placeholder="Suche">
+    <button class="d-none btn btn-primary" type="submit" id="ctrl_submit_<?= $this->uniqueId ?>"><?= $this->search ?></button>
+  </div>
+</div>
+</form>
+
+<?php $this->endblock(); ?>

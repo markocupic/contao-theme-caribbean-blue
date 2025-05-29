@@ -1,0 +1,40 @@
+// Set variables and overwrite bootstrap vars
+@import "variables";
+@import "color_scheme";
+
+// EMBED BOOTSTRAP FRAMEWORK
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// extend
+@import "extend";
+
+// MIXINS
+@import "mixins/_mixins.scss";
+
+// base
+@import "base/page"; 
+@import "base/type";
+@import "base/layout_header";
+@import "base/layout_wrapper_and_main";
+@import "base/layout_footer";
+
+// components
+//@import "components/darkmode";
+@import "components/content_accordion";
+@import "components/card";
+@import "components/content_gallery";
+@import "components/content_headline";
+@import "components/content_text";
+@import "components/cookiebar";
+@import "components/cursor";
+@import "components/downloads_and_hyperlinks";
+@import "components/forms";
+@import "components/invisible";
+@import "components/media";
+@import "components/navbar";
+@import "components/pagination";
+@import "components/swiper";
+
+//@import "components/resource_booking";
+@import "components/scroll-to-top";
+@import "components/sidebar-and-navigation";

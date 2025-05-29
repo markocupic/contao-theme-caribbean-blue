@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "styles/frontend": {
+      "css": [
+        "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.fe0754f0.css"
+      ]
+    }
+  }
+}

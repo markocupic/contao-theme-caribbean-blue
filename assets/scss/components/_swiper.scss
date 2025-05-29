@@ -1,0 +1,26 @@
+#main {
+  .swiper {
+    .swiper-pagination-bullet-active {
+      background: $primary;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      color: #ffffff;
+      background: $primary;
+      opacity: 0.4;
+      border: 6px solid $primary !important;
+      box-sizing: content-box;
+      width: 35px;
+      height: 45px;
+      transition-property: opacity;
+      transition-duration: .8s;
+    }
+
+    &:hover {
+      .swiper-button-prev, .swiper-button-next {
+        opacity: 1;
+      }
+    }
+
+  }
+}

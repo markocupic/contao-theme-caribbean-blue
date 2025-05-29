@@ -1,0 +1,29 @@
+.content-accordion {
+  .handorgel__content {
+    background-color: transparent;
+  }
+
+  .handorgel__header__button {
+    display: flex;
+    align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
+    gap: 10px; /* Abstand zwischen Icon und Text */
+    position: relative;
+    @extend .h4;
+    margin: 0;
+
+    &:before {
+      font-family: $icon-font-name;
+      content: "+";
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    &[aria-expanded="true"] {
+      color: $primary;
+
+      &:before {
+        content: "-";
+      }
+    }
+  }
+}

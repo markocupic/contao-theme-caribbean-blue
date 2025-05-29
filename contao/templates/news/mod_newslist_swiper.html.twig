@@ -1,0 +1,34 @@
+{% extends "@Contao/block_searchable" %}
+{% block content %}
+    {% add to head %}
+        {# include swiper.js #}
+        <link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.css', 'markocupic_contao_theme_caribbean_blue') }}">
+        <script src="{{ asset('swiper/swiper-bundle.js', 'markocupic_contao_theme_caribbean_blue') }}"></script>
+        {# Include swiper options #}
+        {% include '@MarkocupicContaoThemeCaribbeanBlue/Swiper/swiper_options.html.twig' %}
+    {% endadd %}
+    {% if not articles|default %}
+        <p class="empty">{{ empty|default }}</p>
+    {% else %}
+        {% if articles|default %}
+            <div class="d-block">
+            <div class="swiper swiper_newslist_slider_{{ id }}">
+                <ul class="swiper-wrapper" style="max-width: 100%;">
+                    {{ articles|join('')|raw }}
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            </div>
+        {% endif %}
+
+        <script>
+            (() => {
+                const customSwiperOptions = {};
+                const options = {...swiperOptions, ...customSwiperOptions};
+                const swiper = new Swiper('.swiper_newslist_slider_{{ id }}', options);
+            })();
+        </script>
+    {% endif %}
+{% endblock %}

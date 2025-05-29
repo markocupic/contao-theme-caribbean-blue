@@ -1,0 +1,19 @@
+#main {
+  h1 {
+    position: relative;
+    margin-bottom: 6rem;
+
+    &:before {
+      content: "";
+      display: flex;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      border-bottom: 6px solid $primary;
+      width: clamp-calc(4rem, 8rem);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+

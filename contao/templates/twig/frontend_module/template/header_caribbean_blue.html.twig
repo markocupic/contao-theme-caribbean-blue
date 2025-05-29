@@ -1,0 +1,32 @@
+<div class="header-row-1 px-4">
+    <div class="header-container">
+        <div class="d-flex align-items-end py-3 py-md-4">
+            <div class="header-logo">
+                <div>
+                    <a href="" title="Startseite">
+                        <img src="files/themes/theme-caribbean-blue/images/logos/Logo.svg" alt="Logo" class="logo-header">
+                    </a>
+                </div>
+            </div>
+            <div class="ms-auto p-2 d-flex flex-row align-items-center">
+                {# NAVBAR-START  #}
+                <div class="header-row-2 navbar-header d-none d-lg-flex flex-row justify-content-end">
+                    <div class="header-container">{{ insert_tag('insert_module::179')|raw }}</div>
+                </div>
+                {# NAVBAR-END  #}
+
+                {# SEARCH FORM DESKTOP  #}
+                <div class="header--search-form d-none d-lg-block">
+                    {{ insert_tag('insert_module::205')|raw }}
+                </div>
+                {# END SEARCH FORM DESKTOP  #}
+
+                {# SIDEBAR TOGGLER MOBILE ONLY #}
+                <div class="header-navigation-toggle-container d-block d-lg-none">
+                    <button class="navigation-toggler"><i class="far fa-bars" title="Navigation öffnen"></i></button>
+                </div>
+                {# END SIDEBAR TOGGLER MOBILE ONLY #}
+            </div>
+        </div>
+    </div>
+</div>
