@@ -3,7 +3,7 @@
 @import "color_scheme";
 
 // EMBED BOOTSTRAP FRAMEWORK
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "base/bootstrap.scss";
 
 // extend
 @import "extend";
@@ -32,7 +32,7 @@
 @import "components/invisible";
 @import "components/media";
 @import "components/navbar";
-@import "components/pagination";
+//@import "components/pagination";
 @import "components/swiper";
 
 //@import "components/resource_booking";

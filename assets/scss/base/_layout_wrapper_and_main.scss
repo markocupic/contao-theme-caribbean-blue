@@ -10,8 +10,15 @@
 
     .article-inside:not(.article-container-p-0) {
       @extend .px-4;
-      @extend .pe-4;
+      @include media-breakpoint-up(xxl) {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+      }
+
       padding-bottom: 1.5rem;
+      @include media-breakpoint-up(xxl) {
+        padding-bottom: 2rem;
+      }
       background-color: #fff;
     }
 

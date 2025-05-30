@@ -51,7 +51,9 @@
                             .setIfExists('href',card_link|default)
                             .addClass('mt-3 card-link text-decoration-none')
                             .mergeWith(card_link_attributes|default) %}
-                        <a{{ card_link_attributes }}>Lesen<i class="ms-2 fa-regular fa-arrow-right-long"></i></a>
+                        <div class="mt-4 mb-3">
+                            <a{{ card_link_attributes }}>Lesen<i class="ms-2 fa-regular fa-arrow-right-long"></i></a>
+                        </div>
                     {% endif %}
                 {% endblock %}
                 {# start card text - start card text #}

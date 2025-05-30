@@ -1,40 +1,40 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #000;
-  display:flex;
+  display: flex;
 }
 
 // Set headline
 $text-elements: (
         h1: (
                 line-height: 1.55,
-                margin-top: 2rem,
-                margin-bottom: 2rem
+                margin-top: clamp-calc(2.5rem, 3.5rem),
+                margin-bottom: clamp-calc(2rem, 3rem),
         ),
         h2: (
                 line-height: 1.5,
-                margin-top: 2rem,
-                margin-bottom: 0.5rem
+                margin-top: clamp-calc(2.25rem, 3.25rem),
+                margin-bottom: clamp-calc(1.25rem, 1.5rem),
         ),
         h3: (
                 line-height: 1.25,
-                margin-top: 2rem,
-                margin-bottom: 0.5rem
+                margin-top: clamp-calc(2rem, 3rem),
+                margin-bottom: clamp-calc(1rem, 1.25rem),
         ),
         h4: (
                 line-height: 1,
-                margin-top: 1.5rem,
-                margin-bottom: 0.5rem
+                margin-top: clamp-calc(1.75rem, 2.75rem),
+                margin-bottom: clamp-calc(1rem, 1.25rem),
         ),
         h5: (
                 line-height: 1,
-                margin-top: 1.5rem,
-                margin-bottom: 0.5rem
+                margin-top: clamp-calc(1.5rem, 2.5rem),
+                margin-bottom: clamp-calc(1rem, 1.25rem),
         ),
         h6: (
                 line-height: 1,
-                margin-top: 1.5rem,
-                margin-bottom: 0.5rem
+                margin-top: clamp-calc(1.5rem, 2.5rem),
+                margin-bottom: clamp-calc(1rem, 1.25rem),
         ),
         legend: (
                 line-height: 1.5,

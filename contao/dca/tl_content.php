@@ -35,6 +35,15 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['team_member'] = '
 {invisible_legend:hide},invisible,start,stop
 ';
 
+$GLOBALS['TL_DCA']['tl_content']['palettes']['blockquote'] = '
+{type_legend},type,headline;
+{text_legend},blockquoteText,blockquoteFooterText,blockquoteAlignment;
+{template_legend:hide},customTpl;
+{protected_legend:hide},protected;
+{expert_legend:hide},cssID;
+{invisible_legend:hide},invisible,start,stop
+';
+
 // Subpalettes
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ceTeamMemberAddImage'] = 'singleSRC,fullsize,size,overwriteMeta';
 
@@ -83,4 +92,31 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ceTeamMemberWorkingTime'] = [
     'inputType' => 'listWizard',
     'eval'      => ['tl_class' => 'clr'],
     'sql'       => ['type' => 'blob', 'notnull' => false],
+];
+
+// Blockquote
+$GLOBALS['TL_DCA']['tl_content']['fields']['blockquoteText'] = [
+    'search'      => true,
+    'inputType'   => 'textarea',
+    'eval'        => ['mandatory' => true, 'basicEntities' => true],
+    'explanation' => 'insertTags',
+    'sql'         => "mediumtext NULL",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['blockquoteFooterText'] = [
+    'search'      => true,
+    'inputType'   => 'textarea',
+    'eval'        => ['mandatory' => true, 'basicEntities' => true],
+    'explanation' => 'insertTags',
+    'sql'         => "mediumtext NULL",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['blockquoteAlignment'] = [
+    'search'    => true,
+    'sorting'   => true,
+    'filter'    => true,
+    'inputType' => 'select',
+    'options'   => ['text-start', 'text-center', 'text-end'],
+    'eval'      => ['tl_class' => 'w50'],
+    'sql'       => "varchar(255) NOT NULL default 'text-center'",
 ];
