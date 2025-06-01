@@ -3,27 +3,34 @@
 }
 
 #main {
-  > .inside > .mod_article {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
+  > .inside {
+    & > .mod_article {
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
 
-    .article-inside:not(.article-container-p-0) {
-      @extend .px-4;
-      @include media-breakpoint-up(xxl) {
-        padding-left: 2.5rem !important;
-        padding-right: 2.5rem !important;
+      .article-inside:not(.article-container-p-0) {
+        background-color: #ffffff;
+
+        @extend .px-4;
+        padding-left: clamp-calc(1.5rem, 8rem) !important;
+        padding-right: clamp-calc(1.5rem, 8rem) !important;
+        padding-bottom: clamp-calc(1.5rem, 2rem) !important;
       }
 
-      padding-bottom: 1.5rem;
-      @include media-breakpoint-up(xxl) {
-        padding-bottom: 2rem;
+      .article-inside.article-container {
+        @extend .container-lg;
       }
-      background-color: #fff;
+
+      .article-inside.article-container.p-0 {
+        padding: 0 !important;
+      }
     }
 
-    .article-inside.article-container {
-      @extend .container-lg;
+    & > .mod_article.article-boxed-darkcyan {
+      .article-inside:not(.article-container-p-0) {
+        background-color: $primary-bg-subtle;
+      }
     }
   }
 

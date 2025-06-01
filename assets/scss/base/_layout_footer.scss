@@ -13,7 +13,7 @@ body {
 /** End Sticky Footer */
 
 #footer {
-  background-color: #202125;
+  background-color: $dark;
   padding-top: clamp-calc(0rem, 2rem);
   padding-bottom: clamp-calc(0rem, 2rem);
 
@@ -29,8 +29,11 @@ body {
 
     .footer-container {
       @extend .container-lg;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      @extend .px-4;
+      @include media-breakpoint-up(xxl) {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+      }
 
       a {
         color: $primary;
