@@ -2,7 +2,7 @@ $nav-bg-color: #fff;
 $nav-button-bg-color: #9e000f;
 
 $nav-bg-hover-color: lighten($nav-bg-color, 10%);
-$nav-border-color: lighten($nav-bg-color, 10%);
+$nav-border-color: var(--bs-border-color);
 $nav-font-color: #fff;
 $level_1-offset: 1rem;
 $level_2-offset: 1.25rem;
@@ -252,11 +252,11 @@ body.sidebar-open {
   // Borders & backgrounds
   ul.level_1 {
     > li:first-child {
-      border-top: 1px solid #e2e2e2;
+      border-top: 1px solid $nav-border-color;
     }
 
     > li {
-      border-bottom: 1px solid #e2e2e2;
+      border-bottom: 1px solid $nav-border-color;
 
       &:hover {
         > a, > span, > strong {

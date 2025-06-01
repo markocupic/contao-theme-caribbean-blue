@@ -1,6 +1,8 @@
 .content-accordion {
   .handorgel__content {
     background-color: transparent;
+    border-color: var(--bs-border-color) !important;
+
   }
 
   .handorgel__header__button {
@@ -12,7 +14,6 @@
     margin: 0;
 
     &:before {
-      font-family: $icon-font-name;
       content: "+";
       flex-shrink: 0;
       text-align: center;

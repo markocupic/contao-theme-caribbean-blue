@@ -1,6 +1,6 @@
 {% block card %}
     {% set card_attributes = attrs()
-        .addClass('card bg-white overflow-hidden shadow-sm')
+        .addClass('card bg-white overflow-hidden')
         .mergeWith(card_attributes|default) %}
     <div{{ card_attributes }} style="max-width:100%">
         {# start card image - start card image #}

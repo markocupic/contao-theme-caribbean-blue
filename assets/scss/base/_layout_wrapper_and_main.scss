@@ -27,18 +27,38 @@
       }
     }
 
-    & > .mod_article.article-boxed-darkcyan {
+    & > .mod_article.background-light {
       .article-inside:not(.article-container-p-0) {
-        background-color: $primary-bg-subtle;
+        background-color: $light;
+      }
+    }
+
+    & > .mod_article.background-primary {
+      .article-inside:not(.article-container-p-0) {
+        background-color: $primary;
+      }
+    }
+
+    & > .mod_article.background-secondary {
+      .article-inside:not(.article-container-p-0) {
+        background-color: $secondary;
+      }
+    }
+
+    & > .mod_article.background-dark {
+      .article-inside:not(.article-container-p-0) {
+        background-color: $dark;
+      }
+    }
+
+    & > .mod_article.background-transparent {
+      .article-inside:not(.article-container-p-0) {
+        background-color: transparent;
       }
     }
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 4rem;
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin-bottom: 6rem;
+    margin-bottom: clamp-calc(4rem, 6rem, 992px, 1400px);
   }
 }

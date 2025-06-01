@@ -4,7 +4,11 @@
             <div class="header-logo">
                 <div>
                     <a href="" title="Startseite">
-                        <img src="files/themes/theme-caribbean-blue/images/logos/Logo.svg" alt="Logo" class="logo-header">
+                        {% if is_debug_mode() %}
+                            <img src="files/themes/theme-caribbean-blue/images/logos/neu/Logo Schule Ettiswil 2025.svg" alt="Logo Schule Ettiswil" class="logo-header">
+                        {% else %}
+                            <img src="files/themes/theme-caribbean-blue/images/logos/Logo.svg" alt="Logo Schule Ettiswil" class="logo-header">
+                        {% endif %}
                     </a>
                 </div>
             </div>

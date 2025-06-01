@@ -4,23 +4,43 @@
       background: $primary;
     }
 
+    .swiper-button-prev:after {
+      content: '\f0a8' !important; // fa-circle-arrow-left
+    }
+
+    .swiper-button-next:after {
+      content: '\f0a9' !important; // fa-circle-arrow-right
+    }
+
+    .swiper-button-prev:after, .swiper-button-next:after {
+      font-family: $icon-font-name;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $dark;
+      transition-property: color;
+      background-color: #ffffff;
+      transition-duration: .4s;
+    }
+
+    .swiper-button-prev:hover:after, .swiper-button-next:hover:after {
+      color: $primary;
+    }
+
+    .swiper-button-disabled:after {
+      color: #DFDFDFFF;
+    }
+
     .swiper-button-prev, .swiper-button-next {
-      color: #ffffff;
-      background: $primary;
-      opacity: 0.4;
-      border: 6px solid $primary !important;
       box-sizing: content-box;
       width: 35px;
       height: 45px;
-      transition-property: opacity;
-      transition-duration: .8s;
+      opacity: 1;
     }
 
     &:hover {
       .swiper-button-prev, .swiper-button-next {
-        opacity: 1;
+        //opacity: 1;
       }
     }
-
   }
 }

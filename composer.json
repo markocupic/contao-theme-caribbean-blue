@@ -33,7 +33,6 @@
         "markocupic/contao-twig-assets": "^1.1",
         "inspiredminds/contao-glightbox": "^1.0"
     },
-    "version": "2.0",
     "require-dev": {
         "contao/easy-coding-standard": "*"
     },

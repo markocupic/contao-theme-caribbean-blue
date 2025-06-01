@@ -1,4 +1,3 @@
-
 .image_container {
   overflow: hidden;
 }
@@ -12,14 +11,15 @@ img {
   max-width: 100%;
 }
 
-figure{
-  margin:0;
-  padding:0;
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 .content-gallery {
-  ul{
+  ul {
     @extend .row;
+
     li {
       @extend .col-6;
       @extend .col-sm-4;
@@ -27,20 +27,22 @@ figure{
       padding: 0.5rem;
     }
   }
+
   .row {
     margin: 0 -0.5rem;
+
     [class*="col-"] {
       padding: 0.5rem;
     }
   }
 }
 
-img.img-not-fluid, .img-not-fluid img{
+img.img-not-fluid, .img-not-fluid img {
   max-width: 100%;
   width: initial !important;
 }
 
-figcaption{
+figcaption {
   @extend .mt-3;
   @extend .small;
   line-height: 1.25;

@@ -32,8 +32,9 @@
 
     .icon-box-link-element--link {
       flex-grow: 1;
-      background-color: $gray-200;
+      background-color: $light;
       padding: 2px 10px;
+      transition: background-color .4s ease-in-out;
 
       a {
         text-decoration: none !important;
@@ -41,6 +42,10 @@
         @extend .small;
         line-height: 1 !important;
       }
+    }
+
+    &:hover .icon-box-link-element--link {
+      background-color: darken($light, 4);
     }
 
     .icon-box-link-element--icon, .icon-box-link-element--link {
