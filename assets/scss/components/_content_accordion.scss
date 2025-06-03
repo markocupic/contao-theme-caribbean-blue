@@ -20,7 +20,7 @@
     }
 
     &[aria-expanded="true"] {
-      color: $primary;
+      color: var(--bs-primary);
 
       &:before {
         content: "-";

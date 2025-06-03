@@ -13,7 +13,7 @@ body {
 /** End Sticky Footer */
 
 #footer {
-  background-color: $dark;
+  background-color: var(--bs-dark);
   padding-top: clamp-calc(0rem, 2rem);
   padding-bottom: clamp-calc(0rem, 2rem);
 
@@ -36,7 +36,7 @@ body {
       }
 
       a {
-        color: $primary;
+        color: var(--bs-primary);
         text-decoration: none;
       }
 
@@ -77,7 +77,7 @@ body {
       padding-right: 2rem;
 
       a {
-        color: $primary;
+        color: var(--bs-primary);
         text-decoration: none;
       }
 

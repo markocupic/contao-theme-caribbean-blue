@@ -2,7 +2,7 @@ $nav-bg-color: #fff;
 $nav-button-bg-color: #9e000f;
 
 $nav-bg-hover-color: lighten($nav-bg-color, 10%);
-$nav-border-color: var(--bs-border-color);
+$nav-border-color: transparent;
 $nav-font-color: #fff;
 $level_1-offset: 1rem;
 $level_2-offset: 1.25rem;
@@ -51,7 +51,7 @@ $nav-link-color: #222222;
 $nav-link-color: #000000;
 $nav-link-color-active: #000000;
 $nav-bg-color: #FFFFFF;
-$focus-outline-color: #a0d3eb;
+$focus-outline-color: transparent; // Disable/make transparent focus outline color
 
 /* Dropdown - main navigation header */
 #sidebarOverlay {
@@ -71,7 +71,7 @@ $focus-outline-color: #a0d3eb;
 #sidebar::-webkit-scrollbar {
   -webkit-appearance: none !important;
   width: 6px !important;
-  background-color: $primary !important;
+  background-color: var(--bs-primary) !important;
 }
 
 #sidebar::-webkit-scrollbar-thumb {
@@ -187,7 +187,7 @@ body.sidebar-open {
 
     &:hover {
       > a, > strong {
-        color: red !important;
+        color: #000 !important;
       }
     }
   }
@@ -257,12 +257,6 @@ body.sidebar-open {
 
     > li {
       border-bottom: 1px solid $nav-border-color;
-
-      &:hover {
-        > a, > span, > strong {
-          color: #000 !important;
-        }
-      }
     }
   }
 
@@ -302,7 +296,7 @@ body.sidebar-open {
           padding: 0;
           line-height: 1;
           //color: red !important;
-          font-family: 'Font Awesome 6 Pro';
+          font-family: $icon-font-name;
           font-weight: 100;
           // fa fa-angle-right
           content: "\f105";
@@ -359,7 +353,7 @@ body.sidebar-open {
   }
 
   ul.level_2 {
-    > li {
+    & > li {
       line-height: 1.5;
       background-color: transparent;
       padding: .7rem;
@@ -370,38 +364,42 @@ body.sidebar-open {
         margin-top: 0;
       }
 
-      &:hover {
-        background-color: var(--bs-primary-bg-subtle);
-      }
-
-      > .toggle-submenu {
+      & > .toggle-submenu {
         right: 0;
         top: 5px;
       }
 
-      > .toggle-submenu:before {
+      & > .toggle-submenu:before {
         font-size: clamp-calc(1.125rem, 1.75rem);
       }
 
-      > a, strong {
+      & > a, strong {
         font-size: clamp-calc(1.125rem, 1.4rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_2-offset !important;
       }
 
-      > strong.active {
-        color: $nav-link-color-active !important;
+      &:hover {
+        background-color: var(--bs-primary);
+
+        > a, strong {
+          color: #ffffff !important;
+        }
       }
 
-      > a:hover, > strong:hover {
-        //color: red !important;
+      &.active {
+        background-color: var(--bs-primary);
+
+        & > strong {
+          color: #ffffff;
+        }
       }
     }
   }
 
   ul.level_3 {
-    > li {
+    & > li {
       line-height: 1.5;
       background-color: transparent;
       padding: .6rem;
@@ -412,37 +410,41 @@ body.sidebar-open {
         margin-top: 0;
       }
 
-      &:hover {
-        background-color: var(--bs-primary-bg-subtle);
-      }
-
-      > .toggle-submenu {
+      & > .toggle-submenu {
         right: 0;
       }
 
-      > .toggle-submenu:before {
+      & > .toggle-submenu:before {
         font-size: clamp-calc(1rem, 1.5rem);
       }
 
-      > a, strong {
+      & > a, strong {
         font-size: clamp-calc(1rem, 1.3rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_3-offset !important;
       }
 
-      > strong.active {
-        color: $nav-link-color-active !important;
+      &:hover {
+        background-color: var(--bs-primary);
+
+        > a, strong {
+          color: #ffffff !important;
+        }
       }
 
-      > a:hover, > strong:hover {
-        //color: red !important;
+      &.active {
+        background-color: var(--bs-primary);
+
+        & > strong {
+          color: #ffffff;
+        }
       }
     }
   }
 
   ul.level_4 {
-    > li {
+    & > li {
       line-height: 1.5;
       background-color: transparent;
       padding: .5rem;
@@ -453,31 +455,35 @@ body.sidebar-open {
         margin-top: 0;
       }
 
-      &:hover {
-        background-color: var(--bs-primary-bg-subtle);
-      }
-
-      > .toggle-submenu {
+      & > .toggle-submenu {
         right: 0;
       }
 
-      > .toggle-submenu:before {
+      & > .toggle-submenu:before {
         font-size: clamp-calc(.875rem, 1.35rem);
       }
 
-      > a, strong {
+      & > a, strong {
         font-size: clamp-calc(.875rem, 1.2rem);
         color: $nav-link-color;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_4-offset !important;
       }
 
-      > strong.active {
-        color: $nav-link-color-active !important;
+      &:hover {
+        background-color: var(--bs-primary);
+
+        > a, strong {
+          color: #ffffff !important;
+        }
       }
 
-      > a:hover, > strong:hover {
-        //color: red !important;
+      &.active {
+        background-color: var(--bs-primary);
+
+        & > strong {
+          color: #ffffff;
+        }
       }
     }
   }

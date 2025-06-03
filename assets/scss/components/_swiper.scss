@@ -1,7 +1,7 @@
 #main {
   .swiper {
     .swiper-pagination-bullet-active {
-      background: $primary;
+      background: var(--bs-primary);
     }
 
     .swiper-button-prev:after {
@@ -16,14 +16,14 @@
       font-family: $icon-font-name;
       font-size: 2rem;
       font-weight: bold;
-      color: $dark;
+      color: var(--bs-dark);
       transition-property: color;
       background-color: #ffffff;
       transition-duration: .4s;
     }
 
     .swiper-button-prev:hover:after, .swiper-button-next:hover:after {
-      color: $primary;
+      color: var(--bs-primary);
     }
 
     .swiper-button-disabled:after {

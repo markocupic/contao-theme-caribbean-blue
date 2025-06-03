@@ -1,0 +1,22 @@
+.content-text {
+  ul {
+    list-style: none !important;
+
+    li {
+      font-weight: bold;
+      display: flex;
+      align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
+      gap: 10px; /* Abstand zwischen Icon und Text */
+      margin-bottom: 10px;
+      position: relative;
+
+      &:before {
+        color: $primary;
+        font-family: $icon-font-name;
+        content: "\f058";
+        flex-shrink: 0;
+        text-align: center;
+      }
+    }
+  }
+}

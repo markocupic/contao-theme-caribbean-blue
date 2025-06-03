@@ -9,7 +9,7 @@
       position: absolute;
       bottom: calc(clamp-calc(1rem, 1.125rem)*-1);
       left: 0;
-      border-bottom: 6px solid $primary;
+      border-bottom: 6px solid var(--bs-primary);
       width: clamp-calc(4rem, 8rem);
     }
   }

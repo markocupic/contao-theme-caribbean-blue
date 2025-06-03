@@ -3,7 +3,7 @@
     list-style: none !important;
 
     li {
-      font-weight: bold;
+      font-weight: normal;
       display: flex;
       align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
       gap: 10px; /* Abstand zwischen Icon und Text */
@@ -11,7 +11,7 @@
       position: relative;
 
       &:before {
-        color: $primary;
+        color: var(--bs-primary);
         font-family: $icon-font-name;
         content: "\f058";
         flex-shrink: 0;

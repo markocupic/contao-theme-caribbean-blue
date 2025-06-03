@@ -1,0 +1,28 @@
+#header {
+  @extend .container-lg;
+  background-color: #fff;
+  @extend .px-0;
+  @include media-breakpoint-down(lg) {
+    border-bottom: 1px solid $gray-400;
+  }
+
+  .header-row-1 {
+    background-color: #ffffff;
+
+    .header-logo img {
+      height: 60px;
+      width: auto;
+      @include media-breakpoint-up(lg) {
+        height: 80px;
+      }
+      @include media-breakpoint-up(xxl) {
+        height: 90px;
+      }
+    }
+
+    .header-navigation-toggle-container .fa-bars {
+      font-size: 2rem;
+      color: #000;
+    }
+  }
+}

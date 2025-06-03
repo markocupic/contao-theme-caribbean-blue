@@ -10,8 +10,6 @@
       background-color: transparent;
 
       .article-inside:not(.article-container-p-0) {
-        background-color: #ffffff;
-
         @extend .px-4;
         padding-left: clamp-calc(1.5rem, 8rem) !important;
         padding-right: clamp-calc(1.5rem, 8rem) !important;
@@ -26,39 +24,77 @@
         padding: 0 !important;
       }
     }
-
-    & > .mod_article.background-light {
-      .article-inside:not(.article-container-p-0) {
-        background-color: $light;
-      }
-    }
-
-    & > .mod_article.background-primary {
-      .article-inside:not(.article-container-p-0) {
-        background-color: $primary;
-      }
-    }
-
-    & > .mod_article.background-secondary {
-      .article-inside:not(.article-container-p-0) {
-        background-color: $secondary;
-      }
-    }
-
-    & > .mod_article.background-dark {
-      .article-inside:not(.article-container-p-0) {
-        background-color: $dark;
-      }
-    }
-
-    & > .mod_article.background-transparent {
-      .article-inside:not(.article-container-p-0) {
-        background-color: transparent;
-      }
-    }
   }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: clamp-calc(4rem, 6rem, 992px, 1400px);
+  }
+}
+
+html:not([data-bs-theme="dark"]) {
+  #main > .inside > .mod_article .article-inside:not(.article-container-p-0) {
+    background-color: #ffffff;
+  }
+
+  #main > .inside > .mod_article.background-light .article-inside {
+    background-color: var(--bs-light);
+  }
+
+  #main > .inside > .mod_article.background-gray .article-inside {
+    background-color: #efeef4;
+  }
+
+  #main > .inside > .mod_article.background-primary .article-inside {
+    background-color: var(--bs-primary);
+  }
+
+  #main > .inside > .mod_article.background-secondary .article-inside {
+    background-color: var(--bs-secondary);
+  }
+
+  #main > .inside > .mod_article.background-dark .article-inside {
+    background-color: var(--bs-dark);
+  }
+
+  #main > .inside > .mod_article.background-transparent .article-inside {
+    background-color: transparent;
+  }
+
+  #main > .inside > .mod_article.background-transparent .article-inside.article-container-p-0 {
+    background-color: transparent;
+  }
+}
+
+html[data-bs-theme="dark"] {
+  #main > .inside > .mod_article .article-inside:not(.article-container-p-0) {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-light .article-inside {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-gray .article-inside {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-primary .article-inside {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-secondary .article-inside {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-dark .article-inside {
+    background-color: #141414;
+  }
+
+  #main > .inside > .mod_article.background-transparent .article-inside {
+    background-color: transparent;
+  }
+
+  #main > .inside > .mod_article.background-transparent .article-inside.article-container-p-0 {
+    background-color: transparent;
   }
 }

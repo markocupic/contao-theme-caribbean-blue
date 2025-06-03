@@ -1,8 +1,10 @@
+
 <div class="layout_full block<?= $this->class ?>">
-  <h1 class="h1"><?= $this->newsHeadline ?></h1>
+
+  <h1><?= $this->newsHeadline ?></h1>
 
   <?php $this->block('info'); ?>
-  <p class="info text-muted small mt-5"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+  <p class="info text-body-tertiary mt-5"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time><!-- <?= $this->author ?>--></p>
   <?php $this->endblock(); ?>
 
   <?php if ($this->hasSubHeadline): ?>
