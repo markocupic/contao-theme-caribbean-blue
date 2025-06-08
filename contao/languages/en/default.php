@@ -15,3 +15,4 @@ declare(strict_types=1);
 // Content elements
 $GLOBALS['TL_LANG']['CTE']['team_content_elements'] = 'Mitarbeiter Elemente';
 $GLOBALS['TL_LANG']['CTE']['team_member'] = ['Team Mitglied', 'Zeigen Sie ein Team Mitglied mit Text und Foto.'];
+$GLOBALS['TL_LANG']['CTE']['blockquote'] = ['Zitat', 'Zeigen Sie ein Zitat an'];

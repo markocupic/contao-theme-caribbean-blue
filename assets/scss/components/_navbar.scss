@@ -1,0 +1,78 @@
+:root {
+  --contao-nav--color-level-1-hover: var(--bs-primary) !important;
+}
+
+.mod_navigation.header-desktop-navbar {
+  position: relative;
+
+  ul.level_1.contao-nav--nav-list {
+    & > li > a > span, & > li > strong, & li > span {
+      text-decoration: none;
+      font-size: var(--bs-font-size-base) !important;
+      font-weight: 500;
+    }
+
+    & > li.contao-nav--nav-item .contao-nav--dropdown-toggle:after {
+      width: 0.75rem !important;
+    }
+
+    > li.contao-nav--nav-item.trail, > li.contao-nav--nav-item.active {
+      border: 0;
+
+      & > span, & > strong, & > a, & > a:after, & > strong:after {
+        color: var(--bs-primary);
+        text-decoration: none;
+      }
+    }
+
+    > li.contao-nav--nav-item:hover {
+      & > span, & > strong, & > a, & > a:after, & > strong:after {
+        color: var(--bs-primary) !important;
+        text-decoration: none;
+      }
+    }
+
+    div.contao-nav--dropdown-menu {
+
+      @extend .shadow;
+      @extend .border;
+      @extend .rounded;
+      @extend .z-2;
+      overflow: hidden;
+      min-width: 100%;
+      opacity: 1;
+      background-color: #ffffff;
+      width: max-content;
+
+      ul.level_2.contao-nav--nav-list {
+        opacity: 1;
+        background-color: #ffffff;
+        width: max-content;
+
+        li.contao-nav--nav-item {
+          background-color: #fff;
+          padding: .5rem 1rem;
+          display: block;
+
+          & > strong, & > a > span {
+            color: var(--bs-body-color);
+            text-decoration: none;
+            font-size: 0.9125rem !important;
+            @include media-breakpoint-up(xl) {
+              font-size: 1rem !important;
+            }
+            font-weight: 400;
+          }
+
+          &:hover {
+            background-color: var(--bs-primary);
+
+            > a > span, > strong {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

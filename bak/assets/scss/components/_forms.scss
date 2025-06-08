@@ -1,0 +1,98 @@
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+#main {
+  .formbody {
+    //max-width: 800px;
+    background: #fff;
+    //border: 1px solid $gray-lighter;
+    padding: $spacer 0;
+    position: relative;
+
+    & > * {
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      margin: $spacer 0 2rem 0;
+
+      legend {
+        margin-bottom: $spacer;
+        border-bottom: 1px solid $gray-300;
+      }
+    }
+
+    .checkbox_container, .radio_container {
+      display: flex;
+      align-items: baseline;
+      position: relative;
+
+      label, input,
+      {
+        margin: 0;
+        padding: 0;
+      }
+
+      input {
+        margin-right: .75rem;
+      }
+
+      label {
+        max-width: 90%;
+      }
+    }
+
+    .checkbox_container, .radio_container, .submit_container {
+      margin: 2rem 0;
+    }
+
+    // Special treatment for radio or checkbox widgets
+    .widget .checkbox_container, .widget .radio_container {
+      span {
+        display: flex;
+        align-items: baseline;
+      }
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    // Switch display order: Display label before input
+    .widget {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .widget + .widget {
+      margin-top: 3rem;
+    }
+
+    span.mandatory, .captcha_text {
+      display: inline-block !important;
+    }
+
+    .submit {
+      margin-top: $spacer-y;
+    }
+
+  }
+
+  .mod_search {
+    .radio_container {
+      span {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+

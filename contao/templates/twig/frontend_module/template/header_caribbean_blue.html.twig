@@ -1,0 +1,66 @@
+<div class="header--row-1">
+    <div class="header--container">
+        <div class="d-flex align-items-center py-3">
+            <div class="header--logo header--col-1">
+                <div>
+                    <a href="" title="Startseite">
+                        {% if is_debug_mode() %}
+                            <img src="files/themes/theme-caribbean-blue/images/logos/neu/Logo Schule Ettiswil 2025.svg"
+                                 alt="Logo Schule Ettiswil" class="logo-header">
+                        {% else %}
+                            <img src="files/themes/theme-caribbean-blue/images/logos/Logo.svg"
+                                 alt="Logo Schule Ettiswil" class="logo-header">
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+            <div class="header--col-2 d-flex flex-nowrap flex-row flex-grow-1 justify-content-end align-items-center">
+                {# NAVBAR-START  #}
+                <div class="header--navbar">
+                    <div class="header--navbar-inner">{{ insert_tag('insert_module::179')|raw }}</div>
+                </div>
+                {# NAVBAR-END  #}
+
+                {# SEARCH FORM DESKTOP  #}
+                <div class="header--search-form">
+                    <button class="header--open-search-button btn btn-sm btn-primary" title="suchen">
+                        <i class="fa-solid fa-magnifying-glass me-3"></i><span>Suchen</span>
+                    </button>
+                    <div class="header--search-box">
+                        {{ insert_tag('insert_module::205')|raw }}
+                        <button class="header--close-search-button btn ms-3" title="Suche schliessen">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+                {# END SEARCH FORM DESKTOP  #}
+
+                {# SIDEBAR TOGGLER MOBILE ONLY #}
+                <div class="header-navigation-toggle-container ms-3 d-block d-lg-none">
+                    <button class="navigation-toggler"><i class="far fa-bars" title="Navigation öffnen"></i></button>
+                </div>
+                {# END SIDEBAR TOGGLER MOBILE ONLY #}
+            </div>
+        </div>
+    </div>
+</div>
+{% add to body %}
+    <script>
+        const openSearchBtn = document.querySelector('.header--open-search-button');
+        const closeSearchBtn = document.querySelector('.header--close-search-button');
+        const navbar = document.querySelector('.header--col-2');
+        const searchBox = navbar.querySelector('.header--search-box');
+
+        openSearchBtn.addEventListener('click', () => {
+            navbar.classList.toggle('header--search-bar--active');
+            window.setTimeout(() => {
+                searchBox.querySelector('input[type="search"]').focus();
+                searchBox.querySelector('input[type="search"]').select();
+            }, 50);
+        });
+
+        closeSearchBtn.addEventListener('click', () => {
+            navbar.classList.toggle('header--search-bar--active');
+        });
+    </script>
+{% endadd %}

@@ -1,0 +1,14 @@
+{
+  "entrypoints": {
+    "headroom": {
+      "js": [
+        "/bundles/markocupiccontaothemecaribbeanblue/headroom.71c7ab65.js"
+      ]
+    },
+    "styles/frontend": {
+      "css": [
+        "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.d2c802f2.css"
+      ]
+    }
+  }
+}

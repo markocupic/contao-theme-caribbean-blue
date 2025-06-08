@@ -1,0 +1,31 @@
+:root{
+  --content-element-margin-bottom: 2rem;
+  --content-element-margin-top: 2rem;
+}
+
+//$body-bg: #ffffff;
+$body-bg: #ffffff;
+$body-color: #000000;
+$font-size-base: 1.25rem;
+
+// Line heights
+$line-height-base: 1.6 !default;
+$line-height-sm: 1.6 !default; // default 1.25
+$line-height-lg: 2 !default;
+
+// Icon Fontname
+$icon-font-name: "Font Awesome 6 Pro";
+
+// Border radius
+$enable-rounded: true;
+
+$zindex-navbar-aside-backdrop: 1080;
+$zindex-navbar-aside: 1090;
+
+// Backward compatibility to bootstrap 3
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+$zindex-dropdown-backdrop: 990;
+$zindex-navbar: 1000;

@@ -1,0 +1,20 @@
+.scroll-to-top {
+  width: 50px;
+  height: auto;
+  font-size: 20px;
+  background: var(--bs-primary);
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  aspect-ratio: 1/1;
+  opacity: 1;
+  @include transition(background-color);
+  a, .fa{
+    color: #fff;
+  }
+}

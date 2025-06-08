@@ -1,0 +1,66 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+{% use "@Contao/component/_figure.html.twig" %}
+
+{% set grid_classes_col_1 = 'col-12' %}
+{% set grid_classes_col_2 = 'col-12' %}
+
+{% if has_image %}
+    {% set grid_classes_col_1 = 'col-9' %}
+    {% set grid_classes_col_2 = 'col-3' %}
+{% endif %}
+
+{% block content %}
+    <div class="content-team_member--inner mb-5">
+        <div class="row">
+            <div class="{{ grid_classes_col_1 }}">
+                <div class="content-team_member--name">
+                    <h3 class="mt-0">{{ firstname }} {{ lastname }}</h3>
+                </div>
+
+                {% if roles|default %}
+                    <div class="content-team_member--roles mt-4">
+                        <h5 class="m-0 mb-3 mt-4">Zuständigkeit:</h5>
+                        <ul class="content-team_member--roles-list">
+                            {% for role in roles %}
+                                <li class="content-team_member--roles-list-item d-flex align-items-lg-start lh-base mb-2">
+                                    <span class="me-2"><i class="fa-solid fa-circle-check text-primary"></i></span>
+                                    <span>{{ role }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if working_time|default %}
+                    <div class="content-team_member--working-time mt-5">
+                        <h5 class="m-0 mb-3 mt-4">Bürozeit:</h5>
+                        <ul class="content-team_member--working-time-list">
+                            {% for item in working_time %}
+                                <li class="content-team_member--working-time-list-item">{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                <address class="content-team_member--address mt-4">
+                    {% if email|default %}
+                        <div class="content-team_member--email"><i class="fa-solid fa-circle-envelope text-primary fa-fw me-2"></i><a href="mailto:{{ email }}">{{ email }}</a></div>
+                    {% endif %}
+
+                    {% if phone|default %}
+                        <div class="content-team_member--phone"><i class="fa-solid fa-circle-phone text-primary fa-fw me-2"></i><a href="tel:{{ phone|replace({' ': ''}) }}">{{ phone }}</a></div>
+                    {% endif %}
+                </address>
+            </div>
+
+            {% if has_image|default %}
+                <div class="{{ grid_classes_col_2 }}">
+                    <div class="content-team_member--picture">
+                        {% with {figure: images|first} %}{{ block('figure_component') }}{% endwith %}
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock %}

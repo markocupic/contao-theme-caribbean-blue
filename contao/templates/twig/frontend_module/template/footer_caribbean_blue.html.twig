@@ -1,0 +1,48 @@
+<div class="footer-row-1">
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <h4 class="title"></i>Schuladministration</h4>
+                    Schulhaus 73<br>
+                    Dorf 21<br>
+                    6218 Ettiswil<br>
+                    Tel. 041 255 13 60<br>
+                    {{ insert_tag('email_open::sekretariat@schule-ettiswil.ch')|raw }}E-Mail{{ insert_tag('email_close')|raw }}<br>
+                    <a href="https://www.schule-ettiswil.ch/schulleitung#Schuladministration">Bürozeiten</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <h4 class="title">Gesamtschulleitung:</h4>
+                    Schulhaus 73<br>
+                    Dorf 21<br>
+                    6218 Ettiswil<br>
+                    Tel. 041 984 13 51<br>
+                    {{ insert_tag('email_open::gesamtschulleitung@schule-ettiswil.ch')|raw }}E-Mail{{ insert_tag('email_close')|raw }}<br>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <h4 class="title">Quicklinks</h4>
+                    {{ insert_tag('insert_module::99')|raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright-box footer-row-2">
+    <div class="footer-container">
+        <div class="d-flex">
+            <div class="flex-grow-1">
+                <div>Copyright © {{ 'now'|date('Y') }} Schule Ettiswil</div>
+            </div>
+            <div class="navigation-footer">
+                <div>{{ insert_tag('link::impressum')|raw }}</div>
+            </div>
+        </div>
+    </div>
+</div>

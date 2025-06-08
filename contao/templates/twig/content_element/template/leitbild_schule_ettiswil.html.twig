@@ -1,0 +1,90 @@
+{% block content %}
+    {% set merdia_path = './bundles/markocupiccontaothemecaribbeanblue/leitbild/media' %}
+    <div id="mod_leitbild" data-mediapath="{{ merdia_path }}">
+        <div id="leitbild_karte" class="content-image">
+            <figure>
+                <img src="{{ merdia_path }}/karte_innenseite_mit_logo_2.jpg" alt="" width="3507" height="2480">
+            </figure>
+            <div id="leitbild_text_0" class="leitbild_text content-image" style="opacity: 100;">
+                <figure>
+                    <img src="{{ merdia_path }}/logo_titelblatt.jpg" alt="" width="1425" height="712">
+                </figure>
+            </div>
+            <div id="leitbild_text_1" class="leitbild_text content-image">
+                <figure>
+                    <img src="{{ merdia_path }}/textblock_olive_mit_titel.png" alt="" width="1307" height="480">
+                </figure>
+            </div>
+            <div id="leitbild_text_2" class="leitbild_text content-image">
+                <figure>
+                    <img src="{{ merdia_path }}/textblock_violett_mit_titel.png" alt="" width="1311" height="541">
+                </figure>
+            </div>
+            <div id="leitbild_text_3" class="leitbild_text content-image">
+                <figure>
+                    <img src="{{ merdia_path }}/textblock_blau_mit_titel.png" alt="" width="1311" height="620">
+                </figure>
+            </div>
+            <div id="leitbild_text_4" class="leitbild_text content-image">
+                <figure>
+                    <img src="{{ merdia_path }}/textblock_orange_mit_titel.png" alt="" width="1307" height="781">
+                </figure>
+            </div>
+            <div id="leitbild_titel_layer" class="invisible" style="opacity:1">
+                <h4 id="leitbild_titel_1" style="color:#7B8024">Klima &amp; Kultur</h4>
+                <h4 id="leitbild_titel_2" style="color:#6F314A">Führen &amp; Formen</h4>
+                <h4 id="leitbild_titel_3" style="color:#00718F">Kooperation &amp; Kommunikation</h4>
+                <h4 id="leitbild_titel_4" style="color:#F57D26">Lehren &amp; Lernen</h4>
+            </div>
+        </div>
+    </div>
+    {% add to head %}
+        <style>
+            #leitbild_titel_layer {
+                position: absolute;
+                top: 12%;
+                left: 78%;
+                z-index: 99;
+                zoom: 1;
+                filter: alpha(opacity=0);
+                opacity: 0;
+            }
+
+            #leitbild_titel_layer h4 {
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            #leitbild_karte {
+                position: relative;
+                z-index: 1;
+            }
+
+            #leitbild_karte .hidden {
+                visibility: hidden;
+                width: 100%;
+            }
+
+            .leitbild_text {
+                position: absolute;
+                z-index: 98;
+                top: 12%;
+                left: 5%;
+                width: 60%;
+                zoom: 1;
+                filter: alpha(opacity=0);
+                opacity: 0;
+            }
+
+            #leitbild_text_0 {
+                cursor: pointer !important;
+                top: 20%;
+                width: 60%;
+                z-index: 100;
+            }
+        </style>
+    {% endadd %}
+    {% add to body %}
+        <script src="{{ asset('leitbild/js/leitbild.js','markocupic_contao_theme_caribbean_blue') }}"
+    {% endadd %}
+{% endblock %}

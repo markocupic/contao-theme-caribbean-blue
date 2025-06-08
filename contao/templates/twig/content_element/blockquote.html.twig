@@ -1,0 +1,13 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% block content %}
+    <figure class="{{ blockquoteAlignment }}">
+        <i class="fa-solid fa-quote-left content-blockquote--icon"></i>
+        <blockquote class="blockquote">
+            <p>{{ blockquoteText }}</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            {{ blockquoteFooterText }}
+        </figcaption>
+    </figure>
+{% endblock %}

@@ -1,0 +1,303 @@
+$dm-accent-color-1: #121212;
+$dm-accent-color-2: #252F33;
+$dm-accent-color-3: #1976d2;
+$dm-accent-color-4: #1976d2;
+$dm-accent-color-5: #d32f2f;
+
+$dm-color-1: #ffffff;
+$dm-color-2: #cccccc;
+$dm-color-3: #666666;
+
+body.dark-mode {
+  background-color: $dm-accent-color-1;
+
+  .bg-primary {
+    background-color: $dm-accent-color-4 !important;
+  }
+
+  // header
+  #header {
+    .header-row-1 {
+      background-color: $dm-accent-color-1;
+
+      .btn-outline-danger {
+        border-color: $dm-color-2;
+        color: $dm-color-2;
+        background-color: $dm-accent-color-2;
+
+        &:hover {
+          border-color: $dm-accent-color-5;
+          background-color: $dm-accent-color-5;
+          color: $dm-color-1;
+        }
+      }
+
+      .header-search-form .btn {
+        color: $dm-color-2;
+      }
+
+      .header-navigation-toggle-container .fa-bars {
+        color: $dm-color-1;
+      }
+
+    }
+
+    .header-title h1 {
+      color: $dm-color-1;
+    }
+
+    // navbar header
+    .header-row-2, .mod_navigation.navbar-header {
+      background-color: $dm-accent-color-2;
+
+      ul.level_1 > li.active, ul.level_1 > li:hover, ul.level_1 > li.expanded {
+        background-color: $dm-accent-color-5 !important;
+      }
+
+      ul.level_2 > li, ul.level_2 > li.expanded {
+        background-color: $dm-accent-color-2 !important;
+        border: 0;
+        border-bottom: 1px solid $dm-color-3 !important;
+        color: $dm-color-2;
+
+        > a > span {
+          color: $dm-color-2;
+        }
+      }
+
+      ul.level_2 > li:hover {
+        background-color: $dm-accent-color-5 !important;
+        border-color: $dm-accent-color-5 !important;
+        color: $dm-color-1;
+      }
+
+      ul.level_2 > li:last-child {
+        border: 0 !important;
+      }
+    }
+  }
+
+  #container {
+    .mod_article {
+      .ce_headline {
+        color: $dm-color-2;
+      }
+
+      background-color: $dm-accent-color-1;
+
+      .inside {
+        background-color: $dm-accent-color-1;
+      }
+    }
+  }
+
+
+  #container {
+    .rbb-app {
+
+      background-color: $dm-accent-color-1 !important;
+
+      // Form elements
+      .rbb-filter-board-form {
+        select, options, [class*="fa-"], .btn {
+          font-size: 1rem !important;
+          line-height: 1.5rem !important;
+        }
+
+        .btn {
+          border: 0;
+        }
+
+        .rbb-filter-form-messages {
+          background-color: $dm-accent-color-2;
+
+          .alert {
+            background-color: $dm-accent-color-2;
+            border: 0;
+            color: $dm-color-2;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      // alerts
+      .rbb-message-box {
+        [class*="alert-"] {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+          border: 0;
+          margin-bottom: 0;
+          border-radius: 0
+        }
+
+        .alert-danger {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+
+        .alert-success {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+
+        .alert-info {
+          background-color: $dm-accent-color-2 !important;
+          color: $dm-color-2;
+        }
+      }
+
+      .btn-primary {
+        background-color: $dm-accent-color-4;
+        border-color: $dm-accent-color-4;
+
+        &:hover {
+          background-color: darken($dm-accent-color-4, 10);
+          border-color: darken($dm-accent-color-4, 10);
+
+        }
+      }
+
+      .btn-secondary {
+        border-color: lighten($dm-accent-color-1, 20);
+        background-color: lighten($dm-accent-color-1, 20);
+
+        &:hover {
+          background-color: lighten($dm-accent-color-1, 10);
+          border-color: lighten($dm-accent-color-1, 10);
+        }
+      }
+
+      .btn-danger {
+        background-color: $dm-accent-color-5;
+
+        &:hover {
+          background-color: darken($dm-accent-color-5, 10);
+        }
+      }
+
+      .custom-control-input {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      select, .form-control {
+        background-clip: unset;
+        border: 0;
+      }
+
+      legend, label, .rbb-logged-in-user-data, .rbb-input-help-text {
+        color: $dm-color-2;
+      }
+
+      // End form elements
+
+      // layout table and cells
+      .rbb-layout-table > * {
+        background-color: $dm-accent-color-1;
+        color: $dm-color-1;
+      }
+
+      .rbb-layout-table {
+        border-color: $dm-accent-color-1;
+
+        .rbb-layout-cell {
+          background-color: $dm-accent-color-3;
+          border-color: $dm-accent-color-1;
+          padding: 4px 8px;
+          color: $dm-color-1;
+        }
+
+        .rbb-layout-cell[data-isinvaliddate] {
+          background-color: $dm-accent-color-2;
+        }
+
+        .rbb-layout-cell {
+          &.rbb-time-slot-indicator, &.rbb-cell-headline {
+            background-color: $dm-accent-color-2;
+            color: $dm-color-2;
+          }
+        }
+
+        .rbb-layout-cell[data-isfullybooked="true"] {
+          background-color: $dm-accent-color-5;
+        }
+
+        .rbb-layout-cell[data-isfullybooked="true"][data-iscancelable="true"] {
+          //background-color: $dm-accent-color-4;
+        }
+
+        .rbb-btn-booking .rbb-icon-cancel-booking {
+          color: #000000 !important;
+        }
+      }
+
+      // End layout table and cells
+
+      // Main booking table & booking table in booking window
+      .rbb-booking-table-main, .rbb-booking-table-booking-form {
+        .rbb-layout-box-inner {
+          .rbb-layout-cell {
+            &.rbb-time-slot-indicator {
+              border-left: 0;
+            }
+          }
+        }
+      }
+
+      // Booking window
+      .rbb-booking-window {
+        button.rbb-close-window {
+          border: 0;
+          border-left: 1px solid $dm-accent-color-1;
+        }
+
+        .rbb-booking-table-booking-form {
+          .rbb-layout-box-inner {
+            .rbb-cell-headline {
+              border-top: 0;
+            }
+          }
+        }
+
+        .rbb-layout-table.rbb-info-table, .rbb-layout-table.rbb-booking-preview-table {
+          .rbb-layout-box-inner {
+            background-color: $dm-accent-color-2 !important;
+            border: 0;
+
+            .rbb-layout-cell {
+              background-color: transparent;
+              border: 0;
+              padding-left: 1rem;
+              padding-right: 1rem;
+            }
+
+            .not-bookable {
+              background-color: $dm-accent-color-5 !important;
+              border-color: $dm-accent-color-2;
+
+              .rbb-layout-cell {
+                background-color: $dm-accent-color-5 !important;
+              }
+            }
+          }
+        }
+      }
+
+      .rbb-booking-window {
+        .rbb-booking-form {
+          .rbb-layout-box {
+            .rbb-layout-box-inner {
+              background-color: $dm-accent-color-2 !important;
+              padding: 1rem;
+            }
+          }
+        }
+
+
+      }
+
+      // End booking window
+
+    }
+  }
+}

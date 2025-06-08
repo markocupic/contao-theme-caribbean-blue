@@ -1,0 +1,39 @@
+.content-accordion {
+  .handorgel__content {
+    background-color: transparent;
+    border-color: var(--bs-border-color) !important;
+
+  }
+
+  .handorgel__header__button {
+    display: flex;
+    align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
+    gap: 10px; /* Abstand zwischen Icon und Text */
+    position: relative;
+    @extend .h4;
+    margin: 0;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+
+
+
+
+    &:before {
+      content: "+";
+      flex-shrink: 0;
+      text-align: center;
+      font-size: 2rem;
+      font-family: $icon-font-name !important;
+      padding-right: .75rem;
+      content: "\e59e"; // fa-plus-large
+    }
+
+    &[aria-expanded="true"] {
+      color: var(--bs-primary);
+
+      &:before {
+        content: "\e404"; // fa-dash
+      }
+    }
+  }
+}

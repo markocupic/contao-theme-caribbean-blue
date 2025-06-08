@@ -1,0 +1,14 @@
+<li class="swiper-slide h-100" itemscope itemtype="http://schema.org/Article">
+    {% set card_props = {
+        card_attributes: attrs().addClass('with-border-bottom-gradient'),
+        card_link: insert_tag('news_url::'~id),
+        card_image_path: addImage|default ? singleSRC : null,
+        card_image_size: 3,
+        card_title_text: string_util_revert_input_encoding(newsHeadline)|raw,
+        card_text_text: '',
+        card_text_attributes: attrs().addClass('card-news-teaser'),
+        card_date_text: date,
+        card_date_attributes: { 'datetime': datetime },
+    } %}
+    {% include '@MarkocupicContaoThemeCaribbeanBlue/Card/card_default.html.twig' with card_props only %}
+</li>

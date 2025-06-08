@@ -1,0 +1,12 @@
+.content-image {
+  &.img-fluid {
+    img {
+      @extend .img-fluid;
+    }
+  }
+  &.w-100 {
+    img {
+      @extend .w-100;
+    }
+  }
+}

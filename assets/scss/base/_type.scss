@@ -1,0 +1,116 @@
+:root{
+  --bs-font-size-base: clamp-calc(17px,20px);
+}
+
+body{
+  font-size: clamp-calc(17px,20px) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: flex;
+}
+
+// Set headline
+$text-elements: (
+        h1: (
+                line-height: 1.55,
+                margin-top: clamp-calc(2.5rem, 3.5rem),
+                margin-bottom: clamp-calc(2rem, 3rem),
+        ),
+        h2: (
+                line-height: 1.5,
+                margin-top: clamp-calc(2.25rem, 3.25rem),
+                margin-bottom: clamp-calc(1.25rem, 1.5rem),
+        ),
+        h3: (
+                line-height: 1.25,
+                margin-top: clamp-calc(2rem, 3rem),
+                margin-bottom: clamp-calc(1.25rem, 1.35rem),
+        ),
+        h4: (
+                line-height: 1,
+                margin-top: clamp-calc(1.75rem, 2.75rem),
+                margin-bottom: clamp-calc(1.25rem, 1.25rem),
+        ),
+        h5: (
+                line-height: 1,
+                margin-top: clamp-calc(1.5rem, 2.5rem),
+                margin-bottom: clamp-calc(1.25rem, 1.25rem),
+        ),
+        h6: (
+                line-height: 1,
+                margin-top: clamp-calc(1.5rem, 2.5rem),
+                margin-bottom: clamp-calc(1.25rem, 1.25rem),
+        ),
+        legend: (
+                line-height: 1.5,
+                margin-top: 2rem,
+                margin-bottom: 0.5rem,
+                font-weight: bold
+        ),
+        label: (
+                line-height: 1.5,
+                margin-top: 0,
+                margin-bottom: 0.5rem,
+                font-weight: bold
+        ),
+);
+
+@each $key, $map in $text-elements {
+  #{$key} {
+    @extend .#{$key};
+    line-height: map-deep-get($text-elements, $key, "line-height");
+    margin-top: map-deep-get($text-elements, $key, "margin-top");
+    margin-bottom: map-deep-get($text-elements, $key, "margin-bottom");
+  }
+  .#{$key} {
+    margin-top: map-deep-get($text-elements, $key, "margin-top");
+    margin-bottom: map-deep-get($text-elements, $key, "margin-bottom");
+  }
+}
+
+.small {
+  font-weight: 500;
+}
+
+// Underline
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  text-decoration: none;
+}
+
+.mobile-title-heading {
+  h1 {
+    @include transition(font-size);
+    //@extend .h1;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hyphenate, .hyphenate * {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.mod_sitemap {
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+}
+
+a {
+  text-underline-offset: 4px;
+  text-decoration-style: dotted;
+}
