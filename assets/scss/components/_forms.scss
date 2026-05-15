@@ -2,6 +2,7 @@
 .submit {
   @extend .btn;
   @extend .btn-primary;
+  @extend .text-white
 }
 
 #main {
@@ -9,6 +10,7 @@
     background: #fff;
     padding: $spacer 0;
     position: relative;
+    max-width: 400px;
 
     & > * {
       box-sizing: border-box;

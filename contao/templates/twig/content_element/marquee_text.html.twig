@@ -1,0 +1,12 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% block content %}
+    <marquee>{{ marqueeText }}</marquee>
+    {% add to head %}
+        <style>
+            .content-marquee-text {
+                padding: 1.5rem;
+            }
+        </style>
+    {% endadd %}
+{% endblock %}

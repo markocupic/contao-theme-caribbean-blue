@@ -3,9 +3,9 @@
  * p {
  *   font-size: clamp-calc(1rem, 1.25rem);
  *   height: clamp-calc(40px, 50px); // accepts px or rem!
- * }
+ * } 1440
  */
-@function clamp-calc($size-at-min-width, $size-at-max-width, $min-breakpoint: 360px, $max-breakpoint: 1440px) {
+@function clamp-calc($size-at-min-width, $size-at-max-width, $min-breakpoint: 360px, $max-breakpoint: 2600px) {
   $size-min: 0;
 
   @if str-index(#{$size-at-min-width}, 'rem') {

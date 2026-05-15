@@ -1,9 +1,9 @@
 :root{
-  --bs-font-size-base: clamp-calc(17px,20px);
+  --bs-font-size-base: clamp-calc(15px,17px);
 }
 
 body{
-  font-size: clamp-calc(17px,20px) !important;
+  font-size: clamp-calc(15px,17px) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {

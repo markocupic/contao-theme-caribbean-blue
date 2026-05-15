@@ -1,9 +1,12 @@
 .card {
   border-radius: 0;
-
   border: none;
 
   .card-img, .card-img-top {
     border-radius: 0;
+  }
+
+  &:hover {
+    @extend .shadow;
   }
 }

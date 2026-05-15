@@ -1,0 +1,20 @@
+{
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.3",
+        "markocupic/composer-file-copier-plugin": "^0.2",
+        "markocupic/contao-component-fontawesome-free": "7.0.0",
+        "contao/manager-plugin": "^2.12",
+        "markocupic/easy-coding-standard": "^13.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "contao-community-alliance/composer-plugin": true,
+            "markocupic/composer-file-copier-plugin": true,
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

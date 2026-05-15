@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Contao Theme Caribbean Blue.
  *
- * (c) Marko Cupic 2023 <m.cupic@gmx.ch>
+ * (c) Marko Cupic <m.cupic@gmx.ch>
  * @license MIT
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
@@ -41,8 +41,8 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
         $request = $e->getRequest();
 
         if ($this->scopeMatcher->isFrontendRequest($request)) {
-
             $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/theme.js', 'markocupic_contao_theme_caribbean_blue');
+            $GLOBALS['TL_BODY'][] = '<script defer src="'.$this->packages->getUrl('js/theme/theme-switch.js', 'markocupic_contao_theme_caribbean_blue').'"></script>';
 
             // Bootstrap
             $GLOBALS['TL_CSS'][] = $this->packages->getUrl('styles/frontend.css', 'markocupic_contao_theme_caribbean_blue');
@@ -100,7 +100,7 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
         $GLOBALS['TL_CSS'][] = 'assets/contao-component-fontawesome-pro/fontawesome-pro/css/light.min.css?v=6.7.2';
         $GLOBALS['TL_CSS'][] = 'assets/contao-component-fontawesome-pro/fontawesome-pro/css/regular.min.css?v=6.7.2';
         $GLOBALS['TL_CSS'][] = 'assets/contao-component-fontawesome-pro/fontawesome-pro/css/solid.min.css?v=6.7.2';
-        //$GLOBALS['TL_CSS'][] = 'assets/contao-component-fontawesome-pro/fontawesome-pro/css/svg-with-js.min.css?v=6.7.2';
+        $GLOBALS['TL_CSS'][] = 'assets/contao-component-fontawesome-pro/fontawesome-pro/css/svg-with-js.min.css?v=6.7.2';
     }
 
     private function generateScriptTag(string|null $src = null, $defer = false, $script = '')
@@ -114,14 +114,13 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
         $attrDefer = $defer ? ' defer' : '';
 
         $nonce = !empty($cspHandler) ? $cspHandler->getNonce('script-src') : '';
-        $attrNonce = !empty($nonce) ? sprintf(' nonce="%s"', $nonce) : '';
+        $attrNonce = !empty($nonce) ? \sprintf(' nonce="%s"', $nonce) : '';
 
         if (!empty($src)) {
             $src = '/'.ltrim($src, '/');
         }
-        $attrSrc = !empty($src) ? sprintf(' src="%s"', $src) : '';
+        $attrSrc = !empty($src) ? \sprintf(' src="%s"', $src) : '';
 
-        return sprintf('<script%s%s%s>%s</script>', $attrDefer, $attrNonce, $attrSrc, $script);
+        return \sprintf('<script%s%s%s>%s</script>', $attrDefer, $attrNonce, $attrSrc, $script);
     }
-
 }

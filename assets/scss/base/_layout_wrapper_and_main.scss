@@ -86,6 +86,30 @@ html:not([data-bs-theme="dark"]) {
       }
     }
 
+    .mod_article.background-primary-subtle {
+      .article-inside {
+        background-color: var(--bs-primary-bg-subtle);
+      }
+    }
+
+    .mod_article.background-success-subtle {
+      .article-inside {
+        background-color: var(--bs-success-bg-subtle);
+      }
+    }
+
+    .mod_article.background-warning-subtle {
+      .article-inside {
+        background-color: var(--bs-warning-bg-subtle);
+      }
+    }
+
+    .mod_article.background-danger-subtle {
+      .article-inside {
+        background-color: var(--bs-danger-bg-subtle);
+      }
+    }
+
     .mod_article.background-map {
       //background-color: rgb(249, 240, 255);
       //clip-path: ellipse(60% 200% at 50% 200%);

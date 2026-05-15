@@ -287,6 +287,10 @@ body.sidebar-open {
         width: fit-content;
 
         &:before {
+          content: "";
+        }
+
+        svg {
           position: initial !important;
           top: initial !important;
           right: initial !important;
@@ -295,28 +299,19 @@ body.sidebar-open {
           margin: 0;
           padding: 0;
           line-height: 1;
-          //color: red !important;
-          font-family: $icon-font-name;
-          font-weight: 100;
-          // fa fa-angle-right
-          content: "\f105";
-          font-size: clamp-calc(2rem, 3rem);
+          font-size: clamp-calc(1.5rem, 2rem);
           font-style: normal;
         }
-      }
-
-      > .toggle-submenu:before:hover {
-        //color: red !important;
       }
 
       &.expanded {
         > .toggle-submenu {
           background-color: transparent;
-        }
 
-        > .toggle-submenu:before {
-          // minus fa-angle-down
-          content: "\f107";
+          svg {
+            transform: rotate(90deg);
+            transition: transform .3s ease;
+          }
         }
       }
     }
@@ -327,7 +322,7 @@ body.sidebar-open {
     > li {
       line-height: 1.5;
       background-color: transparent;
-      padding: clamp-calc(.8rem, 1.4rem);
+      padding: clamp-calc(.8rem, 1.125rem);
       padding-left: 0;
       padding-right: 0;
 

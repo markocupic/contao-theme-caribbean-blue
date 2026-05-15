@@ -5,11 +5,11 @@
     }
 
     .swiper-button-prev:after {
-      content: '\f0a8' !important; // fa-circle-arrow-left
+      /**content: '\f0a8' !important; // fa-circle-arrow-left **/
     }
 
     .swiper-button-next:after {
-      content: '\f0a9' !important; // fa-circle-arrow-right
+      /** content: '\f0a9' !important; // fa-circle-arrow-right **/
     }
 
     .swiper-button-prev:after, .swiper-button-next:after {
@@ -20,7 +20,7 @@
       transition-property: color;
       background-color: #ffffff;
       transition-duration: .4s;
-      border-radius:50%;
+      border-radius: 50%;
     }
 
     .swiper-button-prev:hover:after, .swiper-button-next:hover:after {
