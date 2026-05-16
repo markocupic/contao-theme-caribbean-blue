@@ -1,11 +1,9 @@
-<div class="footer-darkmode-bar">
-    <div class="footer-container">
-        <div class="d-flex justify-content-end align-items-center py-2">
-            <label class="form-check-label me-2 small" for="darkModeToggle">Dunkelmodus</label>
-            <div class="form-check form-switch mb-0">
-                <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle" data-bs-theme-switch aria-label="Dunkelmodus umschalten">
-            </div>
+<div class="darkmode-toggle">
+    <div class="d-flex align-items-center py-2">
+        <div class="form-check form-switch mb-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle" data-bs-theme-switch aria-label="Dunkelmodus umschalten">
         </div>
+        <label class="form-check-label ms-2" for="darkModeToggle">Dunkelmodus</label>
     </div>
 </div>
 {% add to body %}
@@ -19,6 +17,15 @@
           if (theme === "dark") {
             this.updateSwitches(theme);
           }
+
+          // Dispatch the event. Used by the logo switcher!
+          const event = new CustomEvent('set-theme', {
+            detail: {
+              theme: theme,
+            }
+          });
+
+          document.dispatchEvent(event);
         }
 
         getTheme = function () {

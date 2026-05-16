@@ -3,11 +3,18 @@
         <div class="header--flex-container d-flex align-items-center py-3">
             <div class="header--col-1">
                 <a href="" title="Startseite">
-                    {% if is_debug_mode() %}
-                        <img src="{{ asset('logos/logo_schule_ettiswil.svg', 'markocupic_contao_theme_caribbean_blue') }}" alt="Logo Schule Ettiswil" class="logo-header">
-                    {% else %}
-                        <img src="{{ asset('logos/logo_schule_ettiswil.svg', 'markocupic_contao_theme_caribbean_blue') }}" alt="Logo Schule Ettiswil" class="logo-header">
-                    {% endif %}
+                    <img src="{{ asset('logos/logo_schule_ettiswil.svg', 'markocupic_contao_theme_caribbean_blue') }}" id="brandLogo" alt="Logo Schule Ettiswil" class="logo-header">
+                    <script>
+                      const logo = {
+                        'dark': "{{ asset('logos/logo_schule_ettiswil_dark.svg', 'markocupic_contao_theme_caribbean_blue') }}",
+                        'light': "{{ asset('logos/logo_schule_ettiswil.svg', 'markocupic_contao_theme_caribbean_blue') }}",
+                      }
+
+                      document.addEventListener("set-theme", (e) => {
+                        const theme = e.detail.theme === 'dark' ? 'dark' : 'light';
+                        document.getElementById('brandLogo').src = logo[theme];
+                      })
+                    </script>
                 </a>
             </div>
             <div class="header--col-2 d-flex flex-nowrap flex-row flex-grow-1 justify-content-end align-items-center">
@@ -19,7 +26,7 @@
 
                 {# SEARCH FORM DESKTOP  #}
                 <div class="header--search-form d-none d-xl-flex">
-                    <button class="header--open-search-button btn bg-black text-white rounded-pill px-3" title="suchen">
+                    <button class="header--open-search-button btn btn-sm btn-dark rounded-pill px-3" title="suchen">
                         <i class="fa-solid fa-magnifying-glass me-3"></i><span>Suchen</span>
                     </button>
                     <div class="header--search-box">
