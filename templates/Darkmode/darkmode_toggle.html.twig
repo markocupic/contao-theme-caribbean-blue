@@ -1,0 +1,61 @@
+<div class="footer-darkmode-bar">
+    <div class="footer-container">
+        <div class="d-flex justify-content-end align-items-center py-2">
+            <label class="form-check-label me-2 small" for="darkModeToggle">Dunkelmodus</label>
+            <div class="form-check form-switch mb-0">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle" data-bs-theme-switch aria-label="Dunkelmodus umschalten">
+            </div>
+        </div>
+    </div>
+</div>
+{% add to body %}
+    <script>
+      class ThemeSwitch {
+        setTheme = (theme) => {
+          const elHtml = document.querySelector('html');
+          elHtml.setAttribute("data-bs-theme", theme);
+          localStorage.setItem("theme", theme);
+
+          if (theme === "dark") {
+            this.updateSwitches(theme);
+          }
+        }
+
+        getTheme = function () {
+          return localStorage.getItem("theme") || "light";
+        }
+
+        toggleTheme = () => {
+          let newTheme = this.getTheme() === "dark" ? "light" : "dark";
+          this.setTheme(newTheme);
+        }
+
+        updateSwitches = (theme) => {
+          const switches = document.querySelectorAll('[data-bs-theme-switch]');
+          for (const elSwitch of switches) {
+            elSwitch.checked = theme === "dark";
+          }
+        }
+      }
+
+      // Apply saved theme on page load
+      const themeSwitch = new ThemeSwitch();
+      themeSwitch.setTheme(themeSwitch.getTheme());
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const switches = document.querySelectorAll('[data-bs-theme-switch]');
+        for (const elSwitch of switches) {
+          elSwitch.addEventListener("change", () => {
+            const themeSwitch = new ThemeSwitch();
+
+            if (elSwitch.checked) {
+              themeSwitch.setTheme('dark');
+            } else {
+              themeSwitch.setTheme('light');
+            }
+          });
+        }
+      });
+
+    </script>
+{% endadd %}

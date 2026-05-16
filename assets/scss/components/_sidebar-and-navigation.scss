@@ -1,7 +1,5 @@
-$nav-bg-color: #fff;
 $nav-button-bg-color: #9e000f;
-
-$nav-bg-hover-color: lighten($nav-bg-color, 10%);
+$nav-bg-hover-color: var(--bs-tertiary-bg);
 $nav-border-color: transparent;
 $nav-font-color: #fff;
 $level_1-offset: 1rem;
@@ -16,11 +14,7 @@ html, body {
 #header {
   .navigation-toggler {
     background: transparent;
-
-    .fa {
-      font-size: 2rem;
-    }
-
+    color: var(--bs-body-color);
     border: 0;
 
     &:focus {
@@ -36,7 +30,7 @@ html, body {
 
 #sidebar .sidebar-button-container {
   .svg-inline--fa {
-    color: $nav-font-color !important;
+    color: var(--bs-body-color) !important;
     font-size: 2rem;
   }
 }
@@ -47,10 +41,8 @@ $sidebar-backdrop-bg-color: #000000;
 $nav-bg-hover-color: #F6F6F6;
 $nav-close-btn-color: #000000;
 
-$nav-link-color: #222222;
 $nav-link-color: #000000;
 $nav-link-color-active: #000000;
-$nav-bg-color: #FFFFFF;
 $focus-outline-color: transparent; // Disable/make transparent focus outline color
 
 /* Dropdown - main navigation header */
@@ -91,7 +83,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
   width: 100%;
   left: -400px;
   max-width: 400px;
-  background-color: $nav-bg-color;
+  background-color: var(--bs-tertiary-bg);
   @include transition(left, ease-in-out, 1s);
 
   a:focus, a:focus-visible, button:focus, button:focus-visible {
@@ -107,7 +99,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
   .navigation-toggler.btn.btn-link {
     background: transparent;
     font-size: clamp-calc(1.75rem, 2.5rem);
-    color: $nav-link-color;
+    color: var(--bs-body-color);
     margin: 0 !important;
     padding: 2px 6px !important;
     height: auto;
@@ -126,8 +118,8 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
       right: $spacer;
       border: 0;
 
-      i {
-        color: $nav-close-btn-color;
+      i.fa-2x{
+        color: var(--bs-body-color);
       }
 
       &:focus {
@@ -157,7 +149,7 @@ body.sidebar-open {
 
 .sidebar-navigation {
   padding: $spacer 0;
-  margin: 4rem 0 3rem clamp-calc(0rem,2rem) !important;
+  margin: 4rem 0 3rem clamp-calc(0rem, 2rem) !important;
   text-align: left;
   position: relative;
 
@@ -181,7 +173,7 @@ body.sidebar-open {
     overflow: hidden;
 
     > strong.active {
-      color: $nav-link-color;
+      color: var(--bs-body-color);
       font-weight: bold;
     }
 
@@ -225,28 +217,28 @@ body.sidebar-open {
 
   // Link color for non-clickable items for all levels
   ul.level_1 > li.page-container > a {
-    color: $nav-link-color !important;
+    color:        var(--bs-body-color) !important;
   }
 
   ul.level_2 > li.page-container > a {
-    color: $nav-link-color !important;
+    color:       var(--bs-body-color) !important;
   }
 
   ul.level_3 > li.page-container > a {
-    color: $nav-link-color !important;
+    color:       var(--bs-body-color) !important;
   }
 
   // Link color for clickable items for all levels
   ul.level_1 > li > a {
-    color: $nav-link-color !important;
+    color:       var(--bs-body-color) !important;
   }
 
   ul.level_2 > li > a {
-    color: $nav-link-color !important;
+    color:       var(--bs-body-color) !important;
   }
 
   ul.level_3 > li > a {
-    color: $nav-link-color !important;
+    color:       var(--bs-body-color) !important;
   }
 
   // Borders & backgrounds
@@ -265,7 +257,7 @@ body.sidebar-open {
     > li.expanded {
       // Background-color for active levels
       &:before, > *, > *:before {
-        color: $nav-link-color !important;
+        color:       var(--bs-body-color) !important;
       }
     }
 
@@ -330,14 +322,14 @@ body.sidebar-open {
       }
 
       > a, > strong {
-        font-size: clamp-calc(1.25rem, 2.5rem);
+        font-size: clamp-calc(1.5rem, 2rem) !important;
         font-weight: bolder;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_1-offset !important;
       }
 
       > strong.active {
-        color: $nav-link-color-active !important;
+        color:       $nav-link-color-active !important;
       }
 
       > a:hover, > strong:hover {
@@ -350,7 +342,7 @@ body.sidebar-open {
     & > li {
       line-height: 1.5;
       background-color: transparent;
-      padding: .7rem;
+      padding: .25rem;
       padding-left: 0;
       padding-right: 0;
 
@@ -364,12 +356,12 @@ body.sidebar-open {
       }
 
       & > .toggle-submenu:before {
-        font-size: clamp-calc(1.125rem, 1.75rem);
+        font-size: clamp-calc(1.25rem, 1.75rem) !important;
       }
 
       & > a, strong {
-        font-size: clamp-calc(1.125rem, 1.4rem);
-        color: $nav-link-color;
+        font-size: clamp-calc(1.5rem, 2.4rem);
+        color:       var(--bs-body-color);
         max-width: calc(100% - 4.5rem);
         padding-left: $level_2-offset !important;
       }
@@ -414,7 +406,7 @@ body.sidebar-open {
 
       & > a, strong {
         font-size: clamp-calc(1rem, 1.3rem);
-        color: $nav-link-color;
+        color:       var(--bs-body-color);
         max-width: calc(100% - 4.5rem);
         padding-left: $level_3-offset !important;
       }
@@ -459,7 +451,7 @@ body.sidebar-open {
 
       & > a, strong {
         font-size: clamp-calc(.875rem, 1.2rem);
-        color: $nav-link-color;
+        color: var(--bs-body-color);
         max-width: calc(100% - 4.5rem);
         padding-left: $level_4-offset !important;
       }

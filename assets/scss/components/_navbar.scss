@@ -1,5 +1,6 @@
 :root {
   --contao-nav--color-level-1-hover: var(--bs-primary) !important;
+  --contao-nav--color-level-1: var(--bs-body-color) !important;
 }
 
 .mod_navigation.header-desktop-navbar {
@@ -12,8 +13,13 @@
       font-weight: 500;
     }
 
+    & > li.contao-nav--nav-item .contao-nav--dropdown-toggle {
+      color: var(--bs-body-color) !important;
+    }
+
     & > li.contao-nav--nav-item .contao-nav--dropdown-toggle:after {
       width: 0.75rem !important;
+      color: var(--bs-body-color) !important;
     }
 
     > li.contao-nav--nav-item.trail, > li.contao-nav--nav-item.active {
@@ -41,18 +47,19 @@
       overflow: hidden;
       min-width: 100%;
       opacity: 1;
-      background-color: #ffffff;
+      background-color: var(--bs-tertiary-bg);
       width: max-content;
 
       ul.level_2.contao-nav--nav-list {
         opacity: 1;
-        background-color: #ffffff;
+        background-color: transparent;
         width: max-content;
 
         li.contao-nav--nav-item {
-          background-color: #fff;
+          background-color: transparent;
           padding: .5rem 1rem;
           display: block;
+          border-color: var(--bs-border-color);
 
           & > strong, & > a > span {
             color: var(--bs-body-color);

@@ -10,6 +10,8 @@
   }
 
   .handorgel__header__button {
+    background-color: var(--bs-tertiary-bg);
+    border-color: var(--bs-border-color);
     display: flex;
     align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
     gap: clamp-calc(.5rem, 1rem); /* Abstand zwischen Icon und Text */
@@ -20,7 +22,7 @@
     padding-bottom: clamp-calc(.75rem, 1.75rem);
     padding-left: clamp-calc(.25rem, 1.5rem);
     padding-right: clamp-calc(.25rem, 1.5rem);
-    font-size: clamp-calc(1rem, 2rem);
+    font-size: clamp-calc(1.125rem, 2rem);
 
     svg {
       color: var(--bs-primary);

@@ -11,7 +11,7 @@
 
       .article-inside:not(.article-container-p-0) {
         @extend .px-4;
-        padding-left: clamp-calc(1.5rem, 1.5rem) !important;
+        padding-left: clamp-calc(1.5rem, 4rem) !important;
         padding-right: clamp-calc(1.5rem, 1.5rem) !important;
         padding-bottom: clamp-calc(1.5rem, 2rem) !important;
       }
@@ -127,27 +127,27 @@ html:not([data-bs-theme="dark"]) {
 html[data-bs-theme="dark"] {
   #main > .inside {
     .mod_article .article-inside:not(.article-container-p-0) {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-light .article-inside {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-gray .article-inside {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-primary .article-inside {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-secondary .article-inside {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-dark .article-inside {
-      background-color: #141414;
+      background-color: var(--bs--tertiary-bg);
     }
 
     .mod_article.background-transparent .article-inside {

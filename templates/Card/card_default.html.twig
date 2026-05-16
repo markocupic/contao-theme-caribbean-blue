@@ -1,6 +1,6 @@
 {% block card %}
     {% set card_attributes = attrs()
-        .addClass('card bg-white overflow-hidden')
+        .addClass('card overflow-hidden')
         .mergeWith(card_attributes|default) %}
     <div{{ card_attributes }} style="max-width:100%">
         {# start card image - start card image #}
@@ -49,7 +49,7 @@
                     {% if card_link|default %}
                         {% set card_link_attributes =  attrs()
                             .setIfExists('href',card_link|default)
-                            .addClass('mt-3 card-link text-decoration-none')
+                            .addClass('mt-3 card-link text-decoration-none small')
                             .mergeWith(card_link_attributes|default) %}
                         <div class="mt-4 mb-3">
                             <a{{ card_link_attributes }}>Mehr erfahren<i class="ms-2 fa-regular fa-arrow-right-long"></i></a>

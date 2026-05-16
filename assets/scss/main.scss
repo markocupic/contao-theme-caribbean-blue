@@ -9,6 +9,7 @@
 @import "mixins/_mixins.scss";
 
 // base
+@import "base/root";
 @import "base/page"; 
 @import "base/type";
 @import "base/layout_header";
@@ -16,8 +17,6 @@
 @import "base/layout_footer";
 
 // components
-//@import "components/darkmode";
-//@import "components/pagination";
 @import "components/card";
 @import "components/content_accordion";
 @import "components/content_blockquote";

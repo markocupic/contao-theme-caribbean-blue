@@ -1,7 +1,8 @@
 .card {
+  background-color: var(--bs-tertiary-bg);
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px solid #efefef;
+  border: 1px solid var(--bs-border-color);
 
   .card-img, .card-img-top {
     border-radius: .5rem !important

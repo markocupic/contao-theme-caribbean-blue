@@ -4,7 +4,6 @@
     {% if articles|default %}
         <p class="empty">{{ empty }}</p>
     {% else %}
-
         <ul class="row g-2 equal-height">
             {{ articles|joiin('') }}
         </ul>

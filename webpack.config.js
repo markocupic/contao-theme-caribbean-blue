@@ -17,8 +17,8 @@ Encore
       to: 'favicon/[path][name].[ext]'
     })
     .copyFiles({
-      from: './assets/images',
-      to: 'images/[path][name].[ext]'
+      from: './assets/logos',
+      to: 'logos/[path][name].[hash:8].[ext]'
     })
     .copyFiles({
       from: './assets/js',

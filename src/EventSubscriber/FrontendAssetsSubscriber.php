@@ -42,7 +42,6 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
 
         if ($this->scopeMatcher->isFrontendRequest($request)) {
             $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/theme.js', 'markocupic_contao_theme_caribbean_blue');
-            $GLOBALS['TL_BODY'][] = '<script defer src="'.$this->packages->getUrl('js/theme/theme-switch.js', 'markocupic_contao_theme_caribbean_blue').'"></script>';
 
             // Bootstrap
             $GLOBALS['TL_CSS'][] = $this->packages->getUrl('styles/frontend.css', 'markocupic_contao_theme_caribbean_blue');
