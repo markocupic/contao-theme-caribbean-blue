@@ -157,7 +157,7 @@ body.sidebar-open {
 
 .sidebar-navigation {
   padding: $spacer 0;
-  margin: 4rem 0 3rem 0 !important;
+  margin: 4rem 0 3rem clamp-calc(0rem,2rem) !important;
   text-align: left;
   position: relative;
 
@@ -318,7 +318,6 @@ body.sidebar-open {
   }
 
   ul.level_1 {
-
     > li {
       line-height: 1.5;
       background-color: transparent;
@@ -331,7 +330,7 @@ body.sidebar-open {
       }
 
       > a, > strong {
-        font-size: clamp-calc(1.25rem, 1.5rem);
+        font-size: clamp-calc(1.25rem, 2.5rem);
         font-weight: bolder;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_1-offset !important;

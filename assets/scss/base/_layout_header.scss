@@ -1,9 +1,11 @@
 #header {
   background-color: var(--bs-white);
   @extend .px-0;
-  @extend .shadow;
+  //@extend .shadow;
   position: relative;
   z-index: 2;
+
+  margin-bottom: clamp-calc(0rem, 4rem);
 
   > .inside {
     @extend .container-lg;
