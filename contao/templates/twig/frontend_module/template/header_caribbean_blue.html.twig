@@ -10,7 +10,7 @@
                         'light': "{{ asset('logos/logo_schule_ettiswil.svg', 'markocupic_contao_theme_caribbean_blue') }}",
                       }
 
-                      document.addEventListener("set-theme", (e) => {
+                      document.addEventListener("toggle-theme", (e) => {
                         const theme = e.detail.theme === 'dark' ? 'dark' : 'light';
                         document.getElementById('brandLogo').src = logo[theme];
                       })

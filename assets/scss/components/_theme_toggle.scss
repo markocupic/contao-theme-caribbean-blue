@@ -1,0 +1,9 @@
+button[data-theme-toggle] {
+  background-color: transparent;
+  border: 1px solid #495057;
+  color: #fff;
+}
+
+button[data-theme-toggle]:hover {
+  background-color: #000000;
+}
