@@ -1,7 +1,8 @@
 :root[data-bs-theme="light"] {
   --bs-tertiary-bg: #ffffff;
+  --bs-beige-bg: #e7d7bd;
 }
 
 :root, :root[data-bs-theme="dark"] {
-
+  --bs-beige-bg: var(--bs-tertiary-bg);
 }

@@ -1,6 +1,6 @@
 {
   "headroom.js": "/bundles/markocupiccontaothemecaribbeanblue/headroom.c50159d1.js",
-  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.8f0a64c8.css",
+  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.9cf52df5.css",
   "leitbild/media/originale/orange transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/orange transparent.tif",
   "leitbild/media/innenseite_total.jpg": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/innenseite_total.jpg",
   "leitbild/media/originale/blau transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/blau transparent.tif",
@@ -73,9 +73,10 @@
   "favicon/favicon-16x16.png": "/bundles/markocupiccontaothemecaribbeanblue/favicon/favicon-16x16.png",
   "favicon/favicon.ico": "/bundles/markocupiccontaothemecaribbeanblue/favicon/favicon.ico",
   "js/theme/theme.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/theme.89e66980.js",
-  "images/bubble.svg": "/bundles/markocupiccontaothemecaribbeanblue/images/bubble.e0873750.svg",
+  "images/bubble_beige.svg": "/bundles/markocupiccontaothemecaribbeanblue/images/bubble_beige.864e0638.svg",
+  "images/bubble_gray_light.svg": "/bundles/markocupiccontaothemecaribbeanblue/images/bubble_gray_light.e0873750.svg",
   "favicon/manifest.json": "/bundles/markocupiccontaothemecaribbeanblue/favicon/manifest.json",
   "favicon/browserconfig.xml": "/bundles/markocupiccontaothemecaribbeanblue/favicon/browserconfig.xml",
   "headroom.c50159d1.js.map": "/bundles/markocupiccontaothemecaribbeanblue/headroom.c50159d1.js.map",
-  "frontend.8f0a64c8.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.8f0a64c8.css.map"
+  "frontend.9cf52df5.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.9cf52df5.css.map"
 }

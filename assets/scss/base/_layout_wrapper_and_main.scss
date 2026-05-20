@@ -43,6 +43,10 @@ html:not([data-bs-theme="dark"]) {
       background: var(--bs-light);
     }
 
+    .mod_article.background-beige {
+      background: var(--bs-beige-bg);
+    }
+
     .mod_article.background-light-2-white-gradient {
       background: var(--bs-light);
       background: linear-gradient(180deg, var(--bs-light) 0%, var(--bs-white) 100%);
@@ -72,10 +76,24 @@ html:not([data-bs-theme="dark"]) {
       background-color: transparent;
     }
 
+    .mod_article.background-beige-waves {
+      //background-color: rgb(249, 240, 255);
+      //clip-path: ellipse(60% 200% at 50% 200%);
+      background-image: url('../images/bubble_beige.svg');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: left bottom, left top;
+      background-color: transparent;
+
+      .article-inside {
+        background-color: transparent;
+      }
+    }
+
     .mod_article.background-light-waves {
       //background-color: rgb(249, 240, 255);
       //clip-path: ellipse(60% 200% at 50% 200%);
-      background-image: url('../images/bubble.svg');
+      background-image: url('../images/bubble_gray_light.svg');
       background-repeat: no-repeat;
       background-size: 100% auto;
       background-position: left bottom, left top;

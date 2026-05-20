@@ -46,6 +46,13 @@
 
       }
 
+      .btn.header--open-search-button {
+        &:hover {
+          background-color: var(--bs-primary);
+          border-color: var(--bs-primary);
+        }
+      }
+
       .header--col-2.header--search-bar--active {
         .header--navbar {
           background-color: #0a53be;

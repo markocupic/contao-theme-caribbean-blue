@@ -4,12 +4,12 @@
       background: var(--bs-primary);
     }
 
-    .swiper-button-prev:after {
-      /**content: '\f0a8' !important; // fa-circle-arrow-left **/
+    .swiper-button-prev svg {
+      color: var(--bs-primary)
     }
 
-    .swiper-button-next:after {
-      /** content: '\f0a9' !important; // fa-circle-arrow-right **/
+    .swiper-button-next svg {
+      color: var(--bs-primary)
     }
 
     .swiper-button-prev:after, .swiper-button-next:after {

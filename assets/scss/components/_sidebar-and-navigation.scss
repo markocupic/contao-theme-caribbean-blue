@@ -41,8 +41,8 @@ $sidebar-backdrop-bg-color: #000000;
 $nav-bg-hover-color: #F6F6F6;
 $nav-close-btn-color: #000000;
 
-$nav-link-color: #000000;
-$nav-link-color-active: #000000;
+$nav-link-color: var(--bs-body-color);
+$nav-link-color-active: var(--bs-primary);
 $focus-outline-color: transparent; // Disable/make transparent focus outline color
 
 /* Dropdown - main navigation header */
@@ -118,7 +118,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
       right: $spacer;
       border: 0;
 
-      i.fa-2x{
+      i.fa-2x {
         color: var(--bs-body-color);
       }
 
@@ -217,29 +217,26 @@ body.sidebar-open {
 
   // Link color for non-clickable items for all levels
   ul.level_1 > li.page-container > a {
-    color:        var(--bs-body-color) !important;
+    color: var(--bs-body-color) !important;
   }
 
   ul.level_2 > li.page-container > a {
-    color:       var(--bs-body-color) !important;
+    color: var(--bs-body-color) !important;
   }
 
   ul.level_3 > li.page-container > a {
-    color:       var(--bs-body-color) !important;
+    color: var(--bs-body-color) !important;
   }
 
   // Link color for clickable items for all levels
   ul.level_1 > li > a {
-    color:       var(--bs-body-color) !important;
+    color: var(--bs-body-color) !important;
   }
 
   ul.level_2 > li > a {
-    color:       var(--bs-body-color) !important;
+    color: var(--bs-body-color) !important;
   }
 
-  ul.level_3 > li > a {
-    color:       var(--bs-body-color) !important;
-  }
 
   // Borders & backgrounds
   ul.level_1 {
@@ -257,7 +254,7 @@ body.sidebar-open {
     > li.expanded {
       // Background-color for active levels
       &:before, > *, > *:before {
-        color:       var(--bs-body-color) !important;
+        color: var(--bs-body-color) !important;
       }
     }
 
@@ -329,7 +326,7 @@ body.sidebar-open {
       }
 
       > strong.active {
-        color:       $nav-link-color-active !important;
+        color: $nav-link-color-active !important;
       }
 
       > a:hover, > strong:hover {
@@ -339,10 +336,12 @@ body.sidebar-open {
   }
 
   ul.level_2 {
+    margin-top: .25rem;
+
     & > li {
       line-height: 1.5;
       background-color: transparent;
-      padding: .25rem;
+      padding: clamp-calc(.35rem, .5rem) !important;
       padding-left: 0;
       padding-right: 0;
 
@@ -356,12 +355,12 @@ body.sidebar-open {
       }
 
       & > .toggle-submenu:before {
-        font-size: clamp-calc(1.25rem, 1.75rem) !important;
+        font-size: clamp-calc(1.5rem, 1.75rem) !important;
       }
 
       & > a, strong {
-        font-size: clamp-calc(1.5rem, 2.4rem);
-        color:       var(--bs-body-color);
+        font-size: clamp-calc(1.25rem, 1.5rem) !important;
+        color: var(--bs-body-color);
         max-width: calc(100% - 4.5rem);
         padding-left: $level_2-offset !important;
       }
@@ -384,93 +383,4 @@ body.sidebar-open {
     }
   }
 
-  ul.level_3 {
-    & > li {
-      line-height: 1.5;
-      background-color: transparent;
-      padding: .6rem;
-      padding-left: 0;
-      padding-right: 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      & > .toggle-submenu {
-        right: 0;
-      }
-
-      & > .toggle-submenu:before {
-        font-size: clamp-calc(1rem, 1.5rem);
-      }
-
-      & > a, strong {
-        font-size: clamp-calc(1rem, 1.3rem);
-        color:       var(--bs-body-color);
-        max-width: calc(100% - 4.5rem);
-        padding-left: $level_3-offset !important;
-      }
-
-      &:hover {
-        background-color: var(--bs-primary);
-
-        > a, strong {
-          color: #ffffff !important;
-        }
-      }
-
-      &.active {
-        background-color: var(--bs-primary);
-
-        & > strong {
-          color: #ffffff;
-        }
-      }
-    }
-  }
-
-  ul.level_4 {
-    & > li {
-      line-height: 1.5;
-      background-color: transparent;
-      padding: .5rem;
-      padding-left: 0;
-      padding-right: 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      & > .toggle-submenu {
-        right: 0;
-      }
-
-      & > .toggle-submenu:before {
-        font-size: clamp-calc(.875rem, 1.35rem);
-      }
-
-      & > a, strong {
-        font-size: clamp-calc(.875rem, 1.2rem);
-        color: var(--bs-body-color);
-        max-width: calc(100% - 4.5rem);
-        padding-left: $level_4-offset !important;
-      }
-
-      &:hover {
-        background-color: var(--bs-primary);
-
-        > a, strong {
-          color: #ffffff !important;
-        }
-      }
-
-      &.active {
-        background-color: var(--bs-primary);
-
-        & > strong {
-          color: #ffffff;
-        }
-      }
-    }
-  }
 }
