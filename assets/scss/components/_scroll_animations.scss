@@ -1,0 +1,14 @@
+/**
+[data-animation="reveal"], .mod_newslist .swiper, h2 {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="reveal"].is-visible, .mod_newslist .swiper.is-visible, h2.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+ */

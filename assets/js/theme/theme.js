@@ -1,5 +1,5 @@
 /** Scroll to top button **/
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // Create the scroll-to-top button
   var scrollBtn = document.createElement("div");
   scrollBtn.classList.add("scroll-to-top");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(scrollBtn);
 
   // Show or hide button based on scroll position
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
       scrollBtn.style.display = "flex";
     } else {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Scroll to top on click
-  scrollBtn.addEventListener("click", function (event) {
+  scrollBtn.addEventListener("click", (event) => {
     event.preventDefault();
     window.scrollTo({
       top: 0,

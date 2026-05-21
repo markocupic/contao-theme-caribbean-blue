@@ -47,9 +47,11 @@
       }
 
       .btn.header--open-search-button {
+        color: #ffffff !important;
+
         &:hover {
-          background-color: var(--bs-primary);
-          border-color: var(--bs-primary);
+          background-color: #000;
+          border-color: #000;
         }
       }
 
@@ -142,4 +144,8 @@
     }
 
   }
+}
+
+html[data-bs-theme="dark"] #header {
+  background-color: var(--bs-tertiary-bg);
 }

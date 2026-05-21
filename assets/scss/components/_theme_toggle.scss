@@ -1,9 +1,12 @@
 button[data-theme-toggle] {
   background-color: transparent;
-  border: 1px solid #495057;
-  color: #fff;
+  border: none;
+  color: var(--bs-body-color);
+  margin-right: clamp-calc(.5rem, 1rem);
 }
 
 button[data-theme-toggle]:hover {
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
+  color: var(--bs-body-color);
 }
