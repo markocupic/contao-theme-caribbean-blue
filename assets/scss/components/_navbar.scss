@@ -9,7 +9,7 @@
   ul.level_1.contao-nav--nav-list {
     & > li > a > span, & > li > strong, & li > span {
       text-decoration: none;
-      font-size: clamp-calc(1rem, 1.125rem, 992px, 1400px) !important;
+      font-size: var(--bs-font-size-base) !important;
       font-weight: 500;
     }
 

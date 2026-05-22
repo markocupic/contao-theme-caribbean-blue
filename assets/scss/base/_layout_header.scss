@@ -25,6 +25,7 @@
 
         .header--navbar {
           display: none;
+          margin-right: clamp-calc(1.5rem, 2.5rem);
           @include media-breakpoint-up(xl) {
             display: flex;
             flex-grow: 1;
