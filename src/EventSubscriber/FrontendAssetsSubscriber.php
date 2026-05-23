@@ -48,9 +48,6 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
             $GLOBALS['TL_CSS'][] = $this->packages->getUrl('styles/frontend.css', 'markocupic_contao_theme_caribbean_blue');
             $GLOBALS['TL_BODY'][] = '<script defer src="' . $this->packages->getUrl('bootstrap/dist/js/bootstrap.bundle.min.js', 'markocupic_contao_theme_caribbean_blue') . '"></script>';
 
-            // Headroom
-            $GLOBALS['TL_BODY'][] = '<script defer src="' . $this->packages->getUrl('headroom.js', 'markocupic_contao_theme_caribbean_blue') . '"></script>';
-
             // Viewport
             $GLOBALS['TL_HEAD'][] = '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
 
@@ -59,6 +56,10 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
 
             // Font Awesome 6 Pro
             $this->addFontAwesome();
+
+            // Sticky header
+            $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/sticky_header.js', 'markocupic_contao_theme_caribbean_blue');
+
 
             // Scroll Animations
             $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/scroll_animations.js', 'markocupic_contao_theme_caribbean_blue');

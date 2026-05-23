@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  new StickyHeader('header', {
+    offset: 150,     // ab 150px Scrolltiefe aktiv
+    threshold: 6     // etwas smoother
+  });
+});
+
 /** Scroll to top button **/
 document.addEventListener("DOMContentLoaded", () => {
   // Create the scroll-to-top button

@@ -1,6 +1,5 @@
 {
-  "headroom.js": "/bundles/markocupiccontaothemecaribbeanblue/headroom.c50159d1.js",
-  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.f8991f15.css",
+  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.1dedb90c.css",
   "leitbild/media/originale/orange transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/orange transparent.tif",
   "leitbild/media/innenseite_total.jpg": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/innenseite_total.jpg",
   "leitbild/media/originale/blau transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/blau transparent.tif",
@@ -72,12 +71,12 @@
   "leitbild/js/leitbild.js": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/js/leitbild.js",
   "favicon/favicon-16x16.png": "/bundles/markocupiccontaothemecaribbeanblue/favicon/favicon-16x16.png",
   "favicon/favicon.ico": "/bundles/markocupiccontaothemecaribbeanblue/favicon/favicon.ico",
-  "js/theme/theme.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/theme.5205e844.js",
+  "js/theme/theme.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/theme.8a43c1f5.js",
+  "js/theme/sticky_header.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/sticky_header.2761d3c9.js",
   "images/bubble_beige.svg": "/bundles/markocupiccontaothemecaribbeanblue/images/bubble_beige.864e0638.svg",
   "images/bubble_gray_light.svg": "/bundles/markocupiccontaothemecaribbeanblue/images/bubble_gray_light.e0873750.svg",
   "favicon/manifest.json": "/bundles/markocupiccontaothemecaribbeanblue/favicon/manifest.json",
   "js/theme/scroll_animations.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/scroll_animations.6382598a.js",
   "favicon/browserconfig.xml": "/bundles/markocupiccontaothemecaribbeanblue/favicon/browserconfig.xml",
-  "headroom.c50159d1.js.map": "/bundles/markocupiccontaothemecaribbeanblue/headroom.c50159d1.js.map",
-  "frontend.f8991f15.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.f8991f15.css.map"
+  "frontend.1dedb90c.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.1dedb90c.css.map"
 }

@@ -5,7 +5,6 @@ Encore
     .setPublicPath('/bundles/markocupiccontaothemecaribbeanblue')
     .setManifestKeyPrefix('')
 
-    .addEntry('headroom', './assets/entries/headroom.js')
     //.addEntry('frontend', './assets/filepond.js')
     .copyFiles({
       from: './node_modules/bootstrap/dist/js',

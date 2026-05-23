@@ -1,0 +1,17 @@
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(.25, .8, .25, 1);
+  will-change: transform;
+}
+
+#header.header--unpinned {
+  transform: translateY(-100%);
+}
+
+#header.header--pinned {
+  @extend .z-3;
+  transform: translateY(0);
+}
