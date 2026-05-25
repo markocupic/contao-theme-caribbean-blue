@@ -5,12 +5,12 @@
   @extend .text-white
 }
 
-#main {
+.layout-main {
   .formbody {
     background: #fff;
     padding: $spacer 0;
     position: relative;
-    max-width: 400px;
+    max-width: 600px;
 
     & > * {
       box-sizing: border-box;

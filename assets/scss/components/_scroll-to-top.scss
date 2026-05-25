@@ -13,6 +13,7 @@
   right: 10px;
   aspect-ratio: 1/1;
   opacity: 1;
+  z-index: 1;
   @include transition(background-color);
   a, .fa{
     color: #fff;

@@ -6,13 +6,13 @@ body {
   min-height: 100vh;
 }
 
-#footer {
+.layout-footer {
   margin-top: auto;
 }
 
 /** End Sticky Footer */
 
-#footer {
+.layout-footer {
   background-color: var(--bs-dark);
   padding-top: clamp-calc(0rem, 2rem);
   padding-bottom: clamp-calc(0rem, 2rem);
@@ -54,7 +54,7 @@ body {
 
       .title {
         font-weight: bold;
-        font-size: $font-size-base;
+        font-size: var(--bs-body-font-size);
         color: #ffffff;
       }
     }
@@ -83,12 +83,12 @@ body {
 
       .title {
         color: #ffffff;
-        font-size: $font-size-base;
+        font-size: var(--bs-body-font-size);
       }
     }
   }
 }
 
-html[data-bs-theme="dark"] #footer {
+html[data-bs-theme="dark"] .layout-footer {
   background-color: var(--bs-tertiary-bg);
 }

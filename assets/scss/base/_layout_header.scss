@@ -1,4 +1,4 @@
-#header {
+.layout-header {
   background-color: var(--bs-tertiary-bg);
   @extend .px-0;
   position: relative;
@@ -100,6 +100,6 @@
   transition: top .5s;
 }
 
-html[data-bs-theme="dark"] #header {
+html[data-bs-theme="dark"] .layout-header {
   background-color: var(--bs-tertiary-bg);
 }

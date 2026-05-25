@@ -1,4 +1,4 @@
-#header {
+.layout-header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -7,11 +7,11 @@
   will-change: transform;
 }
 
-#header.header--unpinned {
+.layout-header.header--unpinned {
   transform: translateY(-100%);
 }
 
-#header.header--pinned {
+.layout-header.header--pinned {
   @extend .z-3;
   transform: translateY(0);
 }

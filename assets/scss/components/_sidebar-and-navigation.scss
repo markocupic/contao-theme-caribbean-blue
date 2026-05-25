@@ -11,8 +11,8 @@ html, body {
   height: 100%;
 }
 
-#header {
-  .navigation-toggler {
+.layout-header {
+  .navigation-toggle {
     background: transparent;
     color: var(--bs-body-color);
     border: 0;
@@ -96,15 +96,8 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
     width: auto;
   }
 
-  .navigation-toggler.btn.btn-link {
-    background: transparent;
-    font-size: clamp-calc(1.75rem, 2.5rem);
-    color: var(--bs-body-color);
-    margin: 0 !important;
-    padding: 2px 6px !important;
-    height: auto;
-    width: auto;
-    line-height: 1;
+  .navigation-toggle {
+    font-size: 1.5rem;
   }
 
   .sidebar-top-container {
@@ -113,7 +106,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
       color: $gray-400;
     }
 
-    .sidebar-navigation-toggler {
+    .sidebar-navigation-toggle {
       position: absolute;
       right: $spacer;
       border: 0;

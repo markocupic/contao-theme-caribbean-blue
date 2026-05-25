@@ -60,7 +60,6 @@ class FrontendAssetsSubscriber implements EventSubscriberInterface
             // Sticky header
             $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/sticky_header.js', 'markocupic_contao_theme_caribbean_blue');
 
-
             // Scroll Animations
             $GLOBALS['TL_JAVASCRIPT'][] = $this->packages->getUrl('js/theme/scroll_animations.js', 'markocupic_contao_theme_caribbean_blue');
         }

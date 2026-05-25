@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollBtn.addEventListener("click", (event) => {
     event.preventDefault();
     window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+      top: 0, behavior: "smooth"
     });
   });
 });
@@ -36,7 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.handorgel__header__button');
   for (const el of elements) {
-    el.insertAdjacentHTML('afterbegin', '<i class="icon-expand fa-light fa-plus-large"></i><i class="icon-collapse fa-light fa-dash"></i>');
+    const text = el.innerText;
+    el.innerText = '';
+
+    el.insertAdjacentHTML('beforeend', `<span class="handorgel__header__button__text">${text}</span>`);
+    el.insertAdjacentHTML('beforeend', '<i class="handorgel__header__button__toggle_icon icon-expand fa-light fa-plus-large"></i><i class="icon-collapse fa-light fa-dash"></i>');
   }
 });
 

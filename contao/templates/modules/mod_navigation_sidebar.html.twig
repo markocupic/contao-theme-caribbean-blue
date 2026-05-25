@@ -6,8 +6,8 @@
 
 <div class="sidebar-top-container d-flex align-items-center ps-3 pe-3 pt-4 pb-4 mt-4 me-4 mb-5">
     {# Hide sidebar button #}
-    <div class="sidebar-navigation-toggler navigation-toggler cursor-pointer" title="Navigation schliessen" role="button">
-        <i class="fa-thin fa-2x fa-xmark-large"></i>
+    <div class="sidebar-navigation-toggle navigation-toggle cursor-pointer" title="Navigation schliessen" role="button">
+        <i class="fa-thin fa-xmark-large"></i>
         <span class="visually-hidden">Navigation</span>
     </div>
 </div>
@@ -50,7 +50,7 @@
         sidebarOverlay.id = "sidebarOverlay";
         document.body.prepend(sidebarOverlay);
 
-        document.querySelectorAll(".navigation-toggler, #sidebarOverlay").forEach(element => {
+        document.querySelectorAll(".navigation-toggle, #sidebarOverlay").forEach(element => {
             element.addEventListener("click", function () {
                 document.body.classList.toggle("sidebar-open");
 

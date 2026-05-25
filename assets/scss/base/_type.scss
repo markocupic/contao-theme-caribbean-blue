@@ -1,11 +1,12 @@
-$fs-base: clamp-calc(17px, 20px);
+$fs-base: clamp-calc(16px, 20px);
 
 :root {
-  --bs-font-size-base: $fs-base;
+  --bs-font-size-base: clamp-calc(16px, 20px);
+  --bs-body-font-size: clamp-calc(16px, 20px);
 }
 
 body {
-  font-size: var(--bs-body-font-size) !important;
+  font-size: clamp-calc(16px, 20px) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {

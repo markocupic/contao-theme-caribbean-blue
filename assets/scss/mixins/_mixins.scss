@@ -5,7 +5,7 @@
  *   height: clamp-calc(40px, 50px); // accepts px or rem!
  * } 1440
  */
-@function clamp-calc($size-at-min-width, $size-at-max-width, $min-breakpoint: 360px, $max-breakpoint: 2600px) {
+@function clamp-calc($size-at-min-width, $size-at-max-width, $min-breakpoint: 320px, $max-breakpoint: 2600px) {
   $size-min: 0;
 
   @if str-index(#{$size-at-min-width}, 'rem') {

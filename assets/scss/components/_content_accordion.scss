@@ -13,6 +13,7 @@
     background-color: var(--bs-tertiary-bg);
     border-color: var(--bs-border-color);
     display: flex;
+    justify-content: space-between;
     align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
     gap: clamp-calc(.5rem, 1rem); /* Abstand zwischen Icon und Text */
     position: relative;
@@ -20,9 +21,10 @@
     margin: 0;
     padding-top: clamp-calc(.75rem, 1.75rem);
     padding-bottom: clamp-calc(.75rem, 1.75rem);
-    padding-left: clamp-calc(.25rem, 1.5rem);
-    padding-right: clamp-calc(.25rem, 1.5rem);
-    font-size: clamp-calc(1.125rem, 2rem);
+    padding-left: clamp-calc(.5rem, 1.5rem);
+    padding-right: clamp-calc(.5rem, 1.5rem);
+    font-size: clamp-calc(1rem, 2rem);
+    line-height: 1.2;
 
     svg {
       color: var(--bs-primary);

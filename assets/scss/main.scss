@@ -1,3 +1,6 @@
+// MIXINS
+@import "mixins/_mixins.scss";
+
 // Set variables and overwrite bootstrap vars
 @import "variables";
 @import "color_scheme";
@@ -5,10 +8,8 @@
 // EMBED BOOTSTRAP FRAMEWORK
 @import "base/bootstrap.scss";
 
-// MIXINS
-@import "mixins/_mixins.scss";
-
 // base
+@import "generic/contao-reset";
 @import "base/root";
 @import "base/page";
 @import "base/type";
@@ -28,7 +29,6 @@
 @import "components/cursor";
 @import "components/downloads_and_hyperlinks";
 @import "components/forms";
-@import "components/invisible";
 @import "components/media";
 @import "components/navbar";
 @import "components/scroll-to-top";

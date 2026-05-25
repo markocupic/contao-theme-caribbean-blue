@@ -5,7 +5,6 @@ Encore
     .setPublicPath('/bundles/markocupiccontaothemecaribbeanblue')
     .setManifestKeyPrefix('')
 
-    //.addEntry('frontend', './assets/filepond.js')
     .copyFiles({
       from: './node_modules/bootstrap/dist/js',
       to: 'bootstrap/dist/js/[path][name].[ext]',
