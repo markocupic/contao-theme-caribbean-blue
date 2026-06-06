@@ -1,5 +1,5 @@
 {
-  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.0e0e6236.css",
+  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.6e260447.css",
   "leitbild/media/originale/orange transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/orange transparent.tif",
   "leitbild/media/innenseite_total.jpg": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/innenseite_total.jpg",
   "leitbild/media/originale/blau transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/blau transparent.tif",
@@ -35,9 +35,12 @@
   "leitbild/media/originale/orange-transparent.gif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/orange-transparent.gif",
   "leitbild/media/textblock_violett_mit_titel.png": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/textblock_violett_mit_titel.png",
   "leitbild/media/originale/blau-transparent.gif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/blau-transparent.gif",
-  "logos/logo_schule_ettiswil_dark.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/logo_schule_ettiswil_dark.99371e43.svg",
-  "logos/logo_schule_ettiswil.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/logo_schule_ettiswil.ad65bc3d.svg",
+  "logos/old/logo_schule_ettiswil_dark.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/logo_schule_ettiswil_dark.99371e43.svg",
+  "logos/old/logo_schule_ettiswil.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/logo_schule_ettiswil.ad65bc3d.svg",
+  "logos/logo_schule_ettiswil_inkscape.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/logo_schule_ettiswil_inkscape.907bf1de.svg",
   "leitbild/media/originale/violett-transparent.gif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/violett-transparent.gif",
+  "logos/logo_schule_ettiswil_dark.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/logo_schule_ettiswil_dark.c0fbdcb4.svg",
+  "logos/logo_schule_ettiswil.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/logo_schule_ettiswil.b8c3de0c.svg",
   "leitbild/media/originale/olive-transparent.gif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/olive-transparent.gif",
   "favicon/apple-icon-precomposed.png": "/bundles/markocupiccontaothemecaribbeanblue/favicon/apple-icon-precomposed.png",
   "favicon/apple-icon.png": "/bundles/markocupiccontaothemecaribbeanblue/favicon/apple-icon.png",
@@ -78,5 +81,5 @@
   "favicon/manifest.json": "/bundles/markocupiccontaothemecaribbeanblue/favicon/manifest.json",
   "js/theme/scroll_animations.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/scroll_animations.6382598a.js",
   "favicon/browserconfig.xml": "/bundles/markocupiccontaothemecaribbeanblue/favicon/browserconfig.xml",
-  "frontend.0e0e6236.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.0e0e6236.css.map"
+  "frontend.6e260447.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.6e260447.css.map"
 }
