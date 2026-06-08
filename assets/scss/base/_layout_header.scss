@@ -3,7 +3,7 @@
   @extend .px-0;
   position: relative;
   z-index: 3;
-  margin-bottom: clamp-calc(0rem, 2rem);
+  margin-bottom: clamp-calc(0, 2rem);
   border-bottom: 1px solid var(--bs-border-color);
 
   > .inside {

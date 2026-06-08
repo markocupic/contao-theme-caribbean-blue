@@ -1,8 +1,8 @@
 $fs-base: clamp-calc(16px, 20px);
 
 :root {
-  --bs-font-size-base: clamp-calc(16px, 20px);
-  --bs-body-font-size: clamp-calc(16px, 20px);
+  --bs-font-size-base: $fs-base;
+  --bs-body-font-size: $fs-base;
 }
 
 body {
