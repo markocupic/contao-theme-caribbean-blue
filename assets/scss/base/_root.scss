@@ -1,9 +1,9 @@
-:root[data-bs-theme="light"] {
+:root, :root[data-bs-theme="light"] {
   --bs-tertiary-bg: #ffffff;
   --bs-beige-bg: #e7d7bd;
 }
 
-:root, :root[data-bs-theme="dark"] {
+:root[data-bs-theme="dark"] {
   --bs-body-bg: #0f0f11;
   --bs-tertiary-bg: #212227;
   --bs-border-color: #44464b;
