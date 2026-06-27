@@ -13,5 +13,6 @@
 }
 
 html[data-bs-theme="dark"] .card {
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-tertiary-bg);
+  border-color: transparent;
 }
