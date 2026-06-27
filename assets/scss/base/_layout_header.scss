@@ -1,5 +1,5 @@
 .layout-header {
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bs-body-bg);
   @extend .px-0;
   position: relative;
   z-index: 3;
@@ -101,5 +101,5 @@
 }
 
 html[data-bs-theme="dark"] .layout-header {
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bs-body-bg);
 }

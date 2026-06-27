@@ -1,4 +1,6 @@
 .content-accordion {
+  border-bottom: 1px solid var(--bs-border-color);
+
   .handorgel__content {
     background-color: transparent;
     border-color: var(--bs-border-color) !important;
@@ -10,7 +12,7 @@
   }
 
   .handorgel__header__button {
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--bs-body-bg);
     border-color: var(--bs-border-color);
     display: flex;
     justify-content: space-between;

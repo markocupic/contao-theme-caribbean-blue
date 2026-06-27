@@ -11,3 +11,7 @@
     @extend .shadow;
   }
 }
+
+html[data-bs-theme="dark"] .card {
+  background-color: var(--bs-body-bg);
+}
