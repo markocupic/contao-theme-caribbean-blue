@@ -1,11 +1,16 @@
-$nav-button-bg-color: #9e000f;
-$nav-bg-hover-color: var(--bs-tertiary-bg);
-$nav-border-color: transparent;
-$nav-font-color: #fff;
 $level_1-offset: 1rem;
 $level_2-offset: 1.25rem;
 $level_3-offset: 1.5rem;
 $level_4-offset: 1.75rem;
+
+
+:root, :root[data-bs-theme="dark"] {
+  --sidebar-focus-outline-color: transparent; // Disable/make transparent focus outline color
+  --sidebar-backdrop-bg-color: #000000;
+  --nav-link-color-active: var(--bs-primary);
+  --nav-bg-hover-color: var(--bs-tertiary-bg);
+  --nav-border-color: transparent;
+}
 
 html, body {
   height: 100%;
@@ -37,13 +42,6 @@ html, body {
 
 //////////
 
-$sidebar-backdrop-bg-color: #000000;
-$nav-bg-hover-color: #F6F6F6;
-$nav-close-btn-color: #000000;
-
-$nav-link-color: var(--bs-body-color);
-$nav-link-color-active: var(--bs-primary);
-$focus-outline-color: transparent; // Disable/make transparent focus outline color
 
 /* Dropdown - main navigation header */
 #sidebarOverlay {
@@ -54,7 +52,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
   right: 0;
   top: 0;
   height: 100%;
-  background-color: $sidebar-backdrop-bg-color !important;
+  background-color: var(--sidebar-backdrop-bg-color) !important;
   z-index: $zindex-navbar-aside-backdrop;
   @include transition(opacity);
 }
@@ -68,7 +66,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
 
 #sidebar::-webkit-scrollbar-thumb {
   border-radius: 6px !important;
-  background-color: $nav-bg-hover-color !important;
+  background-color: var(--nav-bg-hover-color) !important;
 }
 
 #sidebar {
@@ -87,7 +85,7 @@ $focus-outline-color: transparent; // Disable/make transparent focus outline col
   @include transition(left, ease-in-out, 1s);
 
   a:focus, a:focus-visible, button:focus, button:focus-visible {
-    outline: 4px solid $focus-outline-color;
+    outline: 4px solid var(--sidebar-focus-outline-color);
     outline-offset: 2px;
   }
 
@@ -172,7 +170,7 @@ body.sidebar-open {
 
     &:hover {
       > a, > strong {
-        color: #000 !important;
+        color: var(--nav-link-color-active);
       }
     }
   }
@@ -185,9 +183,6 @@ body.sidebar-open {
 
   a, strong {
     text-decoration: none;
-    //text-decoration-thickness: 3px;
-    //text-decoration-color: transparent !important;
-    //text-underline-offset: 0.35em;
   }
 
   strong.active {
@@ -234,11 +229,11 @@ body.sidebar-open {
   // Borders & backgrounds
   ul.level_1 {
     > li:first-child {
-      border-top: 1px solid $nav-border-color;
+      border-top: 1px solid var(--nav-border-color);
     }
 
     > li {
-      border-bottom: 1px solid $nav-border-color;
+      border-bottom: 1px solid var(--nav-border-color);
     }
   }
 
@@ -318,13 +313,14 @@ body.sidebar-open {
         padding-left: $level_1-offset !important;
       }
 
-      > strong.active {
-        color: $nav-link-color-active !important;
+      &:hover > a, &:hover > strong {
+        color: var(--nav-link-color-active) !important;
       }
 
-      > a:hover, > strong:hover {
-        //color: red !important;
+      > strong.active {
+        color: var(--nav-link-color-active) !important;
       }
+
     }
   }
 
@@ -359,18 +355,16 @@ body.sidebar-open {
       }
 
       &:hover {
-        background-color: var(--bs-primary);
 
-        > a, strong {
-          color: #ffffff !important;
+        > a, > strong {
+          color: var(--nav-link-color-active) !important;
         }
       }
 
       &.active {
-        background-color: var(--bs-primary);
 
-        & > strong {
-          color: #ffffff;
+        & > strong, & > a {
+          color: var(--nav-link-color-active);
         }
       }
     }

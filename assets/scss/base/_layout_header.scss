@@ -3,8 +3,6 @@
   @extend .px-0;
   position: relative;
   z-index: 3;
-  margin-bottom: clamp-calc(0, 2rem);
-  border-bottom: 1px solid var(--bs-border-color);
 
   > .inside {
     @extend .container-lg;
@@ -51,8 +49,8 @@
         color: #ffffff !important;
 
         &:hover {
-          background-color: #000;
-          border-color: #000;
+          background-color: var(--bs-alternative-bg);
+          border-color: var(--bs-alternative-bg);
         }
       }
 
@@ -85,6 +83,7 @@
             input[type="search"] {
               flex-grow: 1;
               margin-left: 3rem;
+              @extend .rounded-pill;
             }
           }
         }

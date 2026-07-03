@@ -1,8 +1,11 @@
-.layout-wrapper{
-  background-color: transparent;
+body {
+  background: var(--bs-beige-bg);
 }
 
 .layout-main {
+  background: transparent;
+  padding-top: clamp-calc(0, 2rem);
+
   > .inside {
     & > .mod_article {
       display: flex;

@@ -39,7 +39,6 @@
     }
 
     div.contao-nav--dropdown-menu {
-
       @extend .shadow;
       @extend .border;
       @extend .rounded;
@@ -47,6 +46,7 @@
       overflow: hidden;
       min-width: 100%;
       opacity: 1;
+      border: none !important;
       background-color: var(--bs-tertiary-bg);
       width: max-content;
 
@@ -59,7 +59,7 @@
           background-color: transparent;
           padding: .5rem 1rem;
           display: block;
-          border-color: var(--bs-border-color);
+          border: none;
 
           & > strong, & > a > span {
             color: var(--bs-body-color);
@@ -68,7 +68,7 @@
             @include media-breakpoint-up(xl) {
               font-size: 1rem !important;
             }
-            font-weight: 400;
+            //font-weight: 400;
           }
 
           &:hover {

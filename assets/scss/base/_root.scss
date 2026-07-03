@@ -1,12 +1,16 @@
 :root, :root[data-bs-theme="light"] {
   --bs-tertiary-bg: #ffffff;
-  --bs-beige-bg: #e7d7bd;
+  --bs-beige-bg: #edece2;
+  --bs-border-color: #2c0f1b;
+  --bs-alternative-bg: #650e36;
+  --bs-dark: #2c0f1b;
 }
 
 :root[data-bs-theme="dark"] {
   --bs-body-bg: #232429;
   --bs-tertiary-bg: #16171b;
   --bs-border-color: #44464b;
+  --bs-alternative-bg: #650e36;
   --bs-beige-bg: var(--bs-tertiary-bg);
   --bs-body-color: #dddddd;
 }
