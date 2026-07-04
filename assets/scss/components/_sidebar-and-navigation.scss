@@ -1,90 +1,82 @@
+// =============================================================================
+// Sidebar navigation
+// Demo: https://jsfiddle.net/markocupic/br520419/
+// =============================================================================
+
+// Level offsets (left padding per nesting level)
 $level_1-offset: 1rem;
 $level_2-offset: 1.25rem;
 $level_3-offset: 1.5rem;
 $level_4-offset: 1.75rem;
 
 
-:root, :root[data-bs-theme="dark"] {
-  --sidebar-focus-outline-color: transparent; // Disable/make transparent focus outline color
+// -----------------------------------------------------------------------------
+// Custom properties
+// -----------------------------------------------------------------------------
+:root,
+:root[data-bs-theme="dark"] {
+  --sidebar-focus-outline-color: transparent; // Transparent = focus outline disabled
   --sidebar-backdrop-bg-color: #000000;
   --nav-link-color-active: var(--bs-primary);
   --nav-bg-hover-color: var(--bs-tertiary-bg);
   --nav-border-color: transparent;
 }
 
-html, body {
+
+// -----------------------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------------------
+html,
+body {
   height: 100%;
 }
 
-.layout-header {
-  .navigation-toggle {
-    background: transparent;
-    color: var(--bs-body-color);
+.layout-header .navigation-toggle {
+  background: transparent;
+  color: var(--bs-body-color);
+  border: 0;
+
+  &:focus {
     border: 0;
-
-    &:focus {
-      border: 0;
-      outline: 0;
-    }
+    outline: 0;
   }
 }
 
-#sidebar {
-  overflow-y: scroll;
-}
 
-#sidebar .sidebar-button-container {
-  .svg-inline--fa {
-    color: var(--bs-body-color) !important;
-    font-size: 2rem;
-  }
-}
-
-//////////
-
-
-/* Dropdown - main navigation header */
-#sidebarOverlay {
-  display: none;
-  opacity: 0.6 !important;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-  background-color: var(--sidebar-backdrop-bg-color) !important;
-  z-index: $zindex-navbar-aside-backdrop;
-  @include transition(opacity);
-}
-
-// Thin scrollbar
-#sidebar::-webkit-scrollbar {
-  -webkit-appearance: none !important;
-  width: 6px !important;
-  background-color: var(--bs-primary) !important;
-}
-
-#sidebar::-webkit-scrollbar-thumb {
-  border-radius: 6px !important;
-  background-color: var(--nav-bg-hover-color) !important;
-}
-
+// -----------------------------------------------------------------------------
+// Sidebar (off-canvas drawer)
+// -----------------------------------------------------------------------------
 #sidebar {
   display: none;
   visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: $zindex-navbar-aside;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  left: -400px;
-  max-width: 400px;
   background-color: var(--bs-tertiary-bg);
   @include transition(left, ease-in-out, 1s);
 
-  a:focus, a:focus-visible, button:focus, button:focus-visible {
+  // Thin scrollbar
+  &::-webkit-scrollbar {
+    -webkit-appearance: none !important;
+    width: 6px !important;
+    background-color: var(--bs-primary) !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px !important;
+    background-color: var(--nav-bg-hover-color) !important;
+  }
+
+  a:focus,
+  a:focus-visible,
+  button:focus,
+  button:focus-visible {
     outline: 4px solid var(--sidebar-focus-outline-color);
     outline-offset: 2px;
   }
@@ -98,8 +90,12 @@ html, body {
     font-size: 1.5rem;
   }
 
-  .sidebar-top-container {
+  .sidebar-button-container .svg-inline--fa {
+    color: var(--bs-body-color) !important;
+    font-size: 2rem;
+  }
 
+  .sidebar-top-container {
     .sidebar-title {
       color: $gray-400;
     }
@@ -121,6 +117,24 @@ html, body {
   }
 }
 
+// Backdrop behind the open sidebar
+#sidebarOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.6 !important;
+  background-color: var(--sidebar-backdrop-bg-color) !important;
+  z-index: $zindex-navbar-aside-backdrop;
+  @include transition(opacity);
+}
+
+
+// -----------------------------------------------------------------------------
+// Open state
+// -----------------------------------------------------------------------------
 @include media-breakpoint-down(xl) {
   body.sidebar-open #sidebar {
     left: 0 !important;
@@ -129,64 +143,38 @@ html, body {
   }
 }
 
-body.sidebar-open {
-  #sidebarOverlay {
-    display: block;
-    opacity: 0;
-  }
+body.sidebar-open #sidebarOverlay {
+  display: block;
+  opacity: 0;
 }
 
-//https://jsfiddle.net/markocupic/br520419/
 
+// -----------------------------------------------------------------------------
+// Navigation tree
+// -----------------------------------------------------------------------------
 .sidebar-navigation {
   padding: $spacer 0;
   margin: 4rem 0 3rem clamp-calc(0rem, 2rem) !important;
   text-align: left;
   position: relative;
 
-  ul.level_1, ul.level_2, ul.level_3, ul.level_4 {
+  ul.level_1,
+  ul.level_2,
+  ul.level_3,
+  ul.level_4 {
     width: 100%;
     list-style: none;
   }
 
-  ul.level_1 li {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center; /* Centers content vertically */
-    justify-content: space-between; /* Pushes elements apart */
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: hidden;
-
-    > strong.active {
-      color: var(--bs-body-color);
-      font-weight: bold;
-    }
-
-    &:hover {
-      > a, > strong {
-        color: var(--nav-link-color-active);
-      }
-    }
+  a,
+  strong {
+    text-decoration: none;
   }
 
   button.toggle-submenu {
     margin-left: .75rem;
     margin-right: 1rem;
     padding: .0625rem .25rem;
-  }
-
-  a, strong {
-    text-decoration: none;
-  }
-
-  strong.active {
-    //text-decoration-color: red !important;
   }
 
   // Show only active submenus
@@ -203,45 +191,57 @@ body.sidebar-open {
     display: block;
   }
 
-  // Link color for non-clickable items for all levels
-  ul.level_1 > li.page-container > a {
-    color: var(--bs-body-color) !important;
-  }
-
-  ul.level_2 > li.page-container > a {
-    color: var(--bs-body-color) !important;
-  }
-
-  ul.level_3 > li.page-container > a {
-    color: var(--bs-body-color) !important;
-  }
-
-  // Link color for clickable items for all levels
-  ul.level_1 > li > a {
-    color: var(--bs-body-color) !important;
-  }
-
+  // Link color (body color) for all shown items
+  ul.level_1 > li.page-container > a,
+  ul.level_2 > li.page-container > a,
+  ul.level_3 > li.page-container > a,
+  ul.level_1 > li > a,
   ul.level_2 > li > a {
     color: var(--bs-body-color) !important;
   }
 
-
-  // Borders & backgrounds
+  // ---------------------------------------------------------------------------
+  // Level 1
+  // ---------------------------------------------------------------------------
   ul.level_1 {
-    > li:first-child {
-      border-top: 1px solid var(--nav-border-color);
+    li {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center; // Center content vertically
+      justify-content: space-between; // Push elements apart
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+
+      > strong.active {
+        color: var(--bs-body-color);
+        font-weight: bold;
+      }
+
+      &:hover > a,
+      &:hover > strong {
+        color: var(--nav-link-color-active);
+      }
     }
 
+    // Borders
     > li {
       border-bottom: 1px solid var(--nav-border-color);
-    }
-  }
 
-  // Expand Icon for items with submenus
-  ul.level_1 {
+      &:first-child {
+        border-top: 1px solid var(--nav-border-color);
+      }
+    }
+
+    // Expanded items with submenus
     > li.expanded {
-      // Background-color for active levels
-      &:before, > *, > *:before {
+      &:before,
+      > *,
+      > *:before {
         color: var(--bs-body-color) !important;
       }
     }
@@ -254,14 +254,14 @@ body.sidebar-open {
       }
 
       > .toggle-submenu.csn--dropdown-toggle {
-        margin-right: 1rem;
-        padding: 0 .5rem 0 .5rem;
         position: initial !important;
         top: initial !important;
         right: initial !important;
         bottom: initial !important;
         left: initial !important;
         width: fit-content;
+        margin-right: 1rem;
+        padding: 0 .5rem;
 
         &:before {
           content: "";
@@ -281,20 +281,17 @@ body.sidebar-open {
         }
       }
 
-      &.expanded {
-        > .toggle-submenu {
-          background-color: transparent;
+      &.expanded > .toggle-submenu {
+        background-color: transparent;
 
-          svg {
-            transform: rotate(90deg);
-            transition: transform .3s ease;
-          }
+        svg {
+          transform: rotate(90deg);
+          transition: transform .3s ease;
         }
       }
     }
-  }
 
-  ul.level_1 {
+    // Item spacing & typography
     > li {
       line-height: 1.5;
       background-color: transparent;
@@ -306,28 +303,29 @@ body.sidebar-open {
         @include font-size(1.25rem);
       }
 
-      > a, > strong {
+      > a,
+      > strong {
         font-size: clamp-calc(1.5rem, 2rem) !important;
         font-weight: bolder;
         max-width: calc(100% - 4.5rem);
         padding-left: $level_1-offset !important;
       }
 
-      &:hover > a, &:hover > strong {
-        color: var(--nav-link-color-active) !important;
-      }
-
+      &:hover > a,
+      &:hover > strong,
       > strong.active {
         color: var(--nav-link-color-active) !important;
       }
-
     }
   }
 
+  // ---------------------------------------------------------------------------
+  // Level 2
+  // ---------------------------------------------------------------------------
   ul.level_2 {
     margin-top: .25rem;
 
-    & > li {
+    > li {
       line-height: 1.5;
       background-color: transparent;
       padding: clamp-calc(.35rem, .5rem) !important;
@@ -338,36 +336,34 @@ body.sidebar-open {
         margin-top: 0;
       }
 
-      & > .toggle-submenu {
+      > .toggle-submenu {
         right: 0;
         top: 5px;
+
+        &:before {
+          font-size: clamp-calc(1.5rem, 1.75rem) !important;
+        }
       }
 
-      & > .toggle-submenu:before {
-        font-size: clamp-calc(1.5rem, 1.75rem) !important;
-      }
-
-      & > a, strong {
+      // NOTE: `strong` here is a descendant, not a direct child — kept as in
+      // the original. Change to `> strong` if that was the intent.
+      > a,
+      strong {
         font-size: clamp-calc(1.25rem, 1.5rem) !important;
         color: var(--bs-body-color);
         max-width: calc(100% - 4.5rem);
         padding-left: $level_2-offset !important;
       }
 
-      &:hover {
-
-        > a, > strong {
-          color: var(--nav-link-color-active) !important;
-        }
+      &:hover > a,
+      &:hover > strong {
+        color: var(--nav-link-color-active) !important;
       }
 
-      &.active {
-
-        & > strong, & > a {
-          color: var(--nav-link-color-active);
-        }
+      &.active > strong,
+      &.active > a {
+        color: var(--nav-link-color-active);
       }
     }
   }
-
 }
