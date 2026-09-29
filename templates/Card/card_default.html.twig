@@ -32,7 +32,7 @@
                             .mergeWith(card_date_attributes|default) %}
                         <!-- indexer::stop -->
                         <p{{ card_date_attributes }}>
-                            <time class="small text-reset">{{ card_date_text }}</time>
+                            <time class="small text-reset">{{ card_date_time|date('d.m.Y') }}</time>
                         </p>
                         <!-- indexer:continue -->
                     {% endif %}

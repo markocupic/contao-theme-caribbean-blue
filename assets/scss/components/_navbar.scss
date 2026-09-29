@@ -1,5 +1,5 @@
 :root {
-  --contao-nav--color-level-1-hover: var(--bs-primary) !important;
+  --contao-nav--color-level-1-hover: rgb(var(--bs-link-color-rgb)) !important;
   --contao-nav--color-level-1: var(--bs-body-color) !important;
 }
 
@@ -26,14 +26,14 @@
       border: 0;
 
       & > span, & > strong, & > a, & > a:after, & > strong:after {
-        color: var(--bs-primary);
+        color: rgb(var(--bs-link-color-rgb)) ;
         text-decoration: none;
       }
     }
 
     > li.contao-nav--nav-item:hover {
       & > span, & > strong, & > a, & > a:after, & > strong:after {
-        color: var(--bs-primary) !important;
+        color: rgb(var(--bs-link-color-rgb))  !important;
         text-decoration: none;
       }
     }
