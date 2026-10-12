@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Contao Theme Caribbean Blue.
  *
- * (c) Marko Cupic 2023 <m.cupic@gmx.ch>
+ * (c) Marko Cupic <m.cupic@gmx.ch>
  * @license MIT
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
@@ -29,6 +29,16 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['team_member'] = '
 {type_legend},type,headline;
 {personal_legend},ceTeamMemberFirstname,ceTeamMemberLastname,ceTeamMemberRoles,ceTeamMemberWorkingTime,ceTeamMemberPhone,ceTeamMemberEmail;
 {image_legend},ceTeamMemberAddImage;
+{template_legend:hide},customTpl;
+{protected_legend:hide},protected;
+{expert_legend:hide},cssID;
+{invisible_legend:hide},invisible,start,stop
+';
+
+// Palettes
+$GLOBALS['TL_DCA']['tl_content']['palettes']['marquee_text'] = '
+{type_legend},type,headline;
+{text_legend},marqueeText;
 {template_legend:hide},customTpl;
 {protected_legend:hide},protected;
 {expert_legend:hide},cssID;
@@ -92,6 +102,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ceTeamMemberWorkingTime'] = [
     'inputType' => 'listWizard',
     'eval'      => ['tl_class' => 'clr'],
     'sql'       => ['type' => 'blob', 'notnull' => false],
+];
+
+// Marquee Text
+$GLOBALS['TL_DCA']['tl_content']['fields']['marqueeText'] = [
+    'search'    => true,
+    'inputType' => 'textarea',
+    'eval'      => ['mandatory' => true, 'basicEntities' => false],
+    'sql'       => "mediumtext NULL",
 ];
 
 // Blockquote

@@ -1,38 +1,46 @@
 .content-accordion {
+  border-bottom: 1px solid var(--bs-border-color);
+
   .handorgel__content {
     background-color: transparent;
     border-color: var(--bs-border-color) !important;
+  }
 
+  .handorgel__content__inner {
+    padding-left: clamp-calc(.5rem, 1.5rem);
+    padding-right: clamp-calc(.5rem, 1.5rem);
   }
 
   .handorgel__header__button {
+    background-color: transparent;
+    border-color: var(--bs-border-color);
     display: flex;
+    justify-content: space-between;
     align-items: flex-start; /* Stellt sicher, dass das Icon oben bleibt */
-    gap: 10px; /* Abstand zwischen Icon und Text */
+    gap: clamp-calc(.5rem, 1rem); /* Abstand zwischen Icon und Text */
     position: relative;
     @extend .h4;
     margin: 0;
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+    padding-top: clamp-calc(.75rem, 1.75rem);
+    padding-bottom: clamp-calc(.75rem, 1.75rem);
+    padding-left: clamp-calc(.5rem, 1.5rem);
+    padding-right: clamp-calc(.5rem, 1.5rem);
+    font-size: clamp-calc(1rem, 2rem);
+    line-height: 1.2;
 
+    svg {
+      color: var(--bs-primary);
+    }
 
-
-
-    &:before {
-      content: "+";
-      flex-shrink: 0;
-      text-align: center;
-      font-size: 2rem;
-      font-family: $icon-font-name !important;
-      padding-right: .75rem;
-      content: "\e59e"; // fa-plus-large
+    &[aria-expanded="false"] {
+      .icon-collapse {
+        display: none;
+      }
     }
 
     &[aria-expanded="true"] {
-      color: var(--bs-primary);
-
-      &:before {
-        content: "\e404"; // fa-dash
+      .icon-expand {
+        display: none;
       }
     }
   }

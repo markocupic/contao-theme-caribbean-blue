@@ -1,0 +1,218 @@
+
+:root {
+  --blue: #1a4f82;
+  --blue-lt: #2b6cb0;
+  --accent: #f5a623;
+  --light: #f0f5fb;
+  --white: #ffffff;
+  --text: #1a2533;
+}
+
+.hero {
+  /* Accent block top-right of visual */
+  .accent-block {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 80px;
+    height: 80px;
+    background: var(--accent);
+    border-radius: 4px;
+    opacity: .85;
+    z-index: 2;
+  }
+
+  .accent-block-sm {
+    position: absolute;
+    top: 3.6rem;
+    right: 3.6rem;
+    width: 40px;
+    height: 40px;
+    background: var(--blue-lt);
+    border-radius: 4px;
+    opacity: .7;
+    z-index: 3;
+  }
+
+  /* ─── RIGHT: CONTENT ─── */
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: clamp-calc(1.5rem,2.5rem) clamp-calc(2rem,4rem) clamp-calc(2rem,4rem) clamp-calc(2rem,4rem);
+    background: var(--white);
+    position: relative;
+  }
+
+  /* Subtle blue line on left edge */
+  .hero__content::before {
+    display:none; // HIDE
+    content: '';
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--accent), var(--blue-lt));
+    border-radius: 0 4px 4px 0;
+  }
+
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--blue-lt);
+    margin-bottom: 0;
+  }
+
+  .hero__eyebrow span {
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .hero__title {
+
+    font-size: clamp(2.8rem, 4vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.0;
+    color: var(--text);
+    letter-spacing: -.02em;
+    margin-top: clamp-calc(1.25rem, 1.75rem);
+    margin-bottom: clamp-calc(2rem, 4rem);
+  }
+
+  .hero__title em {
+    font-style: normal;
+    color: var(--bs-primary);
+    display: block;
+  }
+
+  .hero__sub {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #4a5568;
+    max-width: 38ch;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Quote / Leitsatz */
+  .hero__quote {
+    border-left: 3px solid var(--accent);
+    padding: .85rem 1.2rem;
+    background: var(--light);
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero__quote p {
+    font-size: .9rem;
+    color: var(--blue);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .hero__quote small {
+    display: block;
+    margin-top: .35rem;
+    font-size: .75rem;
+    color: #718096;
+    font-style: normal;
+  }
+
+  /* Buttons */
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .85rem 1.75rem;
+    border-radius: 6px;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .13);
+  }
+
+  .btn--primary {
+    background: var(--bs-dark);
+    color: var(--white);
+  }
+
+  .btn--outline {
+    background: transparent;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+  }
+
+  .btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Stats row */
+  .hero__stats {
+    display: flex;
+    gap: 2rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.75rem;
+  }
+
+  .stat__number {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1;
+  }
+
+  .stat__label {
+    font-size: .75rem;
+    color: #718096;
+    margin-top: .2rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero .hero__visual {
+    height: 55vw;
+    min-height: 280px;
+  }
+  .hero .hero__content {
+    padding: 2.5rem 2rem;
+  }
+  .hero .hero__content::before {
+    display: none;
+  }
+  .hero .hero__stats {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+}

@@ -1,5 +1,6 @@
 :root {
-  --contao-nav--color-level-1-hover: var(--bs-primary) !important;
+  --contao-nav--color-level-1-hover: rgb(var(--bs-link-color-rgb)) !important;
+  --contao-nav--color-level-1: var(--bs-body-color) !important;
 }
 
 .mod_navigation.header-desktop-navbar {
@@ -12,28 +13,32 @@
       font-weight: 500;
     }
 
+    & > li.contao-nav--nav-item .contao-nav--dropdown-toggle {
+      color: var(--bs-body-color) !important;
+    }
+
     & > li.contao-nav--nav-item .contao-nav--dropdown-toggle:after {
       width: 0.75rem !important;
+      color: var(--bs-body-color) !important;
     }
 
     > li.contao-nav--nav-item.trail, > li.contao-nav--nav-item.active {
       border: 0;
 
       & > span, & > strong, & > a, & > a:after, & > strong:after {
-        color: var(--bs-primary);
+        color: rgb(var(--bs-link-color-rgb)) ;
         text-decoration: none;
       }
     }
 
     > li.contao-nav--nav-item:hover {
       & > span, & > strong, & > a, & > a:after, & > strong:after {
-        color: var(--bs-primary) !important;
+        color: rgb(var(--bs-link-color-rgb))  !important;
         text-decoration: none;
       }
     }
 
     div.contao-nav--dropdown-menu {
-
       @extend .shadow;
       @extend .border;
       @extend .rounded;
@@ -41,18 +46,20 @@
       overflow: hidden;
       min-width: 100%;
       opacity: 1;
-      background-color: #ffffff;
+      border: none !important;
+      background-color: var(--bs-tertiary-bg);
       width: max-content;
 
       ul.level_2.contao-nav--nav-list {
         opacity: 1;
-        background-color: #ffffff;
+        background-color: transparent;
         width: max-content;
 
         li.contao-nav--nav-item {
-          background-color: #fff;
+          background-color: transparent;
           padding: .5rem 1rem;
           display: block;
+          border: none;
 
           & > strong, & > a > span {
             color: var(--bs-body-color);
@@ -61,7 +68,7 @@
             @include media-breakpoint-up(xl) {
               font-size: 1rem !important;
             }
-            font-weight: 400;
+            //font-weight: 400;
           }
 
           &:hover {
