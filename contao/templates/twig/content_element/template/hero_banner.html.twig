@@ -1,32 +1,78 @@
 {% block content %}
-<div class="hero-banner">
-    <div class="row g-0 hero-banner--row">
-        <div class="hero-banner--col-1 col-6">
-            <div class="hero-banner--col-1-inner">
-                {{ '{{picture::'~keys.picture~'?size=3}}' }}
+    <div class="hero row g-0">
+        <div class="hero__slider col-lg-6">
+            <div class="d-none d-lg-block">
+                {{ insert_tag('insert_node::1')|raw }}
+            </div>
+            <div class="d-block">
+                {{ insert_tag('insert_node::1')|raw }}
             </div>
         </div>
-        <div class="hero-banner--col-2 col-6 position-relative">
-            <div class="hero-banner--col-2-inner px-2 px-md-5 d-flex h-100 justify-content-center align-items-center">
-                <div class="hero-banner--col-2-headline">
-                    <h2 class="hero-banner--col-2-headline m-0 p-0 lh-lg">{{ headline.text }}</h2>
+
+        <div class="hero__content col-lg-6">
+
+            <p class="hero__eyebrow">
+                <span></span>
+                Herzlich Willkommen
+            </p>
+
+            <h1 class="hero__title">
+                Schule
+                <em>Ettiswil</em>
+            </h1>
+
+            <p class="hero__sub">
+                Vom Kindergarten bis zur Sekundarschule – an unseren Standorten in
+                <strong>Ettiswil</strong> und <strong>Kottwil</strong> lernen und wachsen
+                rund 370 Kinder und Jugendliche in einer lebendigen Gemeinschaft.
+            </p>
+            {#
+            <div class="hero__quote">
+                <p>«Wir bieten zeitgemässen Unterricht und sind offen für Neues.»</p>
+                <small>Leitsatz Schuljahr 2025–26 · Leitbild Schule Ettiswil</small>
+            </div>
+            #}
+
+            <div class="hero__actions">
+                <a href="https://www.schule-ettiswil.ch/ueberblick" class="btn btn--primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Schule entdecken
+                </a>
+                <a href="https://www.schule-ettiswil.ch/informationen" class="btn btn--outline">
+                    Informationen
+                </a>
+            </div>
+
+            <div class="hero__stats">
+                <div>
+                    <div class="stat__number">~370</div>
+                    <div class="stat__label">Schülerinnen &amp; Schüler</div>
+                </div>
+                <div>
+                    <div class="stat__number">2</div>
+                    <div class="stat__label">Schulstandorte</div>
+                </div>
+                <div>
+                    <div class="stat__number">KG–9.</div>
+                    <div class="stat__label">Klasse</div>
                 </div>
             </div>
+
         </div>
     </div>
-</div>
+    {% add to head %}
+        <style>
+            .hero-banner .hero-banner--row .hero-banner--col-2 {
+                background-color: #2a64a6;
+            }
 
-{% add to head %}
-<style>
-    .hero-banner .hero-banner--row .hero-banner--col-2 {
-        background-color: #2a64a6;
-    }
-
-    .hero-banner .hero-banner--row .hero-banner--col-2 .hero-banner--col-2-inner .hero-banner--col-2-headline {
-        text-align: center;
-        color: #fff;
-        font-size: clamp(0.75rem, 1.5rem, 3rem);
-    }
-</style>
-{% endadd %}
+            .hero-banner .hero-banner--row .hero-banner--col-2 .hero-banner--col-2-inner .hero-banner--col-2-headline {
+                text-align: center;
+                color: #fff;
+                font-size: clamp(0.75rem, 1.5rem, 3rem);
+            }
+        </style>
+    {% endadd %}
 {% endblock %}

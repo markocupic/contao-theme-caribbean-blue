@@ -4,7 +4,7 @@
 {% set grid_classes_col_1 = 'col-12' %}
 {% set grid_classes_col_2 = 'col-12' %}
 
-{% if has_image %}
+{% if has_image|default %}
     {% set grid_classes_col_1 = 'col-9' %}
     {% set grid_classes_col_2 = 'col-3' %}
 {% endif %}

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Contao Theme Caribbean Blue.
  *
- * (c) Marko Cupic 2023 <m.cupic@gmx.ch>
+ * (c) Marko Cupic <m.cupic@gmx.ch>
  * @license MIT
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
@@ -21,10 +21,8 @@ use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 #[AsHook('replaceInsertTags', priority: 100)]
 class ReplaceInsertTagsListener
 {
-
     public function __invoke(string $strTag): bool|string
     {
-
         // Trim whitespaces
         $strTag = '' !== $strTag ? trim($strTag) : $strTag;
 
@@ -39,6 +37,7 @@ class ReplaceInsertTagsListener
                 $model->type = 'download';
 
                 $contentElement = new ContentDownload($model);
+
                 return $contentElement->generate();
             }
         }

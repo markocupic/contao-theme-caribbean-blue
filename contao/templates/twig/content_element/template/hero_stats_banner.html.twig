@@ -1,0 +1,59 @@
+{% block content %}
+    {% set items = [
+        { id: 1, number: '2', caption: 'Standorte · Ettiswil & Kottwil' },
+        { id: 2, number: '~50', caption: 'Kindergartenkinder' },
+        { id: 3, number: '~220', caption: 'Primarschüler' },
+        { id: 4, number: '~100', caption: 'Sekundarschüler' },
+    ] %}
+    <div class="hero-stats-banner">
+        <div class="row g-0 gx-2 hero-stats-banner--row">
+            {% for item in items %}
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="hero-stats-banner--item">
+                        <div class="hero-stats-banner--item-inner">
+                            <div class="hero-stats-banner--number">
+                                {{ item.number }}
+                            </div>
+                            <div class="hero-stats-banner--caption">
+                                {{ item.caption }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% add to head %}
+        <style>
+            .hero-stats-banner {
+                margin: 1.5rem 0;
+            }
+
+            .hero-stats-banner .hero-stats-banner--item {
+                background-color: #fff;
+                padding: .5rem;
+            }
+
+            .hero-stats-banner--row > div > div {
+                border-left: 1px solid #e0e0e0;
+            }
+
+            .hero-stats-banner--row > div:first-child > div {
+                border-left: none;
+            }
+
+            .hero-stats-banner .hero-stats-banner--number {
+                font-size: 2rem;
+                font-weight: 500;
+                color: var(--bs-primary)
+            }
+
+            .hero-stats-banner .hero-stats-banner--caption {
+                color: #c1c1c1;
+                font-size: .875em;
+            }
+        </style>
+    {% endadd %}
+{% endblock %}

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Contao Theme Caribbean Blue.
  *
- * (c) Marko Cupic 2023 <m.cupic@gmx.ch>
+ * (c) Marko Cupic <m.cupic@gmx.ch>
  * @license MIT
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
@@ -18,7 +18,7 @@ use Contao\CoreBundle\Framework\Adapter;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\FrontendUser;
 use Contao\MemberModel;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Bundle\SecurityBundle\Security;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -69,7 +69,7 @@ class TwigLoggedInFrontendUserManager extends AbstractExtension
         $user = $this->security->getUser();
 
         if ($user instanceof FrontendUser) {
-            if (null !== ($model = $this->member->findByPk($user->id))) {
+            if (null !== ($model = $this->member->findById($user->id))) {
                 return $model;
             }
         }
