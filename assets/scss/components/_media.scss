@@ -16,6 +16,12 @@ figure {
   padding: 0;
 }
 
+.content-image, .content-gallery {
+  figure img {
+    border-radius: .8rem;
+  }
+}
+
 .content-gallery {
   ul {
     @extend .row;

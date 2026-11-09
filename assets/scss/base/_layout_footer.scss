@@ -13,7 +13,7 @@ body {
 /** End Sticky Footer */
 
 .layout-footer {
-  background-color: var(--bs-dark);
+  background-color: var(--bs-body-bg);
   padding-top: clamp-calc(0rem, 2rem);
   padding-bottom: clamp-calc(0rem, 2rem);
 
@@ -24,7 +24,7 @@ body {
 
   .footer-row-1 {
     background-color: transparent;
-    color: $gray-300;
+    color: #1a1a1a;
     border-top: 0;
 
     .footer-container {
@@ -36,7 +36,8 @@ body {
       }
 
       a {
-        color: var(--bs-primary);
+        //color: var(--bs-primary);
+        color: #1a1a1a;
         text-decoration: none;
       }
 
@@ -55,7 +56,7 @@ body {
       .title {
         font-weight: bold;
         font-size: var(--bs-body-font-size);
-        color: #ffffff;
+        color: #1a1a1a;
       }
     }
 
@@ -66,7 +67,7 @@ body {
 
   .footer-row-2 {
     background-color: transparent;
-    color: $gray-300;
+    color: #1a1a1a;
 
     .footer-container {
       border-top: 1px solid $gray-700;
@@ -78,11 +79,12 @@ body {
 
       a {
         color: var(--bs-primary);
+        color: #1a1a1a;
         text-decoration: none;
       }
 
       .title {
-        color: #ffffff;
+        color: #1a1a1a;
         font-size: var(--bs-body-font-size);
       }
     }
@@ -91,4 +93,19 @@ body {
 
 html[data-bs-theme="dark"] .layout-footer {
   background-color: var(--bs-tertiary-bg);
+
+  .footer-row-1, .footer-row-2 {
+    color: #a1a1a1;
+
+    .footer-container {
+      a {
+        color: #a1a1a1;
+      }
+
+      .title {
+        color: #a1a1a1;
+      }
+    }
+  }
+
 }

@@ -17,3 +17,4 @@ $GLOBALS['TL_LANG']['CTE']['team_content_elements'] = 'Mitarbeiter Elemente';
 $GLOBALS['TL_LANG']['CTE']['team_member'] = ['Team Mitglied', 'Zeigen Sie ein Team Mitglied mit Text und Foto.'];
 $GLOBALS['TL_LANG']['CTE']['marquee_text'] = ['Scrollender Text', 'Zeigen Sie scrollenden Text an.'];
 $GLOBALS['TL_LANG']['CTE']['blockquote'] = ['Zitat', 'Zeigen Sie ein Zitat an'];
+$GLOBALS['TL_LANG']['CTE']['split_hero'] = ['Split-Hero', 'Einstiegsbereich mit Eyebrow, Titel, Teaser, Buttons und Bildslider.'];

@@ -15,12 +15,12 @@
         "bootstrap": "^5.3.5"
     },
     "devDependencies": {
-        "@babel/preset-env": "*",
-        "@symfony/webpack-encore": "^5.0",
+        "@babel/preset-env": "^7.16",
+        "@fontsource-variable/archivo": "^5.3",
+        "@symfony/webpack-encore": "^6.0",
         "autoprefixer": "^10.5",
         "core-js": "^3.49",
         "css-loader": "^7.1",
-        "file-loader": "^6.0",
         "postcss-loader": "^8.2",
         "sass": "^1.99",
         "sass-loader": "^16.0",

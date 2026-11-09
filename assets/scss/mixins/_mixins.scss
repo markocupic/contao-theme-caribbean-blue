@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:string";
+
 /*
  * Use the function like this:
  * p {
@@ -8,9 +12,9 @@
 @function clamp-calc($size-at-min-width, $size-at-max-width, $min-breakpoint: 320px, $max-breakpoint: 2600px) {
   $size-min: 0;
 
-  @if str-index(#{$size-at-min-width}, 'rem') {
+  @if string.index(#{$size-at-min-width}, 'rem') {
     $size-min: parseInt($size-at-min-width) * 16px;
-  } @else if str-index(#{$size-at-min-width}, 'px') {
+  } @else if string.index(#{$size-at-min-width}, 'px') {
     $size-min: parseInt($size-at-min-width) * 1px;
   } @else {
     $size-min: parseInt($size-at-min-width) * 1px;
@@ -18,9 +22,9 @@
 
   $size-max: 0;
 
-  @if str-index(#{$size-at-max-width}, 'rem') {
+  @if string.index(#{$size-at-max-width}, 'rem') {
     $size-max: parseInt($size-at-max-width) * 16px;
-  } @else if str-index(#{$size-at-max-width}, 'px') {
+  } @else if string.index(#{$size-at-max-width}, 'px') {
     $size-max: parseInt($size-at-max-width) * 1px;
   } @else {
     $size-max: parseInt($size-at-max-width) * 1px;
@@ -32,7 +36,7 @@
 }
 
 @function parseInt($n) {
-  @return $n / ($n * 0 + 1); /* 2 */
+  @return math.div($n, $n * 0 + 1); /* 2 */
 }
 
 // Add a icon font before an element
@@ -112,7 +116,7 @@
 //
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }

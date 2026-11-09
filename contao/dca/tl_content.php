@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 use Contao\DataContainer;
 use Contao\ArrayUtil;
+use Markocupic\ContaoThemeCaribbeanBlue\Controller\ContentElement\SplitHeroController;
 
 // Selectors
 // Because overwriteMeta is a nested tl_content.subpalette,
@@ -48,6 +49,17 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['marquee_text'] = '
 $GLOBALS['TL_DCA']['tl_content']['palettes']['blockquote'] = '
 {type_legend},type,headline;
 {text_legend},blockquoteText,blockquoteFooterText,blockquoteAlignment;
+{template_legend:hide},customTpl;
+{protected_legend:hide},protected;
+{expert_legend:hide},cssID;
+{invisible_legend:hide},invisible,start,stop
+';
+
+$GLOBALS['TL_DCA']['tl_content']['palettes']['split_hero'] = '
+{type_legend},type;
+{split_hero_text_legend},splitHeroEyebrow,splitHeroTitle,splitHeroTitleTag,splitHeroTeaser;
+{split_hero_buttons_legend},splitHeroButtons;
+{split_hero_images_legend},multiSRC,size,splitHeroAutoplayDelay;
 {template_legend:hide},customTpl;
 {protected_legend:hide},protected;
 {expert_legend:hide},cssID;
@@ -137,4 +149,67 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['blockquoteAlignment'] = [
     'options'   => ['text-start', 'text-center', 'text-end'],
     'eval'      => ['tl_class' => 'w50'],
     'sql'       => "varchar(255) NOT NULL default 'text-center'",
+];
+
+// Split hero
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroEyebrow'] = [
+    'search'    => true,
+    'inputType' => 'text',
+    'eval'      => ['maxlength' => 255, 'decodeEntities' => true, 'tl_class' => 'w50'],
+    'sql'       => "varchar(255) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroTitle'] = [
+    'search'    => true,
+    'inputType' => 'text',
+    'eval'      => ['mandatory' => true, 'maxlength' => 255, 'decodeEntities' => true, 'tl_class' => 'clr w50'],
+    'sql'       => "varchar(255) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroTitleTag'] = [
+    'inputType' => 'select',
+    'options'   => SplitHeroController::TITLE_TAGS,
+    'eval'      => ['tl_class' => 'w50'],
+    'sql'       => "varchar(8) NOT NULL default 'h1'",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroTeaser'] = [
+    'search'    => true,
+    'inputType' => 'textarea',
+    'eval'      => ['decodeEntities' => true, 'tl_class' => 'clr'],
+    'sql'       => 'text NULL',
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroButtons'] = [
+    'inputType' => 'rowWizard',
+    'fields'    => [
+        'label'    => [
+            'label'     => &$GLOBALS['TL_LANG']['tl_content']['splitHeroButtonLabel'],
+            'inputType' => 'text',
+            'eval'      => ['mandatory' => true, 'maxlength' => 64, 'decodeEntities' => true],
+        ],
+        'href'     => [
+            'label'     => &$GLOBALS['TL_LANG']['tl_content']['splitHeroButtonHref'],
+            'inputType' => 'text',
+            'eval'      => ['mandatory' => true, 'rgxp' => 'url', 'decodeEntities' => true, 'maxlength' => 2048],
+        ],
+        'cssClass' => [
+            'label'     => &$GLOBALS['TL_LANG']['tl_content']['splitHeroButtonClass'],
+            'inputType' => 'select',
+            'options'   => SplitHeroController::BUTTON_CLASSES,
+            'reference' => &$GLOBALS['TL_LANG']['tl_content']['splitHeroButtonClassOptions'],
+        ],
+        'target'   => [
+            'label'     => &$GLOBALS['TL_LANG']['tl_content']['splitHeroButtonTarget'],
+            'inputType' => 'checkbox',
+        ],
+    ],
+    'eval'      => ['tl_class' => 'clr', 'actions' => ['copy', 'delete'], 'max' => 4],
+    'sql'       => 'blob NULL',
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['splitHeroAutoplayDelay'] = [
+    'inputType' => 'text',
+    'eval'      => ['rgxp' => 'natural', 'maxlength' => 6, 'tl_class' => 'w50'],
+    'sql'       => "int(10) unsigned NOT NULL default 6000",
 ];

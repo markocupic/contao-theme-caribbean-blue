@@ -1,5 +1,5 @@
 {
-  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.6f833bed.css",
+  "styles/frontend.css": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.cfce61fe.css",
   "leitbild/media/originale/orange transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/orange transparent.tif",
   "leitbild/media/innenseite_total.jpg": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/innenseite_total.jpg",
   "leitbild/media/originale/blau transparent.tif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/blau transparent.tif",
@@ -41,6 +41,8 @@
   "logos/old/2025/logo_schule_ettiswil_dark.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/2025/logo_schule_ettiswil_dark.99371e43.svg",
   "logos/old/2025/logo_schule_ettiswil.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/2025/logo_schule_ettiswil.ad65bc3d.svg",
   "logos/old/2026/logo_schule_ettiswil_inkscape.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/2026/logo_schule_ettiswil_inkscape.907bf1de.svg",
+  "fonts/archivo-latin-wght-normal.woff2": "/bundles/markocupiccontaothemecaribbeanblue/fonts/archivo-latin-wght-normal.577248e7.woff2",
+  "fonts/archivo-latin-ext-wght-normal.woff2": "/bundles/markocupiccontaothemecaribbeanblue/fonts/archivo-latin-ext-wght-normal.784ec3dc.woff2",
   "leitbild/media/originale/violett-transparent.gif": "/bundles/markocupiccontaothemecaribbeanblue/leitbild/media/originale/violett-transparent.gif",
   "logos/old/2026/logo_schule_ettiswil_dark.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/2026/logo_schule_ettiswil_dark.c0fbdcb4.svg",
   "logos/old/2026/logo_schule_ettiswil.svg": "/bundles/markocupiccontaothemecaribbeanblue/logos/old/2026/logo_schule_ettiswil.b8c3de0c.svg",
@@ -84,5 +86,5 @@
   "favicon/manifest.json": "/bundles/markocupiccontaothemecaribbeanblue/favicon/manifest.json",
   "js/theme/scroll_animations.js": "/bundles/markocupiccontaothemecaribbeanblue/js/theme/scroll_animations.6382598a.js",
   "favicon/browserconfig.xml": "/bundles/markocupiccontaothemecaribbeanblue/favicon/browserconfig.xml",
-  "frontend.6f833bed.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.6f833bed.css.map"
+  "frontend.cfce61fe.css.map": "/bundles/markocupiccontaothemecaribbeanblue/styles/frontend.cfce61fe.css.map"
 }

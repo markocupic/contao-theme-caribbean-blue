@@ -10,6 +10,7 @@
 
 // base
 @import "generic/contao-reset";
+@import "base/fonts";
 @import "base/root";
 @import "base/page";
 @import "base/type";
@@ -37,3 +38,4 @@
 @import "components/theme_toggle";
 @import "components/scroll_animations";
 @import "components/hero_new";
+@import "components/content_split_hero";

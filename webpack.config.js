@@ -43,9 +43,15 @@ Encore
       config.corejs = 3;
     })
 
-    .enablePostCssLoader()
     // Preprocessing scss in css
-    .enableSassLoader()
+    .enableSassLoader((options) => {
+        options.sassOptions = {
+            // Hide deprecation warnings from node_modules (Bootstrap 5.3 still uses @import & global functions)
+            quietDeps: true,
+            // Our own SCSS still uses @import as well (Bootstrap 5 cannot be loaded via @use)
+            silenceDeprecations: ['import'],
+        };
+    })
     .enablePostCssLoader()
     .addStyleEntry('styles/frontend', './assets/scss/main.scss')
 ;

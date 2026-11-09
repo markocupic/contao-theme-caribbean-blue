@@ -1,6 +1,6 @@
 {
     "name": "markocupic/contao-theme-caribbean-blue",
-    "description": "Contao Frontend Theme Caribbean Blue for Contao 4.x or 5.x",
+    "description": "Contao Frontend Theme Caribbean Blue for Contao 5.7+",
     "keywords": [
         "contao",
         "frontend",
@@ -21,7 +21,7 @@
         "source": "https://github.com/markocupic/contao-theme-caribbean-blue"
     },
     "require": {
-        "contao/core-bundle": "^5.0",
+        "contao/core-bundle": "^5.7",
         "markocupic/bootstrap_responsive_youtube_embed": "^2.2",
         "markocupic/contao-db-backup": "^1.3",
         "markocupic/custom-section": "^1.2",

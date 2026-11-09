@@ -6,7 +6,6 @@
     & > .mod_article {
       display: flex;
       flex-direction: column;
-      background-color: transparent;
 
       .article-inside:not(.article-container-p-0) {
         @extend .px-4;
@@ -24,6 +23,22 @@
       }
     }
 
+    & > .mod_article.margin-top {
+      margin-top: clamp-calc(0, 3rem, 460px, 1920px);
+    }
+
+    & > .mod_article.margin-bottom {
+      margin-bottom: clamp-calc(0, 3rem, 460px, 1920px);
+    }
+
+    // Gap between header and content (large screens only):
+    // the article background shows as a strip above the white content area
+    & > .mod_article:first-child {
+      @include media-breakpoint-up(xl) {
+        padding-top: clamp-calc(1.5rem, 3rem, 1200px, 1920px);
+      }
+    }
+
     & > .mod_article:last-of-type {
       @include media-breakpoint-up(lg) {
         padding-bottom: clamp-calc(4rem, 6rem, 992px, 1400px);
@@ -35,11 +50,11 @@
 html:not([data-bs-theme="dark"]) {
   .layout-main > .inside {
     .mod_article .article-inside:not(.article-container-p-0) {
-      background-color: transparent;
+      background-color: #fff;
     }
 
     .mod_article {
-      background: #f3f3f3; // Default article
+      background: var(--bs-body-bg); // Default article
     }
 
     .mod_article.background-white {

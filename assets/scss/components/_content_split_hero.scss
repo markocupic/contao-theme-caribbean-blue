@@ -1,0 +1,123 @@
+// Content element "split_hero"
+// Text left (eyebrow, title, teaser, buttons), image slider right.
+// Below lg the columns stack: text first, then the slider.
+.content-split-hero {
+  --split-hero-radius: 1.25rem;
+
+  padding-block: clamp-calc(1.5rem, 4rem);
+
+  .split-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8125rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--bs-secondary-color);
+
+    &::before {
+      content: '';
+      flex: none;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background-color: var(--bs-primary);
+    }
+  }
+
+  .split-hero__title {
+    // The theme draws an accent line below every h1 (see _content_headline.scss).
+    // Fix its position here and leave enough room between line and teaser.
+    margin: 1rem 0 2.75rem;
+    font-family: $font-family-display;
+    font-size: clamp(2.25rem, 1.75rem + 2.4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -.03em;
+    color: var(--bs-emphasis-color);
+
+    &::after {
+      bottom: -1rem;
+    }
+  }
+
+  .split-hero__teaser {
+    max-width: 34em;
+    margin-bottom: 1.75rem;
+    font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem);
+    line-height: 1.6;
+    color: var(--bs-body-color);
+  }
+
+  .split-hero__actions {
+    .btn {
+      padding: .8rem 1.4rem;
+      border-radius: .625rem;
+      font-weight: 700;
+    }
+  }
+
+  .split-hero__media {
+    overflow: hidden;
+    border-radius: var(--split-hero-radius);
+    background-color: var(--bs-secondary-bg);
+    aspect-ratio: 16 / 10;
+
+    @include media-breakpoint-up(lg) {
+      aspect-ratio: 4 / 3;
+    }
+
+    figure,
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+      height: 100%;
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .split-hero__swiper {
+    --swiper-pagination-color: #ffffff;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: .55;
+    --swiper-pagination-bottom: 1rem;
+
+    .swiper-pagination-bullet-active {
+      background: #ffffff;
+    }
+  }
+
+  .split-hero__toggle {
+    position: absolute;
+    right: .75rem;
+    bottom: .5rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+
+    .fa-play {
+      display: none;
+    }
+
+    &[aria-pressed="true"] {
+      .fa-pause {
+        display: none;
+      }
+
+      .fa-play {
+        display: inline-block;
+      }
+    }
+  }
+}

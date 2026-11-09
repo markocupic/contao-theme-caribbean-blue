@@ -1,0 +1,123 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+{% use "@Contao/component/_figure.html.twig" %}
+
+{% set has_slider = images|length > 1 %}
+{% set swiper_id = 'splitHeroSwiper' ~ data.id %}
+
+{% block content %}
+    <div class="row g-4 g-lg-5 align-items-center">
+        <div class="col-12 col-lg-6">
+            <div class="split-hero__content">
+                {% if eyebrow %}
+                    <p class="split-hero__eyebrow mb-0">{{ eyebrow }}</p>
+                {% endif %}
+
+                {% if title %}
+                    <{{ title_tag }} class="split-hero__title">{{ title }}</{{ title_tag }}>
+                {% endif %}
+
+                {% if teaser %}
+                    <p class="split-hero__teaser">{{ teaser|nl2br }}</p>
+                {% endif %}
+
+                {% if buttons %}
+                    <div class="split-hero__actions d-grid gap-2 d-sm-flex flex-sm-wrap">
+                        {% for button in buttons %}
+                            <a href="{{ button.href }}" class="{{ button.class }}"{% if button.new_window %} target="_blank" rel="noopener"{% endif %}>{{ button.label }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if images %}
+            <div class="col-12 col-lg-6">
+                <div class="split-hero__media position-relative">
+                    {% if has_slider %}
+                        <div class="swiper split-hero__swiper" id="{{ swiper_id }}" data-autoplay-delay="{{ autoplay_delay }}">
+                            <div class="swiper-wrapper">
+                                {% for image in images %}
+                                    <div class="swiper-slide">
+                                        {% with {figure: image} %}{{ block('figure_component') }}{% endwith %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        {% if autoplay_delay > 0 %}
+                            <button type="button" class="split-hero__toggle btn btn-light rounded-circle p-0" aria-controls="{{ swiper_id }}" aria-pressed="false" aria-label="Bildwechsel pausieren">
+                                <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                                <i class="fa-solid fa-play" aria-hidden="true"></i>
+                            </button>
+                        {% endif %}
+                    {% else %}
+                        {% with {figure: images|first} %}{{ block('figure_component') }}{% endwith %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if has_slider %}
+        {% add "swiper_assets" to head %}
+            <link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.css', 'markocupic_contao_theme_caribbean_blue') }}">
+            <script src="{{ asset('swiper/swiper-bundle.js', 'markocupic_contao_theme_caribbean_blue') }}"></script>
+        {% endadd %}
+
+        {% add to body %}
+            <script>
+                (() => {
+                    const el = document.getElementById('{{ swiper_id }}');
+
+                    if (!el || 'undefined' === typeof Swiper) {
+                        return;
+                    }
+
+                    const delay = parseInt(el.dataset.autoplayDelay, 10) || 0;
+                    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    const autoplayEnabled = delay > 0 && !reduceMotion;
+
+                    const swiper = new Swiper(el, {
+                        loop: true,
+                        speed: 800,
+                        effect: 'fade',
+                        fadeEffect: {crossFade: true},
+                        autoplay: autoplayEnabled ? {delay: delay, disableOnInteraction: false} : false,
+                        pagination: {
+                            el: el.querySelector('.swiper-pagination'),
+                            clickable: true,
+                        },
+                        a11y: {
+                            enabled: true,
+                            paginationBulletMessage: 'Gehe zu Bild ' + '{' + 'index}}',
+                        },
+                    });
+
+                    const toggle = el.parentElement.querySelector('.split-hero__toggle');
+
+                    if (!toggle) {
+                        return;
+                    }
+
+                    if (!autoplayEnabled) {
+                        toggle.hidden = true;
+                        return;
+                    }
+
+                    toggle.addEventListener('click', () => {
+                        const paused = 'true' === toggle.getAttribute('aria-pressed');
+
+                        if (paused) {
+                            swiper.autoplay.start();
+                        } else {
+                            swiper.autoplay.stop();
+                        }
+
+                        toggle.setAttribute('aria-pressed', String(!paused));
+                        toggle.setAttribute('aria-label', paused ? 'Bildwechsel pausieren' : 'Bildwechsel starten');
+                    });
+                })();
+            </script>
+        {% endadd %}
+    {% endif %}
+{% endblock %}
