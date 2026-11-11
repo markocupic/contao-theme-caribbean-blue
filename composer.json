@@ -1,6 +1,6 @@
 {
     "name": "markocupic/contao-theme-caribbean-blue",
-    "description": "Contao Frontend Theme Caribbean Blue for Contao 5.7+",
+    "description": "Contao Frontend Theme Caribbean Blue for Contao 5.7 +",
     "keywords": [
         "contao",
         "frontend",
@@ -35,7 +35,7 @@
         "symfony/webpack-encore-bundle": "^v2.2"
     },
     "require-dev": {
-        "contao/easy-coding-standard": "^6.13"
+        "markocupic/easy-coding-standard": "^13.0"
     },
     "autoload": {
         "psr-4": {
