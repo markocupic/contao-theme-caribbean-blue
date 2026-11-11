@@ -50,7 +50,7 @@
 html:not([data-bs-theme="dark"]) {
   .layout-main > .inside {
     .mod_article .article-inside:not(.article-container-p-0) {
-      background-color: #fff;
+      background-color: var(--bs-tertiary-bg);
     }
 
     .mod_article {

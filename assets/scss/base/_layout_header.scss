@@ -3,6 +3,7 @@
   @extend .px-0;
   position: relative;
   z-index: 3;
+  border-bottom: 1px solid var(--bs-body-bg);
 
   > .inside {
     @extend .container-lg;
@@ -102,4 +103,5 @@
 
 html[data-bs-theme="dark"] .layout-header {
   background-color: var(--bs-tertiary-bg);
+  border-bottom: 0;
 }
